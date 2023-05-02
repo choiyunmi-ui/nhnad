@@ -1,0 +1,108 @@
+
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0} 
+body,input,textarea,select,button,table{font-family:noto,'Malgun Gothic','맑은고딕','Apple SD Gothic Neo',Dotum,'돋음',sans-serif;font-size:12px;line-height:1;letter-spacing:-.5px;word-break:break-all} 
+img,fieldset{border:0} 
+ul,ol{list-style:none} 
+em,address{font-style:normal} 
+a{text-decoration:none} 
+a:hover,a:active,a:focus{text-decoration:none}
+table{width:100%;/*border-collapse:collapse;*/border-spacing:0}
+label{vertical-align:middle}
+textarea{resize:none}
+fieldset,li,img{border:0;vertical-align:top}
+address,caption,em{font-style:normal}
+h1,h2,h3,h4,h5,h6{font-weight:normal}
+button{overflow:visible;border:0;outline:none;background-color:transparent;cursor:pointer}
+button::-moz-focus-inner{padding:0;border:0}
+
+.blind,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+#skip{height:0}
+#skip a{display:block;position:absolute;left:0;top:-100px;width:100%;height:25px;text-align:center}
+#skip a:focus,#skip a:active{position:absolute;top:0;z-index:60;padding:10px 0;background:#77a835;font-weight:bold;color:#fff;font-size:20px;text-decoration:none}
+.sp,
+.beta:after,
+.depth2:before,
+.depth2 .sa a:before,
+.pagenation .first,
+.pagenation .prev,
+.pagenation .next,
+.pagenation .last,
+.btn_srch,
+.btn_sel:after,
+.btn_sel_s:after,
+.btn_tosel:after,
+.btn_bd.ico_plus:after,
+.btn_sq:before,
+.btn_del,
+.btn_que,
+.btn_chk,
+.rdo_box input+label:before,
+.rdo_box input:checked+label:before,
+.chk_box input+label:before,
+.chk_box input:checked+label:before,
+.txt_box .warn:before,
+.lst_keyword li button,
+.btn_more:before,
+.btn_more2:after,
+.btn_more3:after,
+.btn_more4:after,
+.datagrid-cell-check:before,
+.datagrid-header-check:before,
+.btn_sort:after,
+a.btn_tooltip,
+.tbl_v1 tr.notice .ico_notice,
+.tbl_v1_s tr.notice .ico_notice,
+.btn_down:after,
+.result_info .selecter:after,
+.ess_not:before,
+.ess:after,
+.tooltip_wrap:before,
+.year_box:before,
+.ly_top .btn_close,
+.srch_more:after,
+.srch_fold:after,
+.btn_srchsub,
+.tbl_v9 .po,.tbl_v9 .po_part,.tbl_v9 .impo,
+#sub_tit .btn_st:after,
+.lst_eff dd .percent:before,
+.link_box li.new:after,
+.link_box:before,
+.ico_new:after,
+.ico_good:before,
+.lst_ad li:before,
+#sns_area li a,
+#sns_area li .share:after,
+.lst_service dd.detail:before,
+.lst_service li:after,
+.down_lst a:before,
+.tit_info>li .down:before,
+.tab_schedule li a:before,
+.slidesjs-navigation,
+.tit_info>li .name_gry:after,
+.section_box3 .txt1 .txt_yel:after,
+.sub_access:before,
+#login_header .logo,
+.lst_contus li a:before,
+.sub_solution .lst_v3:before,
+.ace h3:after,
+.ace_lst2 dt:after,
+.ico_down:before,
+.product_rank .product_lst .change:before,
+.service_lst li:before,
+.bx-prev,
+.bx-next,
+#sta .my_id:after,
+.sta_login:before,
+.sta_login li a:before,
+.rp_wrap:before,
+.rp_comfirm>li:before,
+.ico_movie:after,
+.ico_banner:after,
+.ico_srch:after,
+.ico_cont:after,
+.tab_3depth ul li:before,
+.tab_1depth li.on a:after,
+.sector_lst li:after,
+.btn_sa:before
+{display:inline-block;overflow:hidden;background:url(../img/sp.png) no-repeat;width:1px;height:1px;font-size:1px;text-indent:9999px;white-space:nowrap}
+
