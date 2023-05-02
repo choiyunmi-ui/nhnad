@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+		
+			<div style="height:500px"></div>
+			
+			<!-- dimmed -->
+			<div class="dimmed" style="display: block;"></div>
+			<!-- layer popup - 내정보 -->
+			<div class="ly_pop"><div class="ly_pop_in">
+				<div class="ly_pop_cont">
+					<div class="ly_head">
+						<h3 class="tit_ly">내 정보</h3>
+						<a href="#" class="btn_close_ly">닫기</a>
+					</div>
+					<h4 class="tit_ly_sub">내 정보</h4>
+					<p class="tit_txt">
+						<em class="required">*</em> 표시는 필수입력입니다. 
+					</p>
+					<table class="tbl_ly">
+					<caption>내 정보</caption>
+					<colgroup><col width="137"><col></colgroup>
+					<tbody>
+					<tr>
+						<th>이름</th>
+						<td>박선유</td>
+					</tr>
+					<tr>
+						<th>PAYCO 아이디</th>
+						<td>payco@nhnent.com</td>
+					</tr>
+					<tr>
+						<th>메일 <em class="required">*</em></th>
+						<td>
+							<input type="text" class="inp_text inp_text_s" style="width:146px">
+							<em class="bar">@</em>
+							<input type="text" class="inp_text inp_text_s" style="width:140px">
+							<select class="selectbox select_s" style="min-width:140px">
+								<option>직접입력</option>
+							</select>
+							<em class="msg_check fail"><img src="img/ico_msg_check_not.png" alt="!" class="ico"> 필수입력항목 입니다.</em>
+						</td>
+					</tr>
+					</tbody>
+					</table>
+					<h4 class="tit_ly_sub">광고 매체 마케터 ID</h4>
+					<table class="tbl_ly">
+					<caption>내 정보</caption>
+					<colgroup><col width="137"><col></colgroup>
+					<tbody>
+					<tr>
+						<th>NBP POS ID</th>
+						<td>
+							<input type="text" class="inp_text inp_text_s" style="width:140px">
+							<span class="inp_check"><input type="text"><label><a href="adset_adv_03_03_popup.html">이용약관동의</a></label></span>
+						</td>
+					</tr>
+					<tr>
+						<th>클릭스 마케터 ID</th>
+						<td>
+							<input type="text" class="inp_text inp_text_s" style="width:140px">
+							<span class="inp_check"><input type="text"><label><a href="adset_adv_03_03_popup.html">이용약관동의</a></label></span>
+						</td>
+					</tr>
+					</tbody>
+					</table>	
+					<div class="btn_foot">
+						<a href="#" class="btn_b_odd">확인</a>
+						<a href="#" class="btn_b_gray">취소</a>
+					</div>
+				</div>
+			</div></div>
+			
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>스마트검색 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="sub_tit" class="bg_v2">
+			<dl>
+			<dt>스마트검색</dt>
+			<dd>스마트검색 서브타이틀 영역입니다.</dd>
+			</dl>			
+		</div>
+		<div id="contents" class="sub_smart">
+			<form action="#">
+			<fieldset>
+			<legend>스마트검색 영역</legend>
+				<div class="tbl_v5">
+					<table>
+					<caption class="blind">검색조건 선택(노출소재, 디바이스, 상품유형, 매체, 업종, 예산)</caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row">업종</th>
+					<td>
+						<ul class="lst_chk fl_l" style="padding-top:6px;">
+						<li class="chk_box"><input type="checkbox" id="chk7_1"><label for="chk7_1"><span>전체</span></label></li>
+						</ul>
+						<div class="sel_wrap" style="width:260px">
+							<button type="button" class="btn_sel">1차분류 선택</button>
+							<ul class="sel_lst">
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>		
+							</ul>							
+						</div>
+						<div class="sel_wrap" style="width:260px">
+							<button type="button" class="btn_sel">2차분류 선택</button>
+							<ul class="sel_lst">
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>		
+							</ul>							
+						</div>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">시즌</th>
+					<td>
+						<ul class="lst_season">
+						<li class="seleced"><a href="#">전체</a></li>
+						<li><a href="#">1월</a></li>
+						<li><a href="#">2월</a></li>
+						<li><a href="#">3월</a></li>
+						<li><a href="#">4월</a></li>
+						<li><a href="#">5월</a></li>
+						<li><a href="#">6월</a></li>
+						<li><a href="#">7월</a></li>
+						<li><a href="#">8월</a></li>
+						<li><a href="#">9월</a></li>
+						<li><a href="#">10월</a></li>				
+						<li><a href="#">11월</a></li>				
+						<li><a href="#">12월</a></li>				
+						</ul>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row"><label for="ipt_keyword">키워드검색</label></th>
+					<td><input type="text" id="ipt_keyword" class="fm_com" style="width:716px"></td>
+					</tr>
+					</tbody>						
+					</table>				
+				</div>		
+				<div class="srch_result sec_mb">
+					<dl class="result_total">
+					<dt>검색결과</dt>
+					<dd><b>114</b> 건</dd>						
+					</dl>
+					<ul class="lst_keyword">
+					<li>의류패션<button type="button">삭제</button></li>						
+					<li>7월<button type="button">삭제</button></li>						
+					<li>수영복<button type="button">삭제</button></li>						
+					</ul>
+					<div class="btn_area">
+						<button type="submit" class="btn_s btn_org">검색하기</button>	
+						<button type="button" class="btn_s btn_wht">선택 초기화</button>
+					</div>
+				</div>					
+			</fieldset>				
+			</form>
+			<div class="filter_area">
+				<dl class="provided">
+				<dt>Provided by</dt>
+				<dd class="sp">AceCounter</dd>
+				</dl>		
+				<ul class="filter_lst">
+				<li><a href="#" class="btn_down">엑셀다운로드</a></li>
+				<li>
+					<div class="sel_wrap_s" style="width:130px">
+						<button type="button" class="btn_sel">100개씩 보기</button>
+						<ul class="sel_lst">
+						<li><a href="#">100개씩 보기</a></li>						
+						<li><a href="#">전체보기</a></li>						
+						</ul>
+					</div>
+				</li>
+				</ul>
+			</div>	
+			<div class="tbl_grd">
+				<table class="easyui-datagrid" style="width:100%">
+				<caption class="blind">키워드명, 유입수 순위, 전환수 순위, 직전접환수 순위, 간접전환수 순위, 전환율, 반송률</caption>
+				<thead>
+				<tr>
+				<th field="keywordname" width="310" align="center"><b>키워드명</b></th>
+				<th field="field01" scope="col" width="120" align="center"><span id="tt_btn1_1" class="btn_sort btn_tooltip on">유입수 순위</span></th>
+				<th field="field02" scope="col" width="120" align="center"><span id="tt_btn1_2" class="btn_sort btn_tooltip">전환수 순위</span></th>
+				<th field="field03" scope="col" width="120" align="center"><span id="tt_btn1_3" class="btn_sort btn_tooltip">직접전환수 순위</span></th>
+				<th field="field04" scope="col" width="120" align="center"><span id="tt_btn1_4" class="btn_sort btn_tooltip">간접전환수 순위</span></th>
+				<th field="field05" scope="col" width="120" align="center"><span id="tt_btn1_5" class="btn_sort btn_tooltip">전환율</span></th>
+				<th field="field06" scope="col" width="120" align="center"><span id="tt_btn1_6" class="btn_sort btn_tooltip">반송률</span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td>캐나다구스</td>
+				<td>1위</td>
+				<td>1위</td>
+				<td>1위</td>
+				<td>1위</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>	
+				<tr>
+				<td>크리스마스</td>
+				<td>2위</td>
+				<td>2위</td>
+				<td>2위</td>
+				<td>2위</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>	
+				<tr>
+				<td>크리스마스 선물</td>
+				<td>3위</td>
+				<td>3위</td>
+				<td>3위</td>
+				<td>3위</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>
+				<tr>
+				<td>캐나다구스</td>
+				<td>4위</td>
+				<td>4위</td>
+				<td>4위</td>
+				<td>4위</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>	
+				<tr>
+				<td>크리스마스</td>
+				<td>5위</td>
+				<td>5위</td>
+				<td>5위</td>
+				<td>5위</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>	
+				<tr>
+				<td>크리스마스 선물</td>
+				<td>6위</td>
+				<td>6위</td>
+				<td>6위</td>
+				<td>6위</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>	
+				<tr>
+				<td>캐나다구스</td>
+				<td>7위</td>
+				<td>7위</td>
+				<td>7위</td>
+				<td>7위</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>	
+				<tr>
+				<td>크리스마스</td>
+				<td>8위</td>
+				<td>8위</td>
+				<td>8위</td>
+				<td>8위</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>	
+				<tr>
+				<td>크리스마스 선물</td>
+				<td>9위</td>
+				<td>9위</td>
+				<td>9위</td>
+				<td>9위</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>	
+				<tr>
+				<td>캐나다구스</td>
+				<td>10위</td>
+				<td>10위</td>
+				<td>10위</td>
+				<td>10위</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>	
+				<tr>
+				<td>크리스마스</td>
+				<td>11위</td>
+				<td>11위</td>
+				<td>11위</td>
+				<td>11위</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>	
+				<tr>
+				<td>크리스마스 선물</td>
+				<td>12위</td>
+				<td>12위</td>
+				<td>12위</td>
+				<td>12위</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>	
+				<tr>
+				<td>캐나다구스</td>
+				<td>13위</td>
+				<td>13위</td>
+				<td>13위</td>
+				<td>13위</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>	
+				<tr>
+				<td>크리스마스</td>
+				<td>14위</td>
+				<td>14위</td>
+				<td>14위</td>
+				<td>14위</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>	
+				<tr>
+				<td>크리스마스 선물</td>
+				<td>15위</td>
+				<td>15위</td>
+				<td>15위</td>
+				<td>15위</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>			
+				</tbody>
+				</table>
+				<!-- [D] 툴팁 버튼과 동일한 ID번호로 통일시 자동으로 마우스오버 모션 생성(#tt_btn1 = #tt_wrap1) -->
+				<!-- [D] 위치값은 인라인으로 조정 -->
+				<div id="tt_wrap1_1" class="tooltip_wrap" style="display:none;left:337px">
+					<div class="tool_box">
+						<p class="txt2">특정 키워드로 검색하여 유입된 숫자를 나타내는 지표입니다.</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_2" class="tooltip_wrap" style="display:none;left:457px">
+					<div class="tool_box">
+						<p class="txt2">특정 키워드로 검색하여 전환이 일어난 숫자를 나타내는 지표입니다.</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_3" class="tooltip_wrap" style="display:none;left:576px">
+					<div class="tool_box">
+						<p class="txt2">특정 키워드를 통해 유입된 후 바로 전환이 일어난 건수를 나타내는 지표입니다.</p>
+						<p class="txt3">전체 사이트의 직접전환수가 1,000,000건이고 네이버라는<br>사이트에서 발생한 직접전환 건수가 500,000건일 경우, 네이버라는 유입출처의 직접전환수 비중은 50%입니다.</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_4" class="tooltip_wrap" style="display:none;left:694px">
+					<div class="tool_box">
+						<p class="txt2">특정 키워드를 통해 유입된 후 다른 키워드로 다시 유입하여 전환이 일어난 건수를 나타내는 지표입니다.</p>
+						<p class="txt3">전체 사이트의 간접전환수가 1,000,000건이고 네이버라는<br>사이트에서 발생한 간접전환 건수가 500,000건일 경우, 네이버라는 유입출처의 간접전환수 비중은 50%입니다.</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_5" class="tooltip_wrap right" style="display:none;right:117px">
+					<div class="tool_box">
+						<p class="txt2">특정 키워드를 통해 검색하여 방문한 후 구매, 회원<br>가입 등의 전환이 발생된 비율을 나타내는 지표입니다.</p>
+						<p class="txt3">네이버라는 사이트에 방문한 유입수가 5,000건이고 이를 통해<br>100건의 전환이 일어났을 경우 네이버라는 유입출처의 전환율은 2%입니다.</p>
+						<p class="txt3">* <b>전환율(%)</b> =<br>&nbsp;&nbsp;전환수 / 유입수 *100</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_6" class="tooltip_wrap right" style="display:none;right:-1px">
+					<div class="tool_box">
+						<p class="txt2">특정 키워드를 통해 검색하여 방문한 후 반송된 비율을<br>나타내는 지표입니다.</p>
+						<p class="txt3">* <b>반송률(%)</b> =<br>&nbsp;&nbsp;반송수 / 유입수 *100</p>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

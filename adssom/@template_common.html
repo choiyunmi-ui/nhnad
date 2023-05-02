@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<style>
+body{}
+.tit_case{margin:20px 0 0 5px;font-weight:bold;font-size:14px;}
+.tit_case_in{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;min-width:70px;border-right:2px solid #64bbe8;margin-right:8px;padding-right:10px;text-align:center;}
+.case_info{margin:5px 0 0 5px;font-size:12px;line-height:18px;}
+.template_case{margin:30px;padding-bottom:150px;}
+.case_box{margin-top:10px;padding:10px;border:1px solid #d3d2dc;border-radius:3px;background:#fff;}
+.case_box label{margin-left:15px;}
+.case_box label:first-child{margin-left:0;}
+.case_box+.case_info{margin-top:10px;line-height:16px}
+.inp_check label,.inp_radio label{margin-left:0 !important;margin-right:15px;}
+.selectbox{margin-right:5px;}
+.inp_text{margin-right:10px;margin-left:-10px;}
+label+.inp_text,
+label+.inp_keyword{margin-left:5px;}
+.inp_textarea{margin-right:10px;width:200px;height:110px;}
+.timer{margin-right:10px;}
+.msg_check+.msg_check{margin-left:10px}
+.increase,.decrease{margin-left:15px}
+.inp_keyword .inp_text{margin:0}
+.inp_del .inp_text{margin:0}
+</style>
+</head>
+<body>
+	
+<div class="template_case">
+	<h2 class="tit_case">체크박스/라디오버튼</h2>
+	<p class="case_info">
+		상태별 개발 적용
+	</p>
+	<div class="case_box">
+		<span class="inp_check"><input type="checkbox" id="case_chk_default"><label for="case_chk_default">체크박스</label></span>
+		<span class="inp_check checked"><input type="checkbox" id="case_chk_checked" checked><label for="case_chk_checked">체크박스 checked</label></span>
+		<span class="inp_check disabled"><input type="checkbox" id="case_chk_disabled" disabled><label for="case_chk_disabled">체크박스 disabled</label></span>
+		
+		<span class="inp_radio"><input type="radio" name="case_radio" id="case_radio_default"><label for="case_radio_default">라디오버튼</label></span>
+		<span class="inp_radio checked"><input type="radio" name="case_radio" id="case_radio_checked" checked><label for="case_radio_checked">라디오버튼 checked</label></span>
+		<span class="inp_radio disabled"><input type="radio" name="case_radio" id="case_radio_disabled" disabled><label for="case_radio_checked">radio disabled</label></span>
+		
+		<span class="inp_star"><input type="checkbox"></span>
+	</div>
+	
+	<h2 class="tit_case">INPUT</h2>
+	<p class="case_info">
+		placeholder - IE10 이상 / IE8이하 라운딩 없음<br>
+		금액등 우측 정렬 필요시 inp_text_r class 추가
+	</p>
+	<div class="case_box">
+		<label for="">기본</label>
+		<input type="text" class="inp_text" placeholder="기본문구 placeholder">
+		<input type="text" class="inp_text disabled" placeholder="입력불가 disabled" disabled>
+		<label for="">소형</label>
+		<input type="text" class="inp_text inp_text_s" placeholder="기본문구 placeholder">
+		<input type="text" class="inp_text inp_text_s disabled" placeholder="입력불가 disabled" disabled>
+		<input type="text" value="1,000,000,000" class="inp_text inp_text_s inp_text_r">
+	</div>
+	<p class="case_info">
+		키워드입력
+	</p>
+	<div class="case_box">
+		<label for="">키워드 입력/삭제</label>
+		<!-- [D] 입력 버튼을 누르면 inp_keyword 에 expand class 추가 -->
+		<span class="inp_keyword">
+			<input type="text" class="inp_text" >
+			<textarea class="inp_textarea" rows="5"></textarea>
+			<a href="#" class="btn_expand" onclick="$('.inp_keyword').toggleClass('expand');return false">입력창 확대/축소</a>
+		</span>
+		<label>삭제 버튼 케이스</label>
+		<span class="inp_del">			
+			<input type="text" class="inp_text">
+			<a href="#" class="btn_del">삭제</a>
+		</span>
+		<span class="inp_del">			
+			<input type="text" class="inp_text inp_text_s">
+			<a href="#" class="btn_del">삭제</a>
+		</span>
+	</div>
+	
+	<div class="case_box">
+		<textarea class="inp_textarea" placeholder="기본문구 placeholder"></textarea>
+		<textarea class="inp_textarea disabled" placeholder="입력불가 disabled" disabled></textarea>
+	</div>
+	
+	<h2 class="tit_case">버튼</h2>
+	<div class="case_box">
+		<h3 class="tit_case_in">기본</h3>
+		<a href="#" class="btn_basic">인증하기</a>
+		<a href="#" class="btn_basic disabled" disabled>인증하기 disabled</a>
+		<a href="#" class="btn_basic_m">인증하기</a>
+		<a href="#" class="btn_basic_m disabled" disabled>인증하기 disabled</a>
+		<a href="#" class="btn_basic_s">인증하기</a>
+		<a href="#" class="btn_basic_s disabled" disabled>인증하기 disabled</a>
+		<a href="#" class="btn_basic_s checked">인증하기 checked</a>
+		<a href="#" class="btn_basic_s selected">인증하기 selected</a>
+	</div>
+	<div class="case_box">
+		<h3 class="tit_case_in">아이콘 조합</h3>
+		<a href="#" class="btn_basic_m"><img src="img/ico_btn_check.png" alt="v" class="ico">등록</a>
+		<a href="#" class="btn_basic_m"><img src="img/ico_btn_delete.png" alt="x" class="ico">삭제</a>
+		<a href="#" class="btn_basic_m"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운로드</a>
+		<a href="#" class="btn_basic_s"><img src="img/ico_btn_plus.gif" alt="+" class="ico">추가</a>
+	</div>
+	<div class="case_box">
+		<h3 class="tit_case_in">컬러강조</h3>
+		<a href="#" class="btn_eb_odd">로그인 페이지로</a>
+		<a href="#" class="btn_eb_gray">문구 다운로드로 이동</a>
+		<a href="#" class="btn_b_odd">등록</a>
+		<a href="#" class="btn_b_red">삭제</a>
+		<a href="#" class="btn_b_gray">취소</a>
+		<a href="#" class="btn_b_lgray">전체초기화</a>
+		<a href="#" class="btn_odd">조회</a>
+		<a href="#" class="btn_gray">취소</a>
+	</div>
+	
+	<h2 class="tit_case">드롭다운 기본형</h2>
+	<p class="case_info">
+		사용 플러그인 : Select2 <a href="http://ivaynberg.github.io/select2/index.html" target="_blank">http://ivaynberg.github.io/select2/index.html</a><br>
+		IE8이하 라운딩 없음
+	</p>
+	<div class="case_box">
+		<select class="selectbox">
+			<option>셀렉트 박스 기본1</option>
+			<option selected>셀렉트 박스 기본2</option>
+			<option>셀렉트 박스 기본3</option>
+			<option>셀렉트 박스 기본4</option>
+			<option>셀렉트 박스 기본5</option>
+		</select>
+		<select class="selectbox" disabled="true">
+			<option>셀렉트 박스 기본1</option>
+			<option selected>셀렉트 박스 기본2</option>
+			<option>셀렉트 박스 기본3</option>
+			<option>셀렉트 박스 기본4</option>
+			<option>셀렉트 박스 기본5</option>
+		</select>
+		<select class="selectbox select_m">
+			<option>셀렉트 박스 중형1</option>
+			<option selected>셀렉트 박스 중형2</option>
+			<option>셀렉트 박스 중형3</option>
+			<option>셀렉트 박스 중형4</option>
+			<option>셀렉트 박스 중형5</option>
+		</select>
+		<select class="selectbox select_m" disabled="true">
+			<option>셀렉트 박스 중형1</option>
+			<option selected>셀렉트 박스 중형2</option>
+			<option>셀렉트 박스 중형3</option>
+			<option>셀렉트 박스 중형4</option>
+			<option>셀렉트 박스 중형5</option>
+		</select>
+		<select class="selectbox select_s">
+			<option>셀렉트 박스 소형1</option>
+			<option selected>셀렉트 박스 소형2</option>
+			<option>셀렉트 박스 소형3</option>
+			<option>셀렉트 박스 소형4</option>
+			<option>셀렉트 박스 소형5</option>
+		</select>
+		<select class="selectbox select_s" disabled="true">
+			<option>셀렉트 박스 소형1</option>
+			<option selected>셀렉트 박스 소형2</option>
+			<option>셀렉트 박스 소형3</option>
+			<option>셀렉트 박스 소형4</option>
+			<option>셀렉트 박스 소형5</option>
+		</select>
+	</div>	
+	
+	<h2 class="tit_case">드롭다운 버튼형</h2>
+	<div class="case_box">
+		<!-- drop down button case -->
+		<div class="select_btn select2-container <!-- select2-container-active -->">
+			<a href="#" class="select2-choice" onclick="$('.select_btn.select2-drop').toggle();return false;">
+				<span class="select2-chosen">팀이동</span>
+				<span class="select2-arrow" role="presentation"><b role="presentation"></b></span>
+			</a>
+		</div>
+		<div class="select_btn select2-drop select2-with-searchbox select2-drop-active" onclick="$('.select_btn.select2-drop').toggle();return false;" style="left: 40.625px; width: 150px; top: 963px; bottom: auto; display:none;">
+			<div class="select2-search">
+				<label for="s2id_autogen10_search" class="select2-offscreen"></label>
+				<input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-10" placeholder="" aria-activedescendant="select2-result-label-13">
+			</div>
+			<ul class="select2-results" role="listbox">
+				<li class="select2-results-dept-0 select2-result select2-result-selectable" role="presentation"><div class="select2-result-label" role="option"><span class="select2-match"></span>팀이동</div></li>
+				<li class="select2-results-dept-0 select2-result select2-result-selectable select2-selected" role="presentation"><div class="select2-result-label" role="option"><span class="select2-match"></span>1234567팀</div></li>
+				<li class="select2-results-dept-0 select2-result select2-result-selectable" role="presentation"><div class="select2-result-label" role="option"><span class="select2-match"></span>2팀</div></li>
+				<li class="select2-results-dept-0 select2-result select2-result-selectable select2-selected" role="presentation"><div class="select2-result-label" role="option"><span class="select2-match"></span>3한게임 솔루션 팀</div></li>
+				<li class="select2-results-dept-0 select2-result select2-result-selectable" role="presentation"><div class="select2-result-label" role="option"><span class="select2-match"></span>4팀</div></li>
+				<li class="select2-results-dept-0 select2-result select2-result-selectable" role="presentation"><div class="select2-result-label" role="option"><span class="select2-match"></span>5팀</div></li>
+				<li class="select2-results-dept-0 select2-result select2-result-selectable" role="presentation"><div class="select2-result-label" role="option"><span class="select2-match"></span>6gksrpdla 팀</div></li>
+			</ul>
+			<div class="add_option">
+				<input type="text" class="inp_add">
+				<button class="btn_add">등록</button>
+			</div>
+			<div class="btn_option"><a href="#">이동</a></div>
+		</div>
+		<!-- //drop down button case -->
+	</div>
+	
+	<h2 class="tit_case">datepicker</h2>
+	<p class="case_info">
+		사용플러그인 : jqueryui <a href="http://jqueryui.com/datepicker" target="_blank">http://jqueryui.com/datepicker</a>
+	</p>
+	<div class="case_box">
+		<input type="text" class="datepicker">
+		<label for="">날짜 이동 버튼 케이스</label>
+		<span class="date_move">
+			<a href="#" class="btn_prev">이전</a>
+			<input type="text" class="datepicker_move">
+			<a href="#" class="btn_next">다음</a>
+		</span>
+	</div>
+	
+	<h3 class="tit_case">pagenate</h3>
+	<div class="case_box">
+		<div class="pagenate">
+			<a href="#" class="btn_first">처음</a>
+			<a href="#" class="btn_prev">이전</a>
+			<span class="num">
+				<a href="#">1</a>
+				<span class="bar">|</span>
+				<a href="#">2</a>
+				<span class="bar">|</span>
+				<a href="#">3</a>
+				<span class="bar">|</span>
+				<a href="#">4</a>
+				<span class="bar">|</span>
+				<a href="#">500000000000000000000000000000000000000000</a>	
+			</span>
+			<a href="#" class="btn_next">다음</a>
+			<a href="#" class="btn_last">끝</a>
+		</div>
+	</div>
+	
+	<h2 class="tit_case">기타요소</h2>
+	<p class="case_info">
+		힌트 동작이 click에서 hover로 변경 / 인증 메세지 13px 케이스 추가
+	</p>
+	<div class="case_box">
+		<label for="">힌트</label>
+		<!-- [D] 마우스오버시 .expand 추가 / 오른쪽 끝과 닿을때 right_side class 추가 -->
+		<span class="wrap_hint expand">
+			<a href="#" class="btn_hint">?</a>
+			<span class="ly_hint">
+				<strong class="tit">리포트 유형 도움말</strong>
+				<span class="ul">
+				<span class="li">설정한 광고주의 계정 잔액 과 최근 3일간의 평균소진비용을 비교하여<br>비즈머니 충전이 필요한 시점에  이메일로 알려드립니다.</span>
+				<span class="li">잔액이 부족한 시점과 매일 오전 10시의 계정잔액 상태에 대해서<br>알림을 받을 수 있습니다.</span>
+				</span>
+			</span>
+		</span>
+		<span class="btn_hint disabled">?</span>
+		<label for="">타이머</label>
+		<span class="timer">12:35</span>
+		<span class="timer disabled">12:35</span>
+		<em class="msg_check"><img src="img/ico_msg_check.png" alt="v" class="ico"> 인증완료 (advertiserID) YYYY.MM.DD</em>
+		<em class="msg_check fail"><img src="img/ico_msg_check_not.png" alt="!" class="ico"> 인증이 필요합니다.</em>
+		<em class="msg_check cancel"><img src="img/ico_msg_check_cancel.png" alt="X" class="ico"> 취소를 눌러 비밀번호 변경 취소</em>
+		<strong class="msg_check">아이콘 없음, 13px글씨</strong>
+		<strong class="msg_check fail">아이콘 없음, 13px글씨</strong>
+		<span class="decrease">10.42%</span>
+		<span class="increase">12.22%</span>
+		<em class="required">*</em>
+		<!-- [D] 마우스오버시 .expand 추가 / 오른쪽 끝과 닿을때 right_side class 추가 -->
+		<span class="wrap_hint right_side" style="float:right">
+			<a href="#" class="btn_hint">?</a>
+			<span class="ly_hint">
+				<strong class="tit">리포트 유형 도움말</strong>
+				<span class="ul">
+				<span class="li">설정한 광고주의 계정 잔액 과 최근 3일간의 평균소진비용을 비교하여<br>비즈머니 충전이 필요한 시점에  이메일로 알려드립니다.</span>
+				<span class="li">잔액이 부족한 시점과 매일 오전 10시의 계정잔액 상태에 대해서<br>알림을 받을 수 있습니다.</span>
+				</span>
+			</span>
+		</span>
+	</div>
+</div>
+	
+</body>
+</html>

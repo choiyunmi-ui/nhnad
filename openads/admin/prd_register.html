@@ -1,0 +1,299 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>상품 등록 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$( ".datepicker" ).datepicker();
+	});
+</script>
+</head>
+<body>
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header_wrap"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="lnb"></div>
+		<div id="contents">
+			<div class="section_box">
+				<form action="#">
+				<fieldset>
+				<legend>상품 등록</legend>
+					<div class="tit_wrap2">
+						<h3 class="tit">상품 등록</h3>
+						<div class="btn_area">
+							<button type="submit" class="btn_yel">저장</button>
+							<a href="#" class="btn_yel">취소</a>					
+						</div>
+					</div>
+					<div class="tbl_wrt2">
+						<table>
+						<caption class="blind">상품명, 업종 특화, 게재여부, 대표 URL, 첨부파일, 소개글</caption>
+						<colgroup>
+							<col width="175"><col width="444"><col width="175"><col width="444">
+						</colgroup>
+						<tbody>
+						<tr>
+						<th scope="row"><label for="ip_name">상품명</label></th>
+						<td>
+							<input type="text" id="ip_name" class="ip_txt mr20">
+							<span class="ip_check"><input type="checkbox" id="ip_new"><label for="ip_new">신규 상품</label></span>
+						</td>
+						<th scope="row">업종 특화</th>
+						<td>
+							<span class="ip_check mr15"><input type="checkbox" id="ip_spec"><label for="ip_spec">특화 매체</label></span>
+							<div class="sector_wrap">	
+								<input type="text" id="btn_pop_sector" value="업종선택" class="ip_txt">
+								<ul class="pop_sector">
+								<li><input type="checkbox" id="ch_sec1"><label for="ch_sec1">IT/텔레콤</label></li>
+								<li><input type="checkbox" id="ch_sec2"><label for="ch_sec2">가정/생활</label></li>
+								<li><input type="checkbox" id="ch_sec3"><label for="ch_sec3">건강/미용</label></li>
+								<li><input type="checkbox" id="ch_sec4"><label for="ch_sec4">건축/인테리어</label></li>
+								<li><input type="checkbox" id="ch_sec5"><label for="ch_sec5">결혼/출산/육아</label></li>
+								<li><input type="checkbox" id="ch_sec6"><label for="ch_sec6">교육/취업</label></li>
+								<li><input type="checkbox" id="ch_sec7"><label for="ch_sec7">금융/보험</label></li>
+								<li><input type="checkbox" id="ch_sec8"><label for="ch_sec8">문화/미디어</label></li>
+								<li><input type="checkbox" id="ch_sec9"><label for="ch_sec9">부동산</label></li>
+								<li><input type="checkbox" id="ch_sec10"><label for="ch_sec10">산업기기</label></li>
+								<li><input type="checkbox" id="ch_sec11"><label for="ch_sec11">식품/음료</label></li>
+								<li><input type="checkbox" id="ch_sec12"><label for="ch_sec12">여행/교육</label></li>
+								<!-- [D] 마지막줄에 해당하는 li에 .last 추가-->
+								<li class="last"><input type="checkbox" id="ch_sec13"><label for="ch_sec13">의류/패션잡화</label></li>
+								<li class="last"><input type="checkbox" id="ch_sec14"><label for="ch_sec14">자동차</label></li>
+								<li class="last"><input type="checkbox" id="ch_sec15"><label for="ch_sec15">전문서비스</label></li>
+								</ul>
+							</div>
+						</td>
+						</tr>
+						<tr>
+						<th scope="row">게재여부</th>
+						<td>
+							<div class="sel_wrap" style="width:220px">
+								<button type="button" class="btn_sel">사용</button> 
+								<ul class="sel_lst">
+								<li><a href="#">사용</a></li>								
+								<li><a href="#">미사용</a></li>								
+								</ul>
+							</div>
+						</td>
+						<th scope="row"><label for="ip_url">대표 URL</label></th>
+						<td><input type="text" id="ip_url" class="ip_txt" style="width:328px"></td>
+						</tr>
+						<tr>
+						<th scope="row">첨부파일</th>
+						<td><span class="file_wrap"><button type="button" class="btn_file1 btn_yel">첨부추가</button><input type="file" class="btn_file2"></span></td>
+						<th scope="row">샘플 이미지</th>
+						<td><span class="file_wrap"><button type="button" class="btn_file1 btn_yel">첨부추가</button><input type="file" class="btn_file2"></span></td>
+						</tr>
+						<tr>
+						<th scope="row">소개글</th>
+						<td colspan="3"><textarea id="wr_cont" class="ip_txar2" style="height:80px"></textarea></td>
+						</tr>
+						</tbody>
+						</table>					
+					</div>	
+
+					<div class="tit_wrap2">
+						<h3 class="tit">상품 유형</h3>
+					</div>
+					<div class="tbl_wrt2">
+						<table>
+						<caption class="blind">매체명, 노출소재, 노출영역, 디바이스, 과금방식, 타겟팅 여부, 광고 속성</caption>
+						<colgroup>
+							<col width="175"><col>
+						</colgroup>
+						<tbody>
+						<tr>
+						<th scope="row"><label for="ip_name2">매체명</label></th>
+						<td>
+							<input type="text" id="ip_name2" class="ip_txt">
+						</td>
+						</tr>
+						<tr>
+						<th scope="row">노출소재</th>
+						<td>
+							<ul class="lst_check">
+							<li><span class="ip_check"><input type="checkbox" id="chck1_1"><label for="chck1_1">검색광고</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck1_2"><label for="chck1_2">배너광고</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck1_3"><label for="chck1_3">동영상광고</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck1_4"><label for="chck1_4">콘텐츠광고<label></span></li>
+							</ul>
+						</td>
+						</tr>
+						<tr>
+						<th scope="row">노출영역</th>
+						<td>
+							<ul class="lst_check">
+							<li><span class="ip_check"><input type="checkbox" id="chck2_1"><label for="chck2_1">검색포털</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck2_2"><label for="chck2_2">동영상포털</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck2_3"><label for="chck2_3">애드네트워크</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck2_4"><label for="chck2_4">소셜/메신저<label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck2_5"><label for="chck2_5">어플리케이션<label></span></li>
+							</ul>
+						</td>
+						</tr>
+						<tr>
+						<th scope="row">디바이스</th>
+						<td>
+							<ul class="lst_check">
+							<li><span class="ip_check"><input type="checkbox" id="chck3_1"><label for="chck3_1">PC</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck3_2"><label for="chck3_2">Mobile</label></span></li>
+							</ul>
+						</td>
+						</tr>
+						<tr>
+						<th scope="row">과금방식</th>
+						<td>
+							<ul class="lst_check">
+							<li><span class="ip_check"><input type="checkbox" id="chck4_1"><label for="chck4_1">CPC</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_2"><label for="chck4_2">CPM</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_3"><label for="chck4_3">CPP</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_4"><label for="chck4_4">CPV(CPVC)</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_5"><label for="chck4_5">CPA</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_6"><label for="chck4_6">CPI</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_7"><label for="chck4_7">CPE</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_8"><label for="chck4_8">CPK</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_9"><label for="chck4_9">CPL</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_10"><label for="chck4_10">CPE(engage)</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_11"><label for="chck4_11">키워드 조회수</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_12"><label for="chck4_12">구좌제</label></span></li>
+							</ul>
+						</td>
+						</tr>
+						<tr>
+						<th scope="row">타겟팅 여부</th>
+						<td>
+							<ul class="lst_check">
+							<li><span class="ip_check"><input type="checkbox" id="chck5_1"><label for="chck5_1">가능</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck5_2"><label for="chck5_2">불가능</label></span></li>
+							</ul>
+						</td>
+						</tr>
+						<tr>
+						<th scope="row">과금방식</th>
+						<td>
+							<ul class="lst_check">
+							<li><span class="ip_check"><input type="checkbox" id="chck6_1"><label for="chck6_1">쇼핑</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck6_2"><label for="chck6_2">리워드</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck6_3"><label for="chck6_3">리타겟팅</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck6_4"><label for="chck6_4">네이티브 광고</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck6_5"><label for="chck6_5">앱마케팅</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck6_6"><label for="chck6_6">해당없음</label></span></li>
+							</ul>
+						</td>
+						</tr>
+						</tbody>
+						</table>					
+					</div>
+
+					<div class="tit_wrap2">
+						<h3 class="tit">집행 방법</h3>
+					</div>
+					<div class="tbl_wrt2">
+						<table>
+						<caption class="blind">방법, 내용</caption>
+						<colgroup>
+							<col width="175"><col>
+						</colgroup>
+						<tbody>
+						<tr>
+						<th scope="row">방법</th>
+						<td>
+							<input type="text" id="ip_name2" class="ip_txt">
+						</td>
+						</tr>
+						<tr>
+						<th scope="row">노출소재</th>
+						<td>
+							<ul class="lst_check">
+							<li><span class="ip_check"><input type="checkbox" id="chck1_1"><label for="chck1_1">검색광고</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck1_2"><label for="chck1_2">배너광고</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck1_3"><label for="chck1_3">동영상광고</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck1_4"><label for="chck1_4">콘텐츠광고<label></span></li>
+							</ul>
+						</td>
+						</tr>
+						<tr>
+						<th scope="row">노출영역</th>
+						<td>
+							<ul class="lst_check">
+							<li><span class="ip_check"><input type="checkbox" id="chck2_1"><label for="chck2_1">검색포털</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck2_2"><label for="chck2_2">동영상포털</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck2_3"><label for="chck2_3">애드네트워크</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck2_4"><label for="chck2_4">소셜/메신저<label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck2_5"><label for="chck2_5">어플리케이션<label></span></li>
+							</ul>
+						</td>
+						</tr>
+						<tr>
+						<th scope="row">디바이스</th>
+						<td>
+							<ul class="lst_check">
+							<li><span class="ip_check"><input type="checkbox" id="chck3_1"><label for="chck3_1">PC</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck3_2"><label for="chck3_2">Mobile</label></span></li>
+							</ul>
+						</td>
+						</tr>
+						<tr>
+						<th scope="row">과금방식</th>
+						<td>
+							<ul class="lst_check">
+							<li><span class="ip_check"><input type="checkbox" id="chck4_1"><label for="chck4_1">CPC</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_2"><label for="chck4_2">CPM</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_3"><label for="chck4_3">CPP</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_4"><label for="chck4_4">CPV(CPVC)</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_5"><label for="chck4_5">CPA</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_6"><label for="chck4_6">CPI</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_7"><label for="chck4_7">CPE</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_8"><label for="chck4_8">CPK</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_9"><label for="chck4_9">CPL</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_10"><label for="chck4_10">CPE(engage)</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_11"><label for="chck4_11">키워드 조회수</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck4_12"><label for="chck4_12">구좌제</label></span></li>
+							</ul>
+						</td>
+						</tr>
+						<tr>
+						<th scope="row">타겟팅 여부</th>
+						<td>
+							<ul class="lst_check">
+							<li><span class="ip_check"><input type="checkbox" id="chck5_1"><label for="chck5_1">가능</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck5_2"><label for="chck5_2">불가능</label></span></li>
+							</ul>
+						</td>
+						</tr>
+						<tr>
+						<th scope="row">과금방식</th>
+						<td>
+							<ul class="lst_check">
+							<li><span class="ip_check"><input type="checkbox" id="chck6_1"><label for="chck6_1">쇼핑</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck6_2"><label for="chck6_2">리워드</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck6_3"><label for="chck6_3">리타겟팅</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck6_4"><label for="chck6_4">네이티브 광고</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck6_5"><label for="chck6_5">앱마케팅</label></span></li>
+							<li><span class="ip_check"><input type="checkbox" id="chck6_6"><label for="chck6_6">해당없음</label></span></li>
+							</ul>
+						</td>
+						</tr>
+						</tbody>
+						</table>					
+					</div>				</fieldset>			
+				</form>
+			</div>		
+		</div>
+	</div>
+	<!-- //[D] CONTAINER -->
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

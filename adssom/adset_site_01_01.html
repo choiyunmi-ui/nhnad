@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+			<div class="section_head">
+				<h2 class="tit_top">사이트 정보</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">광고정보관리</a>
+						<span class="dep1">
+							<a href="#" class="selected">광고정보관리</a>
+							<a href="#">분석/리포트</a>
+							<a href="#">자동입찰</a>
+							<a href="#">마켓트렌드</a>
+							<a href="#">광고제안</a>
+							<a href="#">어드민</a>
+							<a href="#">시스템관리</a>
+						</span>
+					</span>
+					<span class="bar">&gt;</span>
+					<span class="dep_group">
+						<a href="#">광고설정/사이트관리</a>
+						<span class="dep2">
+							<em class="tit_dep2">광고설정</em>
+							<a href="#">광고주관리</a>
+							<a href="#" class="selected">사이트관리</a>
+							<a href="#">데이터관리</a>
+							<a href="#">광고대상관리</a>
+							<a href="#">랜딩페이지검수</a>
+							<a href="#">잔액부족알림이력</a>
+							<em class="tit_dep2">전략그룹</em>
+							<a href="#">전략그룹관리</a>
+							<a href="#">전략그룹대량이동</a>
+						</span>
+					</span>
+					<span class="bar">&gt;</span> 사이트목록
+				</div>
+			</div>		
+			
+			<!-- tab -->
+			<div class="tab_page">
+				<ul>
+					<li class="selected"><a href="#">사이트 관리</a></li>
+					<li><a href="#">스크립트 관리</a></li>
+					<li><a href="#">광고상품 관리</a></li>
+				</ul>
+			</div>
+			
+			<!-- 조회필터 -->
+			<div class="section_filter" name="case_filter_ae1">
+				@template_filter.html
+			</div>	
+			
+			<!-- 사이트 관리 -->
+			<div class="sub_head">
+				<h3 class="tit_section">사이트 관리</h3>
+				<div class="side">
+					<a href="#" class="btn_basic_m" onclick="$('.ly_pop[name=adset_site_01_02],.dimmed').show();return false;"><img src="img/ico_btn_check.png" alt="v" class="ico">등록</a>
+					<a href="#" class="btn_basic_m"><img src="img/ico_btn_delete.png" alt="x" class="ico">삭제</a>
+				</div>
+			</div>			
+			
+			<div class="section_box">
+				<!-- [D] 테이블 목록이 10개 이상일때 .wrap_tbl>.thead+.tbody 구조로 둘러쌈 (스크롤처리) / 스크롤이 없을때는 제거! -->
+				<div class="wrap_tbl">
+					<div class="thead">
+						<table class="tbl_form">
+						<caption>사이트 관리 thead</caption>
+						<colgroup><col class="t_check"><col width="21%"><col width="20%"><col width="14%"><col width="*"><col width="153px"><col width="110px"></colgroup>
+						<thead>
+						<tr>
+							<th class="t_check"><span class="inp_check"><input type="checkbox"></span></th>
+							<th>사이트 이름</th>
+							<th>사이트 URL</th>
+							<th>등록일</th>
+							<th>등록자</th>
+							<th>스크립트</th>
+							<th>광고상품</th>
+						</tr>
+						</thead>
+						</table>
+					</div>
+					<div class="tbody line20">
+						<table class="tbl_form">
+						<caption>사이트 관리 tbody</caption>
+						<colgroup><col class="t_check"><col width="21%"><col width="20%"><col width="14%"><col width="*"><col width="153px"><col width="110px"></colgroup>
+						<tbody>
+						<tr>
+							<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+							<td><p class="team_edit">쇼핑몰-PC <a href="#" class="btn_form_modify">수정</a></p></td>
+							<td><p><a href="#">www.shop.com</a></p></td>
+							<td>2015.12.22 <span class="time">23:59</span></td>
+							<td><p>Paycoid**@email.com</p></td>
+							<td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="활성" class="st_monitor st_on">활성</span></td>
+							<td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td>
+						</tr>
+						<tr>
+							<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+							<td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td>
+							<td><p><a href="#">www.shop.com</a></p></td>
+							<td>2015.12.22 <span class="time">23:59</span></td>
+							<td><p>Paycoid**@email.com</p></td>
+							<td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td>
+							<td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td>
+						</tr>
+						<tr>
+							<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+							<td><p class="team_edit">
+								<input type="text" value="m.Ashop" class="inp_text inp_text_s" style="width:100%">
+								<a href="#" class="btn_form_check">변경</a>
+								<a href="#" class="btn_form_delete">삭제</a>
+							</p></td>
+							<td><p><a href="#">www.shop.com</a></p></td>
+							<td>2015.12.22 <span class="time">23:59</span></td>
+							<td><p>Paycoid**@email.com</p></td>
+							<td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="비활성" class="st_monitor st_off">비활성</span></td>
+							<td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td>
+						</tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p class="team_edit">쇼핑몰-모바일 <a href="#" class="btn_form_modify">수정</a></p></td><td><p><a href="#">www.shop.com</a></p></td><td>2015.12.22 <span class="time">23:59</span></td><td><p>Paycoid**@email.com</p></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td><td><a href="#" class="btn_basic_s" style="width:67px">관리</a></td></tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<!-- dimmed -->
+			<div class="dimmed" style="display:none"></div>
+			<!-- layer popup - 사이트 등록 -->
+			<div class="ly_pop" style="display:none" name="adset_site_01_02"><div class="ly_pop_in">
+				<div class="ly_pop_cont">
+					<div class="ly_head">
+						<h3 class="tit_ly">사이트 등록</h3>
+						<a href="#" class="btn_close_ly">닫기</a>
+					</div>
+					<p class="tit_txt">사이트를 등록하세요. 기존에 등록된 사이트 이름, URL 은 등록할 수 없습니다.</p>
+					<table class="tbl_ly">
+					<caption>쿠키 보관 기간 설정</caption>
+					<colgroup><col width="137"><col></colgroup>
+					<tr>
+						<th>사이트 이름</th>
+						<td><input type="text" class="inp_text inp_text_s" style="width:320px"></td>
+					</tr>
+					<tr>
+						<th>사이트 URL</th>
+						<td><input type="text" class="inp_text inp_text_s" style="width:320px"></td>
+					</tr>
+					</table>
+					<div class="btn_foot">
+						<a href="#" class="btn_b_odd">등록</a>
+						<a href="#" class="btn_b_gray">취소</a>
+					</div>
+				</div>
+			</div></div>
+			<!-- //layer popup -->
+			
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

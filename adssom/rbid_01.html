@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script>
+/* [D] 개발제외 - 마크업 검수용 */
+$(function(){
+	$('.btn_plus,.btn_minus').click(function(){$(this).toggleClass('btn_plus btn_minus')})
+});
+</script>
+</head>
+<body>
+			
+			<!-- dimmed -->
+			<div class="dimmed" style=""></div>
+			<!-- layer popup - 실시간입찰 -->
+			<div class="ly_pop" style=""><div class="ly_pop_in">
+				<div class="ly_pop_cont" >
+					<div class="ly_head">
+						<h3 class="tit_ly">실시간입찰</h3>
+						<a href="#" class="btn_close_ly">닫기</a>
+					</div>
+					<div class="btn_side">
+						<a href="#" class="btn_basic_s"><img src="img/ico_btn_delete.png" alt="x" class="ico">삭제</a>
+					</div>
+					
+					<!-- [D] 목록 10개 이하에서는 스크롤 자동 사라짐. page 테이블과 다른건, 가로폭이 고정값이기 때문
+						레이어 내부 스크롤 테이블은 가로값을 항상 지정해 주어야 합니다. / 기본값 530px -->
+					<div class="wrap_tbl_ly" style="width:627px">
+						<div class="thead">
+							<table class="tbl_ly_form">
+							<caption>그룹삭제 목록 thead</caption>
+							<colgroup><col class="t_check"><col width="191px"><col width="173px"><col></colgroup>
+							<thead>
+							<tr class="dep_form">
+								<th rowspan="2" class="t_check"><span class="inp_check"><input type="checkbox"></span></th>
+								<th><a href="#" class="btn_sort">키워드</a></th>
+								<th rowspan="2"><a href="#" class="btn_sort">현재입찰가</a></th>
+								<th>변경입찰가</th>
+							</tr>
+							<tr class="dep_form">
+								<th><input type="text" class="inp_text inp_text_s"></th>
+								<th>
+									<select class="selectbox select_s">
+										<option>변경입찰가_직접입력</option>
+										<option>변경입찰가_변경분입력</option>
+										<option>변경입찰가_비율입력</option>
+									</select>
+								</th>
+							</tr>
+							</thead>
+							</table>
+						</div>
+						<!-- [D] 스크롤 최소 기본 10개->20개 적용을 위한 line20 class 추가 -->
+						<div class="tbody line20">
+							<table class="tbl_ly_form">
+							<caption>그룹삭제 목록 tbody</caption>
+							<colgroup><col class="t_check"><col width="191px"><col width="173px"><col></colgroup>
+							<tbody>
+							<tr>
+								<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+								<td><p>ADSSOM자동그룹</p></td>
+								<td><p class="num">4,681</p></td>
+								<td><span class="inp_direct">
+									<input type="text" class="inp_text inp_text_s inp_text_r">
+									<a href="#" class="btn_copy">복사</a>
+								</span></td>
+							</tr>
+							<tr>
+								<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+								<td><p>사이트 (www.siteaa.com)</p></td>
+								<td><p class="num">3,423,481</p></td>
+								<td><span class="inp_direct">
+									<input type="text" class="inp_text inp_text_s inp_text_r">
+									<a href="#" class="btn_copy">복사</a>
+								</span></td>
+							</tr>
+							<tr>
+								<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+								<td><p>ADSSOM자동그룹</p></td>
+								<td><p class="num">4,681</p></td>
+								<td><span class="inp_direct">
+									<a href="#" class="btn_plus">더하기</a>
+									<input type="text" class="inp_text inp_text_s inp_text_r">
+									<span class="unit">원</span>
+									<a href="#" class="btn_copy">복사</a>
+								</span></td>
+							</tr>
+							<tr>
+								<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+								<td><p>사이트 (www.siteaa.com)</p></td>
+								<td><p class="num">3,423,481</p></td>
+								<td><span class="inp_direct">
+									<a href="#" class="btn_minus">빼기</a>
+									<input type="text" class="inp_text inp_text_s inp_text_r">
+									<span class="unit">%</span>
+									<a href="#" class="btn_copy">복사</a>
+								</span></td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div class="btn_foot">
+						<a href="#" class="btn_b_odd">저장</a>
+						<a href="#" class="btn_b_gray">취소</a>
+					</div>
+				</div>
+			</div></div>
+			<!-- //layer popup -->
+	
+</body>
+</html>

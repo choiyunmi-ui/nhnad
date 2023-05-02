@@ -1,0 +1,198 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>문의하기 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="sub_tit" class="bg_v5">
+			<dl>
+			<dt>고객센터</dt>
+			<dd>자세한 상담을 원하실 경우 온라인 문의를 남겨주시면 신속하게 답변드리겠습니다.</dd>				
+			</dl>				
+			<a href="#" class="btn_st">온라인 문의</a>
+			<a href="#" class="btn_st">내 문의 내역</a>
+		</div>
+		<div id="contents">
+			<form action="#">
+			<fieldset>
+			<legend>온라인 문의 작성영역</legend>
+				<p class="ess_not">필수 입력 정보</p>
+				<div class="tit_wrap">
+					<h2 class="tit_sec">회원정보</h2>
+				</div>
+				<div class="tbl_v3">
+					<table>
+					<caption class="blind">ID, E-Mail, 휴대폰번호</caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<tr class="wide">
+					<th scope="row" class="ess">ID</th>
+					<td><p class="txt2">openadsopenads@nhnent.com</p></td>
+					</tr>
+					<tr>
+					<th scope="row" class="ess">이메일</th>
+					<td>
+						<span class="plc_wrap"><input type="text" id="email" class="fm_com plc_ip" style="width:175px"><label for="email" class="plc_lb">openadsopenads</label></span>
+						<span class="fm_etc" style="width:33px">@</span>
+						<span class="plc_wrap"><input type="text" id="domain" class="fm_com plc_ip" title="도메인 입력" style="width:144px"><label for="domain" class="plc_lb">nhnent.com</label></span>
+						<div class="sel_wrap" style="width:142px;margin-left:10px">
+							<button type="button" class="btn_sel">직접입력</button>
+							<ul class="sel_lst">
+							<li><a href="#">naver.com</a></li>
+							<li><a href="#">naver.com</a></li>
+							<li><a href="#">naver.com</a></li>
+							<li><a href="#">naver.com</a></li>
+							<li><a href="#">naver.com</a></li>	
+							</ul>							
+						</div>
+					</td>	
+					</tr>
+					<tr>
+					<th scope="row" class="ess">휴대폰번호</th>
+					<td>
+						<div class="sel_wrap">
+							<button type="button" class="btn_sel">010</button>
+							<ul class="sel_lst">
+							<li><a href="#">010</a></li>
+							<li><a href="#">011</a></li>
+							<li><a href="#">016</a></li>
+							<li><a href="#">017</a></li>		
+							<li><a href="#">018</a></li>		
+							<li><a href="#">019</a></li>			
+							</ul>							
+						</div>
+						<span class="fm_etc">-</span><span class="plc_wrap"><input type="text" id="num_center" title="휴대폰번호 중간자리" class="fm_com plc_ip" style="width:82px"><label for="num_center" class="plc_lb">8083</label></span>
+						<span class="fm_etc">-</span><span class="plc_wrap"><input type="text" id="num_last" title="휴대폰번호 마지막자리" class="fm_com plc_ip" style="width:82px"><label for="num_last" class="plc_lb">0000</label></span>
+					</td>
+					</tr>				
+					</tbody>						
+					</table>					
+				</div>
+				<div class="tit_wrap">
+					<h2 class="tit_sec">문의 유형</h2>
+				</div>
+				<div class="tbl_v3">
+					<table>
+					<caption class="blind">문의 유형</caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row" class="ess">문의 유형</th>
+					<td>
+						<div class="sel_wrap" style="width:150px">
+							<button type="button" class="btn_sel">선택</button>
+							<ul class="sel_lst">
+								<li><a href="#">선택1</a></li>
+								<li><a href="#">선택2</a></li>
+								<li><a href="#">선택3</a></li>
+								<li><a href="#">선택4</a></li>
+							</ul>							
+						</div>
+					</td>	
+					</tr>		
+					</tbody>						
+					</table>					
+				</div>		
+				<div class="tit_wrap">
+					<h2 class="tit_sec">문의 내용</h2>
+				</div>
+				<div class="tbl_v3">
+					<table>
+					<caption class="blind">문의 제목, 내용, 파일첨부</caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row" class="ess">제목</th>
+					<td>
+						<div class="plc_wrap">
+						<input type="text" id="title" class="fm_com plc_ip" style="width:793px"><label for="title" class="plc_lb">제목을 입력해주세요</label>
+						</div>
+					</td>	
+					</tr>		
+					<tr>
+					<th scope="row" class="ess">내용</th>
+					<td>
+						<div class="plc_wrap" style="width:100%">
+							<textarea id="cont" style="width:100%" class="fm_txtarea plc_ip"></textarea><label for="cont" class="plc_lb">내용을 입력해주세요</label>
+						</div>
+					</tr>
+					<tr>
+					<th scope="row">파일첨부</th>
+					<td>
+						<div class="file_wrap">
+							<input type="file" class="file_hidden"><button type="button" class="file_btn btn_bd ico_plus"><span>파일첨부</span></button>
+						</div>						
+						<p class="fm_txt2">최대10MB, 5개까지 첨부가능<br>파일포맷형식 : JPG, GIF, BMP, PSD, TIFF, LOG, CSV, MSoffice, 한글, PDF, WMV, AVI, ASF, MKV, MP4</p>
+						<div class="txt_box">
+							<p class="warn">개인정보보호법에 따라 문의자의 개인 정보(주민버혼가 포함된 서류 등)가 포함된 파일은 첨부할 수 없습니다.</p>
+						</div>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">개인정보 수집<br>및 이용에 대한 안내</th>
+					<td>
+						<div class="agr_box">
+							<p>대행 이용약관</p>
+							<p>&nbsp;</p>
+							<p>제1조 (목적)</p>
+							<p>이 약관은 오픈애드(이하 "회사"라 합니다)가 제공하는 인터넷 광고대행 서비스의 이용조건 및 절차에 관한 제반사항을 규정함을
+							목적으로 합니다.</p>
+							<p>&nbsp;</p>
+							<p>제 2 조 (서비스의 정의) </p>
+							<p>"모바일 광고대행 서비스"(이하 본 서비스라 합니다.)라 함은 모바일 애플리케이션을 통하여 매체 광고를 제공할 수 있는 광고 
+							서비스를 말합니다.</p>
+							<p>&nbsp;</p>
+							<p>제 3 조 (서비스의 정의) 
+							<p>"모바일 광고대행 서비스"(이하 본 서비스라 합니다.)라 함은 모바일 애플리케이션을 통하여 매체 광고를 제공할 수 있는 광고 
+							서비스를 말합니다.</p>							
+						</div>	
+						<div class="agr_chk">
+							<span class="chk_box"><input type="checkbox" id="agreed1"><label for="agreed1"><span>개인정보 수집 및 이용에 동의합니다.(필수)</span></label></span>							
+						</div>					
+					</td>
+					</tr>	
+					</tbody>						
+					</table>					
+				</div>			
+				<div class="btn_area_l">
+					<button type="submit" class="btn_l btn_org">등록</button>
+					<a href="#" class="btn_l btn_wht">취소</a>				
+				</div>		
+			</fieldset>				
+			</form>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

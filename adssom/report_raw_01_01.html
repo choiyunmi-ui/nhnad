@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+			<div class="section_head">
+				<h2 class="tit_top">리포트 생성</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">광고정보관리</a>
+						<div class="dep1">
+							<a href="#">광고정보관리</a>
+							<a href="#">분석/리포트</a>
+							<a href="#">자동입찰</a>
+							<a href="#">마켓트렌드</a>
+							<a href="#" class="selected">광고제안</a>
+							<a href="#">어드민</a>
+							<a href="#">시스템관리</a>
+						</div>
+					</span>
+					<span class="bar">&gt;</span>
+					<span class="dep_group">
+						<a href="#">광고문구/문구 작성</a>
+						<div class="dep2">
+							<em class="tit_dep2"><a href="#">키워드</a></em>
+							<a href="#">키워드 제안</a>
+							<a href="#">키워드 목록</a>
+							<em class="tit_dep2"><a href="#">광고문구</a></em>
+							<a href="#" class="selected">문구 작성</a>
+							<a href="#">문구 다운로드</a>
+						</div>
+					</span>
+				</div>
+			</div>
+			
+			<!-- 조회필터 -->
+			<div class="section_filter" name="case_filter_ae1">
+				@template_filter.html
+			</div>
+			
+			<!-- 리포트 생성 - 유형 -->
+			<div class="section_report">
+				<em class="index_report">리포트 유형				
+					<!-- [D] 마우스오버시 .expand 추가 -->
+					<span class="wrap_hint">
+						<a href="#" class="btn_hint">?</a>
+						<span class="ly_hint">
+							<strong class="tit">리포트 유형 도움말</strong>
+							<span class="ul">
+							<span class="li">통합리포트 : 엑셀 템플릿 형식의 통합리포트를 생성합니다.</span>
+							<span class="li">광고상세리포트 : 광고상품,사이트,그룹,키워드,영역별로 상세한 RAW리포트를 다운로드 할 수 있습니다.</span>
+							<span class="li">네이버-시간대리포트 : 네이버 클릭초이스 시간대별 리포트를 사이트,그룹,키워드 단위로 다운로드 합니다.</span>
+							<span class="li">유입전환분석-시간대리포트 : ADSSOM 으로 트랙킹한 전환데이터를 시간대별로 분석할 수 있습니다.</span>
+							<span class="li">Tracking RAW 리포트 – ADSSOM Tracking log 를 다운로드 할 수 있습니다.</span>
+							</span>
+						</span>
+					</span>
+				</em>
+				<span class="group1">
+					<select class="selectbox">
+						<option>통합리포트</option>
+						<option onchange="alert('ok)">RAW 리포트</option>
+					</select>
+				</span>
+				<span class="group2">
+					<label>사이트</label>
+					<select class="selectbox">
+						<option>네이버 클릭초이스</option>
+						<option>광고담당자(AE)</option>
+						<option>광고주</option>
+					</select>
+				</span>
+			</div>
+			
+			<!-- 리포트 상세 - 광고상품 선택 -->
+			<div class="section_report">
+				<em class="index_report">광고상품 선택</em>
+				<select class="selectbox">
+					<option>전체광고상품</option>
+					<option selected>네이버 클릭초이스</option>
+					<option>광고담당자(AE)</option>
+					<option>광고주</option>
+				</select>
+				<a href="#" class="btn_basic">캠페인/광고그룹 선택</a>
+			</div>
+			
+			<!-- 리포트 상세 - 분석기준 -->
+			<div class="section_report report_option">
+				<em class="index_report">분석기준
+					<!-- [D] 마우스오버시 .expand 추가 -->
+					<span class="wrap_hint">
+						<a href="#" class="btn_hint">?</a>
+						<span class="ly_hint">
+							<strong class="tit">분석기준 도움말</strong>
+							<span class="ul">
+							<span class="li">분석기준은  지표의 기준이 되는 항목으로  광고상품/사이트/그룹/키워드/영역 중  선택된 가장 상세단위를 기준으로 지표를 노출합니다.</span>
+							<span class="li">분석기준 그룹은 매체그룹기준, 전략그룹 기준 중 선택하여 생성할 수 있습니다.<br>
+								Ex) 그룹 선택 시 그룹단위 키워드합계지표 노출<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 키워드 선택 시 키워드단위  지표 노출<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 키워드/ 영역 선택 시 각 키워드의 영역별 지표 노출
+							</span>
+							<strong class="tit">광고상세리포트 생성시 노출되는 데이터는 아래와 같습니다.<br>전략그룹기준 선택시 ‘그룹’ 기준이 ADSSOM에 등록한 전략그룹에 따라 추출됩니다.</strong>
+							<span class="ul">
+							<span class="li"></span>
+							<span class="li">분석기준 :  기간 | 광고상품 | 캠페인| 그룹 | 키워드 | 영역</span>
+							<span class="li">광고데이터 : 노출일수| 품질지수 ｜ 평균노출순위| 노출 수| 클릭 수| 클릭률 ｜클릭비용 ｜총비용</span>
+							<span class="li">전환데이터 : 전환수｜직접전환수｜간접전환수｜매출액｜직접매출액｜간접매출액<br>
+								전환데이터는 전환설정에서 선택한 데이터가 노출됩니다.<br>
+								(ADSSOM전환, 매체전환, 전환데이터 미노출 중. 상세설명은 전환설정의 도움말을 참조하세요)								
+							</span>
+							</span>
+							[참고] 기준항목 선택 시 , 선택된 기준항목 값을 기준으로 한 지표 값이 노출됩니다.<br>
+							미 선택 된 기준항목도 칼럼은 노출되지만 칼럼에 해당하는 지표는 노출되지 않습니다<br>
+							[참고] 다음 클릭스의 ‘캠페인’ 은 분석기준 항목 ‘사이트’로 표시됩니다.<br>
+						</span>
+					</span>
+				</em>
+				<ul class="report_option_lst">
+				<li>
+					<span class="inp_radio checked" style="width:215px"><input type="radio" checked><label>매체 그룹 기준</label></span>
+					<span class="inp_radio" style="width:215px"><input type="radio"><label>전략 그룹 기준</label></span>
+				</li>
+				<!-- [D] 매체 그룹 기준 선택시 노출 -->
+				<li>
+					<span class="inp_check disabled" style="width:215px"><input type="checkbox" disabled><label>사이트</label></span>
+					<span class="inp_check disabled" style="width:215px"><input type="checkbox" disabled><label>그룹</label></span>
+					<span class="inp_check checked" style="width:215px"><input type="checkbox" checked><label>키워드</label></span>
+					<span class="inp_check disabled" style="width:215px"><input type="checkbox" disabled><label>영역</label></span>
+				</li>
+				<!-- [D] 전략 그룹 기준 선택시 노출 -->
+				<li>
+					<span class="inp_check" style="width:215px"><input type="checkbox"><label>전략그룹</label></span>
+					<span class="inp_check" style="width:215px"><input type="checkbox"><label>키워드</label></span>
+				</li>
+				</ul>
+			</div>	
+			
+			<!-- 리포트 상세 - 분석기준 -->
+			<div class="section_report">
+				<em class="index_report">분석기준
+					<!-- [D] 마우스오버시 .expand 추가 -->
+					<span class="wrap_hint">
+						<a href="#" class="btn_hint">?</a>
+						<span class="ly_hint">
+							<strong class="tit">분석기준 도움말</strong>
+							<span class="ul">
+							<span class="li">분석기준은  지표의 기준이 되는 항목으로  광고상품/사이트/그룹/키워드/영역 중  선택된 가장 상세단위를 기준으로 지표를 노출합니다.</span>
+							<span class="li">분석기준 그룹은 매체그룹기준, 전략그룹 기준 중 선택하여 생성할 수 있습니다.<br>
+								Ex) 그룹 선택 시 그룹단위 키워드합계지표 노출<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 키워드 선택 시 키워드단위  지표 노출<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 키워드/ 영역 선택 시 각 키워드의 영역별 지표 노출
+							</span>
+							<strong class="tit">광고상세리포트 생성시 노출되는 데이터는 아래와 같습니다.<br>전략그룹기준 선택시 ‘그룹’ 기준이 ADSSOM에 등록한 전략그룹에 따라 추출됩니다.</strong>
+							<span class="ul">
+							<span class="li"></span>
+							<span class="li">분석기준 :  기간 | 광고상품 | 캠페인| 그룹 | 키워드 | 영역</span>
+							<span class="li">광고데이터 : 노출일수| 품질지수 ｜ 평균노출순위| 노출 수| 클릭 수| 클릭률 ｜클릭비용 ｜총비용</span>
+							<span class="li">전환데이터 : 전환수｜직접전환수｜간접전환수｜매출액｜직접매출액｜간접매출액<br>
+								전환데이터는 전환설정에서 선택한 데이터가 노출됩니다.<br>
+								(ADSSOM전환, 매체전환, 전환데이터 미노출 중. 상세설명은 전환설정의 도움말을 참조하세요)								
+							</span>
+							</span>
+							[참고] 기준항목 선택 시 , 선택된 기준항목 값을 기준으로 한 지표 값이 노출됩니다.<br>
+							미 선택 된 기준항목도 칼럼은 노출되지만 칼럼에 해당하는 지표는 노출되지 않습니다<br>
+							[참고] 다음 클릭스의 ‘캠페인’ 은 분석기준 항목 ‘사이트’로 표시됩니다.<br>
+						</span>
+					</span>
+				</em>
+				<select class="selectbox">
+					<option>전환기간-전환기간별성과</option>
+				</select>
+			</div>	
+			
+			<!-- 리포트 생성 - 기간유형	-->
+			<div class="section_report">
+				<h5 class="index_report">기간유형
+					<!-- [D] 마우스오버시 .expand 추가 -->
+					<span class="wrap_hint">
+						<a href="#" class="btn_hint">?</a>
+						<span class="ly_hint">
+							<strong class="tit">기간유형 도움말</strong>
+							<span class="ul">
+							<span class="li">기간요약 : 통계기간의 합계데이터를 분석기준에 따라 요약하여 보여줍니다.</span>
+							<span class="li">일별 : 분석기준의 일자별 데이터를 보여줍니다.</span>
+							<span class="li">월별 : 분석기준 성과를 월별로 보여줍니다.<br>
+								EX) 기간유형 – 일별, 분석기준 – 광고상품, 사이트, 그룹, 키워드 선택시<br>
+								키워드 단위의 일별 리포트 데이터를 생성합니다.				
+							</span>
+							</span>
+						</span>
+					</span>
+				</h5>
+				<span class="group1">
+					<select class="selectbox">
+						<option>기간요약</option>
+					</select>
+				</span>
+				<span class="group2">
+					<input type="text" class="datepicker" style="width:150px">
+					<span class="bar_h">-</span>
+					<input type="text" class="datepicker" style="width:150px">
+					<span class="msg_help">한번에 조회 가능한 기간은 31일 입니다.</span>
+				</span>
+			</div>
+			
+			<!-- 리포트 생성 - 기간유형	-->
+			<div class="section_report">
+				<h5 class="index_report">기간유형
+					<!-- [D] 마우스오버시 .expand 추가 -->
+					<span class="wrap_hint">
+						<a href="#" class="btn_hint">?</a>
+						<span class="ly_hint">
+							<strong class="tit">기간유형 도움말</strong>
+							<span class="ul">
+							<span class="li">기간요약 : 통계기간의 합계데이터를 분석기준에 따라 요약하여 보여줍니다.</span>
+							<span class="li">일별 : 분석기준의 일자별 데이터를 보여줍니다.</span>
+							<span class="li">월별 : 분석기준 성과를 월별로 보여줍니다.<br>
+								EX) 기간유형 – 일별, 분석기준 – 광고상품, 사이트, 그룹, 키워드 선택시<br>
+								키워드 단위의 일별 리포트 데이터를 생성합니다.				
+							</span>
+							</span>
+						</span>
+					</span>
+				</h5>
+				<span class="group2">
+					<input type="text" class="datepicker" style="width:150px">
+					<span class="bar_h">-</span>
+					<input type="text" class="datepicker" style="width:150px">
+					<span class="msg_help">한번에 조회 가능한 기간은 31일 입니다.</span>
+				</span>
+			</div>
+			
+			<!-- 리포트 생성 - 전환설정 -->
+			<div class="section_report">
+				<em class="index_report">전환설정
+					<!-- [D] 마우스오버시 .expand 추가 -->
+					<span class="wrap_hint">
+						<a href="#" class="btn_hint">?</a>
+						<span class="ly_hint">
+							<span class="ul">
+							<span class="li">선택한 전환이 전환데이터 부분에 노출됩니다.</span>
+							<span class="li">ADSSOM 전환 중 일부전환만 선택하여 보고싶은 경우 ‘ADSSOM전환-선택’을 체크한 후<br>리포트에 표시할 전환데이터를 체크박스에서 체크하세요.</span>
+							</span>
+						</span>
+					</span>
+				</em>
+				<span class="group_inp_range">
+					<span class="inp_radio"><input type="radio"><label>ADSSOM 총전환</label></span>
+					<span class="inp_radio"><input type="radio"><label>매체 전환</label></span>
+					<span class="inp_radio"><input type="radio"><label>전환데이터 미노출</label></span>
+				</span>
+			</div>
+			
+			<!-- 리포트 생성 - 리포트 이름 -->
+			<div class="section_report">
+				<em class="index_report">리포트 이름</em>
+				<input type="text" class="inp_text" style="width:300px">
+				<a href="#" class="btn_basic">자동생성</a>
+			</div>
+			
+			<!-- 하단 버튼 -->
+			<div class="btn_section_foot">
+				<a href="#" class="btn_b_odd">리포트 생성</a>
+				<a href="#" class="btn_b_gray">취소</a>
+			</div>
+			
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,634 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/chartist.min.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/lib/chartist.min.js"></script>
+<!-- chartist IE9 크로스 브라우징용 JS -->
+<script type="text/javascript" src="js/lib/matchMedia.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<!-- 메인 슬라이드 -->
+<script type="text/javascript" src="js/lib/jquery.bxslider.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var slider = $('.bxslider').bxSlider({
+		auto: true,
+		pause: 6000,
+		speed: 800,
+		easing: 'easeOutExpo'
+	});
+    $('.bx-pager-item a').click(function(e){
+        var i = $(this).index();
+    	autoPlay();
+    });
+    $('.bx-prev,.bx-next').click(function(e){
+    	autoPlay();
+    });
+    function autoPlay(){
+        slider.stopAuto();
+        restart=setTimeout(function(){
+            slider.startAuto();
+            });
+        return false;
+    }
+});
+</script>
+<!-- // 메인 슬라이드 -->
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header" class="main_header">
+		<div class="area_ct">
+			<h1 class="logo"><a href="#" class="sp">Open Ads</a></h1>		
+			<ul id="sta">
+			<!-- [D] 로그인 전 -->
+			<li><a href="#">로그인</a></li>
+			<li><a href="#">회원가입</a></li>
+			<!-- //[D] 로그인 전-->
+			<!-- [D] 로그인 후 -->
+			<li>
+				<a href="#" class="my_id">openads</a>
+				<div class="sta_login">
+					<p>seyeon-keum@naver.com<b>님</b></p>
+					<ul>
+					<li><a href="#">마이페이지</a></li>
+					<li><a href="#">로그아웃</a></li>
+					</ul>
+				</div>
+			</li>
+			<!-- //[D] 로그인 후-->
+			<!-- [D] 공통영역 -->
+			<li><a href="#">서비스신청</a></li>
+			<li><a href="#">고객센터</a></li>
+			<li><a href="#" class="sp">검색</a></li>
+			<!-- //[D] 공통영역 -->
+			</ul>
+			<div class="head_srch plc_wrap">
+				<input type="text" id="total_srch" class="plc_ip">
+				<label for="total_srch" class="plc_lb">검색어를 입력해주세요</label>
+				<button type="submit">검색</button>
+			</div>
+			<ul id="gnb">
+			<li>
+				<a href="#" class="depth1 beta">오픈랭킹</a>
+				<ul class="depth2 openRanking" style="display:none">
+				<!-- 활성화 페이지 .on 추가 -->
+				<li><a href="#">오 픈랭킹 홈</a></li>
+				<li><a href="#">상품랭킹</a></li>
+				<li><a href="#">오픈효율지수</a></li>
+				<li><a href="#">유입출처(매체)랭킹</a></li>
+				<li><a href="#">키워드랭킹</a></li>
+				<li><a href="#">스마트검색</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="depth1">상품정보</a>
+				<ul class="depth2 productInfo" style="display:none">
+				<li><a href="#">상품정보 홈</a></li>
+				<li><a href="#">검색광고</a></li>
+				<li><a href="#">배너광고</a></li>
+				<li><a href="#">동영상광고</a></li>
+				<li><a href="#">콘텐츠광고</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="depth1">광고진단</a>
+				<ul class="depth2 ads" style="display:none">
+				<li><a href="#">내 광고 현황</a></li>
+				<li><a href="#">경쟁사 비교 분석</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="depth1">트렌드</a>
+				<ul class="depth2 trend" style="display:none">
+				<li><a href="#">트렌드 홈</a></li>
+				<li><a href="#">마케팅트렌드</a></li>
+				<li><a href="#">매체소식</a></li>
+				<li><a href="#">신규상품</a></li>
+				<li><a href="#">컨퍼런스/교육정보</a></li>
+				<li><a href="#">오픈칼럼</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="solution">솔루션</a>
+			</li>			
+			</ul>		
+		</div>
+	</div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container" class="main_container">
+		<!-- 메인슬라이드 영역 -->
+		<div class="main_slide">			
+			<ul class="bxslider">
+			<li class="bs_bg1">
+				<div class="area_ct">
+					<p>모든 <b>광고상품의 효율</b>을<br>한눈에 확인할 수 있습니다</p>
+				</div>
+			</li>
+			<li class="bs_bg2">
+				<div class="area_ct">
+					<p>오픈애즈가 전해주는<br><b>마케팅 트렌드</b>를 만나보세요.</p>
+				</div>
+			</li>
+			<li class="bs_bg3">
+				<div class="area_ct">
+					<p><b>광고비의 10%</b>를<br> 돌려드립니다.</p>
+				</div>
+			</li>
+			</ul>
+		</div>
+		<!-- // 메인슬라이드 영역 -->
+		<!-- 게시판 영역 -->
+		<div class="board_area">
+			<ul class="board_lst area_ct">
+			<li>
+				<h2>마케팅 소식</h2>
+				<a href="#" class="btn_more4">더보기</a>
+				<ul class="slide_lst">
+				<li>
+					<a href="#" class="tit">트위터의 빠른 정보 전달 과연 얼마나 트위터의 빠른 정보 전달 과연...</a>			
+					<p class="date">16.05.01</p>	
+				</li>
+				<li style="display:none">
+					<a href="#" class="tit">트위터의 ㅃㄹ 정보 전달 과연 얼마나 트위터의 빠른 정보 전달 과연...</a>
+					<p class="date">16.05.02</p>	
+				</li>
+				<li style="display:none">
+					<a href="#" class="tit">트위터의 빠른 ㅈㄷ 전달 과연 얼마나 트위터의 빠른 정보 전달 과연...</a>
+					<p class="date">16.05.03</p>	
+				</li>
+				</ul>
+				<ul class="bd_nav">
+				<li class="on"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				</ul>		
+			</li>
+			<li>
+				<h2>신규 상품</h2>
+				<a href="#" class="btn_more4">더보기</a>
+				<ul class="slide_lst">
+				<li>
+					<a href="#" class="tit">클릭초이스 상품광고 클릭초이스 상품광고 클릭초이스 상품광고...</a>			
+					<p class="date">16.05.04</p>	
+				</li>
+				<li style="display:none">
+					<a href="#" class="tit">클릭초이스 ㅅㅍ광고 클릭초이스 상품광고 클릭초이스 상품광고...</a>		
+					<p class="date">16.05.05</p>	
+				</li>
+				<li style="display:none">
+					<a href="#" class="tit">클릭초이스 상품ㄱㄱ 클릭초이스 상품광고 클릭초이스 상품광고...</a>		
+					<p class="date">16.05.06</p>	
+				</li>
+				</ul>
+				<ul class="bd_nav">
+				<li class="on"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				</ul>		
+			</li>
+			<li>
+				<h2>오픈토크</h2>
+				<a href="#" class="btn_more4">더보기</a>
+				<ul class="slide_lst">
+				<li>
+					<a href="#" class="tit">2016 상반기 리워드 매체애 대한<br>당신의 의견은?</a>			
+				</li>
+				<li style="display:none">
+					<a href="#" class="tit">2015 상반기 리워드 매체애 대한<br>당신의 의견은?</a>				
+				</li>
+				<li style="display:none">
+					<a href="#" class="tit">2014 상반기 리워드 매체애 대한<br>당신의 의견은?</a>			
+				</li>
+				</ul>
+				<ul class="bd_nav">
+				<li class="on"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				</ul>
+			</li>
+			<li>
+				<h2>공지사항</h2>
+				<a href="#" class="btn_more4">더보기</a>
+				<ul class="slide_lst">
+				<li>
+					<a href="#" class="tit">공지사항입니다 공지사항입니다 공지사항입니다 공지사항입니다</a>			
+					<p class="date">16.05.07</p>	
+				</li>
+				<li style="display:none">
+					<a href="#" class="tit">공지사항ㅇㄴㄷ 공지사항입니다 공지사항입니다 공지사항입니다</a>		
+					<p class="date">16.05.08</p>	
+				</li>
+				<li style="display:none">
+					<a href="#">
+					<a href="#" class="tit">공지사항입니다 ㄱㅈㅅㅎ입니다 공지사항입니다 공지사항입니다</a>		
+					<p class="date">16.05.09</p>	
+				</li>
+				</ul>
+				<ul class="bd_nav">
+				<li class="on"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				</ul>
+			</li>
+			</ul>
+		</div>
+		<!-- // 게시판 영역 -->
+		<!-- 상품랭킹 영역 -->
+		<div class="product_rank">
+			<div class="area_ct">
+				<h2>상품 Ranking</h2>
+				<ul class="tab_v5 tab_area">
+				<li class="on"><a href="#">클릭률</a></li>
+				<li><a href="#">클릭비용</a></li>
+				<li><a href="#">전환율</a></li>
+				<li><a href="#">전환비용</a></li>
+				<li><a href="#">ROAS</a></li>
+				</ul>		
+				<ul class="tab_lst">
+				<li>
+					<div class="fl_l">
+						<dl class="dl_type6">
+						<dt>클릭률</dt>
+						<dd>사용자가 특정 광고상품을 보고 해당 광고상품을<br>클릭한 비율을 나타내는 지표입니다.</dd>
+						</dl>
+						<a href="#" class="more">자세히보기</a>
+					</div>
+					<ul class="product_lst">
+					<li><span class="rank">1</span><span class="change up">1</span><span class="tit" title="네이버 클릭초이스 네이버 클릭초이스">네이버 클릭초이스 네이버 클릭초이스</span><span class="percent">4.11%</span></li>
+					<li><span class="rank">2</span><span class="change down">1</span><span class="tit" title="카카오 클릭스">카카오 클릭스</span><span class="percent">3.41%</span></li>
+					<li><span class="rank">3</span><span class="change">0</span><span class="tit" title="네이버 타임보드">네이버 타임보드</span><span class="percent">3.30%</span></li>
+					<li><span class="rank">4</span><span class="change up">0</span><span class="tit" title="크리테오">크리테오</span><span class="percent">3.28%</span></li>
+					<li><span class="rank">5</span><span class="change down">3</span><span class="tit" title="앱팡">앱팡</span><span class="percent">3.20%</span></li>
+					<li><span class="rank">6</span><span class="change">2</span><span class="tit" title="허니스크린">허니스크린</span><span class="percent">3.18%</span></li>
+					<li><span class="rank">7</span><span class="change up">0</span><span class="tit" title="OK캐시백">OK캐시백</span><span class="percent">2.01%</span></li>
+					<li><span class="rank">8</span><span class="change down">1</span><span class="tit" title="다음">다음</span><span class="percent">4.11%</span></li>
+					<li><span class="rank">9</span><span class="change">0</span><span class="tit" title="인모비">인모비</span><span class="percent">3.41%</span></li>
+					<li><span class="rank">10</span><span class="change">0</span><span class="tit" title="시럽">시럽</span><span class="percent">3.30%</span></li>
+					</ul>
+				</li>
+				<li style="display:none">
+					<div class="fl_l">
+						<dl class="dl_type6">
+						<dt>클릭비용</dt>
+						<dd>사용자가 특정 광고상품을 보고 해당 광고상품을<br>클릭한 비율을 나타내는 지표입니다.</dd>
+						</dl>
+						<a href="#" class="more">자세히보기</a>
+					</div>
+					<ul class="product_lst">
+					<li><span class="rank">1</span><span class="change up">1</span><span class="tit" title="네이버 클릭초이스 네이버 클릭초이스">네이버 클릭초이스 네이버 클릭초이스</span><span class="percent">4.11%</span></li>
+					<li><span class="rank">2</span><span class="change down">1</span><span class="tit" title="카카오 클릭스">카카오 클릭스</span><span class="percent">3.41%</span></li>
+					<li><span class="rank">3</span><span class="change">0</span><span class="tit" title="네이버 타임보드">네이버 타임보드</span><span class="percent">3.30%</span></li>
+					<li><span class="rank">4</span><span class="change up">0</span><span class="tit" title="크리테오">크리테오</span><span class="percent">3.28%</span></li>
+					<li><span class="rank">5</span><span class="change down">3</span><span class="tit" title="앱팡">앱팡</span><span class="percent">3.20%</span></li>
+					<li><span class="rank">6</span><span class="change">2</span><span class="tit" title="허니스크린">허니스크린</span><span class="percent">3.18%</span></li>
+					<li><span class="rank">7</span><span class="change up">0</span><span class="tit" title="OK캐시백">OK캐시백</span><span class="percent">2.01%</span></li>
+					<li><span class="rank">8</span><span class="change down">1</span><span class="tit" title="다음">다음</span><span class="percent">4.11%</span></li>
+					<li><span class="rank">9</span><span class="change">0</span><span class="tit" title="인모비">인모비</span><span class="percent">3.41%</span></li>
+					<li><span class="rank">10</span><span class="change">0</span><span class="tit" title="시럽">시럽</span><span class="percent">3.30%</span></li>
+					</ul>
+				</li>
+				<li style="display:none">
+					<div class="fl_l">
+						<dl class="dl_type6">
+						<dt>전환율</dt>
+						<dd>사용자가 특정 광고상품을 보고 해당 광고상품을<br>클릭한 비율을 나타내는 지표입니다.</dd>
+						</dl>
+						<a href="#" class="more">자세히보기</a>
+					</div>
+					<ul class="product_lst">
+					<li><span class="rank">1</span><span class="change up">1</span><span class="tit" title="네이버 클릭초이스 네이버 클릭초이스">네이버 클릭초이스 네이버 클릭초이스</span><span class="percent">4.11%</span></li>
+					<li><span class="rank">2</span><span class="change down">1</span><span class="tit" title="카카오 클릭스">카카오 클릭스</span><span class="percent">3.41%</span></li>
+					<li><span class="rank">3</span><span class="change">0</span><span class="tit" title="네이버 타임보드">네이버 타임보드</span><span class="percent">3.30%</span></li>
+					<li><span class="rank">4</span><span class="change up">0</span><span class="tit" title="크리테오">크리테오</span><span class="percent">3.28%</span></li>
+					<li><span class="rank">5</span><span class="change down">3</span><span class="tit" title="앱팡">앱팡</span><span class="percent">3.20%</span></li>
+					<li><span class="rank">6</span><span class="change up">0</span><span class="tit" title="OK캐시백">OK캐시백</span><span class="percent">2.01%</span></li>
+					<li><span class="rank">7</span><span class="change">2</span><span class="tit" title="허니스크린">허니스크린</span><span class="percent">3.18%</span></li>
+					<li><span class="rank">8</span><span class="change down">1</span><span class="tit" title="다음">다음</span><span class="percent">4.11%</span></li>
+					<li><span class="rank">9</span><span class="change">0</span><span class="tit" title="인모비">인모비</span><span class="percent">3.41%</span></li>
+					<li><span class="rank">10</span><span class="change">0</span><span class="tit" title="시럽">시럽</span><span class="percent">3.30%</span></li>
+					</ul>
+				</li>
+				<li style="display:none">
+					<div class="fl_l">
+						<dl class="dl_type6">
+						<dt>전환비용</dt>
+						<dd>사용자가 특정 광고상품을 보고 해당 광고상품을<br>클릭한 비율을 나타내는 지표입니다.</dd>
+						</dl>
+						<a href="#" class="more">자세히보기</a>
+					</div>
+					<ul class="product_lst">
+					<li><span class="rank">1</span><span class="change up">1</span><span class="tit" title="네이버 클릭초이스 네이버 클릭초이스">네이버 클릭초이스 네이버 클릭초이스</span><span class="percent">4.11%</span></li>
+					<li><span class="rank">2</span><span class="change down">1</span><span class="tit" title="카카오 클릭스">카카오 클릭스</span><span class="percent">3.41%</span></li>
+					<li><span class="rank">3</span><span class="change">0</span><span class="tit" title="네이버 타임보드">네이버 타임보드</span><span class="percent">3.30%</span></li>
+					<li><span class="rank">4</span><span class="change up">0</span><span class="tit" title="크리테오">크리테오</span><span class="percent">3.28%</span></li>
+					<li><span class="rank">5</span><span class="change down">3</span><span class="tit" title="앱팡">앱팡</span><span class="percent">3.20%</span></li>
+					<li><span class="rank">6</span><span class="change">2</span><span class="tit" title="허니스크린">허니스크린</span><span class="percent">3.18%</span></li>
+					<li><span class="rank">7</span><span class="change up">0</span><span class="tit" title="OK캐시백">OK캐시백</span><span class="percent">2.01%</span></li>
+					<li><span class="rank">8</span><span class="change">0</span><span class="tit" title="인모비">인모비</span><span class="percent">3.41%</span></li>
+					<li><span class="rank">9</span><span class="change down">1</span><span class="tit" title="다음">다음</span><span class="percent">4.11%</span></li>
+					<li><span class="rank">10</span><span class="change">0</span><span class="tit" title="시럽">시럽</span><span class="percent">3.30%</span></li>
+					</ul>
+				</li>
+				<li style="display:none">
+					<div class="fl_l">
+						<dl class="dl_type6">
+						<dt>ROAS</dt>
+						<dd>사용자가 특정 광고상품을 보고 해당 광고상품을<br>클릭한 비율을 나타내는 지표입니다.</dd>
+						</dl>
+						<a href="#" class="more">자세히보기</a>
+					</div>
+					<ul class="product_lst">
+					<li><span class="rank">1</span><span class="change up">1</span><span class="tit" title="네이버 클릭초이스 네이버 클릭초이스">네이버 클릭초이스 네이버 클릭초이스</span><span class="percent">4.11%</span></li>
+					<li><span class="rank">2</span><span class="change">0</span><span class="tit" title="네이버 타임보드">네이버 타임보드</span><span class="percent">3.30%</span></li>
+					<li><span class="rank">3</span><span class="change down">1</span><span class="tit" title="카카오 클릭스">카카오 클릭스</span><span class="percent">3.41%</span></li>
+					<li><span class="rank">4</span><span class="change up">0</span><span class="tit" title="크리테오">크리테오</span><span class="percent">3.28%</span></li>
+					<li><span class="rank">5</span><span class="change down">3</span><span class="tit" title="앱팡">앱팡</span><span class="percent">3.20%</span></li>
+					<li><span class="rank">6</span><span class="change">2</span><span class="tit" title="허니스크린">허니스크린</span><span class="percent">3.18%</span></li>
+					<li><span class="rank">7</span><span class="change up">0</span><span class="tit" title="OK캐시백">OK캐시백</span><span class="percent">2.01%</span></li>
+					<li><span class="rank">8</span><span class="change down">1</span><span class="tit" title="다음">다음</span><span class="percent">4.11%</span></li>
+					<li><span class="rank">9</span><span class="change">0</span><span class="tit" title="인모비">인모비</span><span class="percent">3.41%</span></li>
+					<li><span class="rank">10</span><span class="change">0</span><span class="tit" title="시럽">시럽</span><span class="percent">3.30%</span></li>
+					</ul>
+				</li>
+				</ul>	
+			</div>
+			<a href="#" class="btn_prev sp">이전</a>
+			<a href="#" class="btn_next sp">다음</a>
+		</div>
+		<!-- // 상품랭킹 영역 -->
+		<!-- 매체랭킹 영역 -->
+		<div class="media_rank">
+			<div class="area_ct">
+				<h2>매체 Ranking</h2>
+				<ul class="tab_v5 tab_area">
+				<li class="on"><a href="#">유입수 비중</a></li>
+				<li><a href="#">전환수 비중</a></li>
+				<li><a href="#">직접전환수 비중</a></li>
+				<li><a href="#">간접전환수 비중</a></li>
+				<li><a href="#">전환율</a></li>
+				</ul>		
+				<ul class="tab_lst">
+				<li>
+					<ul class="media_lst">
+					<li><a href="#">네이버</a></li>
+					<li><a href="#">다음</a></li>
+					<li><a href="#">구글</a></li>
+					<li><a href="#">네이버 모바일</a></li>
+					<li><a href="#">다음 모바일</a></li>
+					<li><a href="#">네이트</a></li>
+					<li><a href="#">11번가</a></li>
+					<li><a href="#">지마켓</a></li>
+					<li><a href="#">옥션</a></li>
+					<li class="on"><a href="#">현대 H몰</a></li>
+					</ul>
+					<div class="chart_wrap">
+						<!-- [D] 그래프 활성화 = 선택된 .ct-series에 .on 추가 -->
+						<div class="ct-chart ct-double-octave"></div>
+						<dl>
+						<dt>현대몰</dt>
+						<dd>11.11<span>%</span></dd>
+						</dl>
+					</div>
+					<div class="fl_r">
+						<dl class="dl_type6">
+						<dt>유입수 비중</dt>
+						<dd>특정 사이트에 유입된 사용자 수의<br>비중을 나타내는 지표입니다.</dd>
+						</dl>
+						<a href="#" class="more">자세히보기</a>
+					</div>
+				</li>
+				<li style="display:none">
+					<ul class="media_lst">
+					<li><a href="#">네이트</a></li>
+					<li class="on"><a href="#">네이버</a></li>
+					<li><a href="#">다음</a></li>
+					<li><a href="#">구글</a></li>
+					<li><a href="#">네이버 모바일</a></li>
+					<li><a href="#">다음 모바일</a></li>
+					<li><a href="#">11번가</a></li>
+					<li><a href="#">지마켓</a></li>
+					<li><a href="#">옥션</a></li>
+					<li><a href="#">현대 H몰</a></li>
+					</ul>
+					<div class="chart_wrap">
+						<!-- [D] 그래프 활성화 = 선택된 .ct-series에 .on 추가 -->
+						<div class="ct-chart2 ct-double-octave"></div>
+						<dl>
+						<dt>네이버</dt>
+						<dd>55.11<span>%</span></dd>
+						</dl>
+					</div>
+					<div class="fl_r">
+						<dl class="dl_type6">
+						<dt>전환수 비중</dt>
+						<dd>특정 사이트에 유입된 사용자 수의<br>비중을 나타내는 지표입니다.</dd>
+						</dl>
+						<a href="#" class="more">자세히보기</a>
+					</div>
+				</li>
+				<li style="display:none">
+					<ul class="media_lst">
+					<li><a href="#">네이버</a></li>
+					<li><a href="#">다음</a></li>
+					<li><a href="#">구글</a></li>
+					<li><a href="#">네이버 모바일</a></li>
+					<li><a href="#">다음 모바일</a></li>
+					<li><a href="#">네이트</a></li>
+					<li><a href="#">현대 H몰</a></li>
+					<li><a href="#">11번가</a></li>
+					<li class="on"><a href="#">지마켓</a></li>
+					<li><a href="#">옥션</a></li>
+					</ul>
+					<div class="chart_wrap">
+						<!-- [D] 그래프 활성화 = 선택된 .ct-series에 .on 추가 -->
+						<div class="ct-chart3 ct-double-octave"></div>
+						<dl>
+						<dt>지마켓</dt>
+						<dd>33.33<span>%</span></dd>
+						</dl>
+					</div>
+					<div class="fl_r">
+						<dl class="dl_type6">
+						<dt>직접전환수 비중</dt>
+						<dd>특정 사이트에 유입된 사용자 수의<br>비중을 나타내는 지표입니다.</dd>
+						</dl>
+						<a href="#" class="more">자세히보기</a>
+					</div>
+				</li>
+				<li style="display:none">
+					<ul class="media_lst">
+					<li><a href="#">네이버</a></li>
+					<li><a href="#">다음</a></li>
+					<li><a href="#">구글</a></li>
+					<li><a href="#">네이버 모바일</a></li>
+					<li><a href="#">네이트</a></li>
+					<li><a href="#">11번가</a></li>
+					<li><a href="#">지마켓</a></li>
+					<li class="on"><a href="#">다음 모바일</a></li>
+					<li><a href="#">옥션</a></li>
+					<li><a href="#">현대 H몰</a></li>
+					</ul>
+					<div class="chart_wrap">
+						<!-- [D] 그래프 활성화 = 선택된 .ct-series에 .on 추가 -->
+						<div class="ct-chart4 ct-double-octave"></div>
+						<dl>
+						<dt>다음 모바일</dt>
+						<dd>32.55<span>%</span></dd>
+						</dl>
+					</div>
+					<div class="fl_r">
+						<dl class="dl_type6">
+						<dt>간접전환수 비중</dt>
+						<dd>특정 사이트에 유입된 사용자 수의<br>비중을 나타내는 지표입니다.</dd>
+						</dl>
+						<a href="#" class="more">자세히보기</a>
+					</div>
+				</li>
+				<li style="display:none">
+					<ul class="media_lst">
+					<li><a href="#">네이버</a></li>
+					<li><a href="#">다음 모바일</a></li>
+					<li><a href="#">다음</a></li>
+					<li><a href="#">네이버 모바일</a></li>
+					<li><a href="#">네이트</a></li>
+					<li class="on"><a href="#">11번가</a></li>
+					<li><a href="#">구글</a></li>
+					<li><a href="#">지마켓</a></li>
+					<li><a href="#">옥션</a></li>
+					<li><a href="#">현대 H몰</a></li>
+					</ul>
+					<div class="chart_wrap">
+						<!-- [D] 그래프 활성화 = 선택된 .ct-series에 .on 추가 -->
+						<div class="ct-chart5 ct-double-octave"></div>
+						<dl>
+						<dt>11번가</dt>
+						<dd>20.2<span>%</span></dd>
+						</dl>
+					</div>
+					<div class="fl_r">
+						<dl class="dl_type6">
+						<dt>전환율</dt>
+						<dd>특정 사이트에 유입된 사용자 수의<br>비중을 나타내는 지표입니다.</dd>
+						</dl>
+						<a href="#" class="more">자세히보기</a>
+					</div>
+				</li>
+				</ul>	
+				<script>
+					// 유입수 비중 chart
+					new Chartist.Pie('.ct-chart', {
+					  series: [46,5,7,8,15,3,2,3,10,1]
+					}, {
+					  donut: true,
+					  donutWidth: 25,
+					  startAngle: 240,
+					  total: 100,
+					  showLabel: false, 
+					  width: 275,
+					  height: 275
+					});
+					// 전환수 비중 chart
+					new Chartist.Pie('.ct-chart2', {
+					  series: [3,5,7,8,15,40,2,3,1,16]
+					}, {
+					  donut: true,
+					  donutWidth: 25,
+					  startAngle: 240,
+					  total: 100,
+					  showLabel: false, 
+					  width: 275,
+					  height: 275
+					});
+					// 직접전환수 비중 chart
+					new Chartist.Pie('.ct-chart3', {
+					  series: [3,5,7,8,15,16,2,3,1,40]
+					}, {
+					  donut: true,
+					  donutWidth: 25,
+					  startAngle: 240,
+					  total: 100,
+					  showLabel: false, 
+					  width: 275,
+					  height: 275
+					});
+					// 간접전환수 비중 chart
+					new Chartist.Pie('.ct-chart4', {
+					  series: [3,5,7,8,15,20,2,3,1,36]
+					}, {
+					  donut: true,
+					  donutWidth: 25,
+					  startAngle: 240,
+					  total: 100,
+					  showLabel: false, 
+					  width: 275,
+					  height: 275
+					});
+					// 전화율 chart
+					new Chartist.Pie('.ct-chart5', {
+					  series: [3,21,7,8,15,20,2,3,1,20]
+					}, {
+					  donut: true,
+					  donutWidth: 25,
+					  startAngle: 240,
+					  total: 100,
+					  showLabel: false, 
+					  width: 275,
+					  height: 275
+					});
+				</script>
+			</div>
+		</div>
+		<!-- // 매체랭킹 영역 -->
+		<!-- 서비스 바로가기 영역 -->
+		<div class="service_link">
+			<div class="area_ct">
+				<h2>서비스 바로가기</h2>
+				<ul class="service_lst">
+				<li><b>오픈애즈</b><span>서비스 신청</span><a href="#" class="btn_more4">바로가기</a></li>
+				<li><b>ADDSOM</b><span>광고운영솔루션</span><a href="#" class="btn_more4">바로가기</a></li>
+				<li><b>에이스카운터</b><span>로그분석 서비스</span><a href="#" class="btn_more4">바로가기</a></li>
+				<li><b>155-0301</b><span>고객센터 문의상담</span><a href="#" class="btn_more4">바로가기</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- // 서비스 바로가기 영역 -->
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer">
+		<div class="area_ct">	
+			<h2>NHN Entertainment AD</h2>
+			<ul class="lst_foot">
+			<li><a href="#">서비스가이드</a></li>			
+			<li><a href="#">이용약관</a></li>			
+			<li><a href="#">개인정보취급방침</a></li>			
+			<li>사업자등록번호 000-00-00000</li>			
+			<li>대표 : 심도섭</li>			
+			</ul>
+			<ul class="lst_foot">
+			<li>대왕판교로 645번길 16 NHN 엔터테이먼트 플레이뮤지엄</li>			
+			<li>전화번호  1800-0704 </li>			
+			</ul>		
+			<p class="copy">Copyright <em>NHN Entertainment AD</em>. All right reserved</p>
+		</div>
+	</div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

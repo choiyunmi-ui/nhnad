@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+			<div class="section_head">
+				<h2 class="tit_top">전략그룹 대량등록</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">광고정보관리</a>
+						<div class="dep1">
+							<a href="#" class="selected">광고정보관리</a>
+							<a href="#">분석/리포트</a>
+							<a href="#">자동입찰</a>
+							<a href="#">마켓트렌드</a>
+							<a href="#">광고제안</a>
+							<a href="#">어드민</a>
+							<a href="#">시스템관리</a>
+						</div>
+					</span>
+					<span class="bar">&gt;</span>
+					<span class="dep_group">
+						<a href="#">광고설정/전략그룹대량등록</a>
+						<div class="dep2">
+							<em class="tit_dep2">광고설정</em>
+							<a href="#">광고주관리</a>
+							<a href="#">데이터관리</a>
+							<a href="#">스크립트관리</a>
+							<a href="#">추적코드관리</a>
+							<a href="#">랜딩페이지검수</a>
+							<a href="#">잔액부족알림이력</a>
+							<em class="tit_dep2">전략그룹</em>
+							<a href="#">전략그룹관리</a>
+							<a href="#" class="selected">전략그룹대량이동</a>
+						</div>
+					</span>
+				</div>
+			</div>			
+			
+			<!-- [D] 선택된 탭 .selected -->
+			<div class="tab_page">
+				<ul>
+				<li class="selected"><a href="#">대량등록 파일업로드</a></li>
+				<li><a href="#">광고상품정보 다운로드</a></li>
+				</ul>
+			</div>
+			
+			<!-- 조회필터 -->
+			<div class="section_filter" name="case_filter_team3">
+				@template_filter.html
+			</div>
+			<div class="section_filter" name="case_filter_upload">
+				@template_filter.html
+			</div>
+			<div class="section_filter" name="case_filter_inpname">
+				@template_filter.html
+			</div>
+	
+			<div class="sub_head">
+				<h3 class="tit_section">전략그룹 대량등록 파일 업로드 작업조회</h3>
+			</div>			
+			<div class="section_filter" name="case_filter_team2">
+				@template_filter.html
+			</div>
+			<div class="section_filter" name="case_filter_datepicker4">
+				@template_filter.html
+			</div>		
+			
+			<div class="section_box" name="adset_stra_bulkup_01">
+				<table class="tbl_form">
+				<caption>데이터 삭제 이력 thead</caption>
+				<colgroup><col width="13.28%"><col width="6.3%"><col width="7.25%"><col width="13.3%"><col width="14%"><col width="11%"><col width="14%"><col width="7.6%"><col><col width="82px"></colgroup>
+				<thead>
+				<tr>
+					<th>광고주</th>
+					<th>팀</th>
+					<th>담당자</th>
+					<th>사이트</th>
+					<th>광고상품</th>
+					<th>발생시간</th>
+					<th>작업명</th>
+					<th>상태</th>
+					<th>등록자</th>
+					<th>결과다운로드</th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<caption>데이터 삭제 이력 tbody</caption>
+				<colgroup><col width="13.28%"><col width="6.3%"><col width="7.25%"><col width="13.3%"><col width="14%"><col width="11%"><col width="14%"><col width="7.6%"><col><col width="82px"></colgroup>
+				<tbody>
+				<tr>
+					<td><p>박선유네이버12123</p></td>
+					<td><p>1팀</p></td>
+					<td><p>박선유123</p></td>
+					<td><p>사이트(www.site.co.kr)</p></td>
+					<td><p>네이버클릭초이스계정</p></td>
+					<td><p>2014.11.10 <span class="time">24:00</span></p></td>
+					<td title="전략그룹대량등록 파일 업로드 작업조회담당자123"><p><span class="ellipsis">전략그룹대량등록 파일 업로드 작업조회</span></p></td>
+					<td><p>등록</p></td>
+					<td><p>등록자 ID</p></td>
+					<td><img src="img/loding.gif" alt="loding icon" class="ico_loadin"></td>
+				</tr>
+				<tr>
+					<td><p>박선유네이버12123</p></td>
+					<td><p>1팀</p></td>
+					<td><p>박선유123</p></td>
+					<td><p>사이트(www.site.co.kr)</p></td>
+					<td><p>다음클릭스</p></td>
+					<td><p>2014.11.10 <span class="time">24:00</span></p></td>
+					<td title="전략그룹대량등록 파일 업로드 작업조회담당자123"><p><span class="ellipsis">전략그룹대량등록 파일 업로드 작업조회담당자123</span></p></td>
+					<td><p>실패</p></td>
+					<td><p>등록자 ID</p></td>
+					<td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td>
+				</tr>
+				<tr>
+					<td><p>박선유네이버12123</p></td>
+					<td><p>2팀</p></td>
+					<td><p>박선유123</p></td>
+					<td><p>사이트(www.site.co.kr)</p></td>
+					<td><p>다음클릭스대량등록</p></td>
+					<td><p>2014.11.10 <span class="time">24:00</span></p></td>
+					<td title="전략그룹대량등록 파일 업로드 작업조회"><p><span class="ellipsis">전략그룹대량등록 파일 업로드 작업조회</span></p></td>
+					<td><p>진행중</p></td>
+					<td><p>등록자 ID</p></td>
+					<td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td>
+				</tr>
+				<tr>
+					<td><p>박선유네이버12123</p></td>
+					<td><p>팀이름</p></td>
+					<td><p>박선유123</p></td>
+					<td><p>사이트(www.site.co.kr)</p></td>
+					<td><p>네이버클릭초이스전략그룹</p></td>
+					<td><p>2014.11.10 <span class="time">24:00</span></p></td>
+					<td title="전략그룹대량등록 파일 업로드 작업조회담당자123"><p><span class="ellipsis">전략그룹대량등록 파일 업로드 작업조회담당자123</span></p></td>
+					<td><p>대기중</p></td>
+					<td><p>등록자 ID</p></td>
+					<td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="pagenate">
+					<a href="#" class="btn_first">처음</a>
+					<a href="#" class="btn_prev">이전</a>
+					<span class="num">
+						<a href="#">1</a>
+						<span class="bar">|</span>
+						<a href="#">2</a>
+						<span class="bar">|</span>
+						<a href="#">3</a>
+						<span class="bar">|</span>
+						<a href="#">4</a>
+						<span class="bar">|</span>
+						<a href="#">5</a>	
+					</span>
+					<a href="#" class="btn_next">다음</a>
+					<a href="#" class="btn_last">끝</a>
+				</div>
+			</div>
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

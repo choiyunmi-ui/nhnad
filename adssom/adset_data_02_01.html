@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+			<div class="section_head">
+				<h2 class="tit_top">데이터 관리</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">광고정보관리</a>
+						<div class="dep1">
+							<a href="#" class="selected">광고정보관리</a>
+							<a href="#">분석/리포트</a>
+							<a href="#">자동입찰</a>
+							<a href="#">마켓트렌드</a>
+							<a href="#">광고제안</a>
+							<a href="#">어드민</a>
+							<a href="#">시스템관리</a>
+						</div>
+					</span>
+					<span class="bar">&gt;</span>
+					<span class="dep_group">
+						<a href="#">광고설정/데이터관리</a>
+						<div class="dep2">
+							<em class="tit_dep2">광고설정</em>
+							<a href="#">광고주관리</a>
+							<a href="#" class="selected">데이터관리</a>
+							<a href="#">스크립트관리</a>
+							<a href="#">추적코드관리</a>
+							<a href="#">랜딩페이지검수</a>
+							<a href="#">잔액부족알림이력</a>
+							<em class="tit_dep2">전략그룹</em>
+							<a href="#">전략그룹관리</a>
+							<a href="#">전략그룹대량이동</a>
+						</div>
+					</span>
+				</div>
+			</div>			
+			
+			<!-- [D] 선택된 탭 .selected -->
+			<div class="tab_page">
+				<ul>
+				<li><a href="#">광고 데이터 입력</a></li>
+				<li class="selected"><a href="#">광고 데이터 삭제</a></li>
+				</ul>
+			</div>
+			
+			<!-- 조회필터 -->
+			<div class="section_filter" name="case_filter_team1">
+				@template_filter.html
+			</div>
+			<div class="section_filter" name="case_filter_datepicker5">
+				@template_filter.html
+			</div>
+			<div class="section_filter filter_sub">
+				<h5 class="index" style="width:340px">광고상품 선택 <span class="stxt">- 리포트를 삭제할 광고상품을 선택하세요</span></h5>
+				<div class="lst_check">
+					<ul>
+					<li><span class="inp_check"><input type="checkbox"><label>회원가입</label></span></li>
+					<li><span class="inp_check"><input type="checkbox"><label>구매</label></span></li>
+					<li><span class="inp_check"><input type="checkbox"><label>견적신청</label></span></li>
+					<li><span class="inp_check"><input type="checkbox"><label>상담신청</label></span></li>
+					<li><span class="inp_check"><input type="checkbox"><label>장바구니</label></span></li>
+					<li><span class="inp_check"><input type="checkbox"><label>장바구니</label></span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="btn_filter_foot">
+				<a href="#" class="btn_red">삭제</a>
+				<a href="#" class="btn_gray">취소</a>
+			</div>
+			
+			<div class="sub_head">
+				<h3 class="tit_section">데이터 삭제 이력 조회</h3>
+			</div>				
+			<div class="section_filter" name="case_filter_team3">
+				@template_filter.html
+			</div>
+			<div class="section_filter" name="case_filter_datepicker4">
+				@template_filter.html
+			</div>		
+			
+			<div class="section_box">
+				<table class="tbl_form">
+				<caption>데이터 삭제 이력 thead</caption>
+				<colgroup><col width="13.28%"><col width="5.9%"><col width="7.13%"><col width="15.98%"><col width="13.85%"><col width="8%"><col width="15%"><col></colgroup>
+				<thead>
+				<tr>
+					<th>광고주</th>
+					<th>팀</th>
+					<th>담당자</th>
+					<th>사이트</th>
+					<th>발생시간</th>
+					<th>상태</th>
+					<th>데이터기간</th>
+					<th>등록자 ID</th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<caption>데이터 삭제 이력 tbody</caption>
+				<colgroup><col width="13.28%"><col width="5.9%"><col width="7.13%"><col width="15.98%"><col width="13.85%"><col width="8%"><col width="15%"><col></colgroup>
+				<tbody>
+				<tr>
+					<td><p>박선유네이버12123</p></td>
+					<td><p>1팀</p></td>
+					<td><p>홍길동</p></td>
+					<td><p>네이버클릭초이스계정</p></td>
+					<td><p>2014.11.10 <span class="time">24:00</span></p></td>
+					<td><p>대기중</p></td>
+					<td><p>2014.12.12 ~ 2014.12.20</p></td>
+					<td><p>paycoID@email.co.kr</p></td>
+				</tr>
+				<tr>
+					<td><p>가나다</p></td>
+					<td><p>1팀</p></td>
+					<td><p>홍길동냠냠</p></td>
+					<td><p>다음클릭스</p></td>
+					<td><p>2014.11.10 <span class="time">24:00</span></p></td>
+					<td><p>진행중</p></td>
+					<td><p>2014.12.12 ~ 2014.12.20</p></td>
+					<td><p>paycoID@email.co.kr</p></td>
+				</tr>
+				<tr>
+					<td><p>박선유네이버</p></td>
+					<td><p>2팀</p></td>
+					<td><p>홍길동</p></td>
+					<td><p>다음클릭스대량등록</p></td>
+					<td><p>2014.11.10 <span class="time">24:00</span></p></td>
+					<td><p>실패</p></td>
+					<td><p>2014.12.12 ~ 2014.12.20</p></td>
+					<td><p>paycoID@email.co.kr</p></td>
+				</tr>
+				<tr>
+					<td><p>박선유네이</p></td>
+					<td><p>팀이름</p></td>
+					<td><p>홍길동</p></td>
+					<td><p>네이버클릭초이스전략그룹</p></td>
+					<td><p>2014.11.10 <span class="time">24:00</span></p></td>
+					<td><p>완료</p></td>
+					<td><p>2014.12.12 ~ 2014.12.20</p></td>
+					<td><p>paycoIDlongchar@email.co.kr</p></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="pagenate">
+					<a href="#" class="btn_first">처음</a>
+					<a href="#" class="btn_prev">이전</a>
+					<span class="num">
+						<a href="#">1</a>
+						<span class="bar">|</span>
+						<a href="#">2</a>
+						<span class="bar">|</span>
+						<a href="#">3</a>
+						<span class="bar">|</span>
+						<a href="#">4</a>
+						<span class="bar">|</span>
+						<a href="#">5</a>	
+					</span>
+					<a href="#" class="btn_next">다음</a>
+					<a href="#" class="btn_last">끝</a>
+				</div>
+			</div>	
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

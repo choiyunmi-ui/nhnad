@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+			<div class="section_head">
+				<h2 class="tit_top">랜딩페이지 모니터</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<span class="dep_group">
+						<a href="#">광고정보관리</a>
+						<div class="dep1">
+							<a href="#" class="selected">광고정보관리</a>
+							<a href="#">분석/리포트</a>
+							<a href="#">자동입찰</a>
+							<a href="#">마켓트렌드</a>
+							<a href="#">광고제안</a>
+							<a href="#">어드민</a>
+							<a href="#">시스템관리</a>
+						</div>
+					</span>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">광고설정/랜딩페이지검수</a>
+						<div class="dep2">
+							<em class="tit_dep2">광고설정</em>
+							<a href="#">광고주관리</a>
+							<a href="#">데이터관리</a>
+							<a href="#">스크립트관리</a>
+							<a href="#">추적코드관리</a>
+							<a href="#" class="selected">랜딩페이지검수</a>
+							<a href="#">잔액부족알림이력</a>
+							<em class="tit_dep2">전략그룹</em>
+							<a href="#">전략그룹관리</a>
+							<a href="#">전략그룹대량이동</a>
+						</div>
+					</span>
+				</div>
+			</div>
+			
+			<!-- [D] 선택된 탭 .selected -->
+			<div class="tab_page">
+				<ul>
+				<li class="selected"><a href="#">랜딩페이지모니터</a></li>
+				<li><a href="#">모니터 이력조회</a></li>
+				</ul>
+			</div>
+			
+			<!-- 조회필터 -->
+			<div class="section_filter" name="case_filter_ae_site">
+				@template_filter.html
+			</div>
+			
+			<div class="sub_head">
+				<h3 class="tit_section">랜딩페이지 모니터</h3>
+			</div>
+			
+			<h4 class="tit_num"><span class="num">1</span> 모니터링 방법 선택</h4>
+			<div class="section_filter">
+				<span class="inp_radio checked" style="width:200px"><input type="radio" name="case_radio" checked><label>API 기반 모니터링</label></span>
+				<span class="inp_radio"><input type="radio" name="case_radio"><label>업로드 파일 기반 모니터링</label></span>
+			</div>
+			
+			<h4 class="tit_num"><span class="num">2</span> 모니터링 대상 등록</h4>
+			<div class="section_filter">
+				<label for="" style="width:100px">광고상품</label>
+				<select class="selectbox">
+					<option>네이버 클릭초이스</option>
+				</select>
+			</div>
+			<div class="section_filter">
+				<label for="">캠페인/광고그룹선택</label>
+				<a href="#" class="btn_basic" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">캠페인/광고그룹선택</a>
+			</div>
+			
+			<h4 class="tit_num"><span class="num">2</span> 모니터링 대상 등록</h4>
+			<div class="section_filter">
+				<label for="" style="width:100px">광고상품</label>
+				<select class="selectbox">
+					<option>네이버 클릭초이스</option>
+				</select>
+			</div>
+			<div class="section_filter">
+				<label class="ico_file" style="width:100px">파일첨부<img src="img/ico_file.png" alt="file icon" class="ico_file">
+					<!-- [D] 클릭시 .expand 추가 -->
+					<span class="wrap_hint">
+						<a href="#" class="btn_hint">?</a>
+						<span class="ly_hint">한번에 최대 50만 행 까지 입력 할 수 있습니다.</span>
+					</span>				
+				</label>
+				<span class="inp_file">
+					<input type="text" class="inp_text" style="width:762px">
+					<a href="#" class="btn_basic">찾아보기</a>
+				</span>
+				<a href="#" class="btn_basic"><img src="img/ico_btn_down.png" alt="download icon" class="ico">템플릿 다운로드</a>
+			</div>
+			
+			<h4 class="tit_num"><span class="num">3</span> 모니터링 예약 신청</h4>
+			<div class="section_filter">
+				<p class="txt">
+					랜딩페이지 모니터는 예약일 익일 00시 이후 실행 합니다.<br>
+					모니터링 결과는 다음날 모니터 이력조회에서 확인 가능합니다.<br>
+					모니터링 예약 버튼을 클릭하면 다음 내용으로 랜딩페이지 모니터를 예약합니다.
+				</p>
+			</div>
+			<div class="section_box section_bt">
+				<table class="tbl_info">
+				<tr>
+					<th>광고상품</th>
+					<td>네이버클릭초이스</td>
+				</tr>
+				<tr>
+					<th>사이트</th>
+					<td>Nhnadmall (http://www.nhnadmall.co.kr)외 0건</td>
+				</tr>
+				<tr>
+					<th>그룹</th>
+					<td>의류외 00건</td>
+				</tr>
+				</table>
+			</div>
+			
+			<div class="btn_group">
+				<a href="#" class="btn_odd">모니터링 예약</a>
+			</div>
+			
+			<div class="section_box">
+				<dl class="notice_info">
+					<dt>참고하세요! </dt>
+					<dd>
+						1. 랜딩페이지 모니터는 별도의 개발이 필요한 기능으로 사전에 커스텀 설정된 광고주에 한해 제공되고 있습니다. 사용 전 담당부서에 문의해주세요.<br>
+						2. API 수집모니터는 네이버클릭초이스와 다음 클릭스만 가능합니다.<br>
+						3. 모니터결과는 모니터 요청한 다음날 모니터이력 조회에서 확인할 수 있습니다.
+					</dd>
+				</dl>
+			</div>
+			
+			<!-- dimmed -->
+			<div class="dimmed" style="display:none"></div>
+			<!-- layer popup - 캠페인/ 광고그룹 선택 -->
+			<div class="ly_pop" style="display:none"><div class="ly_pop_in">
+				<div class="ly_pop_cont">
+					<div class="ly_head">
+						<h3 class="tit_ly">캠페인/ 광고그룹 선택</h3>
+						<a href="#" class="btn_close_ly">닫기</a>
+					</div>
+					<div class="wrap_lst_choose">
+						<div class="lst_choose">
+							<h4 class="tit"><span class="inp_check"><input type="checkbox"><label for="">사이트 URL 목록</label></span></h4>
+							<ul>
+							<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+							</ul>
+						</div>
+						<div class="lst_choose">
+							<h4 class="tit"><span class="inp_check"><input type="checkbox"><label for="">광고그룹 목록</label></span></h4>
+							<ul>
+							<li><span class="inp_check"><input type="checkbox"><label for="">영업권 인증</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">잔액부족알림</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">광고유형</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">영업권 인증</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">잔액부족알림</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">광고유형</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">영업권 인증</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">잔액부족알림</label></span></li>
+							<li></li>
+							<li></li>
+							</ul>
+						</div>
+					</div>
+					<div class="btn_foot">
+						<a href="#" class="btn_b_odd">확인</a>
+					</div>
+				</div>
+			</div></div>
+			<!-- //layer popup -->
+						
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

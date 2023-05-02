@@ -1,0 +1,172 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>기본정보관리 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents">
+			<form action="#">
+			<fieldset>
+				<!-- [D] 레이어팝업 -->
+				<div class="ly_wrap" style="display:block">
+					<!-- [D] 계좌 등록 팝업1 -->
+					<div class="pop_acc ly_box" style="display:block">
+						<div class="ly_top">
+							<p class="tit">계좌 등록</p>
+							<a href="#" class="btn_close btn_popclose">닫기</a>
+						</div>
+						<div class="ly_cont">
+							<dl class="dl_type2 al_c">
+							<dt>본인인증을 수행해주세요.</dt>
+							<dd>안전한 계좌 관리를 위해 본인 인증을 수행합니다.<br>광고주님의 <span class="txt_yel fnt_md">이메일 주소</span>로 발송된 인증번호를 아래에 입력해 주세요.</dd>
+							</dl>
+							<div class="tbl_v3">
+								<table>
+								<caption class="blind">변경 이메일주소</caption>
+								<colgroup>
+								<col style="width:115px"><col>
+								</colgroup>
+								<tbody>
+								<tr>
+								<th scope="row"><label for="number">인증번호 입력</label></th>
+								<td><input type="text" id="number" class="fm_com" style="width:249px"><a href="#" class="btn_bd bd_y" style="margin-left:10px;">인증키 재발급</a></td>
+								</tr>
+								</tbody>						
+								</table>					
+							</div>	
+							<div class="btn_area">
+								<button type="button" class="btn_s btn_org" style="width:150px">확인</button>
+								<button type="button" class="btn_s btn_wht btn_popclose" style="width:150px">취소</button>
+							</div>				
+						</div>					
+					</div>	
+					<!-- //[D] 계좌 등록 팝업1 -->	
+					<!-- [D] 계좌 등록 팝업2 -->
+					<div class="pop_acc ly_box" style="display:block">
+						<div class="ly_top">
+							<p class="tit">계좌 등록</p>
+							<a href="#" class="btn_close btn_popclose">닫기</a>
+						</div>
+						<div class="ly_cont">
+							<p class="txt1 al_c">은행명과 계좌번호를 입력해 주세요.<br>계좌는 본인명의로 개설된 계좌정보만 등록이 가능 합니다.</p>
+							<div class="tbl_v3">
+								<table>
+								<caption class="blind">은행명, 계좌번호</caption>
+								<colgroup>
+								<col style="width:115px"><col>
+								</colgroup>
+								<tbody>
+								<tr>
+								<th scope="row">은행명</th>
+								<td>
+									<div class="sel_wrap" style="width:200px;">
+										<button type="button" class="btn_sel">은행명</button>
+										<ul class="sel_lst">
+										<li><a href="#">1</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">1</a></li>
+										</ul>							
+									</div>
+								</td>	
+								</tr>
+								<tr>
+								<th scope="row"><label for="acc_num">계좌번호</label></th>
+								<td><input type="text" id="acc_num" class="fm_com" style="width:100%"></td>
+								</tr>
+								<tr>
+								<th scope="row"><label for="acc_name">예금주</label></th>
+								<td><input type="text" id="acc_name" class="fm_com" style="width:100%"></td>
+								</tr>
+								<tr>
+								<th scope="row">통장 사본</th>
+								<td>
+									<div class="file_wrap icd">
+										<input type="text" id="in_file" readonly="readonly" class="fm_com" style="width:260px">
+										<input type="file" class="file_hidden" onchange="javascript:document.getElementById('in_file').value =this.value" name="files"><button type="button" class="file_btn btn_bd ico_plus"><span>찾아보기</span></button>
+									</div>		
+								</td>
+								</tr>
+								</tbody>						
+								</table>					
+							</div>	
+							<div class="agr_chk">
+								<span class="chk_box"><input type="checkbox" id="agreed1"><label for="agreed1"><span>개인정보 수집/이용 안내</span></label></span>
+								<a href="#" class="btn_more3">보기</a>
+							</div>
+							<div class="btn_area">
+								<button type="button" class="btn_s btn_org" style="width:150px">확인</button>
+								<button type="button" class="btn_s btn_wht btn_popclose" style="width:150px">취소</button>
+							</div>				
+						</div>					
+					</div>	
+					<!-- //[D] 계좌 등록 팝업2 -->	
+					<!-- [D] 계좌 등록 팝업3 -->
+					<div class="pop_acc ly_box" style="display:block">
+						<div class="ly_top">
+							<p class="tit">계좌 등록</p>
+							<a href="#" class="btn_close btn_popclose">닫기</a>
+						</div>
+						<div class="ly_cont">
+							<dl class="dl_type8 al_c">
+							<dt>계좌가 정상적으로 등록 되었습니다.</dt>
+							<dd>애드머니 전환 요청 시, 본 계좌로 입금 됩니다.</dd>
+							</dl>
+							<div class="btn_area">
+								<button type="button" class="btn_s btn_wht btn_popclose" style="width:100px">닫기</button>
+							</div>				
+						</div>					
+					</div>	
+					<!-- //[D] 계좌 등록 팝업3 -->	
+					<!-- [D] 개인정보 수집/이용 동의 팝업 -->
+					<div class="pop_acc ly_box" style="display:block">
+						<div class="ly_top">
+							<p class="tit">개인정보 수집/이용 동의</p>
+							<a href="#" class="btn_close btn_popclose">닫기</a>
+						</div>
+						<div class="ly_cont">
+							<p class="txt2">애드머니 전환을 위해 다음과 같이 이용자의 개인정보를 수집 · 이용합니다.</p>	
+							<ul class="lst_v6">
+							<li>개인정보 수집·이용목적 : 사용자 요청에 따라 오픈애즈에서 적립되는 애드머니를 현금으로 전환해드리기 위해 아래와 같은 개인정보를 수집하고 있습니다.</li>
+							<li>수집하는 개인정보 항목 : 은행명, 계좌번호</li>
+							<li>개인정보의 보유 및 이용기간 : 이용자의 개인정보는 원칙적으로 회원탈퇴 요청 시 즉시 파기합니다. 단, 회사는 개인정보 도용 등으로 인한 원치않는 회원탈퇴 등에 대비하기 위하여 회원탈퇴 요청 후, 7일간 개인정보를 보유합니다.</li>
+							</ul>
+
+						</div>					
+					</div>	
+					<!-- //[D] 개인정보 수집/이용 동의 팝업 -->	
+				</div>	
+				<!-- //[D] 레이어팝업 -->
+			</fieldset>				
+			</form>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

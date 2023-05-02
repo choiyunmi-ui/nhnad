@@ -1,0 +1,165 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>매체소식 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="sub_tit" class="bg_v4">
+			<dl>
+				<dt>매체소식</dt>
+				<dd>직접 확인하기 번거로운 수많은 매체사의 최근 소식을 한 눈에 확인해보세요.</dd>				
+			</dl>			
+		</div>
+		<div id="contents" class="sub_trend">
+			<ul class="tab_v1">
+			<li><a href="#">마케팅 소식</a></li>
+			<li class="on"><a href="#">매체소식</a></li>
+			<li><a href="#">신규상품</a></li>
+			<li><a href="#">컨퍼런스 / 교육정보</a></li>
+			</ul>
+			<div class="chart_filter">
+				<dl>
+				<dt>매체</dt>
+				<dd class="sel_wrap" style="width:190px;">
+					<button type="button" class="btn_sel">클릭률</button>
+					<ul class="sel_lst">
+					<li><a href="#">클릭률</a></li>
+					<li><a href="#">클릭비용</a></li>
+					</ul>	
+				</dd>						
+				</dl>
+			</div>
+			<div class="tbl_v1_s">
+				<table>
+				<caption class="blind">공지사항(번호, 매체, 제목, 날짜)</caption>
+				<colgroup>
+					<col style="width:80px"><col style="width:200px"><col><col style="width:150px">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">NO</th>						
+				<th scope="col">매체</th>						
+				<th scope="col">제목</th>						
+				<th scope="col">날짜</th>						
+				</tr>						
+				</thead>
+				<tbody>
+				<!-- [D] 공지사항 .notice 추가 -->
+				<tr class="notice">
+				<td><strong class="ico_notice">공지</strong></td>
+				<td>네이버</td>
+				<td class="tb_tit"><a href="#">[핫클릭비딩] 쿠차의 새로운 검색영역 광고 상품</a></td>
+				<td>2016.03.05</td>				
+				</tr>
+				<tr>
+				<td>10</td>
+				<td>네이버</td>
+				<td class="tb_tit"><a href="#">[핫클릭비딩] 쿠차의 새로운 검색영역 광고 상품</a></td>
+				<td>2016.03.05</td>				
+				</tr>	
+				<tr>
+				<td>9</td>
+				<td>네이버</td>
+				<td class="tb_tit"><a href="#">[핫클릭비딩] 쿠차의 새로운 검색영역 광고 상품</a></td>
+				<td>2016.03.05</td>				
+				</tr>
+				<tr>
+				<td>8</td>
+				<td>다음</td>
+				<td class="tb_tit"><a href="#">[핫클릭비딩] 쿠차의 새로운 검색영역 광고 상품</a></td>
+				<td>2016.03.05</td>				
+				</tr>
+				<tr>
+				<td>7</td>
+				<td>구팡</td>
+				<td class="tb_tit"><a href="#">[핫클릭비딩] 쿠차의 새로운 검색영역 광고 상품</a></td>
+				<td>2016.03.05</td>				
+				</tr>
+				<tr>
+				<td>6</td>
+				<td>쿠파</td>
+				<td class="tb_tit"><a href="#">[핫클릭비딩] 쿠차의 새로운 검색영역 광고 상품</a></td>
+				<td>2016.03.05</td>				
+				</tr>
+				<tr>
+				<td>5</td>
+				<td>위메프</td>
+				<td class="tb_tit"><a href="#">[핫클릭비딩] 쿠차의 새로운 검색영역 광고 상품</a></td>
+				<td>2016.03.05</td>				
+				</tr>
+				<tr>
+				<td>4</td>
+				<td>티몬</td>
+				<td class="tb_tit"><a href="#">[핫클릭비딩] 쿠차의 새로운 검색영역 광고 상품</a></td>
+				<td>2016.03.05</td>				
+				</tr>
+				<tr>
+				<td>3</td>
+				<td>쿠차</td>
+				<td class="tb_tit"><a href="#">[핫클릭비딩] 쿠차의 새로운 검색영역 광고 상품</a></td>
+				<td>2016.03.05</td>				
+				</tr>
+				<tr>
+				<td>2</td>
+				<td>위메프</td>
+				<td class="tb_tit"><a href="#">[핫클릭비딩] 쿠차의 새로운 검색영역 광고 상품</a></td>
+				<td>2016.03.05</td>				
+				</tr>
+				<tr>
+				<td>1</td>
+				<td>쿠팡</td>
+				<td class="tb_tit"><a href="#">[핫클릭비딩] 쿠차의 새로운 검색영역 광고 상품</a></td>
+				<td>2016.03.05</td>				
+				</tr>									
+				</tbody>						
+				</table>					
+			</div>			
+			<div class="pagenation">
+				<a href="#" class="first">처음</a>
+				<a href="#" class="prev">이전</a>
+				<ul class="num">
+				<!-- [D] 활성화 페이지 .on 추가 -->
+				<li class="on"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+				<li><a href="#">7</a></li>
+				<li><a href="#">8</a></li>
+				<li><a href="#">9</a></li>
+				<li><a href="#">10</a></li>				
+				</ul>
+				<a href="#" class="next">다음</a>
+				<a href="#" class="last">끝</a>			
+			</div>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

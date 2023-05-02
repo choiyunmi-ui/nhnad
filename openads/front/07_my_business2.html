@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>비즈니스 계정 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents" class="sub_mybusi"> 		
+			<ul class="tab_v1">
+			<!-- [D] 활성화 페이지 .on 추가 -->
+			<li><a href="#">홈</a></li>			
+			<li><a href="#">기본정보관리</a></li>			
+			<li class="on"><a href="#">비즈니스계정</a></li>			
+			<li><a href="#">애드머니</a></li>			
+			<li class="high"><a href="#">서비스신청<br>처리이력</a></li>	
+			<li class="high"><a href="#">나의<br>광고효율</a></li>	
+			<li class="high"><a href="#">유료회원<br>신청이력</a></li>	
+			<li><a href="#">관심상품</a></li>			
+			<li><a href="#">상담내역</a></li>			
+			</ul>
+			<div class="tit_area">
+				<h2 class="tit_sz20">My 비즈니스 계정</h2>
+			</div>
+			<div class="tbl_v4">
+				<table>
+				<caption class="blind">비즈니스 계정명, 권한, 관리</caption>
+				<colgroup>
+				<col><col style="width:350px"><col style="width:350px">					
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">비즈니스 계정명</th>
+				<th scope="col">권한</th>
+				<th scope="col">관리</th> 
+				</tr>				
+				</thead>
+				<tbody>
+				<tr>
+				<td>오픈애즈 (주)</td>
+				<td>매니저</td>
+				<td>대기<a href="#" class="btn_bd" style="margin-left:10px">취소</a></td>
+				</tr>	
+				</tbody>
+				</table>				
+			</div>
+			<div class="section_box4">
+				<p class="txt1">비즈니스 계정 업그레이드 대기 중입니다.<br>오픈애즈 관리자의 승인이 완료되면, 매니저 권한이 부여되며, 비즈니스 계정 및 계정 멤버를 관리할 수 있습니다.</p>
+				<p class="txt2">오픈애즈 비즈니스 계정이란?</p>
+				<ul class="lst_v6">
+				<li>광고운영 솔루션, 로그분석 서비스 등 오픈애즈의 다양한 비즈니스 회원 서비스를 이용할 수 있는 권한입니다.</li>
+				<li>개인/법인 사업자당 한 개의 비즈니스 계정을 소유할 수 있으며, 해당 비즈니스 계정은 3명의 멤버를 소속 시킬 수 있습니다.</li>
+				<li> 계정에 소속된 멤버는 오픈애즈의 비즈니스 회원 서비스를 이용하실 수 있습니다.</li>
+				</ul>
+			</div>
+			<h2 class="tit_sz20">비즈니스 계정 업그레이드 Guide</h2>
+			<img src="img/img_business.jpg" alt=", 1.비즈니스 계정 업그레이드 2.비즈니스 계정 검색, 등록된 비즈니스 계정이 없는 경우 3-1.비즈니스 계정생성 4-1.오픈애드 관리자 승인 5-1.완료. 이미 등록된 비즈니스 계정이 있는 경우 3-2.비즈니스 계정 멤버요청 4-2.비즈니스 계정 매니저 승인 5-2.완료 ">
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

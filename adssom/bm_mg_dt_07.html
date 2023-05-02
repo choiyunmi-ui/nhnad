@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script>
+/* 개발 제외/마크업 검수용 */
+$(function(){
+	load_contents('bm_mg_dt_09','bm_mg_dt_09.html');
+	load_contents('bm_mg_dt_notice','bm_mg_dt_09.html');
+});
+</script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+			<div class="section_head">
+				<h2 class="tit_top">자동입찰현황 상세</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">자동입찰</a>
+						<div class="dep1">
+							<a href="#">광고정보관리</a>
+							<a href="#">분석/리포트</a>
+							<a href="#" class="selected">자동입찰</a>
+							<a href="#">마켓트렌드</a>
+							<a href="#">광고제안</a>
+							<a href="#">어드민</a>
+							<a href="#">시스템관리</a>
+						</div>
+					</span>
+					<span class="bar">&gt;</span>
+					<a href="#">자동입찰현황 상세</a>
+				</div>
+			</div>
+			
+			<!-- 조회필터 -->			
+			<div class="section_filter" name="case_filter_bm_ae">
+				@template_filter.html
+			</div>	
+			<div class="section_filter" name="case_filter_bm_dt1">
+				@template_filter.html
+			</div>	
+			<div class="section_filter" name="case_filter_bm_dt3">
+				@template_filter.html
+			</div>	
+			
+			<div class="wrap_split" name="bm_mg_dt_09">
+				@bm_mg_dt_09.html
+			</div>
+			
+			<!-- 수정모드 - 광고효율 -->
+			<div class="sub_head">
+				<div class="side">
+					<a href="#" class="btn_basic_m">저장</a>
+				</div>
+			</div>
+			<div class="section_box">
+				<div class="thead_filter">
+					<label>입찰그룹</label>
+					<input type="text" class="inp_text" value="그룹1" style="width:165px">
+				</div>
+				<div class="filter_in" name="bm_mg_dt_07_filterin">						
+					<em class="index" style="width:116px">순위관리설정</em>
+					<span class="inp_radio" style="width:195px"><input type="radio"><label>ON</label></span>
+					<span class="inp_radio" style="width:195px"><input type="radio"><label>OFF</label></span>
+				</div>
+				<div class="filter_in" name="bm_mg_dt_07_filterin">
+					<label style="width:116px">관리기간설정
+						<span class="wrap_hint">
+							<a href="#" class="btn_hint">?</a>
+							<span class="ly_hint">설정한 관리 기간동안 순위관리가 동작합니다.</span>
+						</span>
+					</label>
+					<input type="text" class="datepicker" style="width:165px">
+					<span class="bar_h">-</span>
+					<input type="text" class="datepicker" style="width:165px">
+				</div>			
+				<!-- 리포트기준 -->
+				<div class="filter_in" name="bm_mg_dt_07_filterin">
+					<em class="index" style="width:116px">리포트기준
+						<span class="wrap_hint">
+							<a href="#" class="btn_hint">?</a>
+							<span class="ly_hint">
+							<span class="ul">
+							<span class="li">설정한 리포트 기준에 따라 광고효과를 계산하여 1차 기준 또는 2차 기준으로 입찰 기준이 변경됩니다.</span>
+							<span class="li">설정한 리포트 기준에 따라 광고효과를 계산하여 1차 기준 또는 2차 기준으로 입찰 기준이 변경됩니다.</span>
+							<span class="li">리포트 기준은 매일 아침 수집되는 광고효과 데이터를 기반으로 합니다.</span>
+							</span>
+							</span>
+						</span>
+					</em>
+					<span class="group_inp_range">
+						<span class="inp_radio" style="width:195px"><input type="radio"><label>어제</label></span>
+						<span class="inp_radio" style="width:195px"><input type="radio"><label>이번달</label></span>
+						<span class="inp_radio" style="width:195px"><input type="radio"><label>최근 7일</label></span>
+						<span class="inp_radio" style="width:195px"><input type="radio"><label>최근 30일</label></span>
+					</span>
+				</div>	
+				<!-- 최대클릭비용부족시 -->
+				<div class="filter_in" name="bm_mg_dt_07_filterin">
+					<em class="index" style="width:150px">최대클릭비용부족시
+						<span class="wrap_hint">
+							<a href="#" class="btn_hint">?</a>
+							<span class="ly_hint">
+							<span class="ul">
+							<span class="li">입찰 시도 시 최대클릭비용이 부족할 때 옵션을 선택할 수 있습니다.</span>
+							<span class="li">이전입찰가유지 를 선택 하실 경우, 설정한 최대클릭비용으로<br>목표순위에 진입이 가능할때 입찰을 재시도 합니다.</span>
+							<span class="li">목표최대클릭비용으로 입찰을 선택 하실 경우,<br>설정한 목표최대클릭비용으로 입찰가를 변경합니다.</span>
+							</span>
+							</span>
+						</span>
+					</em>
+					<select class="selectbox" style="width:478px">
+						<option>이전입찰가 유지</option>
+					</select>
+					<span class="bar">|</span>
+					<label>입찰기준
+						<span class="wrap_hint">
+							<a href="#" class="btn_hint">?</a>
+							<span class="ly_hint">
+								목표 순위를 범위로 입력한 경우,
+								<strong class="tit">상위순위우선입찰</strong>
+								<span class="ul">
+								<span class="li">설정 희망 순위 범위에서 가장 높은 순위를 목표로 입찰을 시도하며<br>설정한 최대 클릭비용으로 불가능할 경우 범위 내의 차 순위를 목표로 입찰합니다.</span>
+								<span class="li">현재 순위가 목표 순위 범위 안에 있어도 가장 높은 순위를 목표로<br>계속 입찰을 시도 합니다. </span>
+								</span>
+								<strong class="tit">하위순위우선입찰</strong>
+								<span class="ul">
+								<span class="li">설정 희망 순위 범위에서 가장 낮은 순위를 목표로 입찰을 시도하며,<br>현재 순위가 목표 순위 범위 안에 있을 경우 입찰을 재시도 하지 않습니다.</span>
+								</span>
+							</span>
+						</span>
+					</label>
+					<select class="selectbox" style="width:300px">
+						<option>상위 순위 우선입찰</option>
+					</select>
+				</div>		
+				<!-- 1차기준 -->
+				<div class="filter_in report_option" name="bm_mg_dt_07_filterin">
+					<em class="index" style="width:150px">1차 기준 설정
+						<span class="wrap_hint">
+							<a href="#" class="btn_hint">?</a>
+							<span class="ly_hint">
+							<span class="ul">
+							<span class="li">1차 기준에 따라서 키워드를 우선 분류 한 후 분류된 키워드의 목표순위에 따라 입찰 합니다.</span>
+							<span class="li">설정한 KPI별 분류는 AND 조건으로 분류됩니다.</span>
+							</span>
+							</span>
+						</span>
+					</em>
+					<ul class="report_option_lst">
+					<li>
+						<select class="selectbox" style="width:260px">
+							<option>노출수</option>
+						</select>
+						<input type="text" class="inp_text inp_text_r" value="500" style="width:69px">
+						<span class="bar_h">-</span>
+						<input type="text" class="inp_text inp_text_r" value="1000" style="width:69px">
+					</li>
+					<li>
+						<select class="selectbox" disabled style="width:260px">
+							<option>선택안함</option>
+						</select>
+						<input type="text" class="inp_text inp_text_r disabled" style="width:69px">
+						<span class="bar_h">-</span>
+						<input type="text" class="inp_text inp_text_r disabled" style="width:69px">
+						<span class="bar">|</span>
+						<label>목표순위</label>
+						<select class="selectbox" disabled style="width:78px">
+							<option>1위</option>
+						</select>
+						<span class="bar_h">-</span>
+						<label>목표순위</label>
+						<select class="selectbox" disabled style="width:78px">
+							<option>15위</option>
+						</select>
+						<span class="bar">|</span>
+						<label>목표최대클릭비용
+							<span class="wrap_hint">
+								<a href="#" class="btn_hint">?</a>
+								<span class="ly_hint">
+									<span class="ul">
+									<span class="li">설정한 목표 최대클릭비용 안에서만 목표순위로 입찰을 시도 합니다.</span>
+									<span class="li">최대클릭비용 부족 시에는 설정한 옵션에 따라 동작합니다.</span>
+									</span>
+								</span>
+							</span>
+						</label>
+						<input type="text" class="inp_text inp_text_r" value="500" style="width:69px">
+					</li>
+					<li>
+						<select class="selectbox" disabled style="width:260px">
+							<option>선택안함</option>
+						</select>
+						<input type="text" class="inp_text inp_text_r disabled" style="width:69px">
+						<span class="bar_h">-</span>
+						<input type="text" class="inp_text inp_text_r disabled" style="width:69px">
+					</li>
+					</ul>				
+				</div>
+				<!-- 2차기준 -->
+				<div class="filter_in report_option" name="bm_mg_dt_07_filterin">
+					<em class="index" style="width:150px">2차 기준 설정<br><span class="stxt">(나머지키워드)</span>
+						<span class="wrap_hint">
+							<a href="#" class="btn_hint">?</a>
+							<span class="ly_hint">
+							<span class="ul">
+							<span class="li">1차기준 외의 키워드의 목표순위를 결정합니다.</span>
+							<span class="li">추가 KPI별 분류가 가능하며 이때 1차기준 외의 키워드만 대상으로 합니다.</span>
+							</span>
+							</span>
+						</span>
+					</em>
+					<ul class="report_option_lst">
+					<li>
+						<select class="selectbox" style="width:260px">
+							<option>노출수</option>
+						</select>
+						<input type="text" class="inp_text inp_text_r" value="500" style="width:69px">
+						<span class="bar_h">-</span>
+						<input type="text" class="inp_text inp_text_r" value="1000" style="width:69px">
+					</li>
+					<li>
+						<select class="selectbox" disabled style="width:260px">
+							<option>선택안함</option>
+						</select>
+						<input type="text" class="inp_text inp_text_r disabled" style="width:69px">
+						<span class="bar_h">-</span>
+						<input type="text" class="inp_text inp_text_r disabled" style="width:69px">
+						<span class="bar">|</span>
+						<label>목표순위</label>
+						<select class="selectbox" disabled style="width:78px">
+							<option>1위</option>
+						</select>
+						<span class="bar_h">-</span>
+						<label>목표순위</label>
+						<select class="selectbox" disabled style="width:78px">
+							<option>15위</option>
+						</select>
+						<span class="bar">|</span>
+						<label>목표최대클릭비용
+							<span class="wrap_hint">
+								<a href="#" class="btn_hint">?</a>
+								<span class="ly_hint">
+									<span class="ul">
+									<span class="li">설정한 목표 최대클릭비용 안에서만 목표순위로 입찰을 시도 합니다.</span>
+									<span class="li">최대클릭비용 부족 시에는 설정한 옵션에 따라 동작합니다.</span>
+									</span>
+								</span>
+							</span>
+						</label>
+						<input type="text" class="inp_text inp_text_r" value="500" style="width:69px">
+					</li>
+					<li>
+						<select class="selectbox" disabled style="width:260px">
+							<option>선택안함</option>
+						</select>
+						<input type="text" class="inp_text inp_text_r disabled" style="width:69px">
+						<span class="bar_h">-</span>
+						<input type="text" class="inp_text inp_text_r disabled" style="width:69px">
+					</li>
+					</ul>				
+				</div>
+			</div>	
+			<!-- 참고하세요! -->
+			<div class="section_box" name="bm_mg_dt_notice">
+				@bm_mg_dt_09.html
+			</div>
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

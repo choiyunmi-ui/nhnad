@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script>
+//마크업 검수를 위한 리뷰용 동작
+$(function(){
+	$('.selectbox').on("change", function (e) {
+		var option = $(e.target).val();
+		var set_keyword = function(word){$('.section_filter:eq(1)').find('label:eq(0)').text(word).end().find('.inp_text').attr('placeholder',word+"를 입력하세요.");};
+		var set_report = function(word){$('.section_filter:eq(0)').find('.inp_radio:eq(0) label').text(word);};
+		if(option=="키워드 – 사이트별 유입"){$('.section_filter').hide().filter(':eq(0),:eq(1)').show();set_keyword('키워드');set_report("전체 (유입시간대)");}
+		else if(option=="사이트 – 사이트 비교"){$('.section_filter').hide().filter(':eq(0),:eq(2),:eq(3)').show();}
+		else if(option=="키워드 – 검색수"){$('.section_filter').hide().filter(':eq(0),:eq(1)').show();$('.section_filter:eq(1) label:eq(0)').text('키워드');set_report("전체 (검색시간대)");}
+		else {$('.section_filter').hide().filter(':eq(0),:eq(1)').show();set_keyword('사이트');set_report("전체 (유입시간대)");}
+	});
+});
+</script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+			<div class="section_head">
+				<h2 class="tit_top">검색트랜드</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">마켓트렌드</a>
+						<div class="dep1">
+							<a href="#">광고정보관리</a>
+							<a href="#">분석/리포트</a>
+							<a href="#">자동입찰</a>
+							<a href="#" class="selected">마켓트렌드</a>
+							<a href="#">광고제안</a>
+							<a href="#">어드민</a>
+							<a href="#">시스템관리</a>
+						</div>
+					</span>
+					<span class="bar">&gt;</span>
+					<span class="dep_group">
+						<a href="#">검색트랜드</a>
+						<div class="dep2">
+							<em class="tit_dep2">경쟁사분석</em>
+							<a href="#">사이트별분석</a>
+							<a href="#">키워드별분석</a>
+							<a href="#">업종별분석</a>
+							<em class="tit_dep2"><a href="#" class="selected">검색트랜드</a></em>
+						</div>
+					</span>
+				</div>
+			</div>
+			
+			<!-- 조회필터 -->
+			<div class="section_filter">
+				<label style="width:77px">리포트 종류</label>
+				<select class="selectbox" style="width:475px">
+					<option>사이트 - 유입</option>
+					<option>사이트 – 키워드별 유입</option>
+					<option>사이트 – 사이트 비교</option>
+					<option>키워드 – 검색수</option>
+					<option>키워드 – 사이트별 유입</option>
+				</select>
+				<span class="bar">|</span>
+				<em class="index" style="width:82px">리포트 유형</em>
+				<span class="inp_radio checked" style="width:195px"><input type="radio" checked><label>전체 (유입시간대)</label></span>
+				<span class="inp_radio"><input type="radio"><label>유입 데모데이터</label></span>
+			</div>
+			<div class="section_filter">
+				<label style="width:77px">사이트</label>
+				<input class="inp_text" placeholder="사이트를 입력하세요." style="width:475px"></input>
+				<span class="bar">|</span>
+				<em class="index" style="width:82px">리포트 구간</em>
+				<select class="selectbox" style="width:402px">
+					<option>2014년 10월</option>
+				</select>
+				<span class="btn_group">
+					<a href="#" class="btn_odd">리포트 요청</a>
+				</span>
+			</div>
+			<!-- [D] 리포트 종류 선택에 따라 텍스트 변경 또는 아래 필터 케이스 노출  -->
+			<div class="section_filter" style="display:none">
+				<span class="wrap_search">
+					<label style="width:77px">사이트 1</label>
+					<span class="inp"><input class="inp_text" placeholder="사이트를 입력하세요."></input></span>
+				</span>
+			</div>
+			<div class="section_filter" style="display:none">
+				<span class="wrap_search">
+					<label style="width:77px">사이트 2</label>
+					<span class="inp"><input class="inp_text" placeholder="사이트를 입력하세요."></input></span>
+					<span class="btn_group">
+						<a href="#" class="btn_odd">리포트 요청</a>
+					</span>
+				</span>
+			</div>
+	
+			<div class="sub_head">
+				<h3 class="tit_section">리포트 생성 리스트</h3>
+			</div>	
+			
+			<div class="section_filter">
+				<label>팀</label>
+				<select class="selectbox" style="width:200px">
+					<option>1팀</option>
+					<option>2팀</option>
+					<option>3팀</option>
+					<option>미분류</option>
+				</select>
+				<span class="bar">|</span>
+				<label>담당자</label>
+				<select class="selectbox" style="width:200px">
+					<option>홍길동</option>	
+				</select>
+				<span class="bar">|</span>
+				<label>조회기간</label>
+				<input type="text" class="datepicker from" name="from" style="width:196px">
+				<span class="bar_h">-</span>
+				<input type="text" class="datepicker to" name="to" style="width:196px">
+				<span class="btn_group">
+					<a href="#" class="btn_odd">조회</a>
+				</span>
+			</div>
+			
+			<div class="section_box">
+				<table class="tbl_form">
+				<caption>리포트 생성 리스트 thead</caption>
+				<colgroup><col width="3.9%"><col width="15.6%"><col width="15.6%"><col width="26.6%"><col width="11.82%"><col width="8.54%"><col width="10.84%"><col></colgroup>
+				<thead>
+				<tr>
+					<th>번호</th>
+					<th>리포트 종류</th>
+					<th>리포트 유형</th>
+					<th>사이트 / 키워드</th>
+					<th>요청일시</th>
+					<th>처리상태</th>
+					<th>취소 / 다운로드</th>
+					<th>담당자</th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<caption>리포트 생성 리스트 tbody</caption>
+				<colgroup><col width="3.9%"><col width="15.6%"><col width="15.6%"><col width="26.6%"><col width="11.82%"><col width="8.54%"><col width="10.84%"><col></colgroup>
+				<tbody>
+				<tr>
+					<td>4</td>
+					<td><p>사이트 - 유입</p></td>
+					<td><p>전체 (유입시간대)</p></td>
+					<td><p>www.nameok.net</p></td>
+					<td>2014.11.10 <span class="time">24:00</span></td>
+					<td>취소</td>
+					<td>-</td>
+					<td>박선유</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td><p>사이트 – 키워드별 유입</p></td>
+					<td><p>전체 (유입시간대)</p></td>
+					<td><p>청바지</p></td>
+					<td>2014.11.10 <span class="time">24:00</span></td>
+					<td>완료</td>
+					<td><img src="img/loding.gif" alt="loding icon" class="ico_loadin"></td>
+					<td>박선유</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td><p>사이트 - 유입</p></td>
+					<td><p>전체 (유입 데모데이터)</p></td>
+					<td><p>www.nameok.net</p></td>
+					<td>2014.11.10 <span class="time">24:00</span></td>
+					<td>완료</td>
+					<td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td>
+					<td>박선유</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td><p>사이트 - 유입</p></td>
+					<td><p>전체 (유입시간대)</p></td>
+					<td><p>www.nameok.net</p></td>
+					<td>2014.11.10 <span class="time">24:00</span></td>
+					<td>처리중</td>
+					<td><a href="#" class="btn_basic_s">취소</a></td>
+					<td>박선유123</td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="pagenate">
+					<a href="#" class="btn_first">처음</a>
+					<a href="#" class="btn_prev">이전</a>
+					<span class="num">
+						<a href="#">1</a>
+						<span class="bar">|</span>
+						<a href="#">2</a>
+						<span class="bar">|</span>
+						<a href="#">3</a>
+						<span class="bar">|</span>
+						<a href="#">4</a>
+						<span class="bar">|</span>
+						<a href="#">5</a>	
+					</span>
+					<a href="#" class="btn_next">다음</a>
+					<a href="#" class="btn_last">끝</a>
+				</div>
+			</div>
+			
+			<ul class="notice_required">
+				<li><em class="required">*</em> 생성된 리포트는 최대 한 달간 다운로드 가능합니다.</li>
+				<li><em class="required">*</em> 생성 이력은 최대 3개월 까지 표시됩니다.</li>
+			</ul>
+		</div>		
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

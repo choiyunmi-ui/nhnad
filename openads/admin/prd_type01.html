@@ -1,0 +1,219 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>상품 유형 등록 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$( ".datepicker" ).datepicker();
+	});
+</script>
+</head>
+<body>
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header_wrap"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="lnb"></div>
+		<div id="contents">
+			<div class="tit_box">
+				<h2 class="tit">상품 유형 등록</h2>
+				<div class="tit_sel">
+					<span>유형</span>
+					<!-- [D] width 인라인으로 지정 -->
+					<div class="sel_wrap" style="width:200px">
+						<button type="button" class="btn_sel">매체</button> 
+						<ul class="sel_lst">
+						<li><a href="#">매체</a></li>								
+						<li><a href="#">노출소재</a></li>								
+						<li><a href="#">노출영역</a></li>								
+						<li><a href="#">디바이스</a></li>								
+						<li><a href="#">과금방식</a></li>								
+						<li><a href="#">타겟팅 유무</a></li>								
+						<li><a href="#">광고 속성</a></li>								
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="section_box">
+				<div class="tit_wrap2">
+					<h3 class="tit">매체</h3>
+				</div>
+				<div class="tbl_v2">
+					<table>
+					<caption class="blind">번호, 매체명, 사이트 URL, 등록자, 등록일 / 수정일, 게재여부</caption>
+					<colgroup>
+						<col width="105"><col width="235"><col width="270"><col width="170"><col><col width="170">
+					</colgroup>
+					<thead>
+					<tr class="bg_gry">
+					<th scope="col">No.</th>			
+					<th scope="col">매체명</th>			
+					<th scope="col">사이트 URL</th>			
+					<th scope="col">등록자</th>			
+					<th scope="col">등록일 / 수정일</th>			
+					<th scope="col">게재여부</th>			
+					</tr>					
+					</thead>
+					<tbody>
+					<tr>
+					<td>1</td>
+					<td><a href="#">네이버</a></td>
+					<td>www.naver.com</td>
+					<td>손병진</td>
+					<td>2016 - 06 - 01 / 2016 - 06 - 01</td>
+					<td>사용</td>
+					</tr>
+					<tr>
+					<td>2</td>
+					<td><a href="#">다음</a></td>
+					<td>www.daum.net</td>
+					<td>손병진</td>
+					<td>2016 - 06 - 01</td>
+					<td>사용</td>
+					</tr>
+					<tr>
+					<td>3</td>
+					<td><a href="#">구글</a></td>
+					<td>www.google.com</td>
+					<td>손병진</td>
+					<td>2016 - 06 - 01</td>
+					<td>사용</td>
+					</tr>
+					<tr>
+					<td>4</td>
+					<td><a href="#">인모비</a></td>
+					<td>korea.inmobi.com</td>
+					<td>손병진</td>
+					<td>2016 - 06 - 01</td>
+					<td>사용</td>
+					</tr>
+					<tr>
+					<td>5</td>
+					<td><a href="#">타겟팅게이트</a></td>
+					<td>www.widerplanet.com</td>
+					<td>손병진</td>
+					<td>2016 - 06 - 01</td>
+					<td>사용</td>
+					</tr>
+					</tbody>
+					</table>					
+				</div>
+			</div>
+			<div class="pagenation mb60">
+				<a href="#" class="first">처음</a>
+				<a href="#" class="prev">이전</a>
+				<ul class="num">
+				<!-- [D] 해당 페이지에 .on 추가 -->
+				<li class="on"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+				<li><a href="#">7</a></li>
+				<li><a href="#">8</a></li>
+				<li><a href="#">9</a></li>
+				<li><a href="#">10</a></li>				
+				</ul>
+				<a href="#" class="next">다음</a>
+				<a href="#" class="last">끝</a>			
+			</div>
+			<div class="section_box">
+				<form action="#">
+				<fieldset>
+				<legend>매체 등록</legend>
+					<div class="tit_wrap2">
+						<h3 class="tit">매체 등록</h3>
+						<div class="btn_area">
+							<button type="submit" class="btn_yel">저장</button>
+							<a href="#" class="btn_yel">취소</a>					
+						</div>
+					</div>
+					<div class="tbl_wrt2">
+						<table>
+						<caption class="blind">매체명, 업종특화, 게재여부, 대표 URL, 로고첨부, 소개글</caption>
+						<colgroup>
+							<col width="175"><col width="444"><col width="175"><col width="444">
+						</colgroup>
+						<tbody>
+						<tr>
+						<th scope="row"><label for="ip_name">매체명</label></th>
+						<td>
+							<input type="text" id="ip_name" class="ip_txt mr20">
+							<span class="ip_check"><input type="checkbox" id="ip_new"><label for="ip_new">신규 매체</label></span>
+						</td>
+						<th scope="row">업종 특화</th>
+						<td>
+							<span class="ip_check mr15"><input type="checkbox" id="ip_spec"><label for="ip_spec">특화 매체</label></span>
+							<div class="sector_wrap">	
+								<input type="text" id="btn_pop_sector" value="업종선택" class="ip_txt">
+								<ul class="pop_sector">
+								<li><input type="checkbox" id="ch_sec1"><label for="ch_sec1">IT/텔레콤</label></li>
+								<li><input type="checkbox" id="ch_sec2"><label for="ch_sec2">가정/생활</label></li>
+								<li><input type="checkbox" id="ch_sec3"><label for="ch_sec3">건강/미용</label></li>
+								<li><input type="checkbox" id="ch_sec4"><label for="ch_sec4">건축/인테리어</label></li>
+								<li><input type="checkbox" id="ch_sec5"><label for="ch_sec5">결혼/출산/육아</label></li>
+								<li><input type="checkbox" id="ch_sec6"><label for="ch_sec6">교육/취업</label></li>
+								<li><input type="checkbox" id="ch_sec7"><label for="ch_sec7">금융/보험</label></li>
+								<li><input type="checkbox" id="ch_sec8"><label for="ch_sec8">문화/미디어</label></li>
+								<li><input type="checkbox" id="ch_sec9"><label for="ch_sec9">부동산</label></li>
+								<li><input type="checkbox" id="ch_sec10"><label for="ch_sec10">산업기기</label></li>
+								<li><input type="checkbox" id="ch_sec11"><label for="ch_sec11">식품/음료</label></li>
+								<li><input type="checkbox" id="ch_sec12"><label for="ch_sec12">여행/교육</label></li>
+								<!-- [D] 마지막줄에 해당하는 li에 .last 추가-->
+								<li class="last"><input type="checkbox" id="ch_sec13"><label for="ch_sec13">의류/패션잡화</label></li>
+								<li class="last"><input type="checkbox" id="ch_sec14"><label for="ch_sec14">자동차</label></li>
+								<li class="last"><input type="checkbox" id="ch_sec15"><label for="ch_sec15">전문서비스</label></li>
+								</ul>
+							</div>
+								
+						</td>
+						</tr>
+						<tr>
+						<th scope="row">게재여부</th>
+						<td>
+							<div class="sel_wrap" style="width:220px">
+								<button type="button" class="btn_sel">사용</button> 
+								<ul class="sel_lst">
+								<li><a href="#">사용</a></li>								
+								<li><a href="#">미사용</a></li>						
+								</ul>
+							</div>
+						</td>
+						<th scope="row"><label for="ip_url">대표 URL</label></th>
+						<td><input type="text" id="ip_url" class="ip_txt" style="width:328px"></td>
+						</tr>
+						<th scope="row">로고첨부</th>
+						<td colspan="3">
+							<div class="file_wrap">
+								<input type="text" id="in_file" readonly="readonly" class="ip_txt">
+								<button type="button" class="btn_file1 btn_yel">찾기</button>
+								<input type="file" name="files" onchange="javascript:document.getElementById('in_file').value =this.value" class="btn_file2">
+							</div>
+						<tr>
+						<th scope="row">소개글</th>
+						<td colspan="3"><textarea id="wr_cont" class="ip_txar2" style="height:80px"></textarea></td>
+						</tr>
+						</tbody>
+						</table>					
+					</div>	
+				</fieldset>			
+				</form>
+			</div>		
+		</div>
+	</div>
+	<!-- //[D] CONTAINER -->
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

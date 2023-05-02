@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<!-- [D] 대쉬보드 페이지에 .dashboard class 추가 -->
+		<div id="contents" class="dashboard">
+			<div class="section_head">
+				<h2 class="tit_top">KPI 대시보드</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">분석/리포트</a>
+						<div class="dep1">
+							<a href="#">광고정보관리</a>
+							<a href="#" class="selected">분석/리포트</a>
+							<a href="#">자동입찰</a>
+							<a href="#">마켓트렌드</a>
+							<a href="#">광고제안</a>
+							<a href="#">어드민</a>
+							<a href="#">시스템관리</a>
+						</div>
+					</span>
+					<span class="bar">&gt;</span>
+					<span class="dep_group">
+						<a href="#">광고효과분석</a>
+						<div class="dep2">
+							<em class="tit_dep2">광고효과분석</em>
+							<a href="#">상세분석</a>
+							<a href="#">로그분석</a>
+							<a href="#">실시간분석</a>
+							<em class="tit_dep2">리포트</em>
+							<a href="#">리포트설정</a>
+							<a href="#">리포트예약관리</a>
+							<a href="#">리포트보관함</a>
+						</div>
+					</span>
+				</div>
+			</div>
+			
+			<div class="section_filter" name="case_filter_ae_site">
+				@@template_filter.html
+			</div>
+	
+			<div class="sub_head">
+				<h3 class="tit_section">KPI 요약 <span class="stxt">데이터 기간 : 2014.01.01~2014.02.01</span></h3>
+				<div class="side">
+					<a href="#" class="btn_basic_m" onclick="$('.ly_pop[name=kpi_02_goalset],.dimmed').show();return false;">목표설정</a>
+				</div>				
+			</div>
+			
+			<div class="section_present"><div class="section_in">
+				<dl>
+					<dt>총비용</dt>
+					<dd>
+						<ul>
+						<li><em>900,000,000</em></li>
+						<li><strong>90%</strong> 목표대비</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>전환수</dt>
+					<dd>
+						<ul>
+						<li><span class="bar">-</span></li>
+						<li><span class="bar">-</span></li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>클릭수</dt>
+					<dd>
+						<ul>
+						<li><em>1,000</em></li>
+						<li><strong>90%</strong> 목표대비</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>ROAS%</dt>
+					<dd>
+						<ul>
+						<li><em>1000%</em></li>
+						<li><strong>90%</strong> 목표대비</li>
+						</ul>
+					</dd>
+				</dl>
+			</div></div>
+
+			<div class="section_graph">
+				<div class="wrap_graph">
+					<h4 class="tit">최근 3개월 총 비용</h4>
+					<div class="graph"><img src="img/@graph15.gif" alt="" /></div>
+				</div>
+				<div class="wrap_graph">
+					<h4 class="tit">이번달 성과비중
+						<select class="selectbox select_s" style="width:110px">
+							<option selected>총비용</option>
+							<option>노출수</option>
+							<option>클릭수</option>
+							<option>전환수</option>
+							<option>전환가치</option>
+						</select>
+					</h4>
+					<div class="graph"><img src="img/@graph16.gif" alt="" /></div>
+				</div>
+			</div>
+			<div class="section_graph">
+				<div class="wrap_graph">
+					<h4 class="tit">전월 대비 누적 성과
+						<!-- [D] 검색기능 제거 -->
+						<select class="selectbox select_s no_search" style="width:110px">
+							<option selected>총비용</option>
+							<option>노출수</option>
+							<option>클릭수</option>
+							<option>전환수</option>
+							<option>전환가치</option>
+						</select>
+					</h4>
+					<div class="graph"><img src="img/@graph17.gif" alt="" /></div>
+				</div>
+				<div class="wrap_graph">
+					<h4 class="tit">최근 7일 목표 관리
+						<!-- [D] 검색기능 제거 -->
+						<select class="selectbox select_s no_search" style="width:110px">
+							<option>총비용</option>
+							<option selected>노출수</option>
+							<option>클릭수</option>
+							<option>전환수</option>
+							<option>전환가치</option>
+						</select>
+					</h4>
+					<div class="graph"><img src="img/@graph18.gif" alt="" /></div>
+				</div>
+			</div>
+			
+			<div class="section_box">
+				<dl class="notice_info">
+					<dt>참고하세요!</dt>
+					<dd>
+						<ul>
+						<li>KPI 대시보드는 이번달 1일~어제까지를 기준으로 표시 됩니다. 단 오늘이 1일일 경우 지난달의 데이터가 표시 됩니다.</li>
+						<li>KPI 목표를 설정하면 목표대비 달성율을 확인할 수 있습니다.</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		
+			<!-- dimmed -->
+			<div class="dimmed" style="display:none;"></div>
+			<!-- layer popup - 목표설정 -->
+			<div class="ly_pop" style="display:none" name="kpi_02_goalset"><div class="ly_pop_in">
+				<div class="ly_pop_cont">
+					<div class="ly_head">
+						<h3 class="tit_ly">목표설정</h3>
+						<a href="#" class="btn_close_ly">닫기</a>
+					</div>
+					<p class="tit_txt">
+						 목표 KPI  -광고주 목표와 사이트 목표를 설정할 수 있습니다.<br>
+						 목표를 설정하지 않을 경우 기본 셋팅 된 KPI 가 표시되며, 목표 대비 달성율은 표시 되지 않습니다.
+					</p>
+					<table class="tbl_ly">		
+					<caption>목표설정</caption>			
+					<colgroup><col width="137"><col></colgroup>
+					<tr>
+						<th>설정단위</th>
+						<td>
+							<span class="inp_radio" style="width:155px"><input type="radio"><label>광고주</label></span>
+							<span class="inp_radio"><input type="radio"><label>사이트</label></span>
+						</td>
+					</tr>
+					<tr>
+						<th>사이트</th>
+						<td>
+							<select class="selectbox select_s" style="width:354px">
+								<option>전체</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>KPI1</th>
+						<td>
+							<select class="selectbox select_s" style="width:176px">
+								<option selected>노출수</option>
+								<option>클릭수</option>
+								<option>총비용</option>
+								<option>전환수</option>
+								<option>전환가치</option>
+								<option>전환비용</option>
+								<option>ROAS(%)</option>
+							</select>
+							<select class="selectbox select_s" style="width:176px">
+								<option>지난달 리포트 기준</option>
+								<option>목표설정 안함</option>
+								<option>직접입력</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>KPI2</th>
+						<td>
+							<select class="selectbox select_s" style="width:176px">
+								<option selected>노출수</option>
+								<option>클릭수</option>
+								<option>총비용</option>
+								<option>전환수</option>
+								<option>전환가치</option>
+								<option>전환비용</option>
+								<option>ROAS(%)</option>
+							</select>
+							<select class="selectbox select_s" style="width:176px">
+								<option>지난달 리포트 기준</option>
+								<option>목표설정 안함</option>
+								<option>직접입력</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>KPI3</th>
+						<td>
+							<select class="selectbox select_s" style="width:176px">
+								<option selected>노출수</option>
+								<option>클릭수</option>
+								<option>총비용</option>
+								<option>전환수</option>
+								<option>전환가치</option>
+								<option>전환비용</option>
+								<option>ROAS(%)</option>
+							</select>
+							<select class="selectbox select_s" style="width:176px">
+								<option>지난달 리포트 기준</option>
+								<option selected>목표설정 안함</option>
+								<option>직접입력</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>KPI4</th>
+						<td>
+							<select class="selectbox select_s" style="width:176px">
+								<option selected>노출수</option>
+								<option>클릭수</option>
+								<option>총비용</option>
+								<option>전환수</option>
+								<option>전환가치</option>
+								<option>전환비용</option>
+								<option>ROAS(%)</option>
+							</select>
+							<select class="selectbox select_s" style="width:176px">
+								<option>지난달 리포트 기준</option>
+								<option>목표설정 안함</option>
+								<option selected>직접입력</option>
+							</select>
+							<input type="text" class="inp_text inp_text_s" style="width:140px">
+						</td>
+					</tr>
+					<tr class="notice">
+						<th><strong>참고하세요!</strong></th>
+						<td>
+							<ul class="notice_help">
+							<li>목표는 월 단위를 기준으로 입력하세요. 목표 입력 시 목표대비 어제까지의 달성률을 확인할 수 있습니다.</li>
+							<li>전환 목표는 ADSSOM 총 전환 수를 기준으로 계산됩니다.</li>
+							<li>목표를 직접 입력할 경우 숫자만 입력 가능합니다. 비율지표는 %를 함께 입력하세요.</li>
+							</ul>
+						</td>
+					</tr>
+					</table>
+					<div class="btn_foot">
+						<a href="#" class="btn_b_odd">확인</a>
+						<a href="#" class="btn_b_gray">취소</a>
+					</div>
+				</div>
+			</div></div>
+			<!-- //layer popup -->
+		</div>		
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

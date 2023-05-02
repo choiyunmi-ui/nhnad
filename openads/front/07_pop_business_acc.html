@@ -1,0 +1,131 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>비즈니스 계정 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents">
+			<form action="#">
+			<fieldset>
+				<!-- [D] 레이어팝업 -->
+				<div class="ly_wrap" style="display:block">
+					<!-- [D] 비즈니스 계정 생성 팝업 -->
+					<div class="pop_busiacc ly_box" style="display:block">
+						<div class="ly_top">
+							<p class="tit">비즈니스 계정 생성</p>
+							<a href="#" class="btn_close btn_popclose">닫기</a>
+						</div>
+						<div class="ly_cont">
+							<dl class="dl_type2 al_c">
+							<dt>비즈니스 계정 정보를 입력해주세요.</dt>
+							<dd>비즈니스 계정 생성을 위하여 아래 내용을 입력해주세요.<br>오픈애즈 관리자의 승인이 완료되면, 비즈니스 계정을 관리하실 수 있습니다.</dd>
+							<dd class="txt_yel">* 회원 당 생성할 수 있는 비즈니스 계정은 1개로 제한됩니다.<br>중복 생성이 어려우며, 기 등록된 비즈니스 계정의 멤버를 신청하실 수 있습니다</dd>
+							</dl>
+							<p class="ess_not">필수 입력 항목</p>
+							<div class="tbl_v3">
+								<table>
+								<caption class="blind">업체(법인)명, 신청인 이름, 신청인 ID, 정보 수신용 이메일, 사업자등록번호, 사업자등록증 사본</caption>
+								<colgroup>
+								<col style="width:150px"><col>
+								</colgroup>
+								<tbody>
+								<tr>
+								<th scope="row" class="ess"><label for="company">업체(법인)명</label></th>
+								<td>
+									<input type="text" id="company" class="fm_com" style="width:260px">
+									<a href="#" class="btn_bd bd_y" style="width:100px;margin-left:20px">중복확인</a>
+								</td>
+								</tr>
+								<tr>
+								<th scope="row" class="ess">신청인 이름</th>
+								<td><p class="txt1">한은지</p></td>
+								</tr>
+								<tr>
+								<th scope="row">신청인 ID</th>
+								<td><p class="txt1">ejhan@nhnent.com</p></td>
+								</tr>
+								<tr>
+								<th scope="row">정보 수신용 이메일</th>
+								<td><span class="plc_wrap"><input type="text" id="email" class="fm_com plc_ip" style="width:260px"><label for="email" class="plc_lb">ejhan@nhnent.com</label></span></td>
+								</tr>
+								<tr>
+								<th scope="row" class="ess"><label for="busi_num">사업자등록번호</label></th>
+								<td>
+									<input type="text" id="busi_num" class="fm_com" style="width:80px">
+									<span class="fm_etc">-</span><input type="text" title="사업자등록번호 중간자리" class="fm_com" style="width:70px">
+									<span class="fm_etc">-</span><input type="text" title="사업자등록번호 마지막자리" class="fm_com" style="width:80px">
+									<a href="#" class="btn_bd bd_y" style="width:100px;margin-left:20px">중복확인</a>
+								</td>								
+								</tr>
+								<tr>
+								<th scope="row" class="ess">사업자등록증 사본</th>
+								<td>
+									<div class="file_wrap icd">
+										<input type="text" id="in_file" readonly="readonly" class="fm_com" style="width:260px">
+										<input type="file" class="file_hidden" onchange="javascript:document.getElementById('in_file').value =this.value" name="files"><button type="button" class="file_btn btn_bd ico_plus"><span>찾아보기</span></button>
+									</div>					
+									<p class="down_link"><em>Nhnad 사업자등록증.pdf</em><span>[10KB]</span></p>
+								</td>
+								</tr>
+								</tbody>						
+								</table>					
+							</div>	
+							<div class="btn_area">
+								<button type="submit" class="btn_s btn_org" style="width:150px">확인</button>
+								<button type="button" class="btn_s btn_wht btn_popclose" style="width:150px">취소</button>
+							</div>				
+						</div>					
+					</div>	
+					<!-- //[D] 비즈니스 계정 생성 팝업 -->	
+					<!-- [D] 비즈니스 계정 생성 신청 완료 팝업 -->
+					<div class="pop_busiacc ly_box" style="display:block">
+						<div class="ly_top">
+							<p class="tit">비즈니스 계정 생성 신청 완료</p>
+							<a href="#" class="btn_close btn_popclose">닫기</a>
+						</div>
+						<div class="ly_cont">
+							<dl class="dl_type8 al_c">
+							<dt>비즈니스 계정 생성 신청이 등록 되었습니다.</dt>
+							<dd>오픈애즈 관리자의 승인이 완료되면,<br>비즈니스 회원 서비스를 이용하실 수 있습니다.</dd>
+							</dl>				
+							<div class="btn_area">
+								<button type="button" class="btn_s btn_wht btn_popclose" style="width:150px">닫기</button>
+							</div>				
+						</div>					
+					</div>	
+					<!-- //[D] 비즈니스 계정 생성 신청 완료 팝업 -->	
+				</div>	
+				<!-- //[D] 레이어팝업 -->
+			</fieldset>				
+			</form>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

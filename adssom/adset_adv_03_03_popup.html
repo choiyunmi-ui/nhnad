@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션:광고정보관리&gt;광고주관리&gt;광고주등록</title>
+<link rel="stylesheet" href="css/ui.css">
+<link rel="stylesheet" href="css/select2.css">
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<!-- [D] review용 스타일 / 개발시 삭제 -->
+<style>body{padding:10px}.wrap_pop{display:inline-block;*display:inline;*zoom:1;margin:0 5px 9px 0;vertical-align:top}</style>
+</head>
+<body>
+
+<!-- 영업권 인증 광고주 등록 -->
+<div class="wrap_pop">
+	<div class="pop_head">
+		<h1 class="tit_pop"><img src="img/ico_poptit_check.png" alt="V" class="ico">영업권 인증</h1>
+	</div>
+	<div class="pop_cont">
+		<p class="msg_txt"><em>2014.12.18</em>에 확인된 <em>홍길동</em>님의 광고주 중 아직 솔루션에 등록되지 않은<br>광고주가 표시됩니다. 등록할 광고주를 선택하세요.</p>
+		<table class="tbl_pop">
+		<caption>등록할 광고주</caption>
+		<colgroup></colgroup>
+		<thead>
+		<tr>
+			<th><p><strong>광고주명</strong></p></th>
+			<th><strong>사이트URL</strong></th>
+			<th><strong>선택</strong></th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td><p>아이디</p></td>
+			<td>ganada.com</td>
+			<td><span class="inp_checkbt"><input type="checkbox"><label>선택</label></span></td>
+		</tr>
+		<tr>
+			<td><p>광고주</p></td>
+			<td>honghong.net</td>
+			<td><span class="inp_checkbt checked"><input type="checkbox" checked><label>선택됨</label></span></td>
+		</tr>
+		<tr>
+			<td><p>서비스레벨</p></td>
+			<td>myservice.co.kr</td>
+			<td><span class="inp_checkbt"><input type="checkbox"><label>선택</label></span></td>
+		</tr>
+		</tbody>
+		</table>
+		<div class="btn_foot">
+			<a href="#" class="btn_b_odd">확인</a>
+			<a href="#" class="btn_b_gray">취소</a>
+		</div>
+	</div>
+</div>
+
+<!-- 영업권 인증,재인증 -->
+<div class="wrap_pop">
+	<div class="pop_head">
+		<h1 class="tit_pop"><img src="img/ico_poptit_check.png" alt="V" class="ico">영업권 재인증</h1>
+	</div>
+	<div class="pop_cont">
+		<p class="msg_txt">네이버 광고주 영업권 확인을 위해 다음 정보를 확인하여주세요.<br>POS 계정에 영업권이 있는 광고주만 인증 됩니다<span class=""></span></p>
+		<div class="check_info">
+			<table class="tbl_pop">
+			<caption>영업권 재인증 정보 확인</caption>
+			<colgroup><col width="137"><col align="right"></colgroup>
+			<tr>
+				<th scope="row"><p>클릭스 마케터ID
+					<span class="wrap_hint"><a href="#" class="btn_hint">?</a>
+						<span class="ly_hint">네이버 클릭초이스는  영업권자의 POS ID,<br>다음 클릭스는 클릭스마케터 ID를 입력하세요.</span>
+					</span>
+				</p></th>
+				<td><input type="text" class="inp_text inp_text_s" style="width:170px;"></td>
+			</tr>
+			<tr>
+				<th scope="row"><p>광고주 ID</p></th>
+				<td><input type="text" class="inp_text inp_text_s" style="width:170px;"></td>
+			</tr>
+			</table>
+			<button class="btn_check_info">확인</button>
+		</div>
+		<p class="msg_txt">영업권 인증이 필요합니다.</p>
+		<div class="btn_foot">
+			<a href="#" class="btn_b_odd">확인</a>
+			<a href="#" class="btn_b_gray">취소</a>
+		</div>
+	</div>
+</div>
+
+<!-- 영업권 인증(완료) -->
+<div class="wrap_pop">
+	<div class="pop_head">
+		<h1 class="tit_pop"><img src="img/ico_poptit_check.png" alt="V" class="ico">영업권 인증</h1>
+	</div>
+	<div class="pop_cont">
+		<p class="msg_txt">광고주 영업권 확인을 위해 다음 정보를 확인하여주세요.<br>매체 계정에 영업권이 있는 광고주만 인증 됩니다.</p>
+		<div class="check_info">
+			<table class="tbl_pop">
+			<caption>영업권 재인증 정보 확인</caption>
+			<colgroup><col width="137"><col align="right"></colgroup>
+			<tr>
+				<th scope="row"><p>POS ID
+					<span class="wrap_hint"><a href="#" class="btn_hint">?</a>
+						<span class="ly_hint">네이버 클릭초이스는  영업권자의 POS ID,<br>다음 클릭스는 클릭스마케터 ID를 입력하세요.</span>
+					</span>
+				</p></th>
+				<td><input type="text" class="inp_text inp_text_s" style="width:170px;"></td>
+			</tr>
+			<tr>
+				<th scope="row"><p>광고주 ID</p></th>
+				<td><input type="text" class="inp_text inp_text_s" style="width:170px;"></td>
+			</tr>
+			</table>
+			<button class="btn_check_info">확인</button>
+		</div>
+		<p class="msg_txt"><em class="msg_check"><img src="img/ico_msg_check.png" alt="v" class="ico"> 인증완료</em></p>
+		<div class="btn_foot">
+			<a href="#" class="btn_b_odd">확인</a>
+			<a href="#" class="btn_b_gray">취소</a>
+		</div>
+	</div>
+</div>
+
+<!-- 에이전시 관리자 초대장 발송 -->
+<div class="wrap_pop" style="width:351px;">
+	<div class="pop_head">
+		<h1 class="tit_pop"><img src="img/ico_poptit_check.png" alt="V" class="ico">에이전시 관리자 초대장 발송</h1>
+	</div>
+	<div class="pop_cont">
+		<table class="tbl_pop">
+		<caption>관리자 초대장 발송 에이전시 정보 입력</caption>
+		<colgroup><col width="90"><col align="right"></colgroup>
+		<tr>
+			<th scope="row"><p>에이전시</p></th>
+			<td><p>NHNAD</p></td>
+		</tr>
+		<tr>
+			<th scope="row"><p>이름</p></th>
+			<td><p><input type="text" class="inp_text inp_text_s" style="width:192px;"></p></td>
+		</tr>
+		<tr>
+			<th scope="row"><p>이메일</p></th>
+			<td><p><input type="text" class="inp_text inp_text_s" style="width:192px;"></p></td>
+		</tr>
+		</table>
+		<div class="btn_foot">
+			<a href="#" class="btn_b_odd">확인</a>
+			<a href="#" class="btn_b_gray">취소</a>
+		</div>
+	</div>
+</div>
+
+<!-- 마케터 ID 정보 이용 약관 동의 -->
+<div class="wrap_pop" style="width:572px;">
+	<div class="pop_head">
+		<h1 class="tit_pop"><img src="img/ico_poptit_check.png" alt="V" class="ico">마케터 ID 정보 이용 약관 동의</h1>
+	</div>
+	<div class="pop_cont">
+		<div class="policy_ly"><pre>
+1. 이용하는 개인정보 항목 : 에이전시 담당자 마케터 ID
+3. 이용 기간 : 
+3. 이용 목적 : 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</pre></div>
+		<div class="btn_foot">
+			<a href="#" class="btn_b_gray">닫기</a>
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+			<div class="section_head">
+				<h2 class="tit_top">스크립트 관리</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">광고정보관리</a>
+						<span class="dep1">
+							<a href="#" class="selected">광고정보관리</a>
+							<a href="#">분석/리포트</a>
+							<a href="#">자동입찰</a>
+							<a href="#">마켓트렌드</a>
+							<a href="#">광고제안</a>
+							<a href="#">어드민</a>
+							<a href="#">시스템관리</a>
+						</span>
+					</span>
+					<span class="bar">&gt;</span>
+					<span class="dep_group">
+						<a href="#">광고설정/스크립트관리</a>
+						<span class="dep2">
+							<em class="tit_dep2">광고설정</em>
+							<a href="#">광고주관리</a>
+							<a href="#" class="selected">사이트관리</a>
+							<a href="#">데이터관리</a>
+							<a href="#">광고대상관리</a>
+							<a href="#">랜딩페이지검수</a>
+							<a href="#">잔액부족알림이력</a>
+							<em class="tit_dep2">전략그룹</em>
+							<a href="#">전략그룹관리</a>
+							<a href="#">전략그룹대량이동</a>
+						</span>
+					</span>
+				</div>
+			</div>		
+			
+			<!-- tab -->
+			<div class="tab_page">
+				<ul>
+					<li><a href="#">사이트 관리</a></li>
+					<li class="selected"><a href="#">스크립트 관리</a></li>
+					<li><a href="#">광고상품 관리</a></li>
+				</ul>
+			</div>
+			
+			<!-- 조회필터 -->
+			<div class="section_filter" name="case_filter_ae_site">
+				@template_filter.html
+			</div>	
+			
+			<div class="sub_head">
+				<h3 class="tit_section">전환목록</h3>
+				<div class="side">
+					<a href="#" class="btn_basic_m" onclick="$('.ly_pop:eq(1),.dimmed').show();return false;">쿠키 보관 기간 설정</a>
+					<a href="#" class="btn_basic_m"><img src="img/ico_btn_down.png" alt="download icon" class="ico">전체 스크립트 다운</a>
+					<a href="#" class="btn_basic_m" onclick="$('.ly_pop:eq(2),.dimmed').show();return false;"><img src="img/ico_btn_check.png" alt="v" class="ico">등록</a>
+					<a href="#" class="btn_basic_m"><img src="img/ico_btn_delete.png" alt="x" class="ico">삭제</a>
+				</div>
+			</div>			
+			
+			<div class="section_box">
+				<!-- [D] 테이블 목록이 10개 이상일때 .wrap_tbl>.thead+.tbody 구조로 둘러쌈 (스크롤처리) / 스크롤이 없을때는 제거! -->
+				<div class="wrap_tbl">
+					<div class="thead">
+						<table class="tbl_form">
+						<caption>전환목록 thead</caption>
+						<colgroup><col class="t_check"><col width="16.5%"><col width="16.7%"><col width="16.7%"><col width="16%"><col width="14.5%"></colgroup>
+						<thead>
+						<tr>
+							<th class="t_check"><span class="inp_check"><input type="checkbox"></span></th>
+							<th>전환이름</th>
+							<th class="incharge">전환구분</th>
+							<th class="team">전환 완료조건</th>
+							<th class="level">전환 가치</th>
+							<th class="team_manage">전환 스크립트 보기</th>
+							<th class="posid">스크립트 다운</th>
+						</tr>
+						</thead>
+						</table>
+					</div>
+					<div class="tbody">
+						<table class="tbl_form">
+						<caption>전환목록 tbody</caption>
+						<colgroup><col class="t_check"><col width="16.5%"><col width="16.7%"><col width="16.7%"><col width="16%"><col width="14.5%"></colgroup>
+						<tbody>
+						<tr>
+							<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+							<td><p><a href="#" onclick="$('.ly_pop:eq(3),.dimmed').show();return false;">회원가입</a></p></td>
+							<td><p>전자상거래</p></td>
+							<td><p>페이지도달</p></td>
+							<td><p class="num">50,000</p></td>
+							<td><a href="#" class="btn_basic_s" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">보기</a></td>
+							<td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td>
+						</tr>
+						<tr class="selected">
+							<td class="t_check"><span class="inp_check checked"><input type="checkbox" checked></span></td>
+							<td><p><a href="#" onclick="$('.ly_pop:eq(3),.dimmed').show();return false;">주문완료</a></p></td>
+							<td><p>회원가입</p></td>
+							<td><p>페이지도달</p></td>
+							<td><p class="num">50,000</p></td>
+							<td><a href="#" class="btn_basic_s" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">보기</a></td>
+							<td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td>
+						</tr>
+						<tr>
+							<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+							<td><p><a href="#" onclick="$('.ly_pop:eq(3),.dimmed').show();return false;">주문완료</a></p></td>
+							<td><p>신청완료</p></td>
+							<td><p>버튼클릭</p></td>
+							<td><p class="num">-</p></td>
+							<td><a href="#" class="btn_basic_s" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">보기</a></td>
+							<td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td>
+						</tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#" onclick="$('.ly_pop:eq(3),.dimmed').show();return false;">전화상담</a></p></td><td><p>신청완료</p></td><td><p>페이지도달</p></td><td><p class="num">-</p></td><td><a href="#" class="btn_basic_s" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">보기</a></td><td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p></p></td><td><p>신청완료</p></td><td><p>페이지도달</p></td><td><p class="num">-</p></td><td><a href="#" class="btn_basic_s" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">보기</a></td><td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p></p></td><td><p>신청완료</p></td><td><p>페이지도달</p></td><td><p class="num">-</p></td><td><a href="#" class="btn_basic_s" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">보기</a></td><td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p></p></td><td><p>신청완료</p></td><td><p>페이지도달</p></td><td><p class="num">-</p></td><td><a href="#" class="btn_basic_s" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">보기</a></td><td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p></p></td><td><p>신청완료</p></td><td><p>페이지도달</p></td><td><p class="num">-</p></td><td><a href="#" class="btn_basic_s" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">보기</a></td><td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p></p></td><td><p>신청완료</p></td><td><p>페이지도달</p></td><td><p class="num">-</p></td><td><a href="#" class="btn_basic_s" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">보기</a></td><td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p></p></td><td><p>신청완료</p></td><td><p>페이지도달</p></td><td><p class="num">-</p></td><td><a href="#" class="btn_basic_s" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">보기</a></td><td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p></p></td><td><p>신청완료</p></td><td><p>페이지도달</p></td><td><p class="num">-</p></td><td><a href="#" class="btn_basic_s" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">보기</a></td><td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p></p></td><td><p>신청완료</p></td><td><p>페이지도달</p></td><td><p class="num">-</p></td><td><a href="#" class="btn_basic_s" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">보기</a></td><td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p></p></td><td><p>신청완료</p></td><td><p>페이지도달</p></td><td><p class="num">-</p></td><td><a href="#" class="btn_basic_s" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">보기</a></td><td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p></p></td><td><p>신청완료</p></td><td><p>페이지도달</p></td><td><p class="num">-</p></td><td><a href="#" class="btn_basic_s" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">보기</a></td><td><a href="#" class="btn_basic_s"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운</a></td></tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="sub_head">
+				<h3 class="tit_section">공통 스크립트 <span class="stxt">아래 추적 코드를 설치 가이드에 따라 광고주 사이트에 삽입하여 주세요.</span></h3>
+			</div>
+			
+			<div class="section_box">
+				<textarea class="inp_code">
+공통 스크립트 :
+ 
+<html>
+….
+….
+</html>
+
+				</textarea>
+			</div>
+			<div class="sub_head">
+				<h3 class="tit_section">스크립트 모니터 <span class="stxt">업데이트 시간 : YYYY.MM.DD hh:mm <a href="#" title="새로고침" class="btn_update">새로고침</a></span></h3>
+			</div>
+			
+			<div class="section_box">
+				<table class="tbl_form">
+				<caption>스크립트 모니터 thead</caption>
+				<col width="33.3%"><col width="33.3%"><col>
+				<thead>
+				<tr>
+					<th>최초 전환 일시</th>
+					<th>최근 전환 일시</th>
+					<th>스크립트 상태 모니터</th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<col width="33.3%"><col width="33.3%"><col>
+				<tbody>
+				<tr class="single">
+					<td>2014.11.10 <span class="time">24:00</span></td>
+					<td>2014.11.10 <span class="time">24:00</span></td>
+					<td>활성</td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+			
+			<div class="section_box">
+				<dl class="notice_info">
+					<dt>참고하세요! </dt>
+					<dd>
+						<ul>
+						<li>공통 스크립트 : 분석 대상 사이트의 모든 페이지에 공통적으로 설치해야 할 스크립트 입니다.</li>
+						<li>전환 스크립트 : 전환 완료 페이지에 설치합니다. 추적하고 싶은 추가 정보를 변수 값으로 설정하여 분석할 수 있습니다.</li>
+						<li>EX) 전자상거래의 경우 변수스크립트를 구매완료 페이지에 설치하여 매출액, 구매상품 수 등의 추가정보를 변수 값으로 설정하여 분석할 수 있습니다.</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+			
+			<!-- dimmed -->
+			<div class="dimmed" style="display:none"></div>
+			<!-- layer popup - 회원 권한 수정 -->
+			<div class="ly_pop" style="display:none"><div class="ly_pop_in">
+				<div class="ly_pop_cont" >
+					<div class="ly_head">
+						<h3 class="tit_ly">전환 스크립트 보기</h3>
+						<a href="#" class="btn_close_ly">닫기</a>
+					</div>
+					<h4 class="tit_ly_sub">전환 이름 : 주문 완료</h4>
+					<textarea class="inp_textarea inp_code" style="width:670px;height:175px">
+전환 스크립트 : 주문완료
+ 
+<html>
+….
+var
+var
+….
+</html>
+					</textarea>
+					<div class="btn_foot">
+						<a href="#" class="btn_b_odd">확인</a>
+					</div>
+				</div>
+			</div></div>
+			<!-- //layer popup -->
+			<!-- layer popup - 쿠키 보관 기간 설정 -->
+			<div class="ly_pop" style="display:none"><div class="ly_pop_in">
+				<div class="ly_pop_cont">
+					<div class="ly_head">
+						<h3 class="tit_ly">쿠키 보관 기간 설정</h3>
+						<a href="#" class="btn_close_ly">닫기</a>
+					</div>
+					<p class="tit_txt">쿠키 보관 기간을 설정합니다.<br>쿠키 보관 기간에 따라 간접전환 분석 기간이 결정됩니다.</p>
+					<table class="tbl_ly">
+					<caption>쿠키 보관 기간 설정</caption>
+					<colgroup><col width="137"><col></colgroup>
+					<tr>
+						<th>쿠키 보관 일수</th>
+						<td>
+							<select class="selectbox select_s" style="width:163px">
+								<option>1일</option>
+								<option>7일</option>
+								<option>14일</option>
+								<option selected>30일</option>
+								<option>45일</option>
+								<option selected>직접입력</option>
+							</select>
+							<input type="text" class="inp_text inp_text_s" style="width:220px">
+						</td>
+					</tr>
+					<tr>
+						<th>참고하세요!</th>
+						<td><p class="msg_inp_help">직접 전환 : 광고주 사이트 유입 후 30분 이내에 전환이 발생한 경우<br>간접 전환 : 30분 이후 전환이 발생한 경우, 쿠키 보관 일수에 따라 간접 전환 측정기간이 설정됩니다.</p></td>
+					</tr>
+					</table>
+					<div class="btn_foot">
+						<a href="#" class="btn_b_odd">수정</a>
+						<a href="#" class="btn_b_gray">취소</a>
+					</div>
+				</div>
+			</div></div>
+			<!-- //layer popup -->
+			<!-- layer popup - 전환등록 -->
+			<div class="ly_pop" style="display:none"><div class="ly_pop_in">
+				<div class="ly_pop_cont">
+					<div class="ly_head">
+						<h3 class="tit_ly">전환 등록</h3>
+						<a href="#" class="btn_close_ly">닫기</a>
+					</div>
+					<h4 class="tit_ly_sub">전환을 등록하세요.</h4>
+					<table class="tbl_ly">
+					<caption>전환 등록</caption>
+					<colgroup><col width="171"><col></colgroup>
+					<tr>
+						<th>전환 구분
+							<span class="wrap_hint">
+								<a href="#" class="btn_hint">?</a>
+								<span class="ly_hint">
+									전자상거래 전환을 선택하면 판매금액,<br>객단가, ROAS 등 매출성과 정보를 추가로<br>분석할 수 있습니다.
+								</span>
+							</span>
+						</th>
+						<td>
+							<select class="selectbox select_s" style="width:177px">
+								<option>회원가입</option>
+								<option>전자상거래</option>
+								<option>신청완료</option>
+								<option>예약</option>
+								<option>글쓰기</option>
+								<option>기타</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>전환 이름</th>
+						<td>
+							<input type="text" class="inp_text inp_text_s" style="width:175px">
+							<span class="msg_inp_help">광고 목표로 등록할 전환 이름을 입력하세요.</span>
+						</td>
+					</tr>
+					<tr>
+						<th>전환 완료 조건
+							<span class="wrap_hint">
+								<a href="#" class="btn_hint">?</a>
+								<span class="ly_hint">
+									<span class="ul">
+									<span class="li">페이지 도달 : thank.html 과 같은 완료 페이지도달 추적</span>
+									<span class="li">버튼클릭 : 동영상 재생, 신청하기, 다운로드, Click to call 등 버튼 클릭 추적</span>
+									</span>
+								</span>
+							</span>
+						</th>
+						<td> 
+							<span class="inp_radio checked" style="width:113px"><input type="radio" checked><label for="">페이지 도달</label></span>
+							<span class="inp_radio"><input type="radio"><label for="">버튼 클릭</label></span>
+						</td>
+					</tr>
+					<tr>
+						<th>객단가
+							<span class="wrap_hint">
+								<a href="#" class="btn_hint">?</a>
+								<span class="ly_hint">
+									<span class="ul">
+									<span class="li">객단가는 전환 1건당의 가치를 의미합니다.</span> 
+									<span class="li">객단가를 입력하면 전환에 금전적 가치를 부여하여 성과를 계산할 수 있습니다.</span> 
+									<span class="li">전자상거래 거래의 경우 이 값을 비워 두고 전자상거래 추적을 위한<br>변수 스크립트 설정을 통해 실제 매출액에 근거한 수익을 확인할 수 있습니다.</span>
+									</span>
+								</span>
+							</span>
+						</th>
+						<td>
+							<span class="inp_check checked"><input type="checkbox" checked></span>
+							<input type="text" value="1,000,000,000" class="inp_text inp_text_s inp_text_r" style="width:152px"> <label for="">원</label>
+						</td>
+					</tr>
+					</table>
+					<div class="btn_foot">
+						<a href="#" class="btn_b_odd">등록</a>
+						<a href="#" class="btn_b_gray">취소</a>
+					</div>
+				</div>
+			</div></div>
+			<!-- //layer popup -->
+			<!-- layer popup - 전환수정 -->
+			<div class="ly_pop" style="display:none"><div class="ly_pop_in">
+				<div class="ly_pop_cont">
+					<div class="ly_head">
+						<h3 class="tit_ly">전환 수정</h3>
+						<a href="#" class="btn_close_ly">닫기</a>
+					</div>
+					<h4 class="tit_ly_sub">전환을 등록하세요.</h4>
+					<table class="tbl_ly">
+					<caption>전환 등록</caption>
+					<colgroup><col width="171"><col></colgroup>
+					<tr>
+						<th>전환 구분
+							<span class="wrap_hint">
+								<a href="#" class="btn_hint">?</a>
+								<span class="ly_hint">
+									전자상거래 전환을 선택하면 판매금액,<br>객단가, ROAS 등 매출성과 정보를 추가로<br>분석할 수 있습니다.
+								</span>
+							</span>
+						</th>
+						<td>회원가입</td>
+					</tr>
+					<tr>
+						<th>전환 이름</th>
+						<td>
+							<input type="text" class="inp_text inp_text_s" style="width:175px">
+							<span class="msg_inp_help">광고 목표로 등록할 전환 이름을 입력하세요.</span>
+						</td>
+					</tr>
+					<tr>
+						<th>전환 완료 조건
+							<span class="wrap_hint">
+								<a href="#" class="btn_hint">?</a>
+								<span class="ly_hint">
+									<span class="ul">
+									<span class="li">페이지 도달 : thank.html 과 같은 완료 페이지도달 추적</span>
+									<span class="li">버튼클릭 : 동영상 재생, 신청하기, 다운로드, Click to call 등 버튼 클릭 추적</span>
+									</span>
+								</span>
+							</span>
+						</th>
+						<td>페이지 도달</td>
+					</tr>
+					<tr>
+						<th>객단가
+							<span class="wrap_hint">
+								<a href="#" class="btn_hint">?</a>
+								<span class="ly_hint">
+									<span class="ul">
+									<span class="li">객단가는 전환 1건당의 가치를 의미합니다.</span> 
+									<span class="li">객단가를 입력하면 전환에 금전적 가치를 부여하여 성과를 계산할 수 있습니다.</span> 
+									<span class="li">전자상거래 거래의 경우 이 값을 비워 두고 전자상거래 추적을 위한<br>변수 스크립트 설정을 통해 실제 매출액에 근거한 수익을 확인할 수 있습니다.</span>
+									</span>
+								</span>
+							</span>
+						</th>
+						<td>
+							<span class="inp_check"><input type="checkbox"></span>
+							<input type="text" class="inp_text inp_text_s inp_text_r disabled" disabled style="width:152px"> <label for="">원</label>
+						</td>
+					</tr>
+					</table>
+					<div class="btn_foot">
+						<a href="#" class="btn_b_odd">수정</a>
+						<a href="#" class="btn_b_gray">취소</a>
+					</div>
+				</div>
+			</div></div>
+			<!-- //layer popup -->
+			
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>기본정보관리 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents" class="sub_myinfo"> 		
+			<ul class="tab_v1">
+			<!-- [D] 활성화 페이지 .on 추가 -->
+			<li><a href="#">홈</a></li>			
+			<li class="on"><a href="#">기본정보관리</a></li>			
+			<li><a href="#">비즈니스계정</a></li>			
+			<li><a href="#">애드머니</a></li>			
+			<li class="high"><a href="#">서비스신청<br>처리이력</a></li>
+			<li class="high"><a href="#">나의<br>광고효율</a></li>		
+			<li class="high"><a href="#">유료회원<br>신청이력</a></li>	
+			<li><a href="#">관심상품</a></li>			
+			<li><a href="#">상담내역</a></li>			
+			</ul>
+			<h2 class="tit_sz20">기본정보관리</h2>	
+			<ul class="tab_v2">
+			<li class="on"><a href="#">기본정보관리</a></li>
+			<li><a href="#">계좌정보</a></li>								
+			</ul>
+			<ul class="tab_lst">
+			<li>
+				<div class="tit_wrap">
+					<h3 class="tit_sec">회원 정보</h3>
+				</div>
+				<div class="tbl_v3_2">
+					<table>
+					<caption class="blind">이름, 닉네임, 아이디, 정보 수신용 이메일, 비즈니스 계정명</caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row">이름</th>
+					<td>김철수</td>
+					</tr>
+					<tr>
+					<th scope="row">닉네임</th>
+					<td>애딘</td>
+					</tr>
+					<tr>
+					<th scope="row">아이디</th>
+					<td>openadsopenads@nhnenet.com</td>
+					</tr>
+					<tr>
+					<th scope="row">정보 수신용 이메일</th>
+					<td>openadsopenads@nhnent.com<a href="#" class="btn_bd bd_y" style="margin-left:60px;">이메일변경</a></td>
+					</tr>
+					<tr>
+					<th scope="row">비즈니스 계정명</th>
+					<td>오픈애즈</td>
+					</tr>
+					</tbody>						
+					</table>					
+				</div>
+				<div class="tit_wrap">
+					<h3 class="tit_sec">홍보성 문자/메일 수신설정</h3>
+				</div>
+				<div class="tbl_v3_2">
+					<table>
+					<caption class="blind">홍보성 문자 메시지, 홍보성 이메일</caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row">홍보성 문자 메시지</th>
+					<td>
+						<div class="chk_box">
+							<input type="checkbox" id="ms_agreed"><label for="ms_agreed"><span>이벤트 및 프로모션 등 알림 문자메시지 수신하기</span></label>
+						</div>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">홍보성 이메일</th>
+					<td>
+						<div class="chk_box">
+							<input type="checkbox" id="email_agreed"><label for="email_agreed"><span>뉴스레터, 진단서비스, 이벤트 및 프로모션 등 알림 이메일 수신하기</span></label>
+						</div>
+						<div class="txt_box">
+							<p class="warn">홍보성 이메일을 수신 거부할 경우, 다양한 정보제공, 이벤트, 프로모션 등의 안내가 제한될 수 있습니다.</p>		
+						</div>
+					</td>
+					</tr>
+					</tbody>						
+					</table>					
+				</div>
+				<div class="tit_wrap">
+					<h3 class="tit_sec">사업자 등록정보</h3><a href="#" class="btn_bd bd_y">사업자 등록정보 수정</a>
+				</div>
+				<div class="tbl_v3_2">
+					<table>
+					<caption class="blind">업체(법인)명, 사업자 등록번호, 사업자등록증 사본</caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row">업체(법인)명</th>
+					<td>오픈애즈 (주)</td>
+					</tr>
+					<tr>
+					<th scope="row">사업자 등록번호</th>
+					<td>12-45-67890</td>
+					</tr>
+					<tr>
+					<th scope="row">사업자등록증 사본</th>
+					<td><a href="#" class="down_link"><em>2016년 1월 온라인 광고 트렌드.pdf</em><span>[10KB]</span></a></td>
+					</tr>
+					</tbody>						
+					</table>					
+				</div>						
+				<div class="btn_area al_r">
+					<a href="#" class="btn_s btn_gry">오픈애즈 회원탈퇴를 원하실 경우</a>
+				</div>
+			</li>
+			<li style="display:none">
+				<div class="tit_wrap">
+					<h3 class="tit_sec">애드머니 전환 계좌정보</h3>
+					<p class="txt1">애드머니 전환 진행 중 계좌 정보를 수정/삭제해도 신청 시점에 등록되어 있는 계좌로 입금됩니다.</p>
+				</div>
+				<div class="tbl_v3_2">
+					<table>
+					<caption class="blind">이름, 계좌번호, 예금주명</caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row">이름</th>
+					<td>신한은행</td>
+					</tr>
+					<tr>
+					<th scope="row">계좌번호</th>
+					<td>123-456789-**-***</td>
+					</tr>
+					<tr>
+					<th scope="row">예금주명</th>
+					<td>오픈애즈</td>
+					</tr>
+					<tr>
+					<th scope="row">통장 사본</th>
+					<td><a href="#" class="down_link"><em>오픈애즈_통장사본</em><span>[10KB]</span></a></td>
+					</tr>
+					</tbody>						
+					</table>					
+				</div>			
+				<div class="btn_area al_c">
+					<a href="#" class="btn_l btn_org">계좌 수정</a>
+					<a href="#" class="btn_l btn_wht">계좌 삭제</a>
+				</div>
+				<!-- [D] 계좌정보 없을 경우 -->
+				<div class="tit_wrap">
+					<h3 class="tit_sec">애드머니 전환 계좌정보</h3>
+				</div>
+				<div class="no_account">
+					<p class="txt2">등록된 계좌 정보가 없습니다.</p>
+					<ul class="lst_v2">
+					<li>애드머니 전환 계좌는 광고주 본인 또는 업체명으로 개설된 계좌정보만 등록이 가능합니다.</li>
+					<li>타인의 계좌정보는 등록이 불가합니다.</li>
+					</ul>
+					<a href="#" class="btn_s btn_org">계좌 등록</a>
+				</div>	
+				<!-- // [D] 계좌정보 없을 경우 -->
+			</li>
+			</ul>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

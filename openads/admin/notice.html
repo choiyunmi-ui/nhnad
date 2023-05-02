@@ -1,0 +1,181 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>공지사항 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$( ".datepicker" ).datepicker();
+	});
+</script>
+</head>
+<body>
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header_wrap"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="lnb"></div>
+		<div id="contents">
+			<div class="section_box">		
+				<div class="tit_wrap">
+					<h2 class="tit">공지사항<span class="total">총 100 건</span></h2>
+					<div class="btn_area">
+						<!-- [D] 예약게시글, 임시저장글 클릭시 pop_save 팝업 노출 -->
+						<button class="btn_pop_save btn_gry">예약게시글</button>
+						<button class="btn_pop_save btn_gry">임시저장글</button>					
+					</div>
+					<!-- [D] 글 불러오기 팝업. top값은 .tit_wrap height값에 따라 유동적으로 변함 -->
+					<div class="pop_save" style="top:80px">
+						<ul class="lst_save">
+						<li><a href="#">오픈랭킹 2016.06 기준 자료가 업데이트</a><span class="date">2016.07.07 15:03</span><a href="#" class="btn_del">삭제</a></li>
+						<li><a href="#">오픈랭킹 2016.06 기준 자료가 업데이트</a><span class="date">2016.07.07 15:03</span><a href="#" class="btn_del">삭제</a></li>
+						<li><a href="#">오픈랭킹 2016.06 기준 자료가 업데이트</a><span class="date">2016.07.07 15:03</span><a href="#" class="btn_del">삭제</a></li>
+						<li><a href="#">오픈랭킹 2016.06 기준 자료가 업데이트</a><span class="date">2016.07.07 15:03</span><a href="#" class="btn_del">삭제</a></li>
+						<li><a href="#">오픈랭킹 2016.06 기준 자료가 업데이트</a><span class="date">2016.07.07 15:03</span><a href="#" class="btn_del">삭제</a></li>
+						<li><a href="#">오픈랭킹 2016.06 기준 자료가 업데이트</a><span class="date">2016.07.07 15:03</span><a href="#" class="btn_del">삭제</a></li>
+						<li><a href="#">오픈랭킹 2016.06 기준 자료가 업데이트</a><span class="date">2016.07.07 15:03</span><a href="#" class="btn_del">삭제</a></li>
+						</ul>				
+					</div>
+				</div>
+				<div class="tbl_v1">
+					<table>
+					<caption class="blind">공지사항 제목, 작성자, 게시일, 게시만료일</caption>
+					<colgroup>
+					<col><col width="115"><col width="155"><col width="155">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col">제목</th>
+					<th scope="col">작성자</th>
+					<th scope="col">게시일</th>
+					<th scope="col">게시만료일</th>
+					</tr>				
+					</thead>
+					<tbody>
+					<tr>
+					<!-- [D] 중요 게시물일시 .ico_imp 추가 -->
+					<td class="tit"><a href="#" class="ico_imp">지난 8월 15일 오픈랭킹이 업데이트를 했습니다.  지난 8월 15일 오픈랭킹이 업데이트를 했습니다...</a></td>
+					<td>금세연</td>
+					<td>2016 - 03 -05</td>
+					<td>2016 - 07 -07</td>
+					</tr>
+					<tr>
+					<td class="tit"><a href="#">지난 8월 15일 오픈랭킹이 업데이트를 했습니다.  지난 8월 15일 오픈랭킹이 업데이트를 했습니다...</a></td>
+					<td>금세연</td>
+					<td>2016 - 03 -05</td>
+					<td>2016 - 07 -07</td>
+					</tr>
+					<tr>
+					<td class="tit"><a href="#">지난 8월 15일 오픈랭킹이 업데이트를 했습니다.  지난 8월 15일 오픈랭킹이 업데이트를 했습니다...</a></td>
+					<td>금세연</td>
+					<td>2016 - 03 -05</td>
+					<td>2016 - 07 -07</td>
+					</tr>
+					<tr>
+					<td class="tit"><a href="#">지난 8월 15일 오픈랭킹이 업데이트를 했습니다.  지난 8월 15일 오픈랭킹이 업데이트를 했습니다...</a></td>
+					<td>금세연</td>
+					<td>2016 - 03 -05</td>
+					<td>2016 - 07 -07</td>
+					</tr>
+					<tr>
+					<td class="tit"><a href="#">지난 8월 15일 오픈랭킹이 업데이트를 했습니다.  지난 8월 15일 오픈랭킹이 업데이트를 했습니다...</a></td>
+					<td>금세연</td>
+					<td>2016 - 03 -05</td>
+					<td>2016 - 07 -07</td>
+					</tr>
+					<tr>
+					<td class="tit"><a href="#">지난 8월 15일 오픈랭킹이 업데이트를 했습니다.  지난 8월 15일 오픈랭킹이 업데이트를 했습니다...</a></td>
+					<td>금세연</td>
+					<td>2016 - 03 -05</td>
+					<td>2016 - 07 -07</td>
+					</tr>
+					<tr>
+					<td class="tit"><a href="#">지난 8월 15일 오픈랭킹이 업데이트를 했습니다.  지난 8월 15일 오픈랭킹이 업데이트를 했습니다...</a></td>
+					<td>금세연</td>
+					<td>2016 - 03 -05</td>
+					<td>2016 - 07 -07</td>
+					</tr>
+					<tr>
+					<td class="tit"><a href="#">지난 8월 15일 오픈랭킹이 업데이트를 했습니다.  지난 8월 15일 오픈랭킹이 업데이트를 했습니다...</a></td>
+					<td>금세연</td>
+					<td>2016 - 03 -05</td>
+					<td>2016 - 07 -07</td>
+					</tr>
+					<tr>
+					<td class="tit"><a href="#">지난 8월 15일 오픈랭킹이 업데이트를 했습니다.  지난 8월 15일 오픈랭킹이 업데이트를 했습니다...</a></td>
+					<td>금세연</td>
+					<td>2016 - 03 -05</td>
+					<td>2016 - 07 -07</td>
+					</tr>
+					<tr>
+					<td class="tit"><a href="#">지난 8월 15일 오픈랭킹이 업데이트를 했습니다.  지난 8월 15일 오픈랭킹이 업데이트를 했습니다...</a></td>
+					<td>금세연</td>
+					<td>2016 - 03 -05</td>
+					<td>2016 - 07 -07</td>
+					</tr>
+					<tr>
+					<td class="tit"><a href="#">지난 8월 15일 오픈랭킹이 업데이트를 했습니다.  지난 8월 15일 오픈랭킹이 업데이트를 했습니다...</a></td>
+					<td>금세연</td>
+					<td>2016 - 03 -05</td>
+					<td>2016 - 07 -07</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="btn_area">
+				<a href="#" class="btn_yel fl_r">글쓰기</a>		
+			</div>
+			<div class="pagenation">
+				<a href="#" class="first">처음</a>
+				<a href="#" class="prev">이전</a>
+				<ul class="num">
+				<!-- [D] 해당 페이지에 .on 추가 -->
+				<li class="on"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+				<li><a href="#">7</a></li>
+				<li><a href="#">8</a></li>
+				<li><a href="#">9</a></li>
+				<li><a href="#">10</a></li>				
+				</ul>
+				<a href="#" class="next">다음</a>
+				<a href="#" class="last">끝</a>			
+			</div>
+			<div class="srch_wrap">
+				<form action="#">
+				<fieldset>
+				<legend>검색 영역</legend>
+					<div class="sel_wrap">
+						<button type="button" class="btn_sel">제목 + 내용</button> 
+						<ul class="sel_lst">
+						<li><a href="#">제목 + 내용</a></li>								
+						<li><a href="#">제목</a></li>								
+						<li><a href="#">내용</a></li>								
+						</ul>
+					</div>
+					<label for="scrh_word" class="blind">검색어 입력</label>			
+					<input type="text" id="scrh_word" class="ipt_txt">
+					<button type="submit" class="btn_srch">검색</button>
+				</fieldset>				
+				</form>			
+			</div>	
+		</div>
+	</div>
+	<!-- //[D] CONTAINER -->
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

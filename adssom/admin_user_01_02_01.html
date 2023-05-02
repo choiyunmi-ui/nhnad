@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+			<div class="section_head">
+				<h2 class="tit_top">회원관리</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<a href="#">어드민</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">회원관리</a>
+						<div class="dep2">
+							<em class="tit_dep2">회원관리</em>
+							<a href="#" class="selected">회원관리</a>
+							<a href="#">팀관리</a>
+							<a href="#">관리이력</a>
+							<em class="tit_dep2"><a href="#">API관리</a></em>
+							<em class="tit_dep2"><a href="#">자동입찰개수제한관리</a></em>
+						</div>
+					</span>
+					<span class="bar">&gt;</span>
+					<a href="#">AE회원목록</a>
+				</div>
+			</div>
+			
+			<!-- 조회필터 -->
+			<div class="section_filter" name="case_filter_admin_member">
+				@template_filter.html
+			</div>
+			
+			<!-- 광고담당자(AE) 회원 목록 -->
+			<div class="sub_head">
+				<h3 class="tit_section">광고담당자(AE) 회원 목록 <span class="stxt">총000명</span></h3>
+				<div class="side">
+					<div class="select_btn select2-container">
+						<a href="#" class="select2-choice">
+							<span class="select2-chosen">팀이동</span>
+							<span class="select2-arrow" role="presentation"><b role="presentation"></b></span>
+						</a>
+					</div>
+					<a href="#" class="btn_basic_m"><img src="img/ico_btn_delete.png" alt="x" class="ico">삭제</a>
+				</div>
+			</div>
+			
+			<div class="section_box">
+				<table class="tbl_form">
+				<caption>광고담당자(AE) 회원 목록 thead</caption>
+				<colgroup><col class="t_check"><col width="12.9%"><col width="12.4%"><col width="9.9%"><col width="6.7%"><col width="12.4%"><col width="9.5%"><col width="11.2%"></colgroup>
+				<thead>
+				<tr>
+					<th class="check"><span class="inp_check"><input type="text"></span></th>
+					<th class="id"><a href="#" class="btn_sort">아이디</a></th>
+					<th class="incharge"><a href="#" class="btn_sort">담당자</a></th>
+					<th class="team"><a href="#" class="btn_sort">팀</a></th>
+					<th class="level"><a href="#" class="btn_sort">권한</a></th>
+					<th class="team_manage"><a href="#" class="btn_sort">관리대상 팀</a></th>
+					<th class="posid">POS ID</a></th>
+					<th class="id_click">클릭스마케터 ID</a></th>
+					<th class="date_modify">수정일</th>
+					<th class="date_join">가입일</th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<caption>광고담당자(AE) 회원 목록 tbody</caption>
+				<colgroup><col class="t_check"><col width="12.9%"><col width="12.4%"><col width="9.9%"><col width="6.7%"><col width="12.4%"><col width="9.5%"><col width="11.2%"></colgroup>
+				<tbody>
+				<!-- [D] 목록없을때 -->
+				<tr><td colspan="10" class="lst_none">조회 대상이 없습니다.</td></tr>
+				<!-- //[D] 목록없을때 -->
+				</tbody>
+				</table>
+			</div>
+			
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

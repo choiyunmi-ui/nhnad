@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+		
+			<div class="section_head">
+				<h2 class="tit_top">키워드 제안</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">광고제안</a>
+						<span class="dep1">
+							<a href="#">광고정보관리</a>
+							<a href="#">분석/리포트</a>
+							<a href="#">자동입찰</a>
+							<a href="#">마켓트렌드</a>
+							<a href="#" class="selected">광고제안</a>
+							<a href="#">어드민</a>
+							<a href="#">시스템관리</a>
+						</span>
+					</span>
+					<span class="bar">&gt;</span>
+					<span class="dep_group">
+						<a href="#">키워드/키워드 제안</a>
+						<span class="dep2">
+							<em class="tit_dep2"><a href="#">키워드</a></em>
+							<a href="#" class="selected">키워드 제안</a>
+							<a href="#">키워드 목록</a>
+							<em class="tit_dep2"><a href="#">광고문구</a></em>
+							<a href="#">문구 작성</a>
+							<a href="#">문구 다운로드</a>
+						</span>
+					</span>
+				</div>
+			</div>		
+			
+			<!-- tab -->
+			<div class="tab_page">
+				<ul>
+					<li class="selected"><a href="#">연관 키워드</a></li>
+					<li><a href="#">업종 키워드</a></li>
+					<li><a href="#">시즌 키워드</a></li>
+					<li><a href="#">사이트 추천 키워드</a></li>
+					<li><a href="#">EP 연동</a></li>
+				</ul>
+				<div class="side">
+					<a href="#" class="btn_basic">키워드 담기</a>
+				</div>
+			</div>
+			
+			<!-- 조회필터 - 연관 -->
+			<div class="section_filter" name="prop_06">
+				<label>키워드</label>
+				<!-- [D] 입력 버튼을 누르면 inp_keyword 에 expand class 추가 -->
+				<span class="inp_keyword">
+					<input type="text" class="inp_text" >
+					<textarea class="inp_textarea" rows="5"></textarea>
+					<a href="#" class="btn_expand" onclick="$('.inp_keyword').toggleClass('expand');return false">입력창 확대/축소</a>
+				</span>
+				<span class="bar">|</span>
+				<span class="inp_check" onclick="$('.ly_pop[name=prop_11],.dimmed').show();return false;"><input type="text"><label></label>광고운영 중 키워드 제외</span>
+				<span class="btn_group">
+					<a href="#" class="btn_odd">검색</a>
+				</span>
+			</div>	
+			
+			<!-- 키워드성과 -->
+			<div class="section_box">
+				<table class="tbl_form">
+				<caption>키워드성과 thead</caption>
+				<!-- [D] t_check는 공통/마지막 col항목엔 width선언 제외 -->
+				<colgroup><col class="t_check"><col><col width="8.5%"><col width="8.5%"><col width="8.8%"><col width="8.5%"><col width="9%"><col width="8%"><col width="8%"><col width="10.5%"><col width="105px"></colgroup>
+				<thead>
+				<tr class="dep_form">				
+					<th rowspan="2" class="t_check"><span class="inp_check"><input type="checkbox"></span></th>
+					<th><a href="#" class="btn_sort">키워드</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort up">경쟁현황</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">조회수(PC)</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">조회수(모바일)</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">예상노출수</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">예상클릭수</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">예상클릭율</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">예상CPC</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">예상광고비</a></th>
+					<th rowspan="2">
+						<a href="#" class="btn_basic_s" style="width:80px" onclick="$('.ly_pop[name=prop_16],.dimmed').show();return false;">키워드 필터</a>
+						<a href="#" class="btn_basic_s" style="width:80px">모든필터해제</a>
+					</th>
+				</tr>
+				<tr class="dep_form">
+					<th><input type="text" class="inp_text inp_text_s"></th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<caption>키워드성과 tbody</caption>
+				<!-- [D] 상단 목록과 동일한 col width값 선언 -->
+				<colgroup><col class="t_check"><col><col width="8.5%"><col width="8.5%"><col width="8.8%"><col width="8.5%"><col width="9%"><col width="8%"><col width="8%"><col width="10.5%"><col width="105px"></colgroup>
+				<tbody>				
+				<tr><td colspan="11" class="lst_none" style="height:169px">조회 결과가 없습니다.</td></tr>
+				</tbody>
+				</table>
+			</div>
+			
+			<!-- 담은키워드 -->
+			<div class="section_box">				
+				<!-- tab sub -->
+				<div class="tab_sub">
+					<h4 class="tit_sub">담은 키워드 <span class="txt">(0/5000)</span></h4>
+					<ul>
+						<li class="selected"><a href="#">PC WEB</a></li>
+						<li><a href="#">Mobile</a></li>
+					</ul>
+					<div class="side">
+						<a href="#" class="btn_basic" onclick="$('.ly_pop[name=prop_24],.dimmed').show();return false;">키워드 추가</a>
+						<a href="#" class="btn_basic"><img src="img/ico_btn_delete.png" alt="x" class="ico">삭제</a>
+						<a href="#" class="btn_basic" onclick="$('.ly_pop[name=prop_25],.dimmed').show();return false;">순위변경</a>
+						<a href="#" class="btn_basic" onclick="$('.ly_pop[name=prop_22],.dimmed').show();return false;">순위/입찰가 변경</a>
+						<a href="#" class="btn_basic" onclick="$('.ly_pop[name=prop_26],.dimmed').show();return false;">키워드 조합 </a>
+						<a href="#" class="btn_basic" onclick="$('.ly_pop[name=prop_29],.dimmed').show();return false;">제안서 생성</a>
+					</div>
+				</div>	
+				
+				<!-- [D] PC WEB tab 노출 -->
+				<div class="wrap_tab_contents" name="prop_04">
+					<table class="tbl_form">
+					<caption>담은 키워드 thead</caption>
+					<!-- [D] t_check는 공통/마지막 col항목엔 width선언 제외 -->
+					<colgroup><col class="t_check"><col><col width="114px"><col width="11%"><col width="11%"><col width="11%"><col width="11%"><col width="11%"><col width="105px"></colgroup>
+					<thead>
+					<tr>
+						<th class="t_check"><span class="inp_check"><input type="checkbox"></span></th>
+						<th><a href="#" class="btn_sort selected"><strong>키워드</strong></a></th>
+						<th><a href="#" class="btn_sort up">예상순위</a></th>
+						<th><a href="#" class="btn_sort">예상노출수</a></th>
+						<th><a href="#" class="btn_sort">예상클릭수</a></th>
+						<th><a href="#" class="btn_sort">예상클릭율</a></th>
+						<th><a href="#" class="btn_sort">예상CPC</a></th>
+						<th><a href="#" class="btn_sort">예상광고비</a></th>
+						<th>
+							<a href="#" class="btn_basic_s" style="width:80px" onclick="$('.ly_pop[name=prop_16],.dimmed').show();return false;">키워드 필터</a>
+							<a href="#" class="btn_basic_s" style="width:80px">모든필터해제</a>
+						</th>
+					</tr>
+					</thead>
+					</table>
+					<table class="tbl_form">
+					<caption>담은 키워드 tbody</caption>
+					<!-- [D] 상단 목록과 동일한 col width값 선언 -->					
+					<colgroup><col class="t_check"><col><col width="114px"><col width="11%"><col width="11%"><col width="11%"><col width="11%"><col width="11%"><col width="105px"></colgroup>
+					<tbody>
+					<tr><td colspan="9" class="lst_none" style="height:169px">조회 결과가 없습니다.</td></tr>
+					</tbody>
+					</table> 
+					<table class="tbl_form">
+					<caption>담은 키워드 tfoot</caption>
+					<colgroup><col class="t_check"><col><col width="114px"><col width="11%"><col width="11%"><col width="11%"><col width="11%"><col width="11%"><col width="105px"></colgroup>
+					<tfoot>
+					<tr class="total">
+						<td colspan="2">요약</td>
+						<td><p class="num"></p></td>
+						<td><p class="num"></p></td>
+						<td><p class="num"></p></td>
+						<td><p class="num"></p></td>
+						<td><p class="num"></p></td>
+						<td><p class="num"></p></td>
+						<td></td>
+					</tr>
+					</<tfoot>
+					</table>
+				</div>
+				<!-- //wrap_tab_contents -->			
+			</div>						
+				
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

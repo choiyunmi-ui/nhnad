@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션:광고정보관리&gt;광고주관리&gt;광고주등록</title>
+<link rel="stylesheet" href="css/ui.css">
+<link rel="stylesheet" href="css/select2.css">
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<style>
+.template_case{margin:30px;min-width:1280px;}
+.tit_case{margin:20px 0 0 5px;font-weight:bold;font-size:14px;}
+.tit_case_in{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;min-width:70px;border-right:2px solid #64bbe8;margin-right:8px;padding-right:10px;text-align:center;}
+.case_info{margin:5px 0 0 5px;font-size:12px;line-height:18px;}
+.section_box{margin-top:10px;}
+.case_box{margin-top:10px;padding:10px;border:1px solid #d3d2dc;border-radius:3px;background:#fff;}
+.case_box>.btn_tip{margin-left:200px;}
+.case_box>.btn_tip:first-child{margin:0;}
+</style>
+<body>
+	
+<div class="template_case">		
+
+			<h2 class="tit_case">Convert table</h2>			
+			<div class="section_box">
+				<table class="easyui-datagrid" style="width:100%;max-height:372px">
+				<thead>
+				<tr>
+					<th data-options="field:'date',width:'20%'">날짜</th>
+					<th data-options="field:'get_keyword_num',width:'20%',align:'right'">수집 키워드 수</th>
+					<th data-options="field:'pre_view',width:'20%',align:'right'">예상노출수</th>
+					<th data-options="field:'pre_click',width:'20%',align:'right'">예상클릭수</th>
+					<th data-options="field:'pre_pay',width:'20%',align:'right'">예상 집행금액</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>2014년 06월</td>
+					<td>85</td>
+					<td>136,521</td>
+					<td>2,730</td>
+					<td>67,553,008</td>
+				</tr>
+				<tr>
+					<td>2014년 06월</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>2014년 06월</td>
+					<td>35,456,000</td>
+					<td>35,456,000</td>
+					<td>35,456,000</td>
+					<td>12,435,456,000</td>
+				</tr>
+				<tr><td>2014년 06월</td><td>35,456,000</td><td>35,456,000</td><td>35,456,000</td><td>12,435,456,000</td></tr>
+				<tr><td>2014년 06월</td><td>35,456,000</td><td>35,456,000</td><td>35,456,000</td><td>12,435,456,000</td></tr>
+				<tr><td>2014년 06월</td><td>35,456,000</td><td>35,456,000</td><td>35,456,000</td><td>12,435,456,000</td></tr>
+				<tr><td>2014년 06월</td><td>35,456,000</td><td>35,456,000</td><td>35,456,000</td><td>12,435,456,000</td></tr>
+				<tr><td>2014년 06월</td><td>35,456,000</td><td>35,456,000</td><td>35,456,000</td><td>12,435,456,000</td></tr>
+				<tr><td>2014년 06월</td><td>35,456,000</td><td>35,456,000</td><td>35,456,000</td><td>12,435,456,000</td></tr>
+				<tr><td>2014년 06월</td><td>35,456,000</td><td>35,456,000</td><td>35,456,000</td><td>12,435,456,000</td></tr>
+				<tr><td>2014년 06월</td><td>35,456,000</td><td>35,456,000</td><td>35,456,000</td><td>12,435,456,000</td></tr>
+				<tr><td>2014년 06월</td><td>35,456,000</td><td>35,456,000</td><td>35,456,000</td><td>12,435,456,000</td></tr>
+				<tr><td>2014년 06월</td><td>35,456,000</td><td>35,456,000</td><td>35,456,000</td><td>12,435,456,000</td></tr>
+				</tbody>
+			</table>
+			</div>
+			
+			<div class="section_box">
+				<table class="easyui-datagrid" style="width:100%;max-height:372px">
+				<thead>
+				<tr class="dep1">
+					<th rowspan="2" field="date-do" width="11%" align="center">처리일자</th>
+					<th rowspan="2" field="member-type" width="13.7%">회원 유형</th>
+					<th rowspan="2" field="id" width="18%">아이디</th>
+					<th rowspan="2" field="headerline" width="14%">담당자 해더 항목이 길어질때 줄바꿈이 됩니다</th>
+					<th colspan="2">상세내용</th>
+					<th rowspan="2" field="writer" width="14.3%">등록자</th>
+				</tr>
+				<tr class="dep2">
+					<th field="change-before" width="15%" align="center">변경전</th>
+					<th field="change-after" width="15%" align="center">변경후</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>2014.11.10</td>
+					<td>광고담당자(AE)</td>
+					<td>agent1</td>
+					<td>박선유123</td>
+					<td>1팀</td>
+					<td>3팀</td>
+					<td>MASTER</td>
+				</tr>
+				<tr>
+					<td>2014.11.10</td>
+					<td>광고주</td>
+					<td>agent1</td>
+					<td>박선유</td>
+					<td>1팀</td>
+					<td>
+						<span class="btn_tip">1팀 외 2개 팀
+							<div class="ly_tip">
+								<span class="team">1팀<br>2팀<br>3팀</span>
+							</div>
+						</span>
+					</td>
+					<td>MASTER</td>
+				</tr>
+				<tr>
+					<td>2014.11.10</td>
+					<td title="텍스트가 기준바이트 이상일때 span.ellipsis로 감싼 후 title=''로 본문 전문을 td에 삽입"><span class="ellipsis">텍스트가 기준바이트 이상일때 span.ellipsis로 감싼 후 title=''로 본문 전문을 td에 삽입</span></td>
+					<td>agentDScgbws1</td>
+					<td>가나다라마오</td>
+					<td>멤버</td>
+					<td>리더</td>
+					<td title="mailcharlengthislong@domain.co.kr"><span class="ellipsis">mailcharlengthislong@domain.co.kr</span></td>
+				</tr>
+				<tr>
+					<td>2014.11.10</td>
+					<td>광고담당자(AE)</td>
+					<td>agent1</td>
+					<td><p class="num">90,000,000.000</p></td>
+					<td>-</td>
+					<td>-</td>
+					<td>MASTER</td>
+				</tr>
+				<tr>
+					<td>2014.11.10</td>
+					<td>광고담당자(AE)</td>
+					<td>agent1</td>
+					<td><p class="num">90,000,000</p></td>
+					<td>정상</td>
+					<td>일시중지</td>
+					<td>MASTER</td>
+				</tr>
+				<!-- <tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr> -->
+				</tbody>
+				</table>
+				<div class="pagenate">
+					<a href="#" class="btn_first">처음</a>
+					<a href="#" class="btn_prev">이전</a>
+					<span class="num">
+						<a href="#">1</a>
+						<span class="bar">|</span>
+						<a href="#">2</a>
+						<span class="bar">|</span>
+						<a href="#">3</a>
+						<span class="bar">|</span>
+						<a href="#">4</a>
+						<span class="bar">|</span>
+						<a href="#">5</a>	
+					</span>
+					<a href="#" class="btn_next">다음</a>
+					<a href="#" class="btn_last">끝</a>
+				</div>
+			</div>
+			
+			<div class="section_box">
+				<table class="easyui-datagrid" style="width:100%;max-height:372px">
+				<thead>
+				<tr class="dep1">
+					<th rowspan="2" field="t-check" width="43" align="center"><span class="inp_check"><input type="checkbox"></span></th>
+					<th rowspan="2" field="ae" width="18%"><a href="#" class="btn_sort"><strong>광고주</strong></a></th>
+					<th rowspan="2" field="team" width="12%" align="center"><a href="#" class="btn_sort up"><strong>팀</strong></a></th>
+					<th rowspan="2" field="master" width="11%"><a href="#" class="btn_sort up">담당자</a></th>
+					<th colspan="4">총 비용</th>
+				</tr>
+				<tr class="dep2">
+					<th field="yesterday" width="14%" align="right"><a href="#" class="btn_sort">어제</a></th>
+					<th field="day7" width="14%" align="right"><a href="#" class="btn_sort">최근7일</a></th>
+					<th field="this-month" width="14%" align="right"><a href="#" class="btn_sort">이번달</a></th>
+					<th field="past-month" width="14%" align="right"><a href="#" class="btn_sort">지난달</a></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+					<td><a href="#">ABC쇼핑</a></td>
+					<td>1팀</td>
+					<td>박선유</td>
+					<td>90,000,000.000</td>
+					<td>300,000.000</td>
+					<td>1,300,000.000</td>
+					<td>780,000,000.000</td>
+				</tr>
+				<tr>
+					<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+					<td><p class="selected"><a href="#">ABC쇼핑</a></p></td>
+					<td>1팀</td>
+					<td>박선유</td>
+					<td>780,000,000.000</td>
+					<td>300,000.000</td>
+					<td>90,000,000.000</td>
+					<td>1,300,000.000</td>
+				</tr>
+				<tr class="selected">
+					<td class="t_check"><span class="inp_check checked"><input type="checkbox" checked=""></span></td>
+					<td><p><a href="#">ABC쇼핑</a></p></td>
+					<td>1팀</td>
+					<td>박선유</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+				<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+				<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+				<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+				<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+				<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+				<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+				<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+				<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+				<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+				</tbody>
+				</table>
+			</div>
+			
+</div>
+	
+</body>
+</html>

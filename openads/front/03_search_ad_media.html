@@ -1,0 +1,356 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>검색광고 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents" class="sub_srchad2">
+			<div class="wrap_box">
+				<ul class="tit_info">
+					<li><span class="name_blk ico_new">매체명영역입니다</span><a href="http://www.nhnad.co.kr/" title="새 창 열기" target="_blank" class="link sp">
+					</a></li>
+				</ul>
+			</div>
+			<div class="bd_pt_t">
+				<dl class="dl_type1">
+				<dt>네이버 통합검색과 네이버 내/외부 페이지의 검색결과에 노출되는 네이버 대표 검색광고 상품입니다.</dt>
+				<dd>고객이 광고를 클릭하고 사이트에 방문한 경우에만 광고비를 지불하는 종량제 방식의 상품이며,<br>광고주가 키워드에 적용한 입찰가와 광고 진행 중 얻은 품질지수에 의해 광고 순위가 결정되어 노출됩니다.<br>광고는 제목과 설명문구, 사이트URL이 함께 노출되며, 광고 영역에 따라 전화번호, 위치 등이 추가 노출될 수 있습니다.</dd>
+				</dl>
+				<dl class="ad_dl">
+				<dt>업종 특화</dt>
+				<dd>
+					<ul>
+					<li>업종명1</li>
+					<li>업종명2</li>
+					<li>업종명3</li>
+					</ul>
+				</dd>
+				</dl>
+				<!-- [D] 업종명 두줄로 내려갈 경우 .high 추가-->
+				<dl class="ad_dl high">
+				<dt>업종 특화</dt>
+				<dd>
+					<ul>
+					<li>업종명1</li>
+					<li>업종명2</li>
+					<li>업종명3</li>
+					<li>업종명4</li>
+					<li>업종명5</li>
+					<li>업종명6</li>
+					<li>업종명7</li>
+					<li>업종명8</li>
+					<li>업종명9</li>
+					<li>업종명10</li>
+					<li>업종명1</li>
+					<li>업종명2</li>
+					<li>업종명3</li>
+					<li>업종명4</li>
+					<li>업종명5</li>
+					<li>업종명6</li>
+					<li>업종명7</li>
+					<li>업종명8</li>
+					<li>업종명9</li>
+					<li>업종명10</li>
+					<li>업종명1</li>
+					<li>업종명2</li>
+					<li>업종명3</li>
+					<li>업종명4</li>
+					<li>업종명5</li>
+					<li>업종명6</li>
+					<li>업종명7</li>
+					<li>업종명8</li>
+					<li>업종명9</li>
+					<li>업종명10</li>
+					<li>업종명1</li>
+					<li>업종명2</li>
+					<li>업종명3</li>
+					<li>업종명4</li>
+					<li>업종명5</li>
+					<li>업종명6</li>
+					<li>업종명7</li>
+					<li>업종명8</li>
+					<li>업종명9</li>
+					<li>업종명10</li>
+					</ul>
+				</dd>
+				</dl>
+				<!-- //[D] 업종명 두줄로 내려갈 경우 -->
+				<div class="btn_area_rt">
+					<button type="button" class="btn_bd ico_plus">관심상품 추가</button>
+				</div>
+				<div class="tbl_v11">
+					<table>
+					<caption class="blind">검색광고 리스트(상품명, 소재 유형, 매체, 노출 영역, 디바이스 유형, 과금방식, 타겟팅, 상품 유형)</caption>
+					<colgroup>
+					<col style="width:190px"><col><col style="width:120px"><col style="width:120px"><col style="width:120px"><col style="width:120px"><col style="width:120px"><col style="width:120px">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col">상품명</th>
+					<th scope="col">소재 유형</th>
+					<th scope="col">매체</th>
+					<th scope="col">노출 영역</th>
+					<th scope="col">디바이스 유형</th>
+					<th scope="col">과금방식</th>
+					<th scope="col">타겟팅</th>
+					<th scope="col">상품 유형</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td class="chk_box"><input type="checkbox" id="chk1_1"><label for="chk1_1"><a href="#">사아아아아앙푸우우우우우움며엉</a></label></td>
+					<td>검색광고</td>
+					<td>-</td>
+					<td>검색포털<br>애드네트워크</td>
+					<td>PC/Mobile</td>
+					<td>CPC</td>
+					<td>가능</td>
+					<td>-</td>
+					</tr>	
+					<tr>
+					<td class="chk_box"><input type="checkbox" id="chk2_1"><label for="chk2_1"><a href="#" class="ico_new">상품명2</a></label></td>
+					<td>컨텐츠광고</td>
+					<td>-</td>
+					<td>검색포털<br>애드네트워크</td>
+					<td>PC/Mobile</td>
+					<td>CPC</td>
+					<td>가능</td>
+					<td>-</td>
+					</tr>								
+					</tbody>
+					</table>										
+				</div>
+			</div>
+			<h2 class="tit_sz20">상품별 광고 효과</h2>
+			<div class="chart_box pt20">
+				<div class="chart_filter">
+					<dl>
+					<dt>지표</dt>
+					<dd class="sel_wrap" style="width:190px;">
+						<button type="button" class="btn_sel">클릭률</button>
+						<ul class="sel_lst">
+						<li><a href="#">클릭률</a></li>
+						<li><a href="#">클릭비용</a></li>
+						</ul>	
+					</dd>						
+					</dl>
+				</div>
+				<img src="img/@img_chart01_03.jpg" alt="">					
+			</div>
+			<div class="tbl_grd">
+				<table class="easyui-datagrid" style="width:100%">
+				<caption class="blind">순위, 상품명, 집계 데이터 기준 랭킹(클릭률, 클릭비용, 전환율,전환비용, ROAS), 비중(%) 기준 랭킹(집행수 비중, 노출수 비중, 클릭수 비중, 전환수 비중)</caption>
+				<thead>
+				<tr>
+				<th field="raking" width="60" rowspan="3" align="center"><b>순위</b></th>
+				<th field="productid" width="220" rowspan="3" align="left"><b>상품명</b></th>
+				<th colspan="5"><b>집계 데이터 기준 랭킹</b></th>
+				<th colspan="4"><b>비중(%) 기준 랭킹</b></th>
+				</tr>
+				<tr>
+				<th field="field01" scope="col" width="80" align="right" rowspan="2"><span class="btn_sort on">클릭률</span></th>
+				<th field="field02" scope="col" width="80" align="right" rowspan="2"><span class="btn_sort active">클릭비용</span></th>
+				<th scope="col" colspan="3">
+					전환기준
+					<span class="sel_wrap_s" style="width:134px">
+						<button type="button" class="btn_sel">전체</button>
+						<ul class="sel_lst">
+						<li><a href="#">전체</a></li>
+						<li><a href="#">회원가입</a></li>
+						<li><a href="#">구매/주문완료</a></li>
+						<li><a href="#">신청완료</a></li>
+						<li><a href="#">예약완료</a></li>
+						<li><a href="#">글쓰기완료</a></li>
+						<li><a href="#">다운로드수</a></li>
+						<li><a href="#">실행수</a></li>
+						<li><a href="#">참여수</a></li>
+						<li><a href="#">기타</a></li>
+						</ul>
+					</span>
+				</th>	
+				<th field="field06" scope="col" width="85" align="right" rowspan="2"><span class="btn_sort">집행수 비중</span></th>
+				<th field="field07" scope="col" width="85" align="right" rowspan="2"><span class="btn_sort">노출수 비중</span></th>
+				<th field="field08" scope="col" width="85" align="right" rowspan="2"><span class="btn_sort">클릭수 비중</span></th>
+				<th field="field09" scope="col" width="85" align="right" rowspan="2"><span class="btn_sort">전환수 비중</span></th>			
+				</tr>
+				<tr>
+				<th field="field03" scope="col" width="80" align="right"><span class="btn_sort">전환율</span></th>
+				<th field="field04" scope="col" width="90" align="right"><span class="btn_sort">전환비용</span></th>
+				<th field="field05" scope="col" width="80" align="right"><span class="btn_sort">ROAS</span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td>1</td>
+				<td>네이버 클릭초이스</td>
+				<td>11.20%</td>
+				<td>310원</td>
+				<td>11.10%</td>
+				<td>12,300 원</td>
+				<td>11.20%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				</tr>	
+				<tr>
+				<td>2</td>
+				<td>크리테오</td>
+				<td>7.04%</td>
+				<td>310원</td>
+				<td>7.04%</td>
+				<td>12,300 원</td>
+				<td>7.04%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				</tr>	
+				<tr>
+				<td>3</td>
+				<td>네이버 DA</td>
+				<td>100.00%</td>
+				<td>310원</td>
+				<td>100.00%</td>
+				<td>12,300 원</td>
+				<td>100.00%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				</tr>	
+				<tr>
+				<td>4</td>
+				<td>카카오 성과형</td>
+				<td>4.11%</td>
+				<td>310원</td>
+				<td>4.11%</td>
+				<td>12,300 원</td>
+				<td>4.11%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				</tr>	
+				<tr>
+				<td>5</td>
+				<td>앱팡</td>
+				<td>90.00%</td>
+				<td>310원</td>
+				<td>90.00%</td>
+				<td>12,300 원</td>
+				<td>90.00%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				</tr>	
+				</tbody>
+				</table>
+				<!-- [D] tbody 상단 평균값 스크립트 -->
+				<script type="text/javascript">
+				$(document).ready(function(){
+					$('.datagrid-header-check').html('선택');
+					var html	=	"<tr class='datagrid-header-row'>" +
+	                	"<td auto=\"true\" colspan='2'><div class='datagrid-cell'>전체평균</div></td>" +
+	                	"<td auto=\"true\" ><div class='datagrid-cell al_r'>5.15%</div></td>" +
+						"<td auto=\"true\" ><div class='datagrid-cell al_r'>310원</div></td>" +
+						"<td auto=\"true\" ><div class='datagrid-cell al_r'>5.15%</div></td>" +
+						"<td auto=\"true\" ><div class='datagrid-cell al_r'>120,300 원</div></td>" +
+						"<td auto=\"true\" ><div class='datagrid-cell al_r'>100%</div></td>" +
+						"<td auto=\"true\" ><div class='datagrid-cell al_c'>-</div></td>" +
+						"<td auto=\"true\" ><div class='datagrid-cell al_c'>-</div></td>" +
+						"<td auto=\"true\" ><div class='datagrid-cell al_c'>-</div></td>" +
+						"<td auto=\"true\" ><div class='datagrid-cell al_c'>-</div></td>" +
+	                "</tr>";
+	                $(".datagrid-view2 .datagrid-htable > tbody").append(html);
+				});			        
+		  	   </script>
+				<!-- // [D] tbody 상단 평균값 스크립트 -->
+			</div>		
+			<h2 class="tit_sz20">업종별 클릭률</h2>
+			<!-- [D] 결과 있을시 출력 -->
+			<div class="chart_box">
+				<img src="img/@img_chart01_04.jpg" alt="">					
+			</div>
+			<!-- //[D] 결과 있을시 출력 -->
+			<!-- [D] 결과 없을시 출력 -->
+			<div class="chart_none bd_pt">
+				<p>데이터가 충분하지 않습니다.</p>	
+			</div>
+			<!-- //[D] 결과 없을시 출력 -->
+			<h2 class="tit_sz20">관련 콘텐츠</h2>
+			<div class="tbl_v4">
+				<table>
+				<caption class="blind">분류, 제목, 등록일</caption>
+				<colgroup>
+					<col style="width:150px"><col><col style="width:200px">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">분류</th>						
+				<th scope="col">제목</th>						
+				<th scope="col">등록일</th>						
+				</tr>						
+				</thead>
+				<tbody>
+				<tr class="notice">
+				<td>매체소식</td>
+				<td class="al_l"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+				<td>2016-03-05</td>				
+				</tr>	
+				<tr>
+				<td>오픈토크</td>
+				<td class="al_l"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+				<td>2016-03-05</td>				
+				</tr>	
+				<tr>
+				<td>매체소식</td>
+				<td class="al_l"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+				<td>2016-03-05</td>				
+				</tr>	
+				<tr>
+				<td>오픈토크</td>
+				<td class="al_l"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+				<td>2016-03-05</td>				
+				</tr>	
+				<tr>
+				<td>매체소식</td>
+				<td class="al_l"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+				<td>2016-03-05</td>				
+				</tr>								
+				</tbody>						
+				</table>					
+			</div>	
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

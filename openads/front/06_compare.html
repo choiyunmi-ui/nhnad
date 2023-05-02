@@ -1,0 +1,390 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>상담내역 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents" class="sub_compare"> 		
+			<h2 class="tit_sz24">경쟁사 비교분석</h2>
+			<p class="txt1">동일한 업종의 회원이 집행한 광고 효과와 비교해 보세요.</p>
+			<div class="bd_pt_t">
+				<ul class="sector_lst">
+				<li><span>업종명</span></li>
+				<li><span>업종명</span></li>
+				<li><span>업종명</span></li>
+				</ul>			
+				<div class="section_box5">
+					<ul class="type_lst">
+					<li>
+						<dl>
+						<dt>캠페인</dt>
+						<dd class="sel_wrap">
+							<button class="btn_sel">캠페인1</button>
+							<ul class="sel_lst">
+							<li><a href="#">캠페인1</a></li>
+							<li><a href="#">캠페인2</a></li>
+							<li><a href="#">캠페인3</a></li>
+							<li><a href="#">캠페인4</a></li>
+							<li><a href="#">캠페인5</a></li>
+							</ul>
+						</dd>
+						</dl>					
+					</li>
+					<li>
+						<dl>
+						<dt>상품</dt>
+						<dd class="sel_wrap">
+							<button class="btn_sel">상품1</button>
+							<ul class="sel_lst">
+							<li><a href="#">상품1</a></li>
+							<li><a href="#">상품2</a></li>
+							<li><a href="#">상품3</a></li>
+							<li><a href="#">상품4</a></li>
+							<li><a href="#">상품5</a></li>
+							</ul>
+						</dd>
+						</dl>					
+					</li>
+					</ul>
+					<div class="date_area">
+						<form action="#">
+						<fieldset>
+						<legend>기간 조회 영역</legend>
+							<span class="txt_dt">기간</span>
+							<a href="#" class="btn_year sp">연간 캘린더</a>
+							<div class="year_box" style="display:none">
+								<div class="year_top">
+									<a href="#" class="prev sp">이전 년도</a>
+									<b>2015</b>
+									<a href="#" class="next sp">다음 년도</a>
+								</div>
+								<ul class="month_lst">
+								<li><a href="#">1월</a></li>
+								<li><a href="#">2월</a></li>
+								<li><a href="#">3월</a></li>
+								<li><a href="#">4월</a></li>
+								<li><a href="#">5월</a></li>
+								<li><a href="#">6월</a></li>
+								<li class="on"><a href="#">7월</a></li>
+								<li><a href="#">8월</a></li>
+								<li><a href="#">9월</a></li>
+								<li><a href="#">10월</a></li>
+								<li><a href="#">11월</a></li>
+								<li><a href="#">12월</a></li>
+								</ul>						
+							</div>
+							<button type="button" class="btn_prev sp">이전</button>
+							<span class="now_date">2016.07.01 ~ 2016.07.31</span>
+							<button type="button" class="btn_next sp">다음</button>
+							<button type="sumbit" class="btn_bd">조회</button>
+						</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+			<h2 class="tit_sz20">광고 효과 비교</h2>
+			<ul class="compare_lst">
+			<li>
+				<p>전체 평균 대비 내 광고 <b>상위 10%</b></p>
+				<dl>
+				<dt>광고효율</dt>
+				<dd class="sel_wrap_s">
+					<button type="button" class="btn_sel">클릭률</button>
+					<ul class="sel_lst">
+					<li><a href="#">클릭률</a></li>
+					<li><a href="#">전환율</a></li>
+					</ul>
+				</dd>
+				</dl>
+				<img src="img/@img_chart04_01.jpg" alt="">
+			</li>
+			<li>
+				<p>전체 평균 대비 내 광고 <b>상위 10%</b></p>
+				<dl>
+				<dt>광고효율</dt>
+				<dd class="sel_wrap_s">
+					<button type="button" class="btn_sel">클릭비용</button>
+					<ul class="sel_lst">
+					<li><a href="#">클릭비용</a></li>
+					<li><a href="#">전환비용</a></li>
+					</ul>
+				</dd>
+				</dl>
+				<img src="img/@img_chart04_02.jpg" alt="">
+			</li>
+			</ul>
+			<div class="tbl_grd">
+				<table class="easyui-datagrid" style="width:100%">
+				<caption class="blind">상품, 노출수, 클릭수, 클릭률, 클릭비용, 광고비, 전환수, 전환율, 전환비용, ROAS</caption>
+				<thead>
+				<tr>
+				<th field="productid" scope="col" width="310" align="left"><b>상품</b></th>
+				<th field="field01" scope="col" width="80" align="center"><b>노출수</b></th>
+				<th field="field02" scope="col" width="80" align="center"><b>클릭수</b></th>
+				<th field="field03" scope="col" width="80" align="center"><b>클릭률</b></th>
+				<th field="field04" scope="col" width="80" align="center"><b>클릭비용</b></th>
+				<th field="field05" scope="col" width="80" align="center"><b>광고비</b></th>
+				<th field="field06" scope="col" width="80" align="center"><b>전환수</b></th>
+				<th field="field07" scope="col" width="80" align="center"><b>전환율</b></th>
+				<th field="field08" scope="col" width="80" align="center"><b>전환비용</b></th>
+				<th field="field09" scope="col" width="80" align="center"><b>ROAS</b></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td>내 광고</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr>
+				<td>동일 과금대 평균<a href="#" id="tt_btn1_1" class="btn_tooltip">?</a></td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr>
+				<td>TOP 그룹 평균<a href="#" id="tt_btn1_2" class="btn_tooltip">?</a></td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr>
+				<td>전체 평균<a href="#" id="tt_btn1_3" class="btn_tooltip">?</a></td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				</tbody>
+				</table>
+				<!-- [D] 툴팁 버튼과 동일한 ID번호로 통일시 자동으로 마우스오버 모션 생성(#tt_btn1 = #tt_wrap1) -->
+				<!-- [D] 위치값은 인라인으로 조정 -->
+				<div id="tt_wrap1_1" class="tooltip_wrap" style="display:none;top:142px;left:97px">
+					<div class="tool_box" style="width:410px">
+						<p class="txt2">아래 구간 중 해당 구간 값 표시</p>
+						<p class="txt3">과금대 기준 </p>
+						<p class="txt3">- 1백만원 미만 / 1백만원 이상~5백만원 미만 / 5백만원 미만~1천만원 미만 / 1천만원 이상<br>- 오픈랭킹 과금대 기준과 동일하게 적용</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_2" class="tooltip_wrap" style="display:none;top:200px;left:86px">
+					<div class="tool_box">
+						<p class="txt2">선택 상품의 광고 효과 상위자 평균</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_3" class="tooltip_wrap" style="display:none;top:259px;left:55px">
+					<div class="tool_box">
+						<p class="txt2">선택 상품의 전체 집행 건에 대한 평균</p>
+					</div>
+				</div>
+			</div>
+			<h2 class="tit_sz20">업종 상위 광고 효과</h2>
+			<div class="section_box6">
+				<div class="chart_filter">
+				<dl>
+					<dt>지표</dt>
+					<dd class="sel_wrap_s">
+						<button type="button" class="btn_sel">클릭률</button>
+						<ul class="sel_lst">
+						<li><a href="#">클릭률</a></li>
+						<li><a href="#">클릭률</a></li>
+						<li><a href="#">클릭률</a></li>
+						<li><a href="#">클릭률</a></li>
+						</ul>
+					</dd>
+					<dd class="sel_wrap_s">
+						<button type="button" class="btn_sel">클릭률</button>
+						<ul class="sel_lst">
+						<li><a href="#">클릭률</a></li>
+						<li><a href="#">클릭률</a></li>
+						<li><a href="#">클릭률</a></li>
+						<li><a href="#">클릭률</a></li>
+						</ul>
+					</dd>
+					</dl>
+				</div>
+				<img src="img/@img_chart04_03.jpg" alt="">
+			</div>
+			<div class="tbl_grd">
+				<table class="easyui-datagrid" style="width:100%">
+				<caption class="blind">상품, 노출수, 클릭수, 클릭률, 클릭비용, 광고비, 전환수, 전환율, 전환비용, ROAS</caption>
+				<thead>
+				<tr>
+				<th field="productid" scope="col" width="310" align="left"><b>상품</b></th>
+				<th field="field01" scope="col" width="80" align="center"><b>노출수</b></th>
+				<th field="field02" scope="col" width="80" align="center"><b>클릭수</b></th>
+				<th field="field03" scope="col" width="80" align="center"><b>클릭률</b></th>
+				<th field="field04" scope="col" width="80" align="center"><b>클릭비용</b></th>
+				<th field="field05" scope="col" width="80" align="center"><b>광고비</b></th>
+				<th field="field06" scope="col" width="80" align="center"><b>전환수</b></th>
+				<th field="field07" scope="col" width="80" align="center"><b>전환율</b></th>
+				<th field="field08" scope="col" width="80" align="center"><b>전환비용</b></th>
+				<th field="field09" scope="col" width="80" align="center"><b>ROAS</b></th>
+				</thead>
+				<tbody>
+				<tr>
+				<td><span class="recom">상품명 1</span></td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr>
+				<td><span class="recom">상품명 2</span></td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr>
+				<td><span class="recom">상품명 3</span></td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr>
+				<td>상품명 4</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr>
+				<td>상품명 5</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr>
+				<td>상품명 6</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr>
+				<td>상품명 7</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr>
+				<td>상품명 8</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				<tr>
+				<td>상품명 9</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>유료회원 신청이력 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents" class="sub_mych"> 		
+			<ul class="tab_v1">
+			<!-- [D] 활성화 페이지 .on 추가 -->
+			<li><a href="#">홈</a></li>			
+			<li><a href="#">기본정보관리</a></li>			
+			<li><a href="#">비즈니스계정</a></li>			
+			<li><a href="#">애드머니</a></li>			
+			<li class="high"><a href="#">서비스신청<br>처리이력</a></li>
+			<li class="high"><a href="#">나의<br>광고효율</a></li>
+			<li class="high on"><a href="#">유료회원<br>신청이력</a></li>
+			<li><a href="#">관심상품</a></li>
+			<li><a href="#">상담내역</a></li>			
+			</ul>
+			<h2 class="tit_sz20">유료서비스 신청이력</h2>	
+			<div class="tbl_v3">
+				<table>
+				<caption class="blind">유료권한, 유료서비스 이용기간</caption>
+				<colgroup>
+				<col style="width:200px"><col>
+				</colgroup>
+				<tbody>
+				<tr class="wide">
+				<th scope="row">유료 권한</th>
+				<td><p class="txt1">일반 회원</p></td>
+				</tr>
+				<tr>
+				<th scope="row">유료서비스 이용기간</th>
+				<td><p class="txt1">2016.07.01~2016.07.30 (남은기간 <b class="txt_yel">0</b> 일)<a href="#" class="btn_bd" style="margin-left:30px">연장 신청</a></p></td>
+				</tr>
+				</tbody>
+				</table>
+			</div>		
+			<form action="#">
+			<fieldset>
+			<legend>유료회원 조회기간 선택</legend>
+				<dl class="cal_wrap">
+				<dt>조회기간</dt>
+				<dd>
+					<div class="cal_box">
+						<input type="text" value="2016.07.04" class="fm_com">
+						<button type="button" class="ico_cal sp">날짜선택</button>
+					</div>
+					<span class="cal_txt">~</span>
+					<div class="cal_box">
+						<input type="text" value="2016.08.01" class="fm_com">
+						<button type="button" class="ico_cal sp">날짜선택</button>
+					</div>
+					<button type="submit" class="btn_bd" style="width:76px">조회</button>
+				</dd>
+				</dl>
+			</fieldset>
+			</form>		
+			<div class="tbl_v4">
+				<table>
+				<caption class="blind">상태, 신청일자, 승인일자, 이용기간, 결제방법, 결제금액, 현금영수증</caption>
+				<colgroup>
+				<col style="width:130px"><col style="width:130px"><col style="width:130px"><col><col style="width:130px"><col style="width:130px"><col style="width:130px">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">상태</th>
+				<th scope="col">신청일자</th>
+				<th scope="col">승인일자</th>
+				<th scope="col">이용기간</th>
+				<th scope="col">결제방법</th>
+				<th scope="col">결제금액</th>
+				<th scope="col">현금영수증</th>
+				</tr>
+				</thead>
+				<tbody>				
+				<!-- [D] 신청이력 있을 경우 출력 -->
+				<tr>
+				<td>입금 대기중</td>
+				<td>2016.07.04</td>
+				<td>-</td>
+				<td>2016.08.01~2016.08.30</td>
+				<td>-</td>
+				<td>-</td>
+				<td></td>
+				</tr>
+				<tr>
+				<td>기한만료</td>
+				<td>2016.07.01</td>
+				<td>-</td>
+				<td>2016.08.01~2016.08.30</td>
+				<td>-</td>
+				<td>-</td>
+				<td><button type="button" class="btn_bd">내역 확인</button></td>
+				</tr>
+				<tr>
+				<td>완료</td>
+				<td>2016.06.29</td>
+				<td>2016.06.29</td>
+				<td>2016.07.01~2016.07.30</td>
+				<td>무통장입금</td>
+				<td>150,000</td>
+				<td></td>
+				</tr>
+				<tr>
+				<td>완료</td>
+				<td>2016.05.01</td>
+				<td>2016.05.01</td>
+				<td>2016.05.30~2016.06.30</td>
+				<td>애드머니</td>
+				<td>75,000</td>
+				<td></td>
+				</tr>
+				<tr>
+				<td>완료</td>
+				<td>2016.04.01</td>
+				<td>2016.04.01</td>
+				<td>2016.04.01~2016.05.30</td>
+				<td>무료서비스</td>
+				<td>-</td>
+				<td></td>
+				</tr>
+				<!-- //[D] 신청이력 있을 경우 출력 -->				
+				<!-- [D] 신청이력 없을 경우 출력 -->
+				<tr>
+				<td colspan="7" class="result_none">신청 처리 이력이 없습니다.</td>
+				</tr>
+				<!-- //[D] 신청이력 없을 경우 출력 -->
+				</tbody>
+				<!-- [D] 신청이력 있을 경우 출력 -->
+				<tfoot>
+				<tr>
+				<td><span class="fnt_md">소계</span></td>
+				<td colspan="4"></td>
+				<td colspan="2">총 결제금액 <b>225,000원</b></td>
+				</tr>
+				</tfoot>
+				<!-- //[D] 신청이력 없을 경우 출력 -->
+				</table>
+			</div>		
+			<div class="pagenation"> 
+				<a href="#" class="first">처음</a>
+				<a href="#" class="prev">이전</a>
+				<ul class="num">
+				<!-- [D] 활성화 페이지 .on 추가 -->
+				<li class="on"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+				<li><a href="#">7</a></li>
+				<li><a href="#">8</a></li>
+				<li><a href="#">9</a></li>
+				<li><a href="#">10</a></li>				
+				</ul>
+				<a href="#" class="next">다음</a>
+				<a href="#" class="last">끝</a>			
+			</div>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

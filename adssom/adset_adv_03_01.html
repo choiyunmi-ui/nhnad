@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+			<div class="section_head">
+				<h2 class="tit_top">사이트 정보</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">광고정보관리</a>
+						<span class="dep1">
+							<a href="#" class="selected">광고정보관리</a>
+							<a href="#">분석/리포트</a>
+							<a href="#">자동입찰</a>
+							<a href="#">마켓트렌드</a>
+							<a href="#">광고제안</a>
+							<a href="#">어드민</a>
+							<a href="#">시스템관리</a>
+						</span>
+					</span>
+					<span class="bar">&gt;</span>
+					<span class="dep_group">
+						<a href="#">광고설정/사이트관리</a>
+						<span class="dep2">
+							<em class="tit_dep2">광고설정</em>
+							<a href="#">광고주관리</a>
+							<a href="#" class="selected">사이트관리</a>
+							<a href="#">데이터관리</a>
+							<a href="#">광고대상관리</a>
+							<a href="#">랜딩페이지검수</a>
+							<a href="#">잔액부족알림이력</a>
+							<em class="tit_dep2">전략그룹</em>
+							<a href="#">전략그룹관리</a>
+							<a href="#">전략그룹대량이동</a>
+						</span>
+					</span>
+					<span class="bar">&gt;</span> 광고상품관리
+				</div>
+			</div>
+			
+			<!-- tab -->
+			<div class="tab_page">
+				<ul>
+					<li><a href="#">사이트 관리</a></li>
+					<li><a href="#">스크립트 관리</a></li>
+					<li class="selected"><a href="#">광고상품 관리</a></li>
+				</ul>
+			</div>		
+			
+			<!-- 조회필터 -->
+			<div class="section_filter" name="case_filter_ae_site">
+				@template_filter.html
+			</div>
+			
+			<!-- 광고주목록 -->
+			<div class="sub_head">
+				<h3 class="tit_section">광고상품 목록</h3>
+				<div class="side">
+					<a href="#" class="btn_basic_m" onclick="$('.ly_pop[name=adset_adv_03_02],.dimmed').show();return false;"><img src="img/ico_btn_check.png" alt="v" class="ico">등록</a>
+					<a href="#" class="btn_basic_m"><img src="img/ico_btn_delete.png" alt="x" class="ico">삭제</a>
+				</div>
+			</div>
+			
+			<div class="section_box">
+				<table class="tbl_form">
+				<caption>광고상품 목록 thead</caption>
+				<!-- [D] t_check는 공통/마지막 col항목엔 width선언 제외 -->
+				<colgroup><col class="t_check"><col width="24%"><col span="4"><col width="11%"><col width="18%"></colgroup>	
+				<thead>
+				<tr class="dep1">
+					<th rowspan="2" class="t_check"><span class="inp_check"><input type="checkbox"></span></th>
+					<th rowspan="2"><a href="#" class="btn_sort">광고주</a></th>
+					<th colspan="4" span="4">총 비용</th>
+					<th rowspan="2">등록일</th>
+					<th rowspan="2">등록자</th>
+				</tr>
+				<tr class="dep2">
+					<th><a href="#" class="btn_sort">어제</a></th>
+					<th><a href="#" class="btn_sort">최근7일</a></th>
+					<th><a href="#" class="btn_sort">이번달</a></th>
+					<th><a href="#" class="btn_sort">지난달</a></th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<caption>광고상품 목록 tbody</caption>
+				<!-- [D] 상단 목록과 동일한 col width값 선언 -->
+				<colgroup><col class="t_check"><col width="24%"><col span="4"><col width="11%"><col width="18%"></colgroup>
+				<tbody>
+				<tr>
+					<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+					<td><p><a href="#" onclick="$('.ly_pop[name=adset_adv_03_06],.dimmed').show();return false;">네이버 클릭초이스</a></p></td>
+					<td><p class="num">90,000,000.000</p></td>
+					<td><p class="num">300,000.000</p></td>
+					<td><p class="num">1,300,000.000</p></td>
+					<td><p class="num">780,000,000.000</p></td>
+					<td>2015.12.22 <span class="time">23:59</span></td>
+					<td><p>paycoid@email.com</p></td>
+				</tr>
+				<tr class="selected">
+					<td class="t_check"><span class="inp_check checked"><input type="checkbox" checked></span></td>
+					<td><p><a href="#" onclick="$('.ly_pop[name=adset_adv_03_06],.dimmed').show();return false;">다음 클릭스</a></p></td>
+					<td><p class="num">90,000,000.000</p></td>
+					<td><p class="num">300,000.000</p></td>
+					<td><p class="num">1,300,000.000</p></td>
+					<td><p class="num">780,000,000.000</p></td>
+					<td>2015.12.22 <span class="time">23:59</span></td>
+					<td><p>paycoid@email.com</p></td>
+				</tr>
+				<tr>
+					<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+					<td><p><a href="#" onclick="$('.ly_pop[name=adset_adv_03_06],.dimmed').show();return false;">크리테오</a></p></td>
+					<td><p class="num">90,000,000.000</p></td>
+					<td><p class="num">300,000.000</p></td>
+					<td><p class="num">1,300,000.000</p></td>
+					<td><p class="num">780,000,000.000</p></td>
+					<td>2015.12.22 <span class="time">23:59</span></td>
+					<td><p>paycoid@email.com</p></td>
+				</tr>
+				<tr>
+					<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+					<td><p><a href="#" onclick="$('.ly_pop[name=adset_adv_03_06],.dimmed').show();return false;">다음 클릭스</a></p></td>
+					<td><p class="num">-</p></td>
+					<td><p class="num">-</p></td>
+					<td><p class="num">-</p></td>
+					<td><p class="num">-</p></td>
+					<td>2015.12.22 <span class="time">23:59</span></td>
+					<td><p>paycoid@email.com</p></td>
+				</tr>
+				</tbody>
+				</table>
+			</div>	
+			
+			<!-- dimmed -->
+			<div class="dimmed" style="display:none;"></div>
+			<!-- layer popup - 광고상품 등록(영업권 인증/비영업권) -->
+			<div class="ly_pop" style="display:none" name="adset_adv_03_02"><div class="ly_pop_in">
+				<div class="ly_pop_cont">
+					<div class="ly_head">
+						<h3 class="tit_ly">광고상품 등록</h3>
+						<a href="#" class="btn_close_ly">닫기</a>
+					</div>
+					<table class="tbl_ly">
+					<caption>계정 등록 입력</caption>
+					<colgroup><col width="137"><col></colgroup>
+					<tr>
+						<th scope="row">광고주</th>
+						<td>광고주</td>
+					</tr>
+					<tr>
+						<th scope="row">사이트</th>
+						<td>사이트이름(www.naver.com)</td>
+					</tr>
+					<tr>
+						<th scope="row">광고상품 선택</th>
+						<td>
+							<select class="selectbox select_s" style="width:163px">
+								<option>네이버 클릭초이스</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><strong>영업권 인증</strong></th>
+						<td>
+							<span class="inp_radio checked" style="width:150px"><input type="radio" checked><label for="">영업권 목록에서 선택</label></span>
+							<span class="inp_radio" style="width:120px"><input type="radio"><label for="">광고주 ID로 인증</label></span>
+							<a href="#" class="btn_basic_s">인증하기</a>
+							<em class="msg_check" style="display:none"><img src="img/ico_msg_check.png" alt="v" class="ico"> 인증완료 (advertiserID) YYYY.MM.DD</em>
+							<em class="msg_check fail"><img src="img/ico_msg_check_not.png" alt="!" class="ico"> 인증이 필요합니다.</em>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">캠페인
+							<span class="wrap_hint">
+								<a href="#" class="btn_hint">?</a>
+								<span class="ly_hint">
+									<span class="ul">
+									<span class="li">등록할 광고상품에 연결할 캠페인(사이트)를 선택합니다. </span>
+									<span class="li">한 광고상품에 여러 개의 캠페인을 중복으로 연결할 수 있습니다.</span>
+									<span class="li">광고상품의 성과 데이터는 선택한 사이트들의 합계값으로 계산됩니다.</span>
+									</span>
+									(참고: 네이버 광고주센터에서 표시되는 ‘사이트’가 ADSSOM 에서는 ‘캠페인’으로 표시됩니다.)
+								</span>
+							</span>
+						</th>
+						<td>
+							<a href="#" class="btn_basic_s" onclick="$('.ly_pop[name=adset_adv_03_05]').show();return false">캠페인 선택</a>
+							<em class="msg_check" style="display:none"><img src="img/ico_msg_check.png" alt="v" class="ico"> Nhnad(http://www.nhnad.co.kr) 외 00개</em>
+							<em class="msg_check fail"><img src="img/ico_msg_check_not.png" alt="!" class="ico"> 캠페인을 선택하세요.</em>
+						</td>
+					</tr>
+					</table>
+					<div class="btn_foot">
+						<a href="#" class="btn_b_odd">등록</a>
+						<a href="#" class="btn_b_gray">취소</a>
+					</div>
+					<!-- case view -->
+					<a href="#" onclick="$('.msg_check').toggle();return false;" class="btn_caseview" style="position:absolute;top:27px;left:150px">인증 완료 토글</a>
+				</div>
+			</div></div>
+			<!-- //layer popup -->
+			
+			<!-- layer popup - 광고상품 수정(영업권 인증/비영업권) -->
+			<div class="ly_pop" style="display:none" name="adset_adv_03_06"><div class="ly_pop_in">
+				<div class="ly_pop_cont">
+					<div class="ly_head">
+						<h3 class="tit_ly">광고상품 수정</h3>
+						<a href="#" class="btn_close_ly">닫기</a>
+					</div>
+					<table class="tbl_ly">
+					<caption>계정 수정 입력</caption>
+					<colgroup><col width="137"><col></colgroup>
+					<tr>
+						<th scope="row">사이트</th>
+						<td>A(www.Ashop.com)</td>
+					</tr>
+					<tr>
+						<th scope="row">광고상품</th>
+						<td>다음 클릭스</td>
+					</tr>
+					<tr>
+						<th scope="row"><strong>영업권 인증</strong></th>
+						<td>
+							<strong class="msg_check" style="display:none;">인증완료 (advertiserID) YYYY.MM.DD</strong>
+							<strong class="msg_check fail">인증에 실패하였습니다.</strong>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">캠페인
+							<span class="wrap_hint">
+								<a href="#" class="btn_hint">?</a>
+								<span class="ly_hint">
+									<span class="ul">
+									<span class="li">등록할 광고상품에 연결할 캠페인(사이트)를 선택합니다. </span>
+									<span class="li">한 광고상품에 여러 개의 캠페인을 중복으로 연결할 수 있습니다.</span>
+									<span class="li">광고상품의 성과 데이터는 선택한 사이트들의 합계값으로 계산됩니다.</span>
+									</span>
+									(참고: 네이버 광고주센터에서 표시되는 ‘사이트’가 ADSSOM 에서는 ‘캠페인’으로 표시됩니다.)
+								</span>
+							</span>
+						</th>
+						<td>
+							<strong class="msg_check">Nhnad(http://www.nhnad.co.kr) 외 00개</strong>
+							<a href="#" class="btn_basic_s" onclick="$('.ly_pop[name=adset_adv_03_05]').show();return false">캠페인</a>
+							<a href="#" class="btn_basic_s" onclick="$('.ly_pop[name=adset_adv_03_05]').show();return false">캠페인 추가</a>
+						</td>
+					</tr>
+					</table>
+					<div class="btn_foot">
+						<a href="#" class="btn_b_odd">수정</a>
+						<a href="#" class="btn_b_gray">취소</a>
+					</div>
+					<!-- case view -->
+					<a href="#" onclick="$('.ly_pop[name=adset_adv_03_06] tr:eq(2) .msg_check').toggle();return false;" class="btn_caseview" style="position:absolute;top:27px;left:150px">case:인증 완료 토글</a>
+				</div>
+			</div></div>
+			<!-- //layer popup -->
+			
+			<!-- layer popup - 캠페인 선택 -->
+			<div class="ly_pop" style="display:none" name="adset_adv_03_05"><div class="ly_pop_in">
+				<div class="ly_pop_cont">
+					<div class="ly_head">
+						<h3 class="tit_ly">캠페인 선택</h3>
+						<a href="#" class="btn_close_ly">닫기</a>
+					</div>
+					<div class="wrap_lst_choose">
+						<div class="lst_choose">
+							<h4 class="tit"><span class="inp_check"><input type="checkbox"><label for="">캠페인 목록</label></span></h4>
+							<ul>
+							<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+							<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="btn_foot">
+						<a href="#" class="btn_b_odd">확인</a>
+					</div>
+				</div>
+			</div></div>
+			<!-- //layer popup -->
+			
+			<!-- layer popup - 캠페인 -->
+			<div class="ly_pop" style="display:none" name="adset_adv_03_07"><div class="ly_pop_in">
+				<div class="ly_pop_cont">
+					<div class="ly_head">
+						<h3 class="tit_ly">캠페인</h3>
+						<a href="#" class="btn_close_ly">닫기</a>
+					</div>
+					<div class="wrap_lst_choose">
+						<div class="lst_choose">
+							<h4 class="tit">캠페인 목록</span></h4>
+							<ul>
+							<li>광고상품 선택(http://www.naverdla.com)</li>
+							<li>계정이름(http://www.alwkff.co.kr)</li>
+							<li>광고상품 선택(http://www.naverdla.com)</li>
+							<li>계정이름(http://www.alwkff.co.kr)</li>
+							<li>광고상품 선택(http://www.naverdla.com)</li>
+							<li>계정이름(http://www.alwkff.co.kr)</li>
+							<li>광고상품 선택(http://www.naverdla.com)</li>
+							<li>계정이름(http://www.alwkff.co.kr)</li>
+							</ul>
+						</div>
+					</div>
+					<div class="btn_foot">
+						<a href="#" class="btn_b_odd">확인</a>
+					</div>
+				</div>
+			</div></div>
+			<!-- //layer popup -->
+			
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

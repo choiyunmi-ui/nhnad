@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>마케팅 소식 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="sub_tit" class="bg_v4">
+			<dl>
+				<dt>마케팅소식</dt>
+				<dd>AD curator를 통해 국내외 마케팅트렌드를 만나보세요.</dd>
+			</dl>
+		</div>
+		<div id="contents" class="sub_email">
+			<h2 class="tit_sz20">이메일 공유하기</h2>
+			<form action="#">
+			<fieldset>
+			<legend>이메일 공유 영역</legend>
+				<div class="section_box6">
+					<dl class="email_not">
+					<dt>받는사람</dt>
+					<dd>해당 기사를 공유하고 싶은 사람의 이메일 주소를 입력해주세요. 여러명에게 공유하는 경우 쉼표로 주소를 구분해주세요.</dd>
+					</dl>
+					<textarea class="fm_com to_lst"></textarea>
+					<ul class="email_info">
+					<li>
+						<dl>
+						<dt>보내는사람</dt>
+						<dd class="plc_wrap"><input type="text" id="from" class="fm_com plc_ip"><label for="from" class="plc_lb">Jihye.hwang@nhennt.com</label></dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+						<dt>제목</dt>
+						<dd class="plc_wrap"><input type="text" id="title" class="fm_com plc_ip"><label for="title" class="plc_lb">구글의 2016년 변화</label></dd>
+						</dl>
+					</li>
+					</ul>
+				</div>
+				<div class="btn_area al_c">
+					<button type="submit" class="btn_s btn_org">보내기</button>
+				</div>
+			</fieldset>
+			</form>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

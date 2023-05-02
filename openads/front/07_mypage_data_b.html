@@ -1,0 +1,303 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>나의 광고 효율 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents" class="sub_mydate sub_mydate_b"> 		
+			<ul class="tab_v1">
+			<!-- [D] 활성화 페이지 .on 추가 -->
+			<li><a href="#">홈</a></li>			
+			<li><a href="#">기본정보관리</a></li>			
+			<li><a href="#">비즈니스계정</a></li>			
+			<li><a href="#">애드머니</a></li>			
+			<li class="high"><a href="#">서비스신청<br>처리이력</a></li>	
+			<li class="high"><a href="#">나의<br>광고효율</a></li>	
+			<li class="high"><a href="#">유료회원<br>신청이력</a></li>	
+			<li><a href="#">관심상품</a></li>	
+			<li><a href="#">상담내역</a></li>			
+			</ul>
+			<h2 class="tit_sz20">나의 광고 효율</h2>	
+			<ul class="tab_v2_2">
+			<li><a href="./07_mypage_data_a.html">전체 광고효율 비교</a></li>
+			<li class="on"><a href="./07_mypage_data_b.html">상품별 광고효율</a></li>
+			</ul> 
+			<p class="txt_sz16">선택한 상품별 광고 효율을 확인해보세요.</p>
+			<p class="">*기간은 최대 60일까지 설정하실 수 있으며, 최근 2년 동안의 데이터를 확인하실 수 있습니다.</p>
+			<form action="#">
+			<fieldset>
+			<legend>상품별 광고효율 조회기간 선택</legend>
+				<div class="cal_wrap">
+					<div class="cal_box">
+						<input type="text" value="2016.07.04" class="fm_com">
+						<button type="button" class="ico_cal sp">날짜선택</button>
+					</div>
+					<span class="cal_txt">~</span>
+					<div class="cal_box">
+						<input type="text" value="2016.08.01" class="fm_com">
+						<button type="button" class="ico_cal sp">날짜선택</button>
+					</div>
+				</div>
+			</fieldset>
+			</form>		
+			<div class="chart_filter">			
+				<form action="#">
+				<fieldset>
+				<legend>검색 영역</legend>
+					<ul class="type_lst">
+					<li>
+						<dl>
+						<dt>캠페인</dt>
+						<dd class="sel_wrap" style="width:190px;">
+							<button type="button" class="btn_sel">전체</button>
+							<ul class="sel_lst">
+							<li><a href="#">캠페인</a></li>
+							<li><a href="#">캠페인2</a></li>
+							<li><a href="#">캠페인3</a></li>
+							<li><a href="#">캠페인4</a></li>
+							<li><a href="#">캠페인5</a></li>
+							</ul>	
+						</dd>						
+						</dl>					
+					</li>
+					<li>
+						<dl>
+						<dt>상품</dt>
+						<dd class="sel_wrap" style="width:190px;">
+							<button type="button" class="btn_sel">네이버 클릭초이스</button>
+							<ul class="sel_lst">
+							<li><a href="#">네이버 클릭초이스</a></li>
+							<li><a href="#">네이버 클릭초이스</a></li>
+							<li><a href="#">네이버 클릭초이스</a></li>
+							<li><a href="#">네이버 클릭초이스</a></li>
+							<li><a href="#">네이버 클릭초이스</a></li>
+							<li><a href="#">네이버 클릭초이스</a></li>
+							</ul>	
+						</dd>						
+						</dl>			
+					</li>
+					<li>
+						<dl>
+						<dt>디바이스</dt>
+						<dd class="sel_wrap" style="width:135px;">
+							<button type="button" class="btn_sel">PC</button>
+							<ul class="sel_lst">
+							<li><a href="#">PC</a></li>
+							<li><a href="#">모바일</a></li>
+							<li><a href="#">공통</a></li>
+							</ul>	
+						</dd>						
+						</dl>			
+					</li>
+					<li>
+						<dl>
+						<dt>전환기준</dt>
+						<dd class="sel_wrap" style="width:135px;">
+							<button type="button" class="btn_sel">전체</button>
+							<ul class="sel_lst">
+							<li><a href="#">전체</a></li>
+							<li><a href="#">회원가입</a></li>
+							<li><a href="#">구매/주문완료</a></li>
+							<li><a href="#">신청완료</a></li>
+							<li><a href="#">예약완료</a></li>
+							<li><a href="#">글쓰기완료</a></li>
+							<li><a href="#">다운로드수</a></li>
+							<li><a href="#">실행수</a></li>
+							<li><a href="#">참여수</a></li>
+							<li><a href="#">기타</a></li>
+							</ul>	
+						</dd>						
+						</dl>					
+					</li>
+					</ul>
+					<button type="submit" class="btn_bd">검색</button>
+				</fieldset>
+				</form>
+			</div>		
+			<div class="filter_area">
+				<ul class="filter_lst">
+				<li><a href="#" class="btn_down">엑셀다운로드</a></li>
+				</ul>
+			</div>
+			<div class="tbl_v11">
+				<table>
+				<caption class="blind">일자, 노출수, 클릭수, 클릭률, 클릭당비용, 총비용, 전환수, 전환율, 전환당비용, 전환 매출, ROAS, 전환정의</caption>
+				<colgroup>
+				<col><col style="width:80px"><col style="width:80px"><col style="width:80px"><col style="width:90px"><col style="width:80px"><col style="width:80px"><col style="width:80px"><col style="width:80px"><col style="width:80px"><col style="width:80px"><col style="width:80px">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">일자</th>
+				<th scope="col">노출수</th>
+				<th scope="col">클릭수</th>
+				<th scope="col">클릭률</th>
+				<th scope="col">클릭당비용</th>
+				<th scope="col">총비용</th>
+				<th scope="col">전환수</th>
+				<th scope="col">전환율</th>
+				<th scope="col">전환비용</th>
+				<th scope="col">전환매출</th>
+				<th scope="col">ROAS</th>
+				<th scope="col">전환정의</th>
+				</tr>
+				</thead>
+				<tbody>
+				<!-- [D] 결과 있을시 출력 -->
+				<tr>
+				<td>Total</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td></td>
+				</tr>	
+				<tr>
+				<td>2016.04.07</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td></td>
+				</tr>	
+				<tr>
+				<td>2016.04.08</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td></td>
+				</tr>	
+				<tr>
+				<td>2016.04.09</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td></td>
+				</tr>	
+				<tr>
+				<td>2016.04.10</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td></td>
+				</tr>	
+				<tr>
+				<td>2016.04.11</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td></td>
+				</tr>	
+				<tr>
+				<td>2016.04.12</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td></td>
+				</tr>	
+				<tr>
+				<td>2016.04.13</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td>-</td>
+				<td>-</td>
+				<td>%</td>
+				<td></td>
+				</tr>	
+				<!-- //[D] 결과 있을시 출력 -->
+				<!-- [D] 결과 없을시 출력 -->		
+				<tr>
+				<td class="result_none" colspan="12">
+					<p>광고 집행 이력이 없습니다.</p>
+				</td>
+				</tr>
+				<!-- //[D] 결과 없을시 출력 -->
+				</tbody>				
+				</table>
+			</div>
+			<ul class="lst_v7">
+			<li>데이터는 광고 관리 시스템에 업로드된 시점을 기준으로 업데이트됩니다. 상품별 업데이트 시간은 상이할 수 있습니다.<br> 자세한 내용은 담당자에게 문의해주시기 바랍니다.</li>
+			</ul>				
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

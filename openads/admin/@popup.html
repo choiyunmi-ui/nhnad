@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>TEMPLATE_LAYOUT :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$( ".datepicker" ).datepicker();
+	});
+</script>
+</head>
+<body>
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header_wrap"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="lnb">
+		</div>
+		<div id="contents">		
+			<!-- [D] 레이어팝업 -->
+			<div class="ly_wrap" style="display:block">
+				<!-- [D] 상품 추가하기 팝업 -->
+				<div class="ly_box" style="display:block">
+					<div class="ly_top">
+						<p class="tit">팝업 타이틀</p>
+						<a href="#" class="btn_close">닫기</a>
+					</div>
+					<div class="ly_cont">
+						<p>팝업 내용</p>
+						<div class="btn_area">
+							<button type="submit" class="btn_s btn_org" style="width:150px">확인</button>
+							<a href="#" class="btn_s btn_wht" style="width:150px">취소</a>
+						</div>					
+					</div>					
+				</div>	
+				<!-- //[D] 상품 추가하기 팝업 -->	
+				<!-- [D] 상품 추가하기 팝업 -->
+				<div class="ly_box" style="display:block">
+					<div class="ly_top">
+						<p class="tit">조회 대상 없음 예시</p>
+						<a href="#" class="btn_close">닫기</a>
+					</div>
+					<div class="ly_cont">
+						<div class="result_none">
+							<p class="txt_gry">조회 대상이 없습니다.</p>
+						</div>
+						<div class="btn_area">
+							<button type="submit" class="btn_s btn_org" style="width:150px">확인</button>
+						</div>					
+					</div>					
+				</div>	
+				<!-- //[D] 상품 추가하기 팝업 -->	
+			</div>	
+			<!-- //[D] 레이어팝업 -->
+		</div>
+	</div>
+	<!-- //[D] CONTAINER -->
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

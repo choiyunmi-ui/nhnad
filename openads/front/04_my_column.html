@@ -1,0 +1,172 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>MY칼럼 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="sub_tit">
+			<dl>
+			<dt>오픈 칼럼</dt>
+			<dd>온라인 업계 실무자들이 들려주는 생생한 이야기.</dd>
+			</dl>
+		</div>
+		<div id="contents" class="sub_mycolumn">
+			<form action="#">
+			<fieldset>
+			<legend>MY 칼럼 관리</legend>
+				<h2 class="tit_sz20">MY 칼럼</h2>
+				<div class="btn_area al_r">
+					<a href="#" class="btn_ss btn_org">글쓰기</a>
+					<a href="#" class="btn_ss btn_wht">삭제</a>
+				</div>
+				<div class="tbl_v4_l">
+					<table>
+					<caption class="blind">My 칼럼 선택, 게시물번호, 제목, 작성자, 등록일, 조회수</caption>
+					<colgroup>
+					<col style="width:50px"><col style="width:50px"><col><col style="width:90px"><col style="width:140px"><col style="width:90px">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col" class="chk_box only"><input type="checkbox" id="all"><label for="all">전체선택</label></th>
+					<th scope="col">NO</th>
+					<th scope="col">제목</th>
+					<th scope="col">작성자</th>
+					<th scope="col">등록일</th>
+					<th scope="col">조회수</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td class="chk_box only"><input type="checkbox" id="ip_chk1"><label for="ip_chk1">선택</label></td>
+					<td>10</td>
+					<td class="al_l"><a href="#">사용자 인터랙티브 관점의 네이티브/하이브리드/웹앱</a></td>
+					<td>김현아</td>
+					<td>2016.03.05</td>
+					<td>64</td>
+					</tr>
+					<tr>
+					<td class="chk_box only"><input type="checkbox" id="ip_chk2" checked><label for="ip_chk2">선택</label></td>
+					<td>9</td>
+					<td class="al_l"><a href="#">사용자 인터랙티브 관점의 네이티브/하이브리드/웹앱</a></td>
+					<td>김현아</td>
+					<td>2016.03.05</td>
+					<td>64</td>
+					</tr>
+					<tr>
+					<td class="chk_box only"><input type="checkbox" id="ip_chk3"><label for="ip_chk3">선택</label></td>
+					<td>8</td>
+					<td class="al_l"><a href="#">사용자 인터랙티브 관점의 네이티브/하이브리드/웹앱</a></td>
+					<td>김현아</td>
+					<td>2016.03.05</td>
+					<td>64</td>
+					</tr>
+					<tr>
+					<td class="chk_box only"><input type="checkbox" id="ip_chk4"><label for="ip_chk4">선택</label></td>
+					<td>7</td>
+					<td class="al_l"><a href="#">사용자 인터랙티브 관점의 네이티브/하이브리드/웹앱</a></td>
+					<td>김현아</td>
+					<td>2016.03.05</td>
+					<td>64</td>
+					</tr>
+					<tr>
+					<td class="chk_box only"><input type="checkbox" id="ip_chk5"><label for="ip_chk5">선택</label></td>
+					<td>6</td>
+					<td class="al_l"><a href="#">사용자 인터랙티브 관점의 네이티브/하이브리드/웹앱</a></td>
+					<td>김현아</td>
+					<td>2016.03.05</td>
+					<td>64</td>
+					</tr>
+					<tr>
+					<td class="chk_box only"><input type="checkbox" id="ip_chk6"><label for="ip_chk6">선택</label></td>
+					<td>5</td>
+					<td class="al_l"><a href="#">사용자 인터랙티브 관점의 네이티브/하이브리드/웹앱</a></td>
+					<td>김현아</td>
+					<td>2016.03.05</td>
+					<td>64</td>
+					</tr>
+					<tr>
+					<td class="chk_box only"><input type="checkbox" id="ip_chk7"><label for="ip_chk7">선택</label></td>
+					<td>4</td>
+					<td class="al_l"><a href="#">사용자 인터랙티브 관점의 네이티브/하이브리드/웹앱</a></td>
+					<td>김현아</td>
+					<td>2016.03.05</td>
+					<td>64</td>
+					</tr>
+					<tr>
+					<td class="chk_box only"><input type="checkbox" id="ip_chk8"><label for="ip_chk8">선택</label></td>
+					<td>3</td>
+					<td class="al_l"><a href="#">사용자 인터랙티브 관점의 네이티브/하이브리드/웹앱</a></td>
+					<td>김현아</td>
+					<td>2016.03.05</td>
+					<td>64</td>
+					</tr>
+					<tr>
+					<td class="chk_box only"><input type="checkbox" id="ip_chk9"><label for="ip_chk9">선택</label></td>
+					<td>2</td>
+					<td class="al_l"><a href="#">사용자 인터랙티브 관점의 네이티브/하이브리드/웹앱</a></td>
+					<td>김현아</td>
+					<td>2016.03.05</td>
+					<td>64</td>
+					</tr>
+					<tr>
+					<td class="chk_box only"><input type="checkbox" id="ip_chk10"><label for="ip_chk10">선택</label></td>
+					<td>1</td>
+					<td class="al_l"><a href="#">사용자 인터랙티브 관점의 네이티브/하이브리드/웹앱</a></td>
+					<td>김현아</td>
+					<td>2016.03.05</td>
+					<td>64</td>
+					</tr>
+					</tbody>
+					</table>					
+				</div>
+			</fieldset>
+			</form>		
+			<div class="pagenation"> 
+				<a href="#" class="first">처음</a>
+				<a href="#" class="prev">이전</a>
+				<ul class="num">
+				<!-- [D] 활성화 페이지 .on 추가 -->
+				<li class="on"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+				<li><a href="#">7</a></li>
+				<li><a href="#">8</a></li>
+				<li><a href="#">9</a></li>
+				<li><a href="#">10</a></li>				
+				</ul>
+				<a href="#" class="next">다음</a>
+				<a href="#" class="last">끝</a>			
+			</div>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<style>
+body{}
+.template_case{width:1220px}
+.tit_case{margin:20px 0 0 5px;font-weight:bold;font-size:14px;}
+.tit_case_in{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;width:70px;border-right:2px solid #64bbe8;margin-right:8px;padding-right:10px;text-align:center;}
+.case_info{margin:5px 0 0 5px;font-size:12px;line-height:18px;}
+.template_case{margin:30px;}
+.tit_case+.section_filter,
+.tit_case+.section_option,
+.case_info+.section_option,
+.case_info+.section_filter{margin-top:5px}
+.case_box{margin-top:10px;padding:10px;border:1px solid #d3d2dc;border-radius:3px;background:#fff;}
+.section_option,
+.section_filter{overflow:visible;position:relative}
+.case_name_info{position:absolute;top:-5px;left:-15px;border-radius:1px;font-size:11px;color:#fff;letter-spacing:-1px;font-family:dotum;background:#999;padding:2px 5px;opacity:0.4}
+</style>
+<script>
+$(function(){
+	$('.section_filter[name^="case"],.section_option[name^="case"]').each(function(){
+		$(this).prepend('<div class="case_name_info">'+$(this).attr('name')+'</div>')
+	});
+});
+</script>
+</head>
+<body>
+	
+<div class="template_case">
+	<h2 class="tit_case">조회필터</h2>
+	<p class="case_info">
+		기본 / 필요한 값은 인라인으로 삽입 / <strong>마크업 파일내 include를 위한 임시 name값은 개발시 제거</strong><br>
+		<strong>셀렉트박스+텍스트</strong> - 가로값 기본 100px의 간격을 가짐 / 값이 없을때는 span.txt 빈 태그 노출
+	</p>
+	
+	<div class="section_filter" name="case_filter_ae_read">
+		<label>광고주 <span class="dash">:</span></label>
+		<span class="txt" style="width:215px">광고주이름</span>
+		<span class="bar">|</span>
+		<label>팀 <span class="dash">:</span></label>
+		<span class="txt" style="width:200px">1팀</span>
+		<span class="bar">|</span>
+		<label>담당자 <span class="dash">:</span></label>
+		<span class="txt" style="width:200px">홍길동</span>
+	</div>
+	<div class="section_filter" name="case_filter_ae1">
+		<label style="width:58px">광고주</label>
+		<select class="selectbox" style="width:215px">
+			<option>광고담당자(AE)</option>
+			<option>광고주</option>
+		</select>
+		<span class="bar">|</span>
+		<label>팀 <span class="dash">:</span></label>
+		<span class="txt" style="width:200px">1팀</span>
+		<span class="bar">|</span>
+		<label>담당자 <span class="dash">:</span></label>
+		<span class="txt" style="width:200px">홍길동</span>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<div class="section_filter filter_sub">
+		<h5 class="index" style="width:340px">광고상품 선택 <span class="stxt">- 리포트를 삭제할 광고상품을 선택하세요</span></h5>
+		<div class="lst_check">
+			<ul>
+			<li><span class="inp_check"><input type="checkbox"><label>회원가입</label></span></li>
+			<li><span class="inp_check"><input type="checkbox"><label>구매</label></span></li>
+			<li><span class="inp_check"><input type="checkbox"><label>견적신청</label></span></li>
+			<li><span class="inp_check"><input type="checkbox"><label>상담신청</label></span></li>
+			<li><span class="inp_check"><input type="checkbox"><label>장바구니</label></span></li>
+			<li><span class="inp_check"><input type="checkbox"><label>장바구니</label></span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="btn_filter_foot">
+		<a href="#" class="btn_red">삭제</a>
+		<a href="#" class="btn_gray">취소</a>
+	</div>
+	
+	<p class="case_info">사이트</p>
+	<div class="section_filter" name="case_filter_ae_site">
+		<label style="width:58px">광고주</label>
+		<select class="selectbox" style="width:215px">
+			<option>광고주를 선택하세요.<option>
+		</select>
+		<span class="bar">|</span>
+		<label>팀 <span class="dash">:</span></label>
+		<span class="txt" style="width:180px">1팀</span>
+		<span class="bar">|</span>
+		<label>담당자 <span class="dash">:</span></label>
+		<span class="txt" style="width:180px">홍길동</span>
+		<span class="bar">|</span>
+		<label>사이트</label>
+		<select class="selectbox" style="width:200px">
+			<option>A샵(www.ashop.com)</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>		
+	
+	<h2 class="tit_case">자동입찰</h2>	
+	<div class="section_filter" name="case_filter_bm_ae">
+		<label style="width:58px">광고주</label>
+		<select class="selectbox" style="width:320px">
+			<option>광고담당자(AE)</option>
+			<option>광고주</option>
+		</select>
+		<span class="bar">|</span>
+		<label>팀 <span class="dash">:</span></label>
+		<span class="txt" style="width:300px">1팀</span>
+		<span class="bar">|</span>
+		<label>담당자 <span class="dash">:</span></label>
+		<span class="txt" style="width:300px">홍길동</span>
+	</div>
+	<div class="section_filter" name="case_filter_bm_dt1">
+		<label style="width:58px">광고상품</label>
+		<select class="selectbox" style="width:320px">
+			<option>네이버 클릭초이스</option>
+		</select>
+	</div>
+	<div class="section_filter" name="case_filter_bm_dt2">
+		<label style="width:58px">관리방법</label>
+		<select class="selectbox" style="width:320px">
+			<option>노출관리</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<div class="section_filter" name="case_filter_bm_dt3">
+		<label style="width:58px">관리방법</label>
+		<select class="selectbox" style="width:320px">
+			<option>순위관리</option>
+		</select>
+		<select class="selectbox" style="width:320px">
+			<option>목표순위</option>
+			<option>경쟁사이트</option>
+			<option>클릭비용</option>
+			<option>광고효율</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<div class="section_filter" name="case_filter_bm_dt4">
+		<label style="width:58px">설정단위</label>
+		<select class="selectbox" style="width:320px">
+			<option>캠페인</option>
+			<option>그룹</option>
+			<option>키워드</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<div class="section_filter" name="case_filter_op_site_single">
+		<label style="width:58px">전환선택</label>
+		<select class="selectbox" style="width:320px">
+			<option>ADSSOM전환</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+		
+	<h2 class="tit_case">datepicker형</h2>
+	<p class="case_info">
+		사용플러그인 : jqueryui <a href="http://jqueryui.com/datepicker" target="_blank">http://jqueryui.com/datepicker</a>
+	</p>
+	<div class="section_filter" name="case_filter_team3">
+		<label style="width:58px">팀</label>
+		<select class="selectbox" style="width:150px">
+			<option>1팀</option>
+			<option>2팀</option>
+			<option>3팀</option>
+			<option>미분류</option>
+		</select>
+		<span class="bar">|</span>
+		<label>담당자</label>
+		<select class="selectbox" style="width:150px">
+			<option>홍길동</option>	
+		</select>
+		<span class="bar">|</span>
+		<label style="width:45px">광고주</label>
+		<select class="selectbox" style="width:150px">
+			<option>박선유네이버12123</option>	
+		</select>
+		<span class="bar">|</span>
+		<label>사이트</label>
+		<select class="selectbox" style="width:150px">
+			<option>전체</option>
+		</select>
+		<span class="bar">|</span>
+		<label>광고상품</label>
+		<select class="selectbox" style="width:147px">
+			<option>네오클릭</option>
+		</select>
+	</div>
+	<div class="section_filter" name="case_filter_team1">
+		<label style="width:58px">팀</label>
+		<select class="selectbox" style="width:209px">
+			<option>1팀</option>
+			<option>2팀</option>
+			<option>3팀</option>
+			<option>미분류</option>
+		</select>
+		<span class="bar">|</span>
+		<label>담당자</label>
+		<select class="selectbox" style="width:212px">
+			<option>홍길동</option>	
+		</select>
+		<span class="bar">|</span>
+		<label style="width:45px">광고주</label>
+		<select class="selectbox" style="width:212px">
+			<option>박선유네이버12123</option>	
+		</select>
+		<span class="bar">|</span>
+		<label>사이트</label>
+		<select class="selectbox" style="width:213px">
+			<option>전체</option>
+		</select>
+	</div>
+	<div class="section_filter" name="case_filter_datepicker1">
+		<label style="width:58px">조회기간</label>
+		<input type="text" class="datepicker from" name="from" style="width:175px">
+		<span class="bar_h">-</span>
+		<input type="text" class="datepicker to" name="to" style="width:175px">
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>		
+	<div class="section_filter" name="case_filter_team2_dp2">
+		<label style="width:58px">검수방법</label>
+		<select class="selectbox" style="width:209px">
+			<option>전체선택</option>
+			<option>파일모니터</option>
+			<option>API모니터</option>
+		</select>
+		<span class="bar">|</span>
+		<label style="width:52px">조회기간</label>
+		<input type="text" class="datepicker from" name="from" style="width:175px">
+		<span class="bar_h">-</span>
+		<input type="text" class="datepicker to" name="to" style="width:175px">
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<div class="section_filter" name="case_filter_datepicker5">
+		<label style="width:68px">기간선택</label>
+		<!-- [D] 클릭시 .expand 추가 -->
+		<span class="wrap_hint">
+			<a href="#" class="btn_hint">?</a>
+			<span class="ly_hint">한번에 삭제할 수 있는 기간은 최대 31일 입니다.</span>
+		</span>
+		<input type="text" class="datepicker from" name="from" style="width:166px">
+		<span class="bar_h">-</span>
+		<input type="text" class="datepicker to" name="to" style="width:166px">
+	</div>
+	<div class="section_filter" name="case_filter_datepicker4">
+		<label style="width:58px">조회기간</label>
+		<input type="text" class="datepicker from" name="from" style="width:175px">
+		<span class="bar_h">-</span>
+		<input type="text" class="datepicker to" name="to" style="width:175px">
+		<span class="bar">|</span>
+		<label>상태</label>
+		<select class="selectbox" style="width:198px">
+			<option>전체</option>
+			<option>대기중</option>
+			<option>진행중</option>
+			<option>실패</option>
+			<option>완료</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>	
+	<div class="section_filter" name="case_filter_datepicker2">
+		<label style="width:58px">조회기간</label>
+		<input type="text" class="datepicker from" name="from" style="width:175px">
+		<span class="bar_h">-</span>
+		<input type="text" class="datepicker to" name="to" style="width:175px">
+		<span class="bar">|</span>
+		<label>작업선택</label>
+		<select class="selectbox" style="width:205px">
+			<option>전체선택</option>
+			<option>광고대상 등록</option>
+			<option>광고대상 삭제</option>
+		</select>
+		<span class="bar">|</span>
+		<label>상태</label>
+		<select class="selectbox" style="width:198px">
+			<option>전체</option>
+			<option>대기중</option>
+			<option>진행중</option>
+			<option>실패</option>
+			<option>완료</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>	
+	<div class="section_filter" name="case_filter_datepicker3">
+		<label style="width:58px">조회기간</label>
+		<input type="text" class="datepicker from" name="from" style="width:175px">
+		<span class="bar_h">-</span>
+		<input type="text" class="datepicker to" name="to" style="width:175px">
+		<span class="bar">|</span>
+		<label>리포트 유형</label>
+		<select class="selectbox" style="width:189px">
+			<option>전체선택</option>
+			<option>광고대상 등록</option>
+			<option>광고대상 삭제</option>
+		</select>
+		<span class="bar">|</span>
+		<label>예약구분</label>
+		<select class="selectbox" style="width:174px">
+			<option>예약안함</option>
+			<option>예약</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>	
+	
+	<h2 class="tit_case">검수이력조회</h2>
+	<div class="section_filter" name="case_filter_team2">
+		<label style="width:58px">팀</label>
+		<select class="selectbox" style="width:236px">
+			<option>전체</option>
+			<option>1팀</option>
+			<option>2팀</option>
+			<option>3팀</option>
+			<option>미분류</option>
+		</select>
+		<span class="bar">|</span>
+		<label style="width:58px">담당자</label>
+		<select class="selectbox" style="width:219px">
+			<option>전체</option>
+			<option>1팀</option>
+			<option>2팀</option>
+			<option>3팀</option>
+			<option>미분류</option>
+		</select>
+		<span class="bar">|</span>
+		<label style="width:58px">광고주</label>
+		<select class="selectbox" style="width:226px">
+			<option>광고담당자(AE)</option>
+			<option>광고주</option>
+		</select>
+	</div>	
+	<div class="section_filter" name="case_filter_bm_select">
+		<label>이력종류선택</label>
+		<select class="selectbox" style="width:209px">
+			<opiotn>노출관리이력</opiotn>
+			<opiotn>노출관리입찰이력</opiotn>
+		</select>
+		<span class="bar">|</span>
+		<label style="width:58px">설정단위</label>
+		<select class="selectbox" style="width:219px">
+			<option>전체</option>
+		</select>
+		<span class="bar">|</span>
+		<label style="width:58px">설정내역</label>
+		<select class="selectbox" style="width:226px">
+			<option>전체</option>
+		</select>
+	</div>	
+	<div class="section_filter" name="case_filter_bm_select2">
+		<label>이력종류선택</label>
+		<select class="selectbox" style="width:209px">
+			<opiotn>노출관리이력</opiotn>
+			<opiotn>노출관리입찰이력</opiotn>
+		</select>
+		<span class="bar">|</span>
+		<label style="width:58px">설정단위</label>
+		<select class="selectbox" style="width:219px">
+			<option>전체</option>
+		</select>
+		<span class="bar">|</span>
+		<label style="width:58px">입찰이력</label>
+		<select class="selectbox" style="width:226px">
+			<option>전체</option>
+		</select>
+	</div>	
+	<div class="section_filter" name="case_filter_bm_select_bid">
+		<label>이력종류선택</label>
+		<select class="selectbox" style="width:209px">
+			<opiotn>노출관리이력</opiotn>
+			<opiotn>노출관리입찰이력</opiotn>
+		</select>
+		<span class="bar">|</span>
+		<label style="width:58px">관리방법</label>
+		<select class="selectbox" style="width:219px">
+			<option>전체</option>
+		</select>
+	</div>	
+	<div class="section_filter" name="case_filter_cam2">
+		<label style="width:58px">캠페인</label>
+		<input type="text" class="inp_text" style="width:236px">
+		<span class="bar">|</span>
+		<label style="width:58px">그룹</label>
+		<input type="text" class="inp_text" style="width:219px">
+		<span class="bar">|</span>
+		<label style="width:58px">키워드</label>
+		<input type="text" class="inp_text" style="width:226px">
+	</div>
+	<div class="section_filter" name="case_filter_bm_group">
+		<label style="width:58px">입찰그룹</label>
+		<input type="text" class="inp_text" style="width:236px">
+		<span class="bar">|</span>
+		<label style="width:58px">캠페인</label>
+		<input type="text" class="inp_text" style="width:219px">
+		<span class="bar">|</span>
+		<label style="width:58px">그룹</label>
+		<input type="text" class="inp_text" style="width:226px">
+		<span class="bar">|</span>
+		<label>키워드</label>
+		<input type="text" class="inp_text" style="width:170px">
+	</div>
+	<div class="section_filter" name="case_filter_bm_group_bid">
+		<label style="width:58px">입찰그룹</label>
+		<input type="text" class="inp_text" style="width:236px">
+	</div>
+	<div class="section_filter" name="case_filter_team2_btn">
+		<label style="width:58px">팀</label>
+		<select class="selectbox" style="width:236px">
+			<option>전체</option>
+			<option>1팀</option>
+			<option>2팀</option>
+			<option>3팀</option>
+			<option>미분류</option>
+		</select>
+		<span class="bar">|</span>
+		<label style="width:58px">담당자</label>
+		<select class="selectbox" style="width:219px">
+			<option>전체</option>
+			<option>1팀</option>
+			<option>2팀</option>
+			<option>3팀</option>
+			<option>미분류</option>
+		</select>
+		<span class="bar">|</span>
+		<label style="width:58px">광고주</label>
+		<select class="selectbox" style="width:226px">
+			<option>광고담당자(AE)</option>
+			<option>광고주</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>	
+	<div class="section_filter" name="case_filter_team2_dp">
+		<label style="width:58px">조회기간</label>
+		<input type="text" class="datepicker from" name="from" style="width:203px">
+		<span class="bar_h">-</span>
+		<input type="text" class="datepicker to" name="to" style="width:203px">
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<div class="section_filter" name="case_filter_cam1">
+		<label style="width:58px">캠페인</label>
+		<input type="text" class="inp_text" style="width:236px">
+		<span class="bar">|</span>
+		<label style="width:58px">그룹</label>
+		<input type="text" class="inp_text" style="width:219px">
+		<span class="bar">|</span>
+		<label style="width:58px">키워드</label>
+		<input type="text" class="inp_text" style="width:226px">
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	
+	<h2 class="tit_case">팀+담당자+날짜선택</h2>
+	<div class="section_filter" name="case_filter_team_dpadd">
+		<label>팀</label>
+		<select class="selectbox" style="width:236px">
+			<option>전체</option>
+			<option>1팀</option>
+			<option>2팀</option>
+			<option>3팀</option>
+			<option>미분류</option>
+		</select>
+		<span class="bar">|</span>
+		<label style="width:52px">담당자</label>
+		<select class="selectbox" style="width:219px">
+			<option>전체</option>
+			<option>1팀</option>
+			<option>2팀</option>
+			<option>3팀</option>
+			<option>미분류</option>
+		</select>
+		<span class="bar">|</span>
+		<label style="width:58px">조회기간</label>
+		<input type="text" class="datepicker from" name="from" style="width:156px">
+		<span class="bar_h">-</span>
+		<input type="text" class="datepicker to" name="to" style="width:156px">
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	
+	<h2 class="tit_case">검색</h2>
+	<div class="section_filter">
+		<label>사이트별 분석</label>
+		<input type="text" class="inp_text" placeholder="사이트를 입력하세요." style="width:430px">
+	</div>
+	<div class="section_filter">
+		<label>사이트별 분석</label>
+		<input type="text" class="inp_text" placeholder="사이트를 입력하세요." style="width:430px">
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<div class="section_filter" name="case_filter_upload">
+		<label style="width:69px">파일업로드</label>
+		<input type="text" class="inp_text" style="width:450px">
+		<a href="#" class="btn_basic">찾아보기</a>
+		<a href="#" class="btn_basic"><img src="img/ico_btn_down.png" alt="download icon" class="ico">업로드템플릿</a>
+	</div>
+	<div class="section_filter" name="case_filter_inpname">
+		<label style="width:69px">작업명</label>
+		<input type="text" class="inp_text" style="width:450px">
+		<span class="btn_group">
+			<a href="#" class="btn_odd">등록</a>
+		</span>
+	</div>
+	<div class="section_filter" name="case_filter_search_ad">
+		<label style="width:69px">광고상품</label>
+		<input type="text" class="inp_text" style="width:450px">
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+		
+	<h2 class="tit_case">case별</h2>
+	<p class="case_info">어드민</p>
+	<div class="section_filter" name="case_filter_admin_member">
+		<label>회원유형</label>
+		<select class="selectbox" style="width:205px">
+			<option>광고담당자(AE)</option>
+			<option>광고주</option>
+		</select>
+		<span class="bar">|</span>
+		<label>팀</label>
+		<select class="selectbox" style="width:200px">
+			<option>전체</option>
+			<option>1팀</option>
+			<option>2팀</option>
+			<option>3팀</option>
+			<option>미분류</option>
+		</select>
+		<span class="bar">|</span>
+		<label>권한</label>
+		<select class="selectbox" style="width:200px">
+			<option>전체</option>
+			<option>리더</option>
+			<option>멤버</option>
+		</select>
+		<span class="bar">|</span>
+		<label>담당자</label>
+		<input type="text" class="inp_text" style="width:200px">
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<div class="section_filter" name="case_filter_admin_bid">
+		<label>제한범위</label>
+		<select class="selectbox" style="width:205px">
+			<option>전체</option>
+		</select>
+		<span class="bar">|</span>
+		<label>팀</label>
+		<select class="selectbox" style="width:200px">
+			<option>전체</option>
+			<option>1팀</option>
+			<option>2팀</option>
+			<option>3팀</option>
+			<option>미분류</option>
+		</select>
+		<span class="bar">|</span>
+		<label>타잎</label>
+		<select class="selectbox" style="width:200px">
+			<option>전체</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<div class="section_filter" name="case_filter_admin_member2">
+		<label>회원유형</label>
+		<select class="selectbox" style="width:205px">
+			<option>광고담당자(AE)</option>
+			<option>광고주</option>
+		</select>
+		<span class="bar">|</span>
+		<label>광고주</label>
+		<input type="text" class="inp_text" style="width:200px">
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>			
+	<div class="section_filter" name="case_filter_admin_history">
+		<label>관리이력 선택</label>
+		<select class="selectbox" style="width:207px">
+			<option>회원관리 이력</option>
+			<option>초대장 발송이력</option>
+			<option>초대장 미발송 광고주</option>
+		</select>
+		<span class="bar">|</span>
+		<label>변경항목</label>
+		<select class="selectbox" style="width:207px">
+			<option>전체</option>
+			<option>삭제</option>
+			<option>팀 이동</option>
+			<option>권한 변경</option>
+			<option>관리대상 팀 변경</option>
+			<option>상태변경</option>  
+		</select>
+		<span class="bar">|</span>
+		<label>조회기간</label>
+		<input type="text" class="datepicker from" name="from">
+		<span class="bar_h">-</span>
+		<input type="text" class="datepicker to" name="to">
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>	
+	<div class="section_filter" name="case_filter_admin_history2">
+		<label>관리이력 선택</label>
+		<select class="selectbox" style="width:207px">
+			<option>회원관리 이력</option>
+			<option>초대장 발송이력</option>
+			<option>초대장 미발송 광고주</option>
+		</select>
+		<span class="bar">|</span>
+		<label>조회기간</label>
+		<input type="text" class="datepicker from" name="from">
+		<span class="bar_h">-</span>
+		<input type="text" class="datepicker to" name="to">
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	
+	<!-- 데이터 -->
+	<p class="case_info">데이터</p>	
+	<div class="section_filter" name="case_filter_surtax">
+		<label style="width:63px">부가세</label>
+		<!-- [D] 클릭시 .expand 추가 -->
+		<span class="wrap_hint">
+			<a href="#" class="btn_hint">?</a>
+			<span class="ly_hint">등록하는 리포트의 금액에 부가세가<br>포함되어 있는지 여부를 선택하세요.</span>
+		</span>
+		<span class="inp_radio checked" style="width:205px"><input type="radio" checked><label for="">포함</label></span>
+		<span class="inp_radio"><input type="radio"><label for="">미포함</label></span>
+	</div>	
+	<div class="section_filter" name="case_filter_code">
+		<label style="width:56px">직업선택</label>
+		<span class="inp_radio checked" style="width:240px"><input type="radio" checked><label for="">광고 대상 등록</label></span>
+		<span class="inp_radio"><input type="radio"><label for="">광고 대상 삭제</label></span>
+	</div>
+	<div class="section_filter" name="case_filter_file">
+		<label class="ico_file" style="width:63px">파일첨부<img src="img/ico_file.png" alt="file icon" class="ico_file"></label>
+		<!-- [D] 클릭시 .expand 추가 -->
+		<span class="wrap_hint">
+			<a href="#" class="btn_hint">?</a>
+			<span class="ly_hint">한번에 최대 50만 행 까지 입력 할 수 있습니다.</span>
+		</span>
+		<span class="inp_file">
+			<input type="text" class="inp_text" style="width:780px">
+			<a href="#" class="btn_basic">찾아보기</a>
+		</span>
+		<a href="#" class="btn_basic"><img src="img/ico_btn_down.png" alt="download icon" class="ico">템플릿 다운로드</a>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">등록</a>
+		</span>
+	</div>
+		
+	<p class="case_info">분석/리포트</p>			
+	<div class="section_filter" name="case_filter_report1">
+		<label style="width:58px">광고주</label>
+		<select class="selectbox" style="width:215px">
+			<option>광고주를 선택하세요.</option>
+			<option>광고담당자(AE)</option>
+			<option>광고주</option>
+		</select>
+		<span class="bar">|</span>
+		<label>팀 <span class="dash">:</span></label>
+		<span class="txt" style="width:215px">1팀</span>
+		<span class="bar">|</span>
+		<label>담당자 <span class="dash">:</span></label>
+		<span class="txt" style="width:215px">홍길동</span>
+		<span class="bar">|</span>
+		<label style="width:39px">사이트</label>
+		<select class="selectbox" style="width:225px">
+			<option>네이버 클릭초이스</option>
+			<option>광고담당자(AE)</option>
+			<option>광고주</option>
+		</select>
+	</div>
+	<div class="section_filter" name="case_filter_report2">
+		<label style="width:58px">광고주</label>
+		<select class="selectbox" style="width:175px">
+			<option>광고주를 선택하세요.</option>
+			<option>광고담당자(AE)</option>
+			<option>광고주</option>
+		</select>
+		<span class="bar">|</span>
+		<label>팀 <span class="dash">:</span></label>
+		<span class="txt" style="width:120px">1팀</span>
+		<span class="bar">|</span>
+		<label>담당자 <span class="dash">:</span></label>
+		<span class="txt" style="width:120px">홍길동</span>
+		<span class="bar">|</span>
+		<label style="width:39px">사이트</label>
+		<select class="selectbox" style="width:182px">
+			<option>사이트(www.naver.com)</option>
+		</select>
+		<span class="bar">|</span>
+		<label style="width:49px">광고상품</label>
+		<select class="selectbox" style="width:183px">
+			<option>네이버 클릭초이스</option>
+			<option>광고담당자(AE)</option>
+			<option>광고주</option>
+		</select>
+	</div>
+	<div class="section_filter" name="case_filter_compare_range">
+		<em class="index" style="width:58px">기간유형</em>
+		<ul class="inp_radio_tab">
+			<!-- [D] 선택된 탭에 checked class 추가 -->
+			<li class="checked"><input type="radio" checked><label>일별</label></li>
+			<li><input type="radio"><label>월별</label></li>
+			<li><input type="radio"><label>요일</label></li>
+		</ul>
+	</div>
+	<div class="section_filter" name="case_filter_compare_range2">
+		<em class="index" style="width:58px">기간유형</em>
+		<ul class="inp_radio_tab">
+			<!-- [D] 선택된 탭에 checked class 추가 -->
+			<li class="checked"><input type="radio" checked><label>일별</label></li>
+			<li><input type="radio"><label>월별</label></li>
+			<li><input type="radio"><label>요일</label></li>
+			<li><input type="radio"><label>기간비교</label></li>
+		</ul>
+	</div>
+	<div class="section_filter" name="case_filter_date_range_day_n">
+		<em class="index" style="width:58px">조회기간</em>
+		<input type="text" class="datepicker from" name="from" style="width:209px"> 
+		<span class="bar_h">-</span> 
+		<input type="text" class="datepicker to" name="to" style="width:209px"> 
+		<ul class="inp_radio_tab">
+			<!-- [D] 선택된 탭에 checked class 추가 -->
+			<li><input type="radio"><label>최근7일</label></li>
+			<li><input type="radio"><label>이번주</label></li>
+			<li class="checked"><input type="radio" checked><label>지난주</label></li>
+			<li><input type="radio"><label>이번달</label></li>
+		</ul>
+	</div>
+	<div class="section_filter" name="case_filter_date_range_day">
+		<em class="index" style="width:58px">조회기간</em>
+		<input type="text" class="datepicker from" name="from" style="width:209px"> 
+		<span class="bar_h">-</span> 
+		<input type="text" class="datepicker to" name="to" style="width:209px"> 
+		<ul class="inp_radio_tab">
+			<!-- [D] 선택된 탭에 checked class 추가 -->
+			<li><input type="radio"><label>최근7일</label></li>
+			<li><input type="radio"><label>이번주</label></li>
+			<li class="checked"><input type="radio" checked><label>지난주</label></li>
+			<li><input type="radio"><label>이번달</label></li>
+		</ul>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<div class="section_filter" name="case_filter_date_range_day2">
+		<em class="index" style="width:58px">조회기간</em>
+		<input type="text" class="datepicker from" name="from" style="width:209px"> 
+		<span class="bar_h">-</span> 
+		<input type="text" class="datepicker to" name="to" style="width:209px"> 
+		<ul class="inp_radio_tab">
+			<!-- [D] 선택된 탭에 checked class 추가 -->
+			<li><input type="radio"><label>오늘</label></li>
+			<li><input type="radio"><label>어제</label></li>
+			<li class="checked"><input type="radio" checked><label>이번달</label></li>
+			<li><input type="radio"><label>지난달</label></li>
+			<li><input type="radio"><label>최근30일</label></li>
+		</ul>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<div class="section_filter" name="case_filter_op_site">
+		<label style="width:58px">전환선택</label>
+		<select class="selectbox" style="width:254px">
+			<option>ADSSOM전환</option>
+		</select>
+		<select class="selectbox" style="width:254px">
+			<option>전체선택</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<div class="section_filter" name="case_filter_date_range_month">
+		<em class="index" style="width:58px">조회기간</em>
+		<select class="selectbox" style="width:87px">
+			<option>2013</option>
+		</select>
+		<select class="selectbox" style="width:69px">
+			<option>11</option>
+		</select>
+		<span class="bar_h">-</span> 
+		<select class="selectbox" style="width:87px">
+			<option>2013</option>
+		</select>
+		<select class="selectbox" style="width:69px">
+			<option>11</option>
+		</select>
+		<ul class="inp_radio_tab">
+			<!-- [D] 선택된 탭에 checked class 추가 -->
+			<li><input type="radio" name="inp_radio_tab_group" id="inp_radio_tab_op1"><label for="inp_radio_tab_op1">최근3달</label></li>
+			<li><input type="radio" name="inp_radio_tab_group" id="inp_radio_tab_op2"><label for="inp_radio_tab_op2">최근6달</label></li>
+			<li class="checked"><input type="radio" name="inp_radio_tab_group" id="inp_radio_tab_op3" checked><label for="inp_radio_tab_op3">최근12달</label></li>
+		</ul>
+	</div>	
+	<div class="section_filter" name="case_filter_date_range_bid">
+		<em class="index" style="width:58px">조회기간</em>
+		<input type="text" class="datepicker from" name="from" style="width:209px"> 
+		<ul class="inp_radio_tab">
+			<!-- [D] 선택된 탭에 checked class 추가 -->
+			<li><input type="radio"><label>오늘</label></li>
+			<li class="checked"><input type="radio" checked><label>어제</label></li>
+		</ul>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<div class="section_filter" name="case_filter_conv_cat_n">
+		<em class="index" style="width:58px">분석기준</em>
+		<span class="inp_radio" style="width:272px"><input type="radio" /><label for="">상품카테고리 분석</label></span>
+		<span class="inp_radio" style="width:272px"><input type="radio" /><label for="">판매상품 분석</label></span>
+	</div>		
+	<div class="section_filter" name="case_filter_conv_cat">
+		<em class="index" style="width:58px">분석기준</em>
+		<span class="inp_radio" style="width:272px"><input type="radio" /><label for="">상품카테고리 분석</label></span>
+		<span class="inp_radio" style="width:272px"><input type="radio" /><label for="">판매상품 분석</label></span>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>		
+			
+	<!-- 조회필터(기간비교) -->
+	<p class="case_info">분석/리포트 기간비교</p>
+	<div class="section_filter" name="case_filter_comparesite_ae">
+		<label style="width:90px">광고주</label>
+		<select class="selectbox" style="width:200px">
+			<option>광고주를 선택하세요.</option>
+			<option>광고담당자(AE)</option>
+			<option>광고주</option>
+		</select>
+		<span class="bar">|</span>
+		<label>팀 <span class="dash">:</span></label>
+		<span class="txt" style="width:180px">1팀</span>
+		<span class="bar">|</span>
+		<label>담당자 <span class="dash">:</span></label>
+		<span class="txt" style="width:180px">홍길동</span>
+		<span class="bar">|</span>
+		<label style="width:100px">기간비교 사이트</label>
+		<select class="selectbox" style="width:230px">
+			<option>전체</option>
+		</select>
+	</div>
+	<div class="section_filter" name="case_filter_comparesite_range">
+		<em class="index" style="width:90px">기간유형</em>
+		<ul class="inp_radio_tab">
+			<!-- [D] 선택된 탭에 checked class 추가 -->
+			<li><input type="radio"><label>일별</label></li>
+			<li><input type="radio"><label>월별</label></li>
+			<li><input type="radio"><label>요일</label></li>
+			<li class="checked"i><input type="radio" checked><label>기간비교</label></li>
+		</ul>
+	</div>
+	<div class="section_filter" name="case_filter_comparesite_day">
+		<em class="index" style="width:90px">조회기간</em>
+		<input type="text" class="datepicker from" name="from" style="width:209px"> 
+		<span class="bar_h">-</span> 
+		<input type="text" class="datepicker to" name="to" style="width:209px"> 
+		<ul class="inp_radio_tab">
+			<!-- [D] 선택된 탭에 checked class 추가 -->
+			<li><input type="radio"><label>최근7일</label></li>
+			<li><input type="radio"><label>이번주</label></li>
+			<li class="checked"><input type="radio" checked><label>지난주</label></li>
+			<li><input type="radio"><label>이번달</label></li>
+		</ul>
+	</div>		
+	<div class="section_filter" name="case_filter_comparesite_day_v1">
+		<em class="index" style="width:90px">비교기간1 <span class="inp_check checked"><input type="checkbox" checked></span></em>
+		<input type="text" class="datepicker from" name="from" style="width:209px"> 
+		<span class="bar_h">-</span> 
+		<input type="text" class="datepicker to" name="to" style="width:209px"> 
+	</div>		
+	<div class="section_filter" name="case_filter_comparesite_day_v2">
+		<em class="index" style="width:90px">비교기간2 <span class="inp_check"><input type="checkbox"></span></em>
+		<input type="text" class="datepicker from" name="from" style="width:209px"> 
+		<span class="bar_h">-</span> 
+		<input type="text" class="datepicker to" name="to" style="width:209px"> 
+	</div>		
+	<div class="section_filter" name="case_filter_comparesite_day_v3">
+		<em class="index" style="width:90px">비교기간3 <span class="inp_check"><input type="checkbox"></span></em>
+		<input type="text" class="datepicker from" name="from" style="width:209px"> 
+		<span class="bar_h">-</span> 
+		<input type="text" class="datepicker to" name="to" style="width:209px"> 
+	</div>	
+	<div class="section_filter" name="case_filter_op_site_compare">
+		<label style="width:90px">전환선택</label>
+		<select class="selectbox" style="width:254px">
+			<option>ADSSOM전환</option>
+		</select>
+		<select class="selectbox" style="width:254px">
+			<option>전체선택</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	
+	<!-- 시스템관리 -->
+	<h2 class="tit_case">시스템관리</h2>
+	<div class="section_filter" name="case_filter_agency2">
+		<label>에이전시선택</label>
+		<select class="selectbox" style="width:298px">
+			<option>에이전시를 선택하세요</option>
+		</select>	
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<div class="section_filter" name="case_filter_agency">
+		<label style="width:58px">상태</label>
+		<select class="selectbox" style="width:325px">
+			<option>전체</option>
+			<option>활성</option>
+			<option>삭제됨</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<div class="section_filter" name="case_filter_agency6">
+		<label style="width:58px">에이전시</label>
+		<select class="selectbox" style="width:325px">
+			<option>NHN AD</option>
+			<option>전체에이전시1</option>
+			<option>전체에이전시2</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	
+	<div class="section_filter" name="case_filter_agency_bid1">
+		<label style="width:58px">서버ID</label>
+		<select class="selectbox" style="width:325px">
+			<option>전체</option>
+		</select>
+		<span class="bar">|</span>
+		<label>작업종류</label>
+		<select class="selectbox" style="width:325px">
+			<option>노출</option>
+			<option>순위수집</option>
+		</select>
+	</div>
+	<div class="section_filter" name="case_filter_agency3">
+		<label style="width:58px">매체</label>
+		<select class="selectbox" style="width:325px">
+			<option>전체</option>
+			<option>NAVER</option>
+			<option>DAUM</option>
+		</select>
+	</div>
+	<div class="section_filter" name="case_filter_agency4">
+		<label style="width:58px">에이전시</label>
+		<select class="selectbox" style="width:210px">
+			<option>NHN AD</option>
+			<option>전체에이전시1</option>
+			<option>전체에이전시2</option>
+		</select>
+		<span class="bar">|</span>
+		<label>API 매체 선택</label>
+		<select class="selectbox" style="width:215px">
+			<option>네이버</option>
+			<option>다음</option>
+		</select>
+		<span class="bar">|</span>
+		<em class="index" style="width:58px">조회기간</em>
+		<input type="text" class="datepicker from" name="from" style="width:158px"> 
+		<ul class="inp_radio_tab">
+			<!-- [D] 선택된 탭에 checked class 추가 -->
+			<li><input type="radio"><label style="width:80px">오늘</label></li>
+			<li class="checked"><input type="radio" checked><label style="width:80px">어제</label></li>
+		</ul>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<div class="section_filter" name="case_filter_agency5">
+		<label style="width:58px">에이전시</label>
+		<select class="selectbox" style="width:210px">
+			<option>NHN AD</option>
+			<option>전체에이전시1</option>
+			<option>전체에이전시2</option>
+		</select>
+		<span class="bar">|</span>
+		<em class="index" style="width:58px">조회기간</em>
+		<input type="text" class="datepicker from" name="from" style="width:180px"> 
+		<ul class="inp_radio_tab">
+			<!-- [D] 선택된 탭에 checked class 추가 -->
+			<li><input type="radio"><label style="width:80px">오늘</label></li>
+			<li class="checked"><input type="radio" checked><label style="width:80px">어제</label></li>
+		</ul>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<div class="section_filter" name="case_filter_agency_bid2">
+		<em class="index" style="width:58px">조회기간</em>
+		<input type="text" class="datepicker from" name="from" style="width:177px">
+		<input type="text" class="inp_text center" value="12:59" style="width:75px;">
+		<span class="bar_h">-</span> 
+		<input type="text" class="datepicker to" name="to" style="width:177px"> 
+		<input type="text" class="inp_text center" value="23:59" style="width:75px;">
+		<ul class="inp_radio_tab">
+			<!-- [D] 선택된 탭에 checked class 추가 -->
+			<li><input type="radio"><label style="width:80px">1시간</label></li>
+			<li><input type="radio"><label style="width:80px">6시간</label></li>
+			<li class="checked"><input type="radio" checked><label style="width:80px">12시간</label></li>
+		</ul>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	
+	<div class="section_filter" name="case_filter_agency_api1">
+		<label style="width:58px">에이전시</label>
+		<select class="selectbox" style="width:210px">
+			<option>NHN AD</option>
+			<option>전체에이전시1</option>
+			<option>전체에이전시2</option>
+		</select>
+		<span class="bar">|</span> 
+		<label>라이선스</label>
+		<input type="text" class="inp_text" style="width:210px">
+		<span class="bar">|</span> 
+		<em class="index">조회기간</em>
+		<input type="text" class="datepicker from" name="from" style="width:150px"> 
+		<span class="bar_h">-</span> 
+		<input type="text" class="datepicker to" name="to" style="width:150px"> 
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	
+	<div class="section_filter" name="case_filter_system_bid">
+		<label style="width:58px">에이전시</label>
+		<select class="selectbox" style="width:210px">
+			<option>NHN AD</option>
+			<option>전체에이전시1</option>
+			<option>전체에이전시2</option>
+		</select>
+		<span class="bar">|</span> 
+		<label>제한범위</label>
+		<select class="selectbox" style="width:190px">
+			<option>전체</option>
+		</select>
+		<span class="bar">|</span> 
+		<label>팀</label>
+		<input type="text" class="inp_text" style="width:190px">
+		<span class="bar">|</span> 
+		<label>타잎</label>
+		<select class="selectbox" style="width:193px">
+			<option>전체</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	
+	<p class="case_info">선택옵션</p>	
+	<!-- 차트선택 -->
+	<div class="section_option" name="case_filter_op_chart">
+		<label style="width:58px">차트선택</label>
+		<select class="selectbox select_m" style="width:226px">
+			<option>전환수</option>
+		</select>
+		<select class="selectbox select_m" style="width:226px">
+			<option>클릭수</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_basic_m"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운로드</a>
+		</span>
+	</div>
+	
+	<!-- 전환선택 -->
+	<div class="section_option" name="case_filter_op_site2">
+		<label style="width:58px">전환선택</label>
+		<select class="selectbox select_m" style="width:226px">
+			<option>ADSSOM전환</option>
+		</select>
+		<select class="selectbox select_m" style="width:226px">
+			<option>전체선택</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_basic_m"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운로드</a>
+			<a href="#" class="btn_basic_m">알림설정</a>
+		</span>
+	</div>	
+			
+	<!-- 전환선택 -->
+	<div class="section_option" name="case_filter_op_stg">
+		<label style="width:58px">전환선택</label>
+		<select class="selectbox select_m" style="width:226px">
+			<option>ADSSOM전환</option>
+		</select>
+		<select class="selectbox select_m" style="width:226px">
+			<option>전체선택</option>
+		</select>
+		<span class="btn_group">
+			<a href="#" class="btn_basic_m"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운로드</a>
+			<a href="#" class="btn_basic_m">전략그룹설정</a>
+			<a href="#" class="btn_basic_m" onclick="$('.section_filter:has(.search_detail)').toggle();$(this).toggleClass('checked');return false"><img src="img/ico_btn_plus.gif" alt="plus icon" class="ico">상세검색</a>
+		</span>
+	</div>
+	
+	<!-- 상세검색 [D] 상세검색 클릭시 펼침(display:block) -->
+	<div class="section_filter" style="display:none" name="case_filter_op_detail">
+		<dl class="search_detail">
+			<dt>상세검색</dt>
+			<dd>
+				<select class="selectbox select_m" style="width:218px">
+					<option value="" class="selected">노출수</option>
+					<option value="">클릭수</option>
+					<option value="">클릭률</option>
+					<option value="">클릭비용</option>
+					<option value="">총비용</option>
+					<option value="">전환수</option>
+					<option value="">전환률</option>
+					<option value="">전환비용</option>
+					<option value="">매출액</option>
+					<option value="">ROAS </option>
+				</select>
+				<input type="text" class="inp_text inp_text_m inp_text_r" style="width:197px" />
+				<span class="bar_h">-</span>
+				<input type="text" class="inp_text inp_text_m inp_text_r" style="width:197px" />
+				<select class="selectbox select_m" style="width:132px">
+					<option value="" class="selected">AND</option>
+					<option value="">OR</option>
+				</select>
+			</dd>
+			<dd>
+				<select class="selectbox select_m" style="width:218px">
+					<option value="">노출수</option>
+					<option value="">클릭수</option>
+					<option value="">클릭률</option>
+					<option value="">클릭비용</option>
+					<option value="" class="selected">총비용</option>
+					<option value="">전환수</option>
+					<option value="">전환률</option>
+					<option value="">전환비용</option>
+					<option value="">매출액</option>
+					<option value="">ROAS </option>
+				</select>
+				<input type="text" class="inp_text inp_text_m inp_text_r" style="width:197px" />
+				<span class="bar_h">-</span>
+				<input type="text" class="inp_text inp_text_m inp_text_r" style="width:197px" />
+				<select class="selectbox select_m" style="width:132px">
+					<option value="">AND</option>
+					<option value="" class="selected">OR</option>
+				</select>
+			</dd>
+			<dd>
+				<select class="selectbox select_m" style="width:218px">
+					<option value="">노출수</option>
+					<option value="" class="selected">클릭수</option>
+					<option value="">클릭률</option>
+					<option value="">클릭비용</option>
+					<option value="">총비용</option>
+					<option value="">전환수</option>
+					<option value="">전환률</option>
+					<option value="">전환비용</option>
+					<option value="">매출액</option>
+					<option value="">ROAS </option>
+				</select>
+				<input type="text" class="inp_text inp_text_m inp_text_r" style="width:197px" />
+				<span class="bar_h">-</span>
+				<input type="text" class="inp_text inp_text_m inp_text_r" style="width:197px" />
+			</dd>
+		</dl>
+		<span class="btn_group">
+			<a href="#" class="btn_odd">조회</a>
+		</span>
+	</div>
+	<!-- //상세검색 -->
+	
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,252 @@
+
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>유입출처(매체)랭킹 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="sub_tit" class="bg_v2 p40">
+			<dl>
+			<dt>유입출처(매체)랭킹</dt>
+			<dd>유입출처별 효율을 한눈에 확인할 수 있습니다.</dd>
+			</dl>
+		</div>
+		<div id="contents">		
+			<div class="chart_filter">
+				<dl>
+				<dt>업종</dt>
+				<dd class="sel_wrap" style="width:190px;">
+					<button type="button" class="btn_sel">의류/패션잡화</button>
+					<ul class="sel_lst">
+					<li><a href="#">의류/패션잡화</a></li>
+					<li><a href="#">의류/패션잡화</a></li>
+					<li><a href="#">의류/패션잡화</a></li>
+					<li><a href="#">의류/패션잡화</a></li>
+					</ul>	
+				</dd>		
+				<dd class="sel_wrap" style="width:190px;">
+					<button type="button" class="btn_sel">의류/패션잡화</button>
+					<ul class="sel_lst">
+					<li><a href="#">의류/패션잡화</a></li>
+					<li><a href="#">의류/패션잡화</a></li>
+					<li><a href="#">의류/패션잡화</a></li>
+					<li><a href="#">의류/패션잡화</a></li>
+					</ul>	
+				</dd>						
+				</dl>
+				<ul class="lst_rdo">
+				<li class="rdo_box"><input type="radio" name="filter_time" id="prv_month" checked><label for="prv_month"><span>전월</span></label></li>
+				<li class="rdo_box"><input type="radio" name="filter_time" id="three_month"><label for="three_month"><span>직전 3개월</span></label></li>
+				<li class="rdo_box"><input type="radio" name="filter_time" id="six_month"><label for="six_month"><span>직전 6개월</span></label></li>
+				</ul>
+			</div>
+			<div class="chart_box">
+				<img src="img/@img_chart01.jpg" alt="">					
+			</div>
+			<div class="filter_area only">
+				<dl class="provided">
+				<dt>Provided by</dt>
+				<dd class="sp">AceCounter</dd>
+				</dl>		
+			</div>
+			<div class="tbl_grd p30 td_p30">
+				<table class="easyui-datagrid" style="width:100%">
+				<caption class="blind">매체명, 유입수 비중, 전환수 비중, 직접전환수 비중, 간접전환수 비중, 전환율</caption>
+				<thead>
+				<tr>
+				<th field="productid" scope="col" width="280" align="left"><b>매체명</b></th>
+				<th field="field03" scope="col" width="150" align="right"><span id="tt_btn1_1" class="btn_sort btn_tooltip on">유입수 비중</span></th>
+				<th field="field04" scope="col" width="150" align="right"><span id="tt_btn1_2" class="btn_sort btn_tooltip">전환수 비중</span></th>
+				<th field="field05" scope="col" width="150" align="right"><span id="tt_btn1_3" class="btn_sort btn_tooltip">직접전환수 비중</span></th>
+				<th field="field06" scope="col" width="150" align="right"><span id="tt_btn1_4" class="btn_sort btn_tooltip">간접전환수 비중</span></th>
+				<th field="field07" scope="col" width="150" align="right"><span id="tt_btn1_5" class="btn_sort btn_tooltip">전환율</span></th>
+				</thead>
+				<tbody>
+				<tr>
+				<td><b class="fnt_md">네이버 클릭초이스</b></td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>
+				<tr>
+				<td><b class="fnt_md">크리테오</b></td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>
+				<tr>
+				<td><b class="fnt_md">네이버 DA</b></td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>
+				<tr>
+				<td><b class="fnt_md">카카오 성과형</b></td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>
+				<tr>
+				<td><b class="fnt_md">앱팡</b></td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>
+				<tr>
+				<td><b class="fnt_md">네이버 클릭초이스</b></td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>
+				<tr>
+				<td><b class="fnt_md">크리테오</b></td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>
+				<tr>
+				<td><b class="fnt_md">네이버 DA</b></td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>
+				<tr>
+				<td><b class="fnt_md">카카오 성과형</b></td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>
+				<tr>
+				<td><b class="fnt_md">앱팡</b></td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>
+				<tr>
+				<td><b class="fnt_md">네이버 클릭초이스</b></td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>
+				<tr>
+				<td><b class="fnt_md">크리테오</b></td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>
+				<tr>
+				<td><b class="fnt_md">네이버 DA</b></td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>
+				<tr>
+				<td><b class="fnt_md">카카오 성과형</b></td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				</tr>
+				<tr>
+				<td><b class="fnt_md">앱팡</b></td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td>
+				<td>100%</td> 
+				</tr> 
+				</tbody>
+				</table>
+				<!-- [D] 툴팁 버튼과 동일한 ID번호로 통일시 자동으로 마우스오버 모션 생성(#tt_btn1 = #tt_wrap1) -->
+				<!-- [D] 위치값은 인라인으로 조정 -->
+				<div id="tt_wrap1_1" class="tooltip_wrap" style="display:none;left:321px">
+					<div class="tool_box">
+						<p class="txt2">특정 사이트에 유입된 사용자 수의 비중을 나타내는<br>지표입니다.</p>
+						<p class="txt3">전체 사이트의 유입수가 1,000,000이고 네이버라는 사이트의<br>유입수가 500,000일 경우,네이버라는 유입출처의 유입수<br>비중은 50%입니다.</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_2" class="tooltip_wrap" style="display:none;left:470px">
+					<div class="tool_box">
+						<p class="txt2">특정 사이트에서의 구매, 회원가입 등 전환 수 비중을<br>나타내는 지표입니다.</p>
+						<p class="txt3">전체 사이트의 전환수가 1,000,000건이고 네이버라는<br>사이트에서 발생한 전환 건수가 500,000건일 경우, 네이버라는 유입출처의 전환수 비중은 50%입니다.</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_3" class="tooltip_wrap right" style="display:none;right:313px">
+					<div class="tool_box">
+						<p class="txt2">특정 사이트에서의 유입을 통해 바로 전환이<br>일어난 건수(직접전환수)의 비중을 나타내는 지표입니다.</p>
+						<p class="txt3">전체 사이트의 직접전환수가 1,000,000건이고 네이버라는 사이트에서 발생한 직접전환 건수가 500,000건일 경우,<br>네이버라는 유입출처의 직접전환수 비중은 50%입니다.</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_4" class="tooltip_wrap right" style="display:none;right:163px">
+					<div class="tool_box">
+						<p class="txt2">특정 사이트의 유입을 거쳐 다른 유입으로<br>전환이 일어난 건수(간접전환수)의 비중을 나타내는 지표입니다.</p>
+						<p class="txt3">전체 사이트의 간접전환수가 1,000,000건이고 네이버라는 사이트에서 발생한 간접전환 건수가 500,000건일 경우,<br>네이버라는 유입출처의 간접전환수 비중은 50%입니다.</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_5" class="tooltip_wrap right" style="display:none;right:12px">
+					<div class="tool_box">
+						<p class="txt2">특정 사이트에 방문하여 구매, 회원가입 등의<br>전환을 발생시키는 비율을 나타내는 지표입니다.</p>
+						<p class="txt3">네이버라는 사이트에 방문한 유입수가 5,000건이고 이를 통해<br>100건의 전환이 일어났을 경우 네이버라는 유입출처의<br>전환율은 2%입니다.</p>
+						<p class="txt3">* <b>전환율(%)</b> =<br>&nbsp;&nbsp;전환수 / 유입수 *100</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

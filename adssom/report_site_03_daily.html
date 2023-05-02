@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script>
+/* 개발 제외/마크업 검수용 */
+$(function(){
+	load_contents('report_site_01','report_site_01.html');
+});
+</script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+		
+			<div class="section_head">
+				<h2 class="tit_top">사이트분석</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">분석/리포트</a>
+						<div class="dep1">
+							<a href="#">광고정보관리</a>
+							<a href="#" class="selected">분석/리포트</a>
+							<a href="#">자동입찰</a>
+							<a href="#">마켓트렌드</a>
+							<a href="#">광고제안</a>
+							<a href="#">어드민</a>
+							<a href="#">시스템관리</a>
+						</div>
+					</span>
+					<span class="bar">&gt;</span>
+					<span class="dep_group">
+						<a href="#">광고효과분석/사이트분석</a>
+						<div class="dep2">
+							<em class="tit_dep2"><a href="#" class="selected">광고효과분석</a></em>
+							<a href="#">상세분석</a>
+							<a href="#">로그분석</a>
+							<a href="#">실시간분석</a>
+							<em class="tit_dep2">리포트</em>
+							<a href="#">리포트설정</a>
+							<a href="#">리포트예약관리</a>
+							<a href="#">리포트보관함</a>
+						</div>
+					</span>
+					<span class="bar">&gt;</span> <a href="#">기간별 상세</a> <span class="bar">&gt;</span> <a href="#">일별</a>
+				</div>
+			</div>			
+			
+			<!-- tab -->
+			<div class="tab_page">
+				<ul>
+				<li><a href="report_site_01.html">사이트 요약</a></li>
+				<li class="selected"><a href="report_site_03_daily.html">사이트 상세</a></li>
+				</ul>
+			</div>
+			
+			<!-- 조회필터 -->
+			<div class="section_filter" name="case_filter_bm_ae">
+				@template_filter.html
+			</div>
+			<div class="section_filter" name="case_filter_compare_range2">
+				@template_filter.html
+			</div>
+			<div class="section_filter" name="case_filter_date_range_day_n">
+				@template_filter.html
+			</div>
+			<div class="section_option" name="case_filter_op_site">
+				@template_filter.html
+			</div>
+			
+			<!-- 사이트 성과 -->
+			<div class="sub_head">
+				<h3 class="tit_section">사이트 성과</h3>
+				<div class="side">
+					<a href="#" class="btn_basic_m"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운로드</a>
+				</div>				
+			</div>
+			
+			<!-- 성과테이블 -->
+			<div class="section_box" name="report_site_03_tbl">
+				<!-- [D] 테이블 목록이 20개 이상일때 .wrap_tbl>.thead+.tbody 구조로 둘러쌈 (스크롤처리) / 스크롤이 없을때는 제거! -->
+				<div class="wrap_tbl">
+					<div class="thead">
+						<table class="tbl_form">
+						<caption>사이트 성과 thead</caption>
+						<colgroup><col><col width="7.9%"><col width="7.9%"><col width="6.5%"><col width="6.1%"><col width="7.9%"><col width="7.9%"><col width="6.3%"><col width="8%"><col width="10.2%"><col width="8.2%"><col width="80px"></colgroup>
+						<thead>
+						<tr>
+							<th><a href="#" class="btn_sort up"><strong>사이트</strong></a></th>
+							<th><a href="#" class="btn_sort">노출수</a></th>
+							<th><a href="#" class="btn_sort">클릭수</a></th>
+							<th><a href="#" class="btn_sort">클릭률</a></th>
+							<th><a href="#" class="btn_sort">클릭비용</a></th>
+							<th><a href="#" class="btn_sort">총비용</a></th>
+							<th><a href="#" class="btn_sort">전환수</a></th>
+							<th><a href="#" class="btn_sort">전환률</a></th>
+							<th><a href="#" class="btn_sort">전환비용</a></th>
+							<th><a href="#" class="btn_sort">매출액</a></th>
+							<th><a href="#" class="btn_sort">ROAS</a></th>
+							<th>상세</th>
+						</tr>
+						</thead>
+						</table>
+					</div>
+					<div class="tbody line20">
+						<table class="tbl_form">
+						<caption>사이트 성과 tbody</caption>
+						<colgroup><col><col width="7.9%"><col width="7.9%"><col width="6.5%"><col width="6.1%"><col width="7.9%"><col width="7.9%"><col width="6.3%"><col width="8%"><col width="10.2%"><col width="8.2%"><col width="80px"></colgroup>
+						<tbody>
+						<tr class="total">
+							<td>합계</td>
+							<td><p class="num">XXX.XXX.XXX</p></td>
+							<td><p class="num">XXX.XXX.XXX</p></td>
+							<td><p class="num">XXX.XX%</p></td>
+							<td><p class="num">XXX.XXX</p></td>
+							<td><p class="num">XXX.XXX.XXX</p></td>
+							<td><p class="num">XXX.XXX.XXX</p></td>
+							<td><p class="num">XXX.XX%</p></td>
+							<td><p class="num">XXX.XXX.XXX</p></td>
+							<td><p class="num">XXX.XXX.XXX.XXX</p></td>
+							<td><p class="num">XXX.XXX.XX%</p></td>
+							<td><a href="#" class="btn_basic_s">상세</a></td>
+						</tr>
+						<tr>
+							<td><p><a href="#">크리테오</a></p></td>
+							<td><p class="num">617,560</p></td>
+							<td><p class="num">14,051</p></td>
+							<td><p class="num">2.28%</p></td>
+							<td><p class="num">713</p></td>
+							<td><p class="num">100,000,000</p></td>
+							<td><p class="num">180</p></td>
+							<td><p class="num">1.28%</p></td>
+							<td><p class="num">55,656</p></td>
+							<td><p class="num">5,400,000</p></td>
+							<td><p class="num">54%</p></td>
+							<td><a href="#" class="btn_basic_s">상세</a></td>
+						</tr>
+						<tr class="selected">
+							<td><p><a href="#">네이버클릭초이스오</a></p></td>
+							<td><p class="num">900,617,560</p></td>
+							<td><p class="num">900,014,051</p></td>
+							<td><p class="num">902.28%</p></td>
+							<td><p class="num">900,713</p></td>
+							<td><p class="num">900,000,000</p></td>
+							<td><p class="num">900,000,180</p></td>
+							<td><p class="num">900.28%</p></td>
+							<td><p class="num">900,055,656</p></td>
+							<td><p class="num">900,005,400,000</p></td>
+							<td><p class="num">900,000.54%</p></td>
+							<td><a href="#" class="btn_basic_s">상세</a></td>
+						</tr>
+						<tr>
+							<td title="텍스트가 기준바이트 이상일때 span.ellipsis로 감싼 후 title=''로 본문 전문을 td에 삽입"><p><a href="#"><span class="ellipsis">텍스트가 기준바이트 이상일때 span.ellipsis로 감싼 후 title=''로 본문 전문을 td에 삽입</span></a></p></td>
+							<td><p class="num">617,560</p></td>
+							<td><p class="num">14,051</p></td>
+							<td><p class="num">2.28%</p></td>
+							<td><p class="num">713</p></td>
+							<td><p class="num">100,000,000</p></td>
+							<td><p class="num">180</p></td>
+							<td><p class="num">1.28%</p></td>
+							<td><p class="num">55,656</p></td>
+							<td><p class="num">5,400,000</p></td>
+							<td><p class="num">54%</p></td>
+							<td><a href="#" class="btn_basic_s">상세</a></td>
+						</tr>
+						<tr class="disabled">
+							<td><p class="disabled">(삭제)네이버타임보드</p></td>
+							<td><p class="num">617,560</p></td>
+							<td><p class="num">14,051</p></td>
+							<td><p class="num">2.28%</p></td>
+							<td><p class="num">713</p></td>
+							<td><p class="num">100,000,000</p></td>
+							<td><p class="num">180</p></td>
+							<td><p class="num">1.28%</p></td>
+							<td><p class="num">55,656</p></td>
+							<td><p class="num">5,400,000</p></td>
+							<td><p class="num">54%</p></td>
+							<td><a href="#" class="btn_basic_s disabled">상세</a></td>
+						</tr>
+						<tr><td><p><a href="#">네이버타임보드</a></p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p><a href="#">네이버타임보드</a></p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p><a href="#">네이버타임보드</a></p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p><a href="#">네이버타임보드</a></p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p><a href="#">네이버타임보드</a></p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p><a href="#">네이버타임보드</a></p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p><a href="#">네이버타임보드</a></p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p><a href="#">네이버타임보드</a></p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p><a href="#">네이버타임보드</a></p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p><a href="#">네이버타임보드</a></p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p><a href="#">네이버타임보드</a></p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p><a href="#">네이버타임보드</a></p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p><a href="#">네이버타임보드</a></p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p><a href="#">네이버타임보드</a></p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p><a href="#">네이버타임보드</a></p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p><a href="#">네이버타임보드</a></p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p><a href="#">네이버타임보드</a></p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 상세 -->
+			<div class="sub_head">
+				<h3 class="tit_section">상세 <span class="bar_line">-</span> <span class="txt">합계</span></h3>				
+			</div>
+			
+			<!-- 차트선택 -->
+			<div class="section_option" name="case_filter_op_chart">
+				@template_filter.html
+			</div>
+			
+			<!-- 그래프 -->
+			<div class="section_graph" name="report_site_03_graph">
+				<div class="graph"><img src="img/@graph14.gif" alt="" /></div>
+			</div>
+			
+			<!-- 일별그리드 -->
+			<div class="section_box" name="report_site_03_daily">
+				<table class="tbl_form">
+				<caption>사이트분석 상세 thead</caption>
+				<!-- [D] 마지막 col항목엔 width선언 제외 -->
+				<colgroup><col><col width="5%"><col width="8.9%"><col width="8.9%"><col width="6.8%"><col width="6.8%"><col width="8.9%"><col width="9.4%"><col width="7.5%"><col width="8.9%"><col width="10.9%"><col width="8.9%"></colgroup>
+				<thead>
+				<tr>
+					<th>날짜</th>
+					<th>요일</th>
+					<th>노출수</th>
+					<th>클릭수</th>
+					<th>클릭률</th>
+					<th>클릭비용</th>
+					<th>총비용</th>
+					<th>전환수</th>
+					<th>전환률</th>
+					<th>전환비용</th>
+					<th>매출액</th>
+					<th>ROAS</th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<caption>사이트분석 상세 tbody</caption>
+				<colgroup><col><col width="5%"><col width="8.9%"><col width="8.9%"><col width="6.8%"><col width="6.8%"><col width="8.9%"><col width="9.4%"><col width="7.5%"><col width="8.9%"><col width="10.9%"><col width="8.9%"></colgroup>
+				<tbody>
+				<tr>
+					<td>2014.12.01</td>
+					<td>월</td>
+					<td><p class="num">617,560</p></td>
+					<td><p class="num">14,051</p></td>
+					<td><p class="num">2.28%</p></td>
+					<td><p class="num">713</p></td>
+					<td><p class="num">100,000,000</p></td>
+					<td><p class="num">180</p></td>
+					<td><p class="num">1.28%</p></td>
+					<td><p class="num">55,656</p></td>
+					<td><p class="num">5,400,000</p></td>
+					<td><p class="num">54%</p></td>
+				</tr>
+				<tr>
+					<td>2014.12.02</td>
+					<td>화</td>
+					<td><p class="num">900,617,560</p></td>
+					<td><p class="num">900,014,051</p></td>
+					<td><p class="num">902.28%</p></td>
+					<td><p class="num">900,713</p></td>
+					<td><p class="num">900,000,000</p></td>
+					<td><p class="num">900,000,180</p></td>
+					<td><p class="num">900.28%</p></td>
+					<td><p class="num">900,055,656</p></td>
+					<td><p class="num">900,005,400,000</p></td>
+					<td><p class="num">900,000.54%</p></td>
+				</tr>
+				<tr>
+					<td>2014.12.03</td>
+					<td>수</td>
+					<td><p class="num">617,560</p></td>
+					<td><p class="num">14,051</p></td>
+					<td><p class="num">2.28%</p></td>
+					<td><p class="num">713</p></td>
+					<td><p class="num">100,000,000</p></td>
+					<td><p class="num">180</p></td>
+					<td><p class="num">1.28%</p></td>
+					<td><p class="num">55,656</p></td>
+					<td><p class="num">5,400,000</p></td>
+					<td><p class="num">54%</p></td>
+				</tr>
+				<tr>
+					<td>2014.12.04</td>
+					<td>목</td>
+					<td><p class="num">617,560</p></td>
+					<td><p class="num">14,051</p></td>
+					<td><p class="num">2.28%</p></td>
+					<td><p class="num">713</p></td>
+					<td><p class="num">100,000,000</p></td>
+					<td><p class="num">180</p></td>
+					<td><p class="num">1.28%</p></td>
+					<td><p class="num">55,656</p></td>
+					<td><p class="num">5,400,000</p></td>
+					<td><p class="num">135%</p></td>
+				</tr>
+				<tr>
+					<td>2014.12.04</td>
+					<td>금</td>
+					<td><p class="num">617,560</p></td>
+					<td><p class="num">14,051</p></td>
+					<td><p class="num">2.28%</p></td>
+					<td><p class="num">713</p></td>
+					<td><p class="num">100,000,000</p></td>
+					<td><p class="num">180</p></td>
+					<td><p class="num">1.28%</p></td>
+					<td><p class="num">55,656</p></td>
+					<td><p class="num">5,400,000</p></td>
+					<td><p class="num">135%</p></td>
+				</tr>
+				<tr>
+					<td>2014.12.04</td>
+					<td>토</td>
+					<td><p class="num">617,560</p></td>
+					<td><p class="num">14,051</p></td>
+					<td><p class="num">2.28%</p></td>
+					<td><p class="num">713</p></td>
+					<td><p class="num">100,000,000</p></td>
+					<td><p class="num">180</p></td>
+					<td><p class="num">1.28%</p></td>
+					<td><p class="num">55,656</p></td>
+					<td><p class="num">5,400,000</p></td>
+					<td><p class="num">135%</p></td>
+				</tr>
+				<tr>
+					<td>2014.12.04</td>
+					<td>일</td>
+					<td><p class="num">617,560</p></td>
+					<td><p class="num">14,051</p></td>
+					<td><p class="num">2.28%</p></td>
+					<td><p class="num">713</p></td>
+					<td><p class="num">100,000,000</p></td>
+					<td><p class="num">180</p></td>
+					<td><p class="num">1.28%</p></td>
+					<td><p class="num">55,656</p></td>
+					<td><p class="num">5,400,000</p></td>
+					<td><p class="num">135%</p></td>
+				</tr>
+				</tbody>
+				</table>
+			</div>			
+			
+			<!-- 참고하세요! -->
+			<div class="section_box" name="report_site_01_notice">
+				@report_site_01.html
+			</div>
+			
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>스마트검색 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="sub_tit" class="bg_v2">
+			<dl>
+			<dt>스마트검색</dt>
+			<dd>원하는 검색조건에 맞는 상품과 키워드를 확인할 수 있습니다.</dd>
+			</dl>			
+		</div>
+		<div id="contents" class="sub_smart">
+			<form action="#">
+			<fieldset>
+			<legend>스마트검색 영역</legend>
+				<div class="tit_wrap">
+					<h3 class="tit_sec">Step1. 검색영역 선택</h3>
+				</div>
+				<div class="tbl_v5 sec_mb">
+					<table>
+					<caption class="blind">검색영역 선택(상품,키워드)</caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<!-- [D] 선택된 tr에 .on 추가 -->
+					<tr class="on">
+					<th scope="row"><span class="rdo_box"><input type="radio" name="radio1" id="radio1_1" checked><label for="radio1_1"><span>상품</span></label></span></th>
+					<td><p class="fnt_lt">원하는 검색조건에 맞는 상품을 조회하고 해당 상품의 광고효율을 살펴볼 수 있습니다.</p></td> 
+					</tr>
+					<tr>
+					<th scope="row"><span class="rdo_box"><input type="radio" name="radio1" id="radio1_2"><label for="radio1_2"><span>키워드</span></label></span></th>
+					<td><p class="fnt_lt">원하는 검색조건에 맞는 키워드를 조회하고 해당 키워드의 유입/전환지표 등을 살펴볼 수 있습니다.</p></td>
+					</tr>
+					</tbody>						
+					</table>					
+				</div>			
+				<!-- [D] 검색영역 선택 > 상품 선택시 노출되는 영역 -->
+				<div class="tit_wrap bd">
+					<h3 class="tit_sec">Step2. 검색조건 선택</h3>
+				</div>
+				<div class="tbl_v5">
+					<table>
+					<caption class="blind">검색조건 선택(노출소재, 디바이스, 상품유형, 매체, 업종, 과금대)</caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row">노출소재</th>
+					<td>
+						<ul class="lst_chk">
+						<li class="chk_box"><input type="checkbox" id="chk1_1"><label for="chk1_1"><span>전체</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk1_2"><label for="chk1_2"><span>검색광고</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk1_3"><label for="chk1_3"><span>배너광고</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk1_4"><label for="chk1_4"><span>콘텐츠광고</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk1_5"><label for="chk1_5"><span>비디오광고</span></label></li>
+						</ul>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">디바이스</th>
+					<td>
+						<ul class="lst_chk">
+						<li class="chk_box"><input type="checkbox" id="chk2_1"><label for="chk2_1"><span>전체</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk2_2"><label for="chk2_2"><span>PC</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk2_3"><label for="chk2_3"><span>모바일</span></label></li>						
+						</ul>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">상품유형</th>
+					<td>
+						<ul class="lst_chk">
+						<li class="chk_box"><input type="checkbox" id="chk3_1"><label for="chk3_1"><span>전체</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk3_2"><label for="chk3_2"><span>쇼핑</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk3_3"><label for="chk3_3"><span>리워드</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk3_4"><label for="chk3_4"><span>모바일 앱 마케팅</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk3_5"><label for="chk3_5"><span>네이티브애드</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk3_6"><label for="chk3_6"><span>레코맨데이션</span></label></li>
+						</ul>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">매체</th>
+					<td>
+						<ul class="lst_chk fl_l">
+						<li class="chk_box"><input type="checkbox" id="chk4_1"><label for="chk4_1"><span>전체</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk4_2"><label for="chk4_2"><span>네이버</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk4_3"><label for="chk4_3"><span>다음</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk4_4"><label for="chk4_4"><span>구글</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk4_5"><label for="chk4_5"><span>페이스북</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk4_6"><label for="chk4_6"><span>카카오</span></label></li>
+						</ul>
+						<a href="#" class="btn_more">더보기 <span>(10)</span></a>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">업종</th>
+					<td>
+						<ul class="lst_chk fl_l" style="padding-top:4px;">
+						<li class="chk_box"><input type="checkbox" id="chk5_1"><label for="chk5_1"><span>전체</span></label></li>
+						</ul>
+						<div class="sel_wrap" style="width:220px">
+							<button type="button" class="btn_sel">1차분류 선택</button>
+							<ul class="sel_lst">
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>		
+							</ul>							
+						</div>
+						<div class="sel_wrap" style="width:220px">
+							<button type="button" class="btn_sel">2차분류 선택</button>
+							<ul class="sel_lst">
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>		
+							</ul>							
+						</div>
+						<div class="sel_wrap" style="width:220px">
+							<button type="button" class="btn_sel">3차분류 선택</button>
+							<ul class="sel_lst">
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>		
+							</ul>							
+						</div>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">과금대</th>
+					<td>
+						<ul class="lst_chk">
+						<li class="chk_box"><input type="checkbox" id="chk6_1"><label for="chk6_1"><span>전체</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk6_2"><label for="chk6_2"><span>1백만원 미만</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk6_3"><label for="chk6_3"><span>1백만원 이상~5백만원 미만</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk6_4"><label for="chk6_4"><span>5백만원 이상~1천만원 미만</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk6_5"><label for="chk6_5"><span>1천만원 이상</span></label></li>
+						</ul>
+					</td>
+					</tr>
+					</tbody>						
+					</table>					
+				</div>	
+				<!-- //[D] 검색영역 선택 > 상품 선택시 노출되는 영역 -->		
+				<!-- [D] 검색영역 선택 > 키워드 선택시 노출되는 영역 -->
+				<div class="tit_wrap bd">
+					<h3 class="tit_sec">Step2. 검색조건 선택</h3>
+				</div>
+				<div class="tbl_v5">
+					<table>
+					<caption class="blind">검색조건 선택(업종, 시즌, 키워드 검색)</caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row">업종</th>
+					<td>
+						<ul class="lst_chk fl_l" style="padding-top:4px;">
+						<li class="chk_box"><input type="checkbox" id="chk7_1"><label for="chk7_1"><span>전체</span></label></li>
+						</ul>
+						<div class="sel_wrap" style="width:260px">
+							<button type="button" class="btn_sel">1차분류 선택</button>
+							<ul class="sel_lst">
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>		
+							</ul>							
+						</div>
+						<div class="sel_wrap" style="width:260px">
+							<button type="button" class="btn_sel">2차분류 선택</button>
+							<ul class="sel_lst">
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>		
+							</ul>							
+						</div>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">시즌</th>
+					<td>
+						<ul class="lst_season">
+						<li class="seleced"><a href="#">전체</a></li>
+						<li><a href="#">1월</a></li>
+						<li><a href="#">2월</a></li>
+						<li><a href="#">3월</a></li>
+						<li><a href="#">4월</a></li>
+						<li><a href="#">5월</a></li>
+						<li><a href="#">6월</a></li>
+						<li><a href="#">7월</a></li>
+						<li><a href="#">8월</a></li>
+						<li><a href="#">9월</a></li>
+						<li><a href="#">10월</a></li>				
+						<li><a href="#">11월</a></li>				
+						<li><a href="#">12월</a></li>				
+						</ul>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row"><label for="ipt_keyword">키워드검색</label></th>
+					<td><input type="text" id="ipt_keyword" class="fm_com" style="width:716px"></td>
+					</tr>
+					</tbody>						
+					</table>				
+				</div>	
+				<div class="srch_result">
+					<!-- <dl class="result_total">
+					<dt>검색결과</dt>
+					<dd><b>114</b> 건</dd>						
+					</dl> -->
+					<ul class="lst_keyword">
+					<li>의류패션<button type="button">삭제</button></li>						
+					<li>7월<button type="button">삭제</button></li>						
+					<li>수영복<button type="button">삭제</button></li>						
+					</ul>
+					<div class="btn_area">
+						<button type="submit" class="btn_s btn_org">검색하기</button>	
+						<button type="button" class="btn_s btn_wht">선택 초기화</button>
+					</div>
+				</div>	
+			</fieldset>				
+			</form>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

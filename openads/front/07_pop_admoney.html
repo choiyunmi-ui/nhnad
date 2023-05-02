@@ -1,0 +1,157 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>마이페이지 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents">
+			<!-- [D] 레이어팝업 -->
+			<div class="ly_wrap" style="display:block">
+				<!-- [D] 애드머니전환신청1 팝업 -->
+				<div class="pop_admoney ly_box" style="display:block">
+					<div class="ly_top">
+						<p class="tit">애드머니 전환신청</p>
+						<a href="#" class="btn_close btn_popclose">닫기</a>
+					</div>
+					<div class="ly_cont">	
+						<div class="status_box">
+							<p class="txt1">애드머니 전환 유형을 선택해주세요.</p>
+							<ul class="lst_rdo">
+							<li class="rdo_box"><input type="radio" name="ad_type" id="ad_type1" checked><label for="ad_type1"><span>전액전환</span></label></li>
+							<li class="rdo_box"><input type="radio" name="ad_type" id="ad_type2"><label for="ad_type2"><span>일부전환</span></label></li>
+							</ul>
+						</div>
+						<ul class="lst_v2">
+						<li><em>전액전환 :</em> 보유하고 계신 모든 애드머니를 현금으로 전환하고자 함</li>
+						<li><em>일부전환 :</em> 보유하고 계신 모든 애드머니 중 일부를 현금으로 전환하고자 함</li>
+						</ul>
+						<div class="btn_area">
+							<button type="submit" class="btn_s btn_org" style="width:150px">확인</button>
+							<button type="button" class="btn_s btn_wht btn_popclose" style="width:150px">취소</button>
+						</div>			
+					</div>					
+				</div>	
+				<!-- //[D] 애드머니전환신청1 팝업 -->
+				<!-- [D] 애드머니전환신청2 팝업 -->
+				<div class="pop_admoney2 ly_box" style="display:block">
+					<div class="ly_top">
+						<p class="tit">애드머니 전환신청</p>
+						<a href="#" class="btn_close btn_popclose">닫기</a>
+					</div>
+					<div class="ly_cont">	
+						<!-- [D] 전액전환 선택시 -->
+						<div class="tbl_v4">
+							<table>
+							<caption class="blind">총 전환 가능금액, 전환신청 금액, 전환 계좌</caption>
+							<colgroup>
+							<col style="width:160px"><col style="width:160px"><col>
+							</colgroup>
+							<thead>
+							<tr>
+							<th scope="col">총 전환 가능금액</th>
+							<th scope="col">전환신청 금액</th>
+							<th scope="col">전환계좌</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+							<td>100,000 원</td>
+							<td>100,000 원</td>
+							<td>신한은행 / 123-123456-78-801</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<!-- //[D] 전액전환 선택시 -->
+						<!-- [D] 일부전환 선택시 -->
+						<div class="tbl_v4">
+							<table>
+							<caption class="blind">총 전환 가능금액, 전환신청 금액, 전환 계좌</caption>
+							<colgroup>
+							<col style="width:160px"><col style="width:160px"><col>
+							</colgroup>
+							<thead>
+							<tr>
+							<th scope="col">총 전환 가능금액</th>
+							<th scope="col">전환신청 금액</th>
+							<th scope="col">전환계좌</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+							<td>100,000 원</td>
+							<td><input type="text" class="fm_com" value="50,000" style="width:100px"> 원</td>
+							<td>신한은행 / 123-123456-78-801</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<!-- //[D] 일부전환 선택시 -->
+						<!-- [D] 전환계좌 없을시 -->
+						<div class="tbl_v4">
+							<table>
+							<caption class="blind">총 전환 가능금액, 전환신청 금액, 전환 계좌</caption>
+							<colgroup>
+							<col style="width:160px"><col style="width:160px"><col>
+							</colgroup>
+							<thead>
+							<tr>
+							<th scope="col">총 전환 가능금액</th>
+							<th scope="col">전환신청 금액</th>
+							<th scope="col">전환계좌</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+							<td>100,000 원</td>
+							<td><input type="text" class="fm_com" value="50,000" style="width:100px"> 원</td>
+							<td>등록된 계좌 정보가 없습니다.<a href="#" class="txt_link">전환계좌 등록하기</a></td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<!-- //[D] 전환계좌 선택시 -->
+						<ul class="lst_v2">
+						<li>전환 신청일로부터 현금 입금까지 3영업일이 소요될 수 있습니다.</li>
+						<li>전환계좌를 등록하지 않은 경우, &lsquo;마이페이지 &gt; 기본정보관리 &gt; 계좌정보&rsquo;에서 계좌를 등록하셔야 현금전환이 가능합니다.</li>
+						<li>전환계좌 변경을 원하는 경우, &lsquo;마이페이지 &gt; 기본정보관리 &gt; 계좌정보&rsquo;에서 변경 가능합니다.</li>
+						</ul>
+						<div class="btn_area">
+							<button type="submit" class="btn_s btn_org" style="width:150px">전환신청</button>
+							<button type="button" class="btn_s btn_wht btn_popclose" style="width:150px">취소</button>
+						</div>			
+					</div>					
+				</div>	
+				<!-- //[D] 애드머니전환신청2 팝업 -->
+			</div>		
+			<!-- //[D] 레이어팝업 -->
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

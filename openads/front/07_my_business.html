@@ -1,0 +1,144 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>비즈니스 계정 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents" class="sub_mybusi"> 		
+			<ul class="tab_v1">
+			<!-- [D] 활성화 페이지 .on 추가 -->
+			<li><a href="#">홈</a></li>			
+			<li><a href="#">기본정보관리</a></li>			
+			<li class="on"><a href="#">비즈니스계정</a></li>			
+			<li><a href="#">애드머니</a></li>			
+			<li class="high"><a href="#">서비스신청<br>처리이력</a></li>
+			<li class="high"><a href="#">나의<br>광고효율</a></li>
+			<li class="high"><a href="#">유료회원<br>신청이력</a></li>
+			<li><a href="#">관심상품</a></li>			
+			<li><a href="#">상담내역</a></li>			
+			</ul>
+			<div class="tit_area">
+				<h2 class="tit_sz20">My 비즈니스 계정</h2>
+				<div class="btn_area">
+					<a href="#" class="btn_bd ico_plus">비즈니스 계정 업그레이드</a>					
+				</div>
+			</div>
+			<div class="tbl_v4">
+				<table>
+				<caption class="blind">비즈니스 계정명, 권한, 관리</caption>
+				<colgroup>
+				<col><col style="width:350px"><col style="width:350px">					
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">비즈니스 계정명</th>
+				<th scope="col">권한</th>
+				<th scope="col">관리</th> 
+				</tr>					
+				</thead>
+				</table>				
+			</div>
+			<div class="result_none">
+				<p>등록된 비즈니스 계정 정보가 없습니다.</p>
+			</div>					
+			<!-- [D] 비즈니스 계정 검색시 노출 -->
+			<div class="section_box4 sub_busi_srch">
+				<form action="#">
+				<fieldset>
+				<legend>비즈니스 계정 검색영역</legend>
+					<h2 class="tit_sz20">비즈니스 계정 검색</h2>
+					<p class="txt3">소속을 원하는 비즈니스 계정을 법인명으로 검색해주세요.<br>비즈니스 계정이 등록되어 있을 경우 ‘멤버 신청’이 가능하며, 비즈니스 계정 매니저의 승인을 통해 비즈니스 계정 멤버가 되실 수 있습니다.</p>
+					<div class="wrap_box">
+						<span class="plc_wrap">
+							<input type="text" id="company_name" class="fm_com plc_ip" style="width:200px"><label for="company_name" class="plc_lb">법인명</label>
+						</span>
+						<button type="submit" class="btn_bd">검색</button>
+						<p class="txt4">한글, 영문 대/소문자, 숫자, 특수문자 -, (),[],㈜ 만 입력 가능합니다.</p>
+					</div>
+					<!-- [D] 검색시 노출 영역 -->
+					<div class="tbl_v4">
+						<table>
+						<caption class="blind">비즈니스 계정명, 비즈니스 계정 매니저, ID</caption>
+						<colgroup>
+						<col style="width:33.33%"><col style="width:33.33%"><col style="width:33.33%">
+						</colgroup>
+						<thead>
+						<tr>
+						<th scope="col">비즈니스 계정명</th>
+						<th scope="col">비즈니스 계정 매니저</th>
+						<th scope="col">ID</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+						<td>NTNENT</td>
+						<td>김현아</td>
+						<td>openads@openads.com</td>
+						</tr>
+						<!-- [D] 클릭시 .on 추가 -->
+						<tr class="on">
+						<td>NTNENT</td>
+						<td>김현아</td>
+						<td>openads@openads.com</td>
+						</tr>
+						<tr>
+						<td>NTNENT</td>
+						<td>김현아</td>
+						<td>openads@openads.com</td>
+						</tr>
+						</tbody>				
+						</table>				
+					</div>
+					<div class="btn_area al_c">
+						<button type="button" class="btn_s btn_org" style="width:150px">멤버 신청하기</button>
+					</div>
+					<!-- //[D] 검색시 노출 영역 -->
+					<p class="txt5">비즈니스 계정은 소속 멤버를 3명까지 등록할 수 있으며, 추가를 원하시는 경우 관리자에게 문의해주시기 바랍니다.<br>아직 비즈니스 계정이 등록되어 있지 않은 경우, 비즈니스 계정 생성 버튼을 눌러 직접 새로운 비즈니스 계정을 등록할 수 있습니다.</p>
+					<p class="txt6">찾는 법인명이 없는 경우,<br>비즈니스 계정 생성 버튼을 눌러 비즈니스 계정을 신규 생성할 수 있습니다.<a href="#" class="btn_bd ico_plus">비즈니스 계정 생성</a></p>
+				</fieldset>
+				</form>
+			</div>
+			<!-- //[D] 비즈니스 계정 검색시 노출 -->
+			<div class="section_box4">
+				<p class="txt1">현재 등록되어 있는 비즈니스 계정이 없습니다.<br>비즈니스 계정을 등록하시려면, 이미 등록된 비즈니스 계정의 멤버가 되거나, 직접 비즈니스 계정을 생성하여 계정을 업그레이드 해주세요.</p>
+				<p class="txt2">오픈애즈 비즈니스 계정이란?</p>
+				<ul class="lst_v6">
+				<li>광고운영 솔루션, 로그분석 서비스 등 오픈애즈의 다양한 비즈니스 회원 서비스를 이용할 수 있는 권한입니다.</li>
+				<li>개인/법인 사업자당 한 개의 비즈니스 계정을 소유할 수 있으며, 해당 비즈니스 계정은 3명의 멤버를 소속 시킬 수 있습니다.</li>
+				<li> 계정에 소속된 멤버는 오픈애즈의 비즈니스 회원 서비스를 이용하실 수 있습니다.</li>
+				</ul>
+			</div>
+			<h2 class="tit_sz20">비즈니스 계정 업그레이드 Guide</h2>
+			<img src="img/img_business.jpg" alt=", 1.비즈니스 계정 업그레이드 2.비즈니스 계정 검색, 등록된 비즈니스 계정이 없는 경우 3-1.비즈니스 계정생성 4-1.오픈애드 관리자 승인 5-1.완료. 이미 등록된 비즈니스 계정이 있는 경우 3-2.비즈니스 계정 멤버요청 4-2.비즈니스 계정 매니저 승인 5-2.완료 ">
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

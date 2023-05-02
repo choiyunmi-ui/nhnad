@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>비즈니스 계정 관리 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents">
+			<form action="#">
+			<fieldset>
+				<!-- [D] 레이어팝업 -->
+				<div class="ly_wrap" style="display:block">
+					<!-- [D] 비즈니스 계정 매니저 권한 양도 팝업 -->
+					<div class="ly_box" style="display:block">
+						<div class="ly_top">
+							<p class="tit">비즈니스 계정 매니저 권한 양도</p>
+							<a href="#" class="btn_close btn_popclose">닫기</a>
+						</div>
+						<div class="ly_cont">
+							<p class="txt1 al_c">비즈니스 계정 멤버를 지정하여, 매니저 권한을 양도해주세요.<br>권한을 양도할 경우, 회원님은 자동으로 비즈니스 계정 멤버로 등록되며<br>기존 비즈니스 서비스를 계속 이용하실 수 있습니다.</p>
+							<div class="tbl_v3">
+								<table>
+								<caption class="blind">법인명, 멤버이름, 멤버 ID, 양도사유</caption>
+								<colgroup>
+								<col style="width:150px"><col>
+								</colgroup>
+								<tbody>
+								<tr>
+								<th scope="row">법인명</th>
+								<td><span class="plc_wrap"><input type="text" id="name" class="fm_com plc_ip" style="width:200px"><label for="name" class="plc_lb">NHNENTAD</label></span></td>
+								</tr>
+								<tr>
+								<th scope="row">멤버 이름</th>
+								<td>
+									<div class="sel_wrap" style="width:200px">
+										<button type="button" class="btn_sel">차승원</button>
+										<ul class="sel_lst">
+										<li><a href="#">차승원</a></li>
+										<li><a href="#">유해진</a></li>
+										<li><a href="#">손호준</a></li>
+										</ul>
+									</div>
+								</td>
+								</tr>
+								<tr>
+								<th scope="row"><label for="mem_id">멤버 ID</label></th>
+								<td><input type="text" id="mem_id" class="fm_com" style="width:200px"></td>
+								</tr>
+								<tr>
+								<th scope="row">양도사유</th>
+								<td>
+									<div class="plc_wrap" style="display:block">
+										<textarea id="cause" class="fm_txtarea plc_ip" style="width:100%;height:100px"></textarea>
+										<label for="cause" class="plc_lb">권한을 양도받는 멤버가 확인할 수 있도록<br>매니저 권한 양도 사유를 기재하여 주세요.</label>
+									</div>
+								</td>
+								</tr>
+								</tbody>						
+								</table>					
+							</div>	
+							<div class="btn_area">
+								<button type="submit" class="btn_s btn_org" style="width:150px">확인</button>
+								<button type="button" class="btn_s btn_wht btn_popclose" style="width:150px">취소</button>
+							</div>				
+						</div>					
+					</div>	
+					<!-- //[D] 비즈니스 계정 매니저 권한 양도 팝업 -->	
+				</div>	
+				<!-- //[D] 레이어팝업 -->
+			</fieldset>				
+			</form>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

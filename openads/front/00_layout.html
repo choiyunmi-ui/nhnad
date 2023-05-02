@@ -1,0 +1,137 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Layout :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페k이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header">
+		<div class="area_ct">
+			<h1 class="logo"><a href="#" class="sp">Open Ads</a></h1>		
+			<ul id="sta">
+			<!-- [D] 로그인 전 -->
+			<li><a href="#">로그인</a></li>
+			<li><a href="#">회원가입</a></li>
+			<!-- //[D] 로그인 전-->
+			<!-- [D] 로그인 후 -->
+			<li>
+				<a href="#" class="my_id">openads</a>
+				<div class="sta_login">
+					<p>seyeon-keum@naver.com<b>님</b></p>
+					<ul>
+					<li><a href="#">마이페이지</a></li>
+					<li><a href="#">로그아웃</a></li>
+					</ul>
+				</div>
+			</li>
+			<!-- //[D] 로그인 후-->
+			<!-- [D] 공통영역 -->
+			<li><a href="#">서비스신청</a></li>
+			<li><a href="#">고객센터</a></li>
+			<li><a href="#" class="sp">검색</a></li>
+			<!-- //[D] 공통영역 -->
+			</ul>	
+			<div class="head_srch plc_wrap">
+				<input type="text" id="total_srch" class="plc_ip">
+				<label for="total_srch" class="plc_lb">검색어를 입력해주세요</label>
+				<button type="submit">검색</button>
+			</div>
+			<ul id="gnb">
+			<li>
+				<a href="#" class="depth1 beta">오픈랭킹</a>
+				<ul class="depth2 openRanking" style="display:none">
+				<!-- 활성화 페이지 .on 추가 -->
+				<li class="on"><a href="#">오픈랭킹 홈</a></li>
+				<li><a href="#">상품랭킹</a></li>
+				<li><a href="#">오픈효율지수</a></li>
+				<li><a href="#">유입출처(매체)랭킹</a></li>
+				<li><a href="#">키워드랭킹</a></li>
+				<li><a href="#">스마트검색</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="depth1">상품정보</a>
+				<ul class="depth2 productInfo" style="display:none">
+				<li><a href="#">상품정보 홈</a></li>
+				<li><a href="#">검색광고</a></li>
+				<li><a href="#">배너광고</a></li>
+				<li><a href="#">동영상광고</a></li>
+				<li><a href="#">콘텐츠광고</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="depth1">광고진단</a>
+				<ul class="depth2 ads" style="display:none">
+				<li><a href="#">내 광고 현황</a></li>
+				<li><a href="#">경쟁사 비교 분석</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="depth1">트렌드</a>
+				<ul class="depth2 trend" style="display:none">
+				<li><a href="#">트렌드 홈</a></li>
+				<li><a href="#">마케팅트렌드</a></li>
+				<li><a href="#">매체소식</a></li>
+				<li><a href="#">신규상품</a></li>
+				<li><a href="#">컨퍼런스/교육정보</a></li>
+				<li><a href="#">오픈칼럼</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="solution">솔루션</a>
+			</li>			
+			</ul>		
+		</div>
+	</div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="sub_tit">
+			<dl>
+				<dt>애즈포커스</dt>
+				<dd>애즈포커스를 소개해드립니다.</dd>				
+			</dl>			
+		</div>
+		<div id="contents">
+			<p>컨텐츠 영역</p>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer">
+		<div class="area_ct">	
+			<h2>NHN Entertainment AD</h2>
+			<ul class="lst_foot">
+			<li><a href="#">서비스가이드</a></li>			
+			<li><a href="#">이용약관</a></li>			
+			<li><a href="#">개인정보취급방침</a></li>			
+			<li>사업자등록번호 000-00-00000</li>			
+			<li>대표 : 심도섭</li>			
+			</ul>
+			<ul class="lst_foot">
+			<li>대왕판교로 645번길 16 NHN 엔터테이먼트 플레이뮤지엄</li>			
+			<li>전화번호  1800-0704 </li>			
+			</ul>		
+			<p class="copy">Copyright <em>NHN Entertainment AD</em>. All right reserved</p>
+		</div>
+	</div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

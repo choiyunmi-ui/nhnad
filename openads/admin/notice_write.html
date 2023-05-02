@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>공지사항 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$( ".datepicker" ).datepicker();
+	});
+</script>
+</head>
+<body>
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header_wrap"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="lnb"></div>
+		<div id="contents">
+			<form action="#">
+			<fieldset>
+			<legend>공지사항 글쓰기</legend>
+				<div class="section_box">
+					<div class="tit_wrap">
+						<h2 class="tit">공지사항<span class="subhead">&gt; 글쓰기</span></h2>
+					</div>
+					<div class="tbl_wrt">
+						<table>
+						<caption class="blind">공지제목, 중요공지, 공지내용, 예약게시, 게시종료, 첨부파일</caption>
+						<colgroup>
+							<col width="135"><col>
+						</colgroup>
+						<tbody>
+						<tr class="bg_gry">
+						<th scope="row"><label for="wr_tit">공지제목</label></th>
+						<td><input type="text" id="wr_tit" class="ip_txt" placeholder="제목 입력"></td>
+						</tr>	
+						<tr>
+						<th scope="row">중요공지</th>
+						<td>
+							<span class="ip_check mr20"><input type="checkbox" id="wr_chck" class="ip_chbox"><label for="wr_chck">사용</label></span>
+							<div class="sel_wrap" style="width:148px">
+								<button type="button" class="btn_sel">1일</button> 
+								<ul class="sel_lst">
+								<li><a href="#">1일</a></li>								
+								<li><a href="#">2일</a></li>
+								<li><a href="#">3일</a></li>
+								<li><a href="#">4일</a></li>
+								<li><a href="#">5일</a></li>
+								<li><a href="#">6일</a></li>
+								<li><a href="#">7일</a></li>
+								</ul>
+							</div>
+							<p class="txt_org">* 공지사항 상단으로 올릴 글일 경우에만 상단 고정기간과 함께 체크합니다.</p>
+						</td>
+						</tr>	
+						<tr>
+						<th scope="row"><label for="wr_cont">공지내용</label></th>
+						<td><textarea id="wr_cont" class="ip_txar" placeholder="공지 설명 문구를 입력해주세요." style="height:250px"></textarea></td>
+						</tr>		
+						<tr>
+						<th scope="row">예약게시</th>
+						<td>						
+							<span class="ip_radio mr30"><input type="radio" name="reserv" id="wr_now" class="ip_rd"><label for="wr_now">즉시 게시</label></span>
+							<span class="ip_radio mr25"><input type="radio" name="reserv" id="wr_res" class="ip_rd"><label for="wr_res">예약 게시</label></span>
+							<div class="cal_wrap">
+								<input type="text" class="ip_txt datepicker" style="width:158px">		
+							</div>
+						</td>
+						</tr>
+						<tr>
+						<th scope="row">게시종료</th>
+						<td>
+							<span class="ip_check" style="margin-right:94px"><input type="checkbox" id="wr_chck2" class="ip_chbox"><label for="wr_chck2">게시 종료일 설정</label></span>	
+							<div class="cal_wrap">
+								<input type="text" class="ip_txt datepicker" style="width:158px">
+							</div>					
+						</td>
+						</tr>
+						<tr>
+						<th scope="row">첨부파일</th>
+						<td><span class="file_wrap"><button type="button" class="btn_file1 btn_yel">첨부추가</button><input type="file" class="btn_file2"></span></td>
+						</tr>
+						</tbody>
+						</table>					
+					</div>
+				</div>
+				<!-- [D] 게시글 등록 시 노출 버튼 -->
+				<div class="btn_area">
+					<button type="button" class="btn_yel">임시저장</button>		
+					<a href="#" class="btn_yel">미리보기</a>		
+					<button type="submit" class="btn_yel">등록하기</button>		
+					<a href="#" class="btn_yel ab_r">등록취소</a>		
+				</div>
+				<!-- [D] 게시글 수정 시 노출 버튼-->
+				<div class="btn_area">
+					<button type="button" class="btn_yel">임시저장</button>		
+					<a href="#" class="btn_yel">미리보기</a>	
+					<button type="submit" class="btn_yel">수정하기</button>			
+					<a href="#" class="btn_yel ab_r">수정취소</a>		
+				</div>	
+			</fieldset>
+			</form>
+		</div>
+	</div>
+	<!-- //[D] CONTAINER -->
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

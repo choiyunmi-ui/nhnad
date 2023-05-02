@@ -1,0 +1,486 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>TEMPLATE_CONTENTS :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$( ".datepicker" ).datepicker();
+	});
+</script>
+<style>
+body{}
+.section_head{padding-bottom:15px;margin:50px 0 20px;border-bottom:1px solid #000;}
+.section_head:first-child{margin-top:0;}
+.tit_head{font-size:20px;font-weight:bold;}old;font-size:14px;}
+.tit_case_in{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;min-width:70px;border-right:2px solid #64bbe8;margin-right:8px;padding-right:10px;text-align:center;}
+.case_info{margin:5px 0 0 5px;font-size:12px;line-height:18px;}
+.template_case{margin:30px;padding-bottom:150px;}
+.case_box{margin-top:10px;padding:10px;border:1px solid #d3d2dc;border-radius:3px;background:#fff;}
+.case_box label{margin-left:15px;}
+.case_box label:first-child{margin-left:0;}
+.case_box+.case_info{margin-top:10px;line-height:16px}
+.inp_check label,.inp_radio label{margin-left:0 !important;margin-right:15px;}
+.selectbox{margin-right:5px;}
+.inp_text{margin-right:10px;margin-left:-10px;}
+label+.inp_text,
+label+.inp_keyword{margin-left:5px;}
+.inp_textarea{margin-right:10px;width:200px;height:110px;}
+.timer{margin-right:10px;}
+.msg_check+.msg_check{margin-left:10px}
+.increase,.decrease{margin-left:15px}
+.inp_keyword .inp_text{margin:0}
+.inp_del .inp_text{margin:0}
+</style>
+</head>
+<body><!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div class="section_head">
+			<h2 class="tit_head">게시물 리스트</h2>
+		</div>
+		<div class="section_box">
+			<div class="tit_wrap">
+				<h2 class="tit">TITLE - h2<span class="total">총 3 건</span></h2>
+				<div class="btn_area">
+					<!-- [D] 예약게시글, 임시저장글 클릭시 pop_save 팝업 노출 -->
+					<button class="btn_pop_save btn_gry">예약게시글</button>
+					<button class="btn_pop_save btn_gry">임시저장글</button>					
+				</div>
+				<!-- [D] 글 불러오기 팝업. top값은 .tit_wrap height값에 따라 유동적으로 변함 -->
+				<div class="pop_save" style="top:80px">
+					<ul class="lst_save">
+					<li><a href="#">오픈랭킹 2016.06 기준 자료가 업데이트</a><span class="date">2016.07.07 15:03</span><a href="#" class="btn_del">삭제</a></li>
+					<li><a href="#">오픈랭킹 2016.06 기준 자료가 업데이트</a><span class="date">2016.07.07 15:03</span><a href="#" class="btn_del">삭제</a></li>
+					<li><a href="#">오픈랭킹 2016.06 기준 자료가 업데이트</a><span class="date">2016.07.07 15:03</span><a href="#" class="btn_del">삭제</a></li>
+					<li><a href="#">오픈랭킹 2016.06 기준 자료가 업데이트</a><span class="date">2016.07.07 15:03</span><a href="#" class="btn_del">삭제</a></li>
+					</ul>				
+				</div>
+			</div>
+			<div class="tbl_v1">
+				<table>
+				<caption class="blind">공지사항 제목, 작성자, 게시일, 게시만료일</caption>
+				<colgroup>
+				<col><col width="115"><col width="155"><col width="155">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">제목</th>
+				<th scope="col">작성자</th>
+				<th scope="col">게시일</th>
+				<th scope="col">게시만료일</th>
+				</tr>				
+				</thead>
+				<tbody>
+				<tr>
+				<!-- [D] 중요 게시물일시 .ico_imp 추가 -->
+				<td class="tit"><a href="#" class="ico_imp">지난 8월 15일 오픈랭킹이 업데이트를 했습니다.  지난 8월 15일 오픈랭킹이 업데이트를 했습니다...</a></td>
+				<td>금세연</td>
+				<td>2016 - 03 -05</td>
+				<td>2016 - 07 -07</td>
+				</tr>
+				<tr>
+				<td class="tit"><a href="#">지난 8월 15일 오픈랭킹이 업데이트를 했습니다.  지난 8월 15일 오픈랭킹이 업데이트를 했습니다...</a></td>
+				<td>금세연</td>
+				<td>2016 - 03 -05</td>
+				<td>2016 - 07 -07</td>
+				</tr>
+				<tr>
+				<td class="tit"><a href="#">지난 8월 15일 오픈랭킹이 업데이트를 했습니다.  지난 8월 15일 오픈랭킹이 업데이트를 했습니다...</a></td>
+				<td>금세연</td>
+				<td>2016 - 03 -05</td>
+				<td>2016 - 07 -07</td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="section_head">
+			<h2 class="tit_head">게시물 상세</h2>
+		</div>
+		<div class="section_box">
+			<div class="tit_wrap">
+				<h2 class="tit">TITLE - h2</h2>
+				<dl class="wrt_info">
+				<dt class="blind">작성자</dt>
+				<dd>금세연</dd>
+				<dt class="blind">작성날짜</dt>
+				<dd>2016.06.01</dd>					
+				</dl>
+			</div>
+			<div class="vw_tit">
+				<!-- [D] 중요 게시물일시 .ico_imp 추가 -->
+				<p class="tit ico_imp">오픈랭킹 2016.06 기준 자료가 업데이트 되었습니다.</p>
+				<p class="date">게시시작: 2016.07.01 / 게시종료: 2016.07.07</p>				
+			</div>
+			<div class="vw_etc">
+				<dl class="vw_views">
+				<dt>조회수</dt>
+				<dd>10</dd>					
+				</dl>
+				<a href="#" class="vw_file">7월 첨부파일.jpg <span>[10KB]</span></a>				
+			</div>
+			<div class="vw_cont">
+				<div class="txt">
+					<p>안녕하세요. 오픈애즈입니다.</p>
+					<p>2016.06 일자 기준으로 오픈랭킹 자료가 업데이트 되었습니다.</p>	
+					<p>2016.06 일자 기준으로 오픈랭킹 자료가 업데이트 되었습니다. 2016.06 일자 기준으로 오픈랭킹 자료가 업데이트 되었습니다.</p>	
+					<p>2016.06 일자 기준으로 오픈랭킹 자료가 업데이트 되었습니다. 2016.06 일자 기준으로 오픈랭킹</p>
+					<p>2016.06 일자 기준으로 오픈랭킹 자료가 업데이트 되었습니다.2016.06 일자 기준으로 오픈랭킹 자료가 업데이트</p>
+					<p>2016.06 일자 기준으로 오픈랭킹 자료가 업데이트 되었습니다.2016.06 일자 기준으로 </p>
+					<p>2016.06 일자 기준으로 오픈랭킹 자료가 업데이트 되었습니다.2016.06 일자 기준으로 오픈랭킹 자료가 업데이트 되었습니다.</p>
+					<p>2016.06 일자 기준으로 오픈랭킹 자료가 업데이트 되었습니다.2016.06 일자 기준으로 오픈랭킹 자료가 업데이트 </p>
+					<p>2016.06 일자 기준으로 오픈랭킹 자료가 업데이트 되었습니다.</p>
+					<p>감사합니다.</p>
+					<p>오픈애즈 드림 </p>			
+				</div>						
+			</div>
+		</div>
+
+		<div class="section_head">
+			<h2 class="tit_head">게시물 쓰기</h2>
+		</div>
+		<div class="section_box">
+			<div class="tit_wrap">
+				<h2 class="tit">TITLE - h2<span class="subhead">&gt; 글쓰기</span></h2>
+			</div>
+			<div class="tbl_wrt">
+				<table>
+				<caption class="blind">공지제목, 중요공지, 공지내용, 예약게시, 게시종료, 첨부파일</caption>
+				<colgroup>
+					<col width="135"><col>
+				</colgroup>
+				<tbody>
+				<tr class="bg_gry">
+				<th scope="row"><label for="wr_tit">공지제목</label></th>
+				<td><input type="text" id="wr_tit" class="ip_txt" placeholder="제목 입력"></td>
+				</tr>	
+				<tr>
+				<th scope="row">중요공지</th>
+				<td>
+					<span class="ip_check mr20"><input type="checkbox" id="wr_chck" class="ip_chbox"><label for="wr_chck">사용</label></span>
+					<div class="sel_wrap" style="width:148px">
+						<button type="button" class="btn_sel">1일</button> 
+						<ul class="sel_lst">
+						<li><a href="#">1일</a></li>								
+						<li><a href="#">2일</a></li>
+						<li><a href="#">3일</a></li>
+						<li><a href="#">4일</a></li>
+						<li><a href="#">5일</a></li>
+						<li><a href="#">6일</a></li>
+						<li><a href="#">7일</a></li>
+						</ul>
+					</div>
+					<p class="txt_org">* 공지사항 상단으로 올릴 글일 경우에만 상단 고정기간과 함께 체크합니다.</p>
+				</td>
+				</tr>	
+				<tr>
+				<th scope="row"><label for="wr_cont">공지내용</label></th>
+				<td><textarea id="wr_cont" class="ip_txar" placeholder="공지 설명 문구를 입력해주세요." style="height:250px"></textarea></td>
+				</tr>		
+				<tr>
+				<th scope="row">예약게시</th>
+				<td>						
+					<span class="ip_radio mr30"><input type="radio" name="reserv" id="wr_now" class="ip_rd"><label for="wr_now">즉시 게시</label></span>
+					<span class="ip_radio mr25"><input type="radio" name="reserv" id="wr_res" class="ip_rd"><label for="wr_res">예약 게시</label></span>
+					<div class="cal_wrap">
+						<input type="text" class="ip_txt datepicker" style="width:158px">		
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">게시종료</th>
+				<td>
+					<span class="ip_check" style="margin-right:94px"><input type="checkbox" id="wr_chck2" class="ip_chbox"><label for="wr_chck2">게시 종료일 설정</label></span>	
+					<div class="cal_wrap">
+						<input type="text" class="ip_txt datepicker" style="width:158px">
+					</div>					
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">첨부파일</th>
+				<td><span class="file_wrap"><button type="button" class="btn_file1 btn_yel">첨부추가</button><input type="file" class="btn_file2"></span></td>
+				</tr>
+				</tbody>
+				</table>					
+			</div>
+		</div>
+
+		<div class="section_head">
+			<h2 class="tit_head">상품 선택 박스</h2>
+			<p class="case_info">유형 선택시 해당 컨텐츠 노출</p>	
+		</div>
+		<div class="tit_box">
+			<h2 class="tit">독립된 TITLE BOX</h2>
+			<div class="tit_sel">
+				<span>유형</span>
+				<!-- [D] width 인라인으로 지정 -->
+				<div class="sel_wrap" style="width:200px">
+					<button type="button" class="btn_sel">매체</button> 
+					<ul class="sel_lst">
+					<li><a href="#">매체</a></li>								
+					<li><a href="#">노출소재</a></li>								
+					<li><a href="#">노출영역</a></li>								
+					<li><a href="#">디바이스</a></li>								
+					<li><a href="#">과금방식</a></li>								
+					<li><a href="#">타겟팅 유무</a></li>								
+					<li><a href="#">광고 속성</a></li>								
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="section_head">
+			<h2 class="tit_head">상품 리스트+등록영역</h2>
+			<p class="case_info">매체명 선택시 등록영역 &gt; 수정영역으로 변경</p>	
+		</div>
+		<div class="section_box">
+			<div class="tit_wrap2">
+				<h3 class="tit">TITLE - h3</h3>
+			</div>
+			<div class="tbl_v2">
+				<table>
+				<caption class="blind">번호, 매체명, 사이트 URL, 등록자, 등록일 / 수정일, 게재여부</caption>
+				<colgroup>
+					<col width="105"><col width="235"><col width="270"><col width="170"><col><col width="170">
+				</colgroup>
+				<thead>
+				<tr class="bg_gry">
+				<th scope="col">No.</th>			
+				<th scope="col">매체명</th>			
+				<th scope="col">사이트 URL</th>			
+				<th scope="col">등록자</th>			
+				<th scope="col">등록일 / 수정일</th>			
+				<th scope="col">게재여부</th>			
+				</tr>					
+				</thead>
+				<tbody>
+				<tr>
+				<td>1</td>
+				<td><a href="#">네이버</a></td>
+				<td>www.naver.com</td>
+				<td>손병진</td>
+				<td>2016 - 06 - 01 / 2016 - 06 - 01</td>
+				<td>사용</td>
+				</tr>
+				<tr>
+				<td>2</td>
+				<td><a href="#">다음</a></td>
+				<td>www.daum.net</td>
+				<td>손병진</td>
+				<td>2016 - 06 - 01</td>
+				<td>사용</td>
+				</tr>
+				<tr>
+				<td>3</td>
+				<td><a href="#">구글</a></td>
+				<td>www.google.com</td>
+				<td>손병진</td>
+				<td>2016 - 06 - 01</td>
+				<td>사용</td>
+				</tr>
+				<tr>
+				<td>4</td>
+				<td><a href="#">인모비</a></td>
+				<td>korea.inmobi.com</td>
+				<td>손병진</td>
+				<td>2016 - 06 - 01</td>
+				<td>사용</td>
+				</tr>
+				<tr>
+				<td>5</td>
+				<td><a href="#">타겟팅게이트</a></td>
+				<td>www.widerplanet.com</td>
+				<td>손병진</td>
+				<td>2016 - 06 - 01</td>
+				<td>사용</td>
+				</tr>
+				</tbody>
+				</table>					
+			</div>
+		</div>
+		<div class="pagenation mb60">
+			<a href="#" class="first">처음</a>
+			<a href="#" class="prev">이전</a>
+			<ul class="num">
+			<li class="on"><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">6</a></li>
+			<li><a href="#">7</a></li>
+			<li><a href="#">8</a></li>
+			<li><a href="#">9</a></li>
+			<li><a href="#">10</a></li>				
+			</ul>
+			<a href="#" class="next">다음</a>
+			<a href="#" class="last">끝</a>			
+		</div>
+		<div class="section_box">
+			<div class="tit_wrap2">
+				<h3 class="tit">등록영역</h3>
+				<div class="btn_area">
+					<button type="submit" class="btn_yel">저장</button>
+					<a href="#" class="btn_yel">취소</a>					
+				</div>
+			</div>
+			<div class="tbl_wrt2">
+				<table>
+				<caption class="blind">매체명, 업종특화, 게재여부, 대표 URL, 로고첨부, 소개글</caption>
+				<colgroup>
+					<col width="175"><col width="444"><col width="175"><col width="444">
+				</colgroup>
+				<tbody>
+				<tr>
+				<th scope="row"><label for="ip_name">매체명</label></th>
+				<td>
+					<input type="text" id="ip_name" class="ip_txt mr20">
+					<span class="ip_check"><input type="checkbox" id="ip_new"><label for="ip_new">신규 매체</label></span>
+				</td>
+				<th scope="row">업종 특화</th>
+				<td>
+					<span class="ip_check mr15"><input type="checkbox" id="ip_spec"><label for="ip_spec">특화 매체</label></span>
+					<div class="sector_wrap">	
+						<input type="text" id="btn_pop_sector" value="업종선택" class="ip_txt">
+						<ul class="pop_sector">
+						<li><input type="checkbox" id="ch_sec1"><label for="ch_sec1">IT/텔레콤</label></li>
+						<li><input type="checkbox" id="ch_sec2"><label for="ch_sec2">가정/생활</label></li>
+						<li><input type="checkbox" id="ch_sec3"><label for="ch_sec3">건강/미용</label></li>
+						<li><input type="checkbox" id="ch_sec4"><label for="ch_sec4">건축/인테리어</label></li>
+						<li><input type="checkbox" id="ch_sec5"><label for="ch_sec5">결혼/출산/육아</label></li>
+						<li><input type="checkbox" id="ch_sec6"><label for="ch_sec6">교육/취업</label></li>
+						<li><input type="checkbox" id="ch_sec7"><label for="ch_sec7">금융/보험</label></li>
+						<li><input type="checkbox" id="ch_sec8"><label for="ch_sec8">문화/미디어</label></li>
+						<li><input type="checkbox" id="ch_sec9"><label for="ch_sec9">부동산</label></li>
+						<li><input type="checkbox" id="ch_sec10"><label for="ch_sec10">산업기기</label></li>
+						<li><input type="checkbox" id="ch_sec11"><label for="ch_sec11">식품/음료</label></li>
+						<li><input type="checkbox" id="ch_sec12"><label for="ch_sec12">여행/교육</label></li>
+						<!-- [D] 마지막줄에 해당하는 li에 .last 추가-->
+						<li class="last"><input type="checkbox" id="ch_sec13"><label for="ch_sec13">의류/패션잡화</label></li>
+						<li class="last"><input type="checkbox" id="ch_sec14"><label for="ch_sec14">자동차</label></li>
+						<li class="last"><input type="checkbox" id="ch_sec15"><label for="ch_sec15">전문서비스</label></li>
+						</ul>
+					</div>							
+				</td>
+				</tr>
+				<tr>
+				<th scope="row">게재여부</th>
+				<td>
+					<div class="sel_wrap" style="width:220px">
+						<button type="button" class="btn_sel">사용</button> 
+						<ul class="sel_lst">
+						<li><a href="#">사용</a></li>								
+						<li><a href="#">미사용</a></li>						
+						</ul>
+					</div>
+				</td>
+				<th scope="row"><label for="ip_url">대표 URL</label></th>
+				<td><input type="text" id="ip_url" class="ip_txt" style="width:328px"></td>
+				</tr>
+				<th scope="row">로고첨부</th>
+				<td colspan="3">
+					<div class="file_wrap">
+						<input type="text" id="in_file" readonly="readonly" class="ip_txt">
+						<button type="button" class="btn_file1 btn_yel">찾기</button>
+						<input type="file" name="files" onchange="javascript:document.getElementById('in_file').value =this.value" class="btn_file2">
+					</div>
+				<tr>
+				<tr>
+				<th scope="row">첨부파일</th>
+				<td><span class="file_wrap"><button type="button" class="btn_file1 btn_yel">첨부추가</button><input type="file" class="btn_file2"></span></td>
+				</tr>
+				<th scope="row">소개글</th>
+				<td colspan="3"><textarea id="wr_cont" class="ip_txar2" style="height:80px"></textarea></td>
+				</tr>
+				</tbody>
+				</table>					
+			</div>
+		</div>		
+
+		<div class="section_head">
+			<h2 class="tit_head">상품리스트(레이어)</h2>
+			<p class="case_info">등록 버튼/소재명 클릭시 레이어팝업 내 등록/수정</p>	
+		</div>
+		<!-- [D] 노출소재, 노출영역 동일 UI -->
+		<div class="section_box">
+			<div class="tit_wrap2">
+				<h3 class="tit">등록(레이어)</h3>
+				<div class="btn_area">
+					<button id="btn_pop_exadd" class="btn_yel">등록</button>					
+				</div>
+			</div>
+			<div class="tbl_v2">
+				<table>
+				<caption class="blind">번호, 매체명, 사이트 URL, 등록자, 등록일 / 수정일, 게재여부</caption>
+				<colgroup>
+					<col width="105"><col><col><col>
+				</colgroup>
+				<thead>
+				<tr class="bg_gry">
+				<th scope="col">No.</th>			
+				<th scope="col">노출소재</th>			
+				<th scope="col">등록자</th>			
+				<th scope="col">등록일 / 수정일</th>			
+				</tr>					
+				</thead>
+				<tbody>
+				<tr>
+				<td>1</td>
+				<td><a href="#" class="btn_pop_exmody">검색 광고</a></td>
+				<td>손병진</td>
+				<td>2016 - 06 - 01</td>
+				</tr>
+				<tr>
+				<td>2</td>
+				<td><a href="#" class="btn_pop_exmody">배너 광고</a></td>
+				<td>손병진</td>
+				<td>2016 - 06 - 01</td>
+				</tr>
+				<tr>
+				</tbody>
+				</table>					
+			</div>
+			<!-- [D] #btn_pop_exadd 클릭시 노출소재, 노출영역 등록팝업 노출 -->
+			<div id="pop_exadd" class="pop_expos">
+				<form action="#">
+				<fieldset>
+				<legend>등록</legend>
+					<label for="ip_ex2" class="expo_lb">등록</label>
+					<input type="text" id="ip_ex2" class="expo_ip">
+					<div class="btn_area">
+						<button type="submit" class="btn_yel">저장</button>
+						<button type="button" class="btn_yel btn_popcls">취소</button>							
+					</div>
+				</fieldset>			
+				</form>
+			</div>
+			<!-- [D] 해당 타이틀 클릭시 수정 팝업 노출 -->
+			<div id="pop_exmodi" class="pop_expos">
+				<form action="#">
+				<fieldset>
+				<legend>노출소재 등록</legend>
+					<label for="ip_ex1" class="expo_lb">노출소재</label>
+					<input type="text" id="ip_ex1" value="노출소재명" class="expo_ip">
+					<div class="btn_area">
+						<button type="submit" class="btn_yel">수정</button>
+						<button type="button" class="btn_yel">삭제</button>		
+						<button type="button" class="btn_yel btn_popcls">취소</button>	
+					</div>
+				</fieldset>			
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- //[D] CONTAINER -->
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+			<div class="section_head">
+				<h2 class="tit_top">BID서버별 작업이력</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<span class="dep_group">
+						<a href="#">시스템관리</a>
+						<div class="dep1">
+							<a href="#">광고정보관리</a>
+							<a href="#">분석/리포트</a>
+							<a href="#">자동입찰</a>
+							<a href="#">마켓트렌드</a>
+							<a href="#">광고제안</a>
+							<a href="#">어드민</a>
+							<a href="#" class="selected">시스템관리</a>
+						</div>
+					</span>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">시스템모니터링</a>
+						<div class="dep2">
+							<em class="tit_dep2"><a href="#" class="selected">시스템모니터링</a></em>
+							<em class="tit_dep2"><a href="#">자동입찰개수관리</a></em>
+							<em class="tit_dep2"><a href="#">광고상품관리</a></em>
+							<em class="tit_dep2"><a href="#">권한관리</a></em>
+							<em class="tit_dep2"><a href="#">에이전시관리</a></em>
+						</div>
+					</span>
+					<span class="bar">&gt;</span>
+					BID 모니터링
+				</div>
+			</div>
+			
+			<!-- 조회필터 -->
+			<div class="section_filter" name="case_filter_agency_bid1">
+				@template_filter.html
+			</div>
+			<div class="section_filter" name="case_filter_agency_bid2">
+				@template_filter.html
+			</div>
+			
+			<!-- 조회결과 -->
+			<div class="sub_head">
+				<h3 class="tit_section">조회결과</h3>
+				<div class="side">
+					<a href="#" class="btn_basic_m"><img src="img/ico_btn_down.png" alt="download icon" class="ico">CSV 다운로드</a>
+				</div>
+			</div>
+			<div class="section_box">
+				<table class="tbl_form">
+				<caption>조회결과 thead</caption>
+				<colgroup><col width="17%"><col width="17%"><col width="17%"><col width="17%"><col width="17%"><col width="*"></colgroup>
+				<thead>
+				<tr>
+					<th>작업No</th>
+					<th>서버ID</th>
+					<th>작업전체건수</th>
+					<th>작업시간(msec)</th>
+					<th>최종업데이트 시간</th>
+					<th>메세지</th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<caption>조회결과 tbody</caption>
+				<colgroup><col width="17%"><col width="17%"><col width="17%"><col width="17%"><col width="17%"><col width="*"></colgroup>
+				<tbody>
+				<tr>
+					<td><p>24653</p></td>
+					<td><p>S1</p></td>
+					<td><p class="num">904</p></td>
+					<td><p class="num">41,414</p></td>
+					<td>2014.11.10 <span class="time">12:00</span></td>
+					<td><p class="num">SCCS</p></td>
+				</tr>
+				<tr>
+					<td><p>24653</p></td>
+					<td><p>S1</p></td>
+					<td><p class="num">904</p></td>
+					<td><p class="num">41,414</p></td>
+					<td>2014.11.10 <span class="time">12:00</span></td>
+					<td><p class="num">SCCS</p></td>
+				</tr>
+				<tr>
+					<td><p>24653</p></td>
+					<td><p>S1</p></td>
+					<td><p class="num">904</p></td>
+					<td><p class="num">41,414</p></td>
+					<td>2014.11.10 <span class="time">12:00</span></td>
+					<td><p class="num">SCCS</p></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="pagenate">
+					<a href="#" class="btn_first">처음</a>
+					<a href="#" class="btn_prev">이전</a>
+					<span class="num">
+						<a href="#">1</a>
+						<span class="bar">|</span>
+						<a href="#">2</a>
+						<span class="bar">|</span>
+						<a href="#">3</a>
+						<span class="bar">|</span>
+						<a href="#">4</a>
+						<span class="bar">|</span>
+						<a href="#">5</a>	
+					</span>
+					<a href="#" class="btn_next">다음</a>
+					<a href="#" class="btn_last">끝</a>
+				</div>
+			</div>
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

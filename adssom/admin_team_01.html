@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+		
+			<div class="section_head">
+				<h2 class="tit_top">팀 관리</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">어드민</a>
+						<div class="dep1">
+							<a href="#">광고정보관리</a>
+							<a href="#">분석/리포트</a>
+							<a href="#">자동입찰</a>
+							<a href="#">마켓트렌드</a>
+							<a href="#">광고제안</a>
+							<a href="#" class="selected">어드민</a>
+							<a href="#">시스템관리</a>
+						</div>
+					</span>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">회원관리/팀관리</a>
+						<div class="dep2">
+							<em class="tit_dep2">회원관리</em>
+							<a href="#">회원관리</a>
+							<a href="#" class="selected">팀관리</a>
+							<a href="#">관리이력</a>
+							<em class="tit_dep2"><a href="#">API관리</a></em>
+							<em class="tit_dep2"><a href="#">자동입찰개수제한관리</a></em>
+						</div>
+					</span>
+				</div>
+			</div>
+			
+			<div class="wrap_split">
+				<!-- split_l -->
+				<div class="split_l" style="width:25%">
+					<div class="sub_head">
+						<h3 class="tit_section">팀 목록</h3>
+						<div class="side">
+							<a href="#" class="btn_basic_m" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">새 팀 등록</a>
+							<a href="#" class="btn_basic_m"><img src="img/ico_btn_delete.png" alt="x" class="ico">팀 삭제</a>
+						</div>
+					</div>
+					<div class="section_box">
+						<table class="tbl_form">
+						<caption>팀 목록 thead</caption>
+						<!-- [D] 마지막 col항목엔 width선언 제외 -->
+						<col class="t_check"><col>
+						<thead>
+						<tr>
+							<th class="t_check"><span class="inp_check"><input type="checkbox"></th>
+							<th>팀이름</th>
+						</tr>
+						</thead>
+						</table>
+						<table class="tbl_form">
+						<caption>팀 목록 tbody</caption>
+						<!-- [D] 상단 목록과 동일한 col width값 선언 -->
+						<col class="t_check"><col>
+						<tbody>
+						<tr>
+							<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+							<td><p class="team_edit">1팀 <a href="#" class="btn_form_modify">수정</a></p></td>
+						</tr>
+						<tr>
+							<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+							<td><p class="team_edit">
+								<input type="text" value="2팀" class="inp_text inp_text_s" style="width:100%" />
+								<a href="#" class="btn_form_check">변경</a>
+								<a href="#" class="btn_form_delete">삭제</a>
+							</p></td>
+						</tr>
+						<tr class="selected">
+							<td class="t_check"><span class="inp_check checked"><input type="checkbox" checked></span></td>
+							<td><p class="team_edit">3팀 <a href="#" class="btn_form_modify">수정</a></p></td>
+						</tr>
+						<tr>
+							<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+							<td><p class="team_edit">4팀 <a href="#" class="btn_form_modify">수정</a></p></td>
+						</tr>
+						<tr>
+							<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+							<td><p class="team_edit"><span class="ellipsis">팀이름이 길어지면 길어지면 길어지면</span> <a href="#" class="btn_form_modify">수정</a></p></td>
+						</tr>
+						<tr><td class="t_check"></td><td></td></tr>
+						<tr><td class="t_check"></td><td></td></tr>
+						<tr><td class="t_check"></td><td></td></tr>
+						<tr><td class="t_check"></td><td></td></tr>
+						<tr><td class="t_check"></td><td></td></tr>
+						<tr><td class="t_check"></td><td></td></tr>
+						<tr><td class="t_check"></td><td></td></tr>
+						<tr><td class="t_check"></td><td></td></tr>
+						<tr><td class="t_check"></td><td></td></tr>
+						<tr><td class="t_check"></td><td></td></tr>
+						<tr><td class="t_check"></td><td></td></tr>
+						<tr><td class="t_check"></td><td></td></tr>
+						<tr><td class="t_check"></td><td></td></tr>
+						<tr><td class="t_check"></td><td></td></tr>
+						<tr><td class="t_check"></td><td></td></tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- //split_l -->
+				
+				<!-- split_r -->
+				<div class="split_r" style="width:74.26%">
+					<div class="sub_head">
+						<h3 class="tit_section">1팀 <span class="stxt">총 00 명 (멤버 00 / 리더 00)</span></h3>
+						<div class="side">
+							<select class="selectbox select_m" style="width:150px">
+								<option>팀이동</option>
+							</select>
+						</div>
+					</div>			
+					<div class="section_box">
+						<!-- [D] 테이블 목록이 10개 이상일때 .wrap_tbl>.thead+.tbody 구조로 둘러쌈 (스크롤처리) / 스크롤이 없을때는 제거! -->
+						<div class="wrap_tbl">
+							<div class="thead">
+								<table class="tbl_form">
+								<caption>1팀 thead</caption>
+								<!-- [D] 마지막 col항목엔 width선언 제외 -->
+								<colgroup><col class="t_check"><col width="15.7%"><col width="12.4%"><col width="9.5%"><col width="12.5%"><col width="9.5%"><col width="12.5%"><col width="11%"><col></colgroup>
+								<thead>
+								<tr>
+									<th class="t_check"><span class="inp_check"><input type="checkbox"></th>
+									<th>아이디</th>
+									<th>담당자</th>
+									<th>권한</th>
+									<th>관리대상 팀</th>
+									<th>POS ID</th>
+									<th>클릭스마케터ID</th>
+									<th>수정일</th>
+									<th>가입일</th>
+								</tr>
+								</thead>
+								</table>
+							</div>
+							<!-- [D] 20라인 기준 스크롤일때 line20 class 추가 -->
+							<div class="tbody line20">
+								<table class="tbl_form">
+								<caption>1팀 tbody</caption>
+								<!-- [D] 상단 목록과 동일한 col width값 선언 -->
+								<colgroup><col class="t_check"><col width="15.7%"><col width="12.4%"><col width="9.5%"><col width="12.5%"><col width="9.5%"><col width="12.5%"><col width="11%"><col></colgroup>
+								<tbody>
+								<tr>
+									<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+									<td><p>agent1</p></td>
+									<td><p>박선유123</p></td>
+									<td><p>리더</p></td>
+									<td><p>1팀</p></td>
+									<td><p>POS_001</p></td>
+									<td><p>Clix_001</p></td>
+									<td><p>2014.11.10</p></td>
+									<td><p>2014.11.10</p></td>
+								</tr>
+								<tr>
+									<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+									<td><p>agent1</p></td>
+									<td><p>박선유</p></td>
+									<td><p>멤버</p></td>
+									<td><p>
+										<span class="btn_tip">1팀 외 2개 팀
+											<span class="ly_tip">										
+												<span class="team"><strong><em>관리대상팀</em></strong><br>1팀<br>2팀<br>3팀</span>
+											</span>
+										</span>
+									</p></td>
+									<td><p>POS_002</p></td>
+									<td><p>Clix_002</p></td>
+									<td><p>2014.11.10</p></td>
+									<td><p>2014.11.10</p></td>
+								</tr>
+								<tr>
+									<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+									<td><p>agentDScgbws1</p></td>
+									<td><p>박선유123</p></td>
+									<td><p>리더</p></td>
+									<td><p>1팀</p></td>
+									<td><p>POS_001</p></td>
+									<td><p>Clix_001</p></td>
+									<td><p>2014.11.10</p></td>
+									<td><p>2014.11.10</p></td>
+								</tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p>agent1</p></td><td><p>박선유</p></td><td><p>리더</p></td><td><p>1팀</p></td><td><p>POS_001</p></td><td><p>Clix_001</p></td><td><p>2014.11.10</p></td><td><p>2014.11.10</p></td></tr>
+								</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>	
+				<!-- //split_r -->
+			</div>
+			
+			<!-- dimmed -->
+			<div class="dimmed" style="display:none;"></div>
+			<!-- layer popup - 새팀등록 -->
+			<div class="ly_pop" style="display:none;"><div class="ly_pop_in">
+				<div class="ly_pop_cont">
+					<div class="ly_head">
+						<h3 class="tit_ly">새 팀 등록</h3>
+						<a href="#" class="btn_close_ly">닫기</a>
+					</div>
+					<p class="tit_txt">
+						<strong>등록할 팀 이름을 10자 이내로 입력하세요.</strong>
+					</p>
+					<table class="tbl_ly">
+					<col width="137"><col>
+					<tr>
+						<th>팀</th>
+						<td><input type="text" class="inp_text inp_text_s" style="width:234px"></td>
+					</tr>
+					</table>
+					<div class="btn_foot">
+						<a href="#" class="btn_b_odd">확인</a>
+						<a href="#" class="btn_b_gray">취소</a>
+					</div>
+				</div>
+			</div></div>
+			<!-- //layer popup -->
+			
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

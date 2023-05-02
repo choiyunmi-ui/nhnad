@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+			<div class="section_head">
+				<h2 class="tit_top">회원관리</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">어드민</a>
+						<div class="dep1">
+							<a href="#">광고정보관리</a>
+							<a href="#">분석/리포트</a>
+							<a href="#">자동입찰</a>
+							<a href="#">마켓트렌드</a>
+							<a href="#">광고제안</a>
+							<a href="#" class="selected">어드민</a>
+							<a href="#">시스템관리</a>
+						</div>
+					</span>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">회원관리/회원관리</a>
+						<div class="dep2">
+							<em class="tit_dep2">회원관리</em>
+							<a href="#" class="selected">회원관리</a>
+							<a href="#">팀관리</a>
+							<a href="#">관리이력</a>
+							<em class="tit_dep2"><a href="#">API관리</a></em>
+							<em class="tit_dep2"><a href="#">자동입찰개수제한관리</a></em>
+						</div>
+					</span>
+				</div>
+			</div>			
+			
+			<!-- 조회필터 -->
+			<div class="section_filter" name="case_filter_admin_member2">
+				@template_filter.html
+			</div>
+			
+			<!-- 광고주 회원 목록 -->
+			<div class="sub_head">
+				<h3 class="tit_section">광고주 회원 목록<span class="stxt">총150명</span></h3>
+				<div class="side">
+					<a href="#" class="btn_basic_m" onclick="$('.ly_pop:eq(1),.dimmed').show();return false;"><img src="img/ico_btn_delete.png" alt="x" class="ico">삭제</a>
+				</div>
+			</div>
+			
+			<div class="section_box">
+				<table class="tbl_form">
+				<caption>광고주 회원 목록 thead</caption>
+				<colgroup><col class="t_check"><col width="19.1%"><col width="17.8%"><col width="17.9%"><col width="16.9%"><col span="2"></colgroup>
+				<thead>
+				<tr>
+					<th class="t_check"><span class="inp_check"><input type="text"></span></th>
+					<th><a href="#" class="btn_sort"><strong>아이디</strong></a></th>
+					<th class="incharge"><a href="#" class="btn_sort">담당자</a></th>
+					<th class="team"><a href="#" class="btn_sort">광고주</a></th>
+					<th class="level"><a href="#" class="btn_sort">서비스레벨</a></th>
+					<th class="date_modify"><a href="#" class="btn_sort">광고주 등록일</a></th>
+					<th class="date_join"><a href="#" class="btn_sort">가입일</a></th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<caption>광고주 회원 목록 thead</caption>
+				<colgroup><col class="t_check"><col width="19.1%"><col width="17.8%"><col width="17.9%"><col width="16.9%"><col span="2"></colgroup>
+				<tbody>
+				<tr>
+					<td class="t_check"><span class="inp_check"><input type="text"></span><label></label></td>
+					<td><p><a href="#" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">agent1dighs</a></p></td>
+					<td><p>박선유123</p></td>
+					<td><p>한게임</p></td>
+					<td><p>대행서비스</p></td>
+					<td><p>2014.11.10</p></td>
+					<td><p>2014.11.10</p></td>
+				</tr>
+				<tr class="selected">
+					<td class="t_check"><span class="inp_check checked"><input type="text" checked></span></td>
+					<td><p><a href="#" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">agent1</a></p></td>
+					<td><p>박선유123</p></td>
+					<td><p>한게임</p></td>
+					<td><p>대행서비스</p></td>
+					<td><p>2014.11.10</p></td>
+					<td><p>2014.11.10</p></td>
+				</tr>
+				<tr>
+					<td class="t_check"><span class="inp_check"><input type="text"></span><label></label></td>
+					<td><p><a href="#" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">agent1</a></p></td>
+					<td><p>박선유</p></td>
+					<td><p>한게임</p></td>
+					<td><p>셀프서비스</p></td>
+					<td><p>2014.11.10</p></td>
+					<td><p>2014.11.10</p></td>
+				</tr>
+				<tr>
+					<td class="t_check"><span class="inp_check"><input type="text"></span><label></label></td>
+					<td><p><a href="#" onclick="$('.ly_pop:eq(0),.dimmed').show();return false;">agent1</a></p></td>
+					<td><p>박선유123</p></td>
+					<td><p>삼성전자</p></td>
+					<td><p>대행서비스</p></td>
+					<td><p>2014.11.10</p></td>
+					<td><p>2014.11.10</p></td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="pagenate">
+					<a href="#" class="btn_first">처음</a>
+					<a href="#" class="btn_prev">이전</a>
+					<span class="num">
+						<a href="#">1</a>
+						<span class="bar">|</span>
+						<a href="#">2</a>
+						<span class="bar">|</span>
+						<a href="#">3</a>
+						<span class="bar">|</span>
+						<a href="#">4</a>
+						<span class="bar">|</span>
+						<a href="#">5</a>	
+					</span>
+					<a href="#" class="btn_next">다음</a>
+					<a href="#" class="btn_last">끝</a>
+				</div>
+			</div>
+			
+			<!-- dimmed -->
+			<div class="dimmed" style="display:none"></div>
+			<!-- layer popup - 회원 권한 수정 -->
+			<div class="ly_pop" style="display:none"><div class="ly_pop_in">
+				<div class="ly_pop_cont">
+					<div class="ly_head">
+						<h3 class="tit_ly">회원 권한 수정</h3>
+						<a href="#" class="btn_close_ly">닫기</a>
+					</div>
+					<h4 class="tit_ly_sub">회원정보</h4>
+					<table class="tbl_ly">
+					<col width="137"><col>
+					<tr>
+						<th><strong>담당자</strong></th>
+						<td>홍길동</td>
+					</tr>
+					<tr>
+						<th><strong>아이디</strong></th>
+						<td>HONG</td>
+					</tr>
+					<tr>
+						<th><strong>광고주</strong></th>
+						<td>한게임</td>
+					</tr>
+					<tr>
+						<th><strong>서비스레벨</strong></th>
+						<td>대행서비스</td>
+					</tr>
+					<tr>
+						<th>상태</th>
+						<td>
+							<span class="inp_radio checked" style="min-width:72px"><input type="radio" checked><label for="">정상</label></span>
+							<span class="inp_radio" style="min-width:159px"><input type="radio"><label for="">일시중지</label></span>
+						</td>
+					</tr>
+					</table>
+					<div class="btn_foot">
+						<a href="#" class="btn_b_odd">수정</a>
+						<a href="#" class="btn_b_gray">취소</a>
+					</div>
+				</div>
+			</div></div>
+			<!-- //layer popup -->
+			<!-- layer popup - 회원 삭제 -->
+			<div class="ly_pop" style="display:none"><div class="ly_pop_in">
+				<div class="ly_pop_cont">
+					<div class="ly_head">
+						<h3 class="tit_ly">회원 삭제</h3>
+						<a href="#" class="btn_close_ly">닫기</a>
+					</div>
+					<p class="tit_txt">선택하신 회원을 정말로 삭제 처리하시겠습니다?<br>삭제한 회원 정보는 시스템에서 모두 삭제 됩니다</p>
+					<h4 class="tit_ly_sub">회원정보</h4>
+					<table class="tbl_ly">
+					<col width="137"><col width="257">
+					<tr>
+						<th>담당자</th>
+						<td>홍길동</td>
+					</tr>
+					<tr>
+						<th>아이디</th>
+						<td>HONG</td>
+					</tr>
+					<tr>
+						<th>광고주</th>
+						<td>ABC쇼핑</td>
+					</tr>
+					</table>
+					<div class="btn_foot">
+						<a href="#" class="btn_b_red">삭제</a>
+						<a href="#" class="btn_b_gray">취소</a>
+					</div>
+				</div>
+			</div></div>
+			<!-- //layer popup -->
+			
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<style>
+.template_case{margin:30px;min-width:1220px;}
+.tit_case{margin:20px 0 0 5px;font-weight:bold;font-size:14px;}
+.tit_case_in{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;min-width:70px;border-right:2px solid #64bbe8;margin-right:8px;padding-right:10px;text-align:center;}
+.case_info{margin:5px 0 0 5px;font-size:12px;line-height:18px;}
+.section_box{margin-top:10px;}
+.case_box{margin-top:10px;padding:10px;border:1px solid #d3d2dc;border-radius:3px;background:#fff;}
+.case_box>.btn_tip{margin-left:200px;}
+.case_box>.btn_tip:first-child{margin:0;}
+.section_box+.case_info{margin-top:10px}
+.case_name_info{position:absolute;top:-5px;left:-15px;border-radius:1px;font-size:11px;color:#fff;letter-spacing:-1px;font-family:dotum;background:#999;padding:2px 5px;opacity:0.4}
+.code{-webkit-appearance:none;box-sizing:border-box;display:inline-block;overflow:hidden;height:20px;outline:0;margin:-1px 0;padding:2px 3px 0;font-size:11px;border:1px solid #dfdfdf;border-radius:3px;background:#fff;resize:none;line-height:14px;vertical-align:middle;color:#51768e;white-space:nowrap;font-family:verdana}
+.code strong{color:#407ba1}
+</style>
+<script>
+$(function(){
+	$('[name]').each(function(){
+		$(this).prepend('<div class="case_name_info">'+$(this).attr('name')+'</div>')
+	});
+});
+</script>
+<body>
+	
+<div class="template_case">		
+
+			<h2 class="tit_case">헤더케이스 / 목록없음</h2>
+			<div class="case_info">
+				싱글헤더 : class없음<br>
+				더블헤더 : <pre class="code">&lt;th class="<strong>dep1</strong>"&gt;</pre> / <pre class="code">&lt;th class="<strong>dep2</strong>"&gt;</pre><br>
+				검색헤더 : <pre class="code">&lt;th class="<strong>dep_form</strong>"&gt;</pre><br>
+				다음 조건일때 <pre class="code">&lt;th <strong>style="border:0"</strong>&gt;</pre> 적용 : 헤더 첫줄(tr), 첫셀(th)이 세로 병합셀(rowspan="*")이 아닐때 이하 라인의 첫번째 셀(th)에 border:0 <br>
+				<pre class="code">$('<strong>.tbl_form thead:not(:has(tr:first-child th:first-child[rowspan])) tr th:first-child</strong>').css('border-left','0');</pre>
+			</div>	
+			<div class="section_box">
+				<!-- 싱글헤더 -->
+				<table class="tbl_form">
+				<col class="t_check"><col width="18%"><col width="12%"><col width="10%"><col span="4">
+				<thead>
+				<tr>
+					<th rowspan="2" class="t_check"><span class="inp_check"><input type="checkbox"></span></th>
+					<th rowspan="2"><a href="#" class="btn_sort">광고주</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">팀</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">담당자</a></th>
+					<th><a href="#" class="btn_sort">어제</a></th>
+					<th><a href="#" class="btn_sort">최근7일</a></th>
+					<th><a href="#" class="btn_sort">이번달</a></th>
+					<th><a href="#" class="btn_sort">지난달</a></th>
+				</tr>
+				</thead>
+				</table>
+				<!-- 더블헤더 -->
+				<table class="tbl_form">
+				<col class="t_check"><col width="18%"><col width="12%"><col width="10%"><col span="4">
+				<thead>
+				<tr class="dep1">
+					<th rowspan="2" class="t_check"><span class="inp_check"><input type="checkbox"></span></th>
+					<th rowspan="2"><a href="#" class="btn_sort">광고주</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">팀</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">담당자</a></th>
+					<th colspan="4" span="4">총 비용</th>
+				</tr>
+				<tr class="dep2">
+					<th><a href="#" class="btn_sort">어제</a></th>
+					<th><a href="#" class="btn_sort">최근7일</a></th>
+					<th><a href="#" class="btn_sort">이번달</a></th>
+					<th><a href="#" class="btn_sort">지난달</a></th>
+				</tr>
+				</thead>
+				</table>
+				<!-- 더블헤더+검색폼 -->
+				<table class="tbl_form">
+				<colgroup><col class="t_check"><col><col width="7.9%"><col width="7.4%"><col width="7.4%"><col width="5.65%"><col width="5.75%"><col width="7.6%"><col width="7.39%"><col width="5.75%"><col width="7.45%"><col width="9.75%"><col width="8.1%"><col width="75px"></colgroup>
+				<thead>
+				<tr class="dep_form">
+					<th rowspan="2" class="t_check"><span class="inp_check"><input type="checkbox"></span></th>
+					<th><a href="#" class="btn_sort">키워드</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort up">평균노출순위</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">노출수</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">클릭수</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">클릭률</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">클릭비용</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">총비용</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">전환수</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">전환률</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">전환비용</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">매출액</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">ROAS</a></th>
+					<th rowspan="2">상세</th>
+				</tr>
+				<tr class="dep_form">
+					<th><input type="text" class="inp_text inp_text_s"></th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<!-- [D] 상단 목록과 동일한 col width값 선언 -->
+				<col class="t_check"><col width="18%"><col width="12%"><col width="10%"><col span="4">
+				<tbody>
+				<!-- [D] 목록없을때 -->
+				<tr><td colspan="10" class="lst_none">조회 대상이 없습니다.</td></tr>
+				<!-- //[D] 목록없을때 -->
+				</tbody>
+				</table>
+			</div>
+
+			<h2 class="tit_case">스크롤 없이 페이지 이동 케이스 및 테이블 기본 / 정보 레이어</h2>
+			<p class="case_info">
+				<strong>스크롤이 없는경우 .wrap_tbl>.thead+.tbody 구조 제거!</strong><br>
+				텍스트가 기준바이트 이상일때 span.ellipsis로 감싼 후 title=''로 본문 전문을 td에 삽입<br>
+				<strong>정렬 :</strong> 기본 센터정렬 / 좌측 정렬일 경우 p태그로 감쌈 / 숫자등의 좌측 정렬시 p.num<br>
+				<strong>text overflow :</strong> 내용이 길어질 경우 줄바꿈이 아니라 말줄임표 처리
+			</p>						
+			<div class="section_box">
+				<table class="tbl_form">
+				<caption>변경이력 thead</caption>
+				<!-- [D] 마지막 col항목엔 width선언 제외 -->
+				<colgroup><col width="11%"><col width="13.7%"><col width="17%"><col width="14%"><col span="2" width="15%"><col></colgroup>
+				<thead>
+				<tr class="dep1">
+					<th rowspan="2">처리일자</th>
+					<th rowspan="2">회원 유형</th>
+					<th rowspan="2">아이디</th>
+					<th rowspan="2">담당자 해더 항목이 길어질때 줄바꿈이 됩니다</th>
+					<th colspan="2">상세내용</th>
+					<th rowspan="2">등록자</th>
+				</tr>
+				<tr class="dep2">
+					<th>변경전</th>
+					<th>변경후</th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<caption>변경이력 tbody</caption>
+				<!-- [D] 상단 목록과 동일한 col width값 선언 -->
+				<colgroup><col width="11%"><col width="13.7%"><col width="17%"><col width="14%"><col span="2" width="15%"><col></colgroup>
+				<tbody>
+				<tr>
+					<td>2014.11.10</td>
+					<td><p>광고담당자(AE)</p></td>
+					<td>agent1</td>
+					<td>박선유123</td>
+					<td>1팀</td>
+					<td>3팀</td>
+					<td>MASTER</td>
+				</tr>
+				<tr>
+					<td>2014.11.10</td>
+					<td><p>광고주</p></td>
+					<td>agent1</td>
+					<td>박선유</td>
+					<td>1팀</td>
+					<td>
+						<span class="btn_tip">1팀 외 2개 팀
+							<span class="ly_tip">
+								<span class="team">1팀<br>2팀<br>3팀</span>
+							</span>
+						</span>
+					</td>
+					<td>MASTER</td>
+				</tr>
+				<tr>
+					<td><a href="#" class="btn_basic_s">관리</a><span title="비활성" class="st_monitor st_off">비활성</span></td>
+					<td title="텍스트가 기준바이트 이상일때 span.ellipsis로 감싼 후 title=''로 본문 전문을 td에 삽입"><p><span class="ellipsis">텍스트가 기준바이트 이상일때 span.ellipsis로 감싼 후 title=''로 본문 전문을 td에 삽입</span></p></td>
+					<td>agentDScgbws1</td>
+					<td>가나다라마오</td>
+					<td><p class="num">
+						<span class="btn_tip num">100,000,000
+							<span class="ly_tip">
+								<span class="btn_tip_lst">
+								<span class="li"><em>총 회원수</em>1,012 명</span>
+								<span class="li"><em>에이전시관리자</em>12 명</span>
+								<span class="li"><em>광고담당자</em>118 명</span>
+								<span class="li"><em>광고주</em>212 명</span>
+								</span>
+							</span>
+						</span>	
+					</p></td>
+					<td>리더</td>
+					<td title="mailcharlengthislong@domain.co.kr"><span class="ellipsis">mailcharlengthislong@domain.co.kr</span></td>
+				</tr>
+				<tr>
+					<td><a href="#" class="btn_basic_s">관리</a><span title="설치안됨" class="st_monitor st_none">설치안됨</span></td>
+					<td><p class="team_edit"><span class="ellipsis">팀이름이 길어지면 길어지면 길어지면</span> <a href="#" class="btn_form_modify">수정</a></p></td>
+					<td>agent1</td>
+					<td><p class="num">90,000,000.000</p></td>
+					<td>-</td>
+					<td>-</td>
+					<td>MASTER</td>
+				</tr>
+				<tr>
+					<td><a href="#" class="btn_basic_s">관리</a><span title="활성" class="st_monitor st_on">활성</span></td>
+					<td><p class="team_edit">
+						<input type="text" value="2팀" class="inp_text inp_text_s" style="width:100%">
+						<a href="#" class="btn_form_check">변경</a>
+						<a href="#" class="btn_form_delete">삭제</a>
+					</p></td>
+					<td>agent1</td>
+					<td class="selected"><input type="text" class="inp_text inp_text_m inp_text_r" value="123" style="width:100%"></td>
+					<td>정상</td>
+					<td>일시중지</td>
+					<td>MASTER</td>
+				</tr>
+				<!-- <tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr>
+				<tr><td>2014.11.10</td><td>광고담당자(AE)</td><td>agent1</td><td>박선유</td><td>1팀</td><td>3팀</td><td>MASTER</td></tr> -->
+				</tbody>
+				</table>
+				<div class="pagenate">
+					<a href="#" class="btn_first">처음</a>
+					<a href="#" class="btn_prev">이전</a>
+					<span class="num">
+						<a href="#">1</a>
+						<span class="bar">|</span>
+						<a href="#">2</a>
+						<span class="bar">|</span>
+						<a href="#">3</a>
+						<span class="bar">|</span>
+						<a href="#">4</a>
+						<span class="bar">|</span>
+						<a href="#">5</a>	
+					</span>
+					<a href="#" class="btn_next">다음</a>
+					<a href="#" class="btn_last">끝</a>
+				</div>
+			</div>
+
+			<h2 class="tit_case">10개가 넘어가는 경우 스크롤 생성 케이스 / 선택라인 selected</h2>
+			<p class="case_info">
+				<strong>스크롤이 없는경우 .wrap_tbl>.thead+.tbody 구조 제거!</strong><br>
+				스크롤 높이는 <strong>기본 10개</strong>값으로 div.tbody에 339px로 선언되어 있음.<br>
+				20개 라인 스크롤 : &lt;div class="tbody <strong>line20</strong>"&gt; / 
+				그 외 높으값을 바꿀경우 해당 값을 인라인으로 삽입.<br>
+				테이블 sorting시 오름/내림차순 케이스 up클래스로 적용<br>
+				선택된 항목 반전시 tr.selected
+			</p>			
+			<div class="section_box">
+				<!-- [D] 테이블 목록이 10개 이상일때 .wrap_tbl>.thead+.tbody 구조로 둘러쌈 (스크롤처리) / 스크롤이 없을때는 제거! -->
+				<div class="wrap_tbl">
+					<div class="thead">
+						<table class="tbl_form">
+						<!-- [D] t_check는 공통/마지막 col항목엔 width선언 제외 -->
+						<col class="t_check"><col width="18%"><col width="12%"><col width="10%"><col span="4">
+						<thead>
+						<tr class="dep_form">
+							<th rowspan="2" class="t_check"><span class="inp_check"><input type="checkbox"></span></th>
+							<th rowspan="2"><a href="#" class="btn_sort"><strong>광고주</strong></a></th>
+							<th rowspan="2"><a href="#" class="btn_sort up"><strong>팀</strong></a></th>
+							<th rowspan="2"><a href="#" class="btn_sort up">담당자</a></th>
+							<th colspan="4" span="4">총 비용</th>
+						</tr>
+						<tr class="dep2">
+							<th><a href="#" class="btn_sort">어제</a></th>
+							<th><a href="#" class="btn_sort">최근7일</a></th>
+							<th><a href="#" class="btn_sort">이번달</a></th>
+							<th><a href="#" class="btn_sort">지난달</a></th>
+						</tr>
+						</thead>
+						</table>
+					</div>
+					<div class="tbody">
+						<table class="tbl_form">
+						<!-- [D] 상단 목록과 동일한 col width값 선언 -->
+						<col class="t_check"><col width="18%"><col width="12%"><col width="10%"><col span="4">
+						<tbody>
+						<tr>
+							<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+							<td><p><a href="#">ABC쇼핑</a></p></td>
+							<td>1팀</td>
+							<td>박선유</td>
+							<td>90,000,000.000</td>
+							<td>300,000.000</td>
+							<td>1,300,000.000</td>
+							<td>780,000,000.000</td>
+						</tr>
+						<tr class="selected">
+							<td class="t_check"><span class="inp_check checked"><input type="checkbox" checked></span></td>
+							<td><p class="selected"><a href="#">ABC쇼핑</a></p></td>
+							<td>1팀</td>
+							<td>박선유</td>
+							<td>780,000,000.000</td>
+							<td>300,000.000</td>
+							<td>90,000,000.000</td>
+							<td>1,300,000.000</td>
+						</tr>
+						<tr class="disabled">
+							<td class="t_check"><span class="inp_check disabled"><input type="checkbox" disabled></span></td>
+							<td><p class="disabled">(삭제)ABC쇼핑</p></td>
+							<td>1팀</td>
+							<td>박선유</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+						<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><a href="#">ABC쇼핑</a></p></td><td>1팀</td><td>박선유</td><td>90,000,000.000</td><td>300,000.000</td><td>1,300,000.000</td><td>780,000,000.000</td></tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<h2 class="tit_case">20줄 이살일때 .tbody.line20</h2>
+			<p class="case_info">
+				
+			</p>	
+			<div class="section_box">
+				<!-- [D] 테이블 목록이 20개 이상일때 .wrap_tbl>.thead+.tbody 구조로 둘러쌈 (스크롤처리) / 스크롤이 없을때는 제거! -->
+				<div class="wrap_tbl">
+					<div class="thead">
+						<table class="tbl_form">
+						<caption>통합분석 요약 thead</caption>
+						<!-- [D] t_check는 공통/마지막 col항목엔 width선언 제외 -->
+						<colgroup><col width="16%"><col width="7.8%"><col width="7.8%"><col width="6.5%"><col width="6.1%"><col width="9%"><col width="7.5%"><col width="6.5%"><col width="8%"><col width="10.2%"><col width="8%"><col></colgroup>
+						<thead>
+						<tr>
+							<th><a href="#" class="btn_sort up">계정</a></th>
+							<th><a href="#" class="btn_sort up">노출수</a></th>
+							<th><a href="#" class="btn_sort up">클릭수</a></th>
+							<th><a href="#" class="btn_sort up">클릭률</a></th>
+							<th><a href="#" class="btn_sort up">클릭비용</a></th>
+							<th><a href="#" class="btn_sort">총비용</a></th>
+							<th><a href="#" class="btn_sort up">전환수</a></th>
+							<th><a href="#" class="btn_sort up">전환률</a></th>
+							<th><a href="#" class="btn_sort up">전환비용</a></th>
+							<th><a href="#" class="btn_sort up">매출액</a></th>
+							<th><a href="#" class="btn_sort up">ROAS</a></th>
+							<th>상세</th>
+						</tr>
+						</thead>
+						</table>
+					</div>
+					<div class="tbody line20">
+						<table class="tbl_form">
+						<caption>통합분석 요약 tbody</caption>
+						<!-- [D] 상단 목록과 동일한 col width값 선언 -->
+						<colgroup><col width="16%"><col width="7.8%"><col width="7.8%"><col width="6.5%"><col width="6.1%"><col width="9%"><col width="7.5%"><col width="6.5%"><col width="8%"><col width="10.2%"><col width="8%"><col></colgroup>
+						<tbody>
+						<tr class="total">
+							<td>합계</td>
+							<td><p class="num">XXX.XXX.XXX</p></td>
+							<td><p class="num">XXX.XXX.XXX</p></td>
+							<td><p class="num">XXX.XX%</p></td>
+							<td><p class="num">XXX.XXX</p></td>
+							<td><p class="num">XXX.XXX.XXX</p></td>
+							<td><p class="num">XXX.XXX.XXX</p></td>
+							<td><p class="num">XXX.XX%</p></td>
+							<td><p class="num">XXX.XXX.XXX</p></td>
+							<td><p class="num">XXX.XXX.XXX.XXX</p></td>
+							<td><p class="num">XXX.XXX.XX%</p></td>
+							<td><a href="#" class="btn_basic_s">상세</a></td>
+						</tr>
+						<tr>
+							<td><p class="disabled">크리테오 disabled</p></td>
+							<td><p class="num">617,560</p></td>
+							<td><p class="num">14,051</p></td>
+							<td><p class="num">2.28%</p></td>
+							<td><p class="num">713</p></td>
+							<td><p class="num">100,000,000</p></td>
+							<td><p class="num"><span class="decrease">4.38%</span></p></td>
+							<td><p class="num"><span class="increase">12.22%</span></p></td>
+							<td><p class="num">55,656</p></td>
+							<td><p class="num">5,400,000</p></td>
+							<td><p class="num">54%</p></td>
+							<td><a href="#" class="btn_basic_s">상세</a></td>
+						</tr>
+						<tr class="selected">
+							<td><p>네이버클릭초이스오</p></td>
+							<td><p class="num">617,560</p></td>
+							<td><p class="num">14,051</p></td>
+							<td><p class="num">2.28%</p></td>
+							<td><p class="num">713</p></td>
+							<td><p class="num">100,000,000</p></td>
+							<td><p class="num">180</p></td>
+							<td><p class="num">1.28%</p></td>
+							<td><p class="num">55,656</p></td>
+							<td><p class="num">5,400,000</p></td>
+							<td><p class="num">54%</p></td>
+							<td><a href="#" class="btn_basic_s checked">상세</a></td>
+						</tr>
+						<tr class="selected">
+							<td title="텍스트가 기준바이트 이상일때 span.ellipsis로 감싼 후 title=''로 본문 전문을 td에 삽입"><p><span class="ellipsis">텍스트가 기준바이트 이상일때 span.ellipsis로 감싼 후 title=''로 본문 전문을 td에 삽입</span></p></td>
+							<td><p class="num">617,560</p></td>
+							<td><p class="num">14,051</p></td>
+							<td><p class="num">2.28%</p></td>
+							<td><p class="num">713</p></td>
+							<td><p class="num">100,000,000</p></td>
+							<td><p class="num">180</p></td>
+							<td><p class="num">1.28%</p></td>
+							<td><p class="num">55,656</p></td>
+							<td><p class="num">5,400,000</p></td>
+							<!-- [D] selected bg적용 제외 셀은 select_exc class 추가 -->
+							<td class="select_exc"><p class="num">54%</p></td>
+							<td class="select_exc"><a href="#" class="btn_basic_s">상세</a></td>
+						</tr>
+						<tr>
+							<td><span class="date_wrap"><span class="sup">비교기간3</span><br>2014.12.30 ~ 2015.02.01</span></td>
+							<td><p class="num">617,560</p></td>
+							<td><p class="num">14,051</p></td>
+							<td><p class="num">2.28%</p></td>
+							<td><p class="num">713</p></td>
+							<td><p class="num">100,000,000</p></td>
+							<td><p class="num">180</p></td>
+							<td><p class="num">1.28%</p></td>
+							<td><p class="num">55,656</p></td>
+							<td><p class="num">5,400,000</p></td>
+							<td><p class="num">54%</p></td>
+							<td><a href="#" class="btn_basic_s">상세</a></td>
+						</tr>
+						<tr><td><p>네이버타임보드</p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p>네이버타임보드</p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p>네이버타임보드</p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p>네이버타임보드</p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p>네이버타임보드</p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p>네이버타임보드</p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p>네이버타임보드</p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p>네이버타임보드</p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p>네이버타임보드</p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p>네이버타임보드</p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p>네이버타임보드</p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p>네이버타임보드</p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p>네이버타임보드</p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p>네이버타임보드</p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p>네이버타임보드</p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p>네이버타임보드</p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						<tr><td><p>네이버타임보드</p></td><td><p class="num">617,560</p></td><td><p class="num">14,051</p></td><td><p class="num">2.28%</p></td><td><p class="num">713</p></td><td><p class="num">100,000,000</p></td><td><p class="num">180</p></td><td><p class="num">1.28%</p></td><td><p class="num">55,656</p></td><td><p class="num">5,400,000</p></td><td><p class="num">54%</p></td><td><a href="#" class="btn_basic_s">상세</a></td></tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<h2 class="tit_case">테이블 내 레이어 정보</h2>
+			<div class="case_box" style="margin-bottom:130px;">	
+				<span class="btn_tip num">100,000,000
+					<span class="ly_tip" style="display:block">
+						<span class="btn_tip_lst">
+						<span class="li"><em>총 회원수</em>1,012 명</span>
+						<span class="li"><em>에이전시관리자</em>12 명</span>
+						<span class="li"><em>광고담당자</em>118 명</span>
+						<span class="li"><em>광고주</em>212 명</span>
+						</span>
+					</span>
+				</span>	
+				
+				<span class="btn_tip">1팀 외 2개 팀
+					<span class="ly_tip" style="display:block;">
+						<span class="team">1팀<br>2팀<br>3팀</span>
+					</span>
+				</span>
+				
+				
+				<a href="#" class="btn_tip">00개
+					<span class="ly_tip" style="display:block;">
+						<strong class="tit"><em>선택그룹 : 3개</em></strong>
+						<span class="tip_lst_dot">
+						<span class="li">그룹2</span>
+						<span class="li">ADSSOM자동</span>
+						<span class="li">그룹3</span>
+						</span>
+					</span>
+				</a>
+				- 링크값이 있을 경우
+			</div>	
+			
+			<h2 class="tit_case">단일목록</h2>
+			<p class="case_info">tr.single</p>	
+			<div class="section_box">
+				<table class="tbl_form">
+				<caption>업종별 분석 목록 thead</caption>
+				<!-- [D] t_check는 공통/마지막 col항목엔 width선언 제외 -->
+				<colgroup><col width="40.26%"><col span="2"></colgroup>
+				<thead>
+				<tr>
+					<th>업종</th>
+					<th>11월 예상광고비</th>
+					<th>11월 집행 키워드 수</th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<caption>업종별 분석 목록 tbody</caption>
+				<!-- [D] 상단 목록과 동일한 col width값 선언 -->
+				<colgroup><col width="40.26%"><col span="2"></colgroup>
+				<tbody>
+				<tr class="single">
+					<td>경제, 재테크 > 대출 > 신용대출 > 신용대출</td>
+					<td>24,013,619</td>
+					<td>250</td>
+				</tr>
+				</tbody>
+				</table>
+			</div>	
+				
+			<h2 class="tit_case">정보 보기</h2>			
+			<div class="section_box">
+				<table class="tbl_info">
+				<tr>
+					<th>광고주</th>
+					<td>광고주 C</td>
+				</tr>
+				<tr>
+					<th>서비스 레벨</th>
+					<td>대행서비스</td>
+				</tr>
+				<tr>
+					<th>대표담당자</th>
+					<td>홍길동</td>
+				</tr>
+				<tr>
+					<th>회사 전화번호</th>
+					<td>02-000-0000</td>
+				</tr>
+				<tr>
+					<th>회사주소</th>
+					<td>서울시 서초구 OOO 동 OOO로 OO 빌딩 00층</td>
+				</tr>
+				<tr>
+					<th>사이트 URL</th>
+					<td><a href="#">http://www.abcshopping.co.kr</a></td>
+				</tr>
+				<tr>
+					<th>업종</th>
+					<td>의류/패션잡화>의류/패션잡화판매>의류/패션잡화전문몰>가방/지갑전문</td>
+				</tr>
+				</table>
+			</div>
+			
+			<h2 class="tit_case">분할/선택</h2>			
+			
+			<div class="section_box">
+				<div class="wrap_split_tbl">				
+					<div class="split_tbl">
+						<table class="tbl_form">
+						<caption>노출관리 설정 캠페인 thead</caption>
+						<colgroup><col width="*"></colgroup>
+						<thead>
+						<tr class="dep_form">
+							<th><a href="#" class="btn_sort">캠페인</a></th>
+						</tr>
+						<tr class="dep_form">
+							<th><input type="text" class="inp_text inp_text_s"></th>
+						</tr>
+						</thead>
+						</table>
+						<table class="tbl_form">
+						<caption>노출관리 설정 캠페인 tbody</caption>
+						<colgroup><col width="*"></colgroup>
+						<tbody>
+						<tr><td><p>사이트 (www.nhnadsite.co.kr)</p></td></tr>
+						<tr class="selected"><td><p>사이트 (www.nhnadsite.co.kr)</p></td></tr>
+						<tr><td><p>사이트 (www.nhnadsite.co.kr)</p></td></tr>
+						<tr><td><p>사이트 (www.nhnadsite.co.kr)</p></td></tr>
+						<tr><td><p>사이트 (www.nhnadsite.co.kr)</p></td></tr>
+						<tr><td></td></tr>
+						<tr><td></td></tr>
+						<tr><td></td></tr>
+						<tr><td></td></tr>
+						<tr><td></td></tr>
+						</tbody>
+						</table>				
+					</div>					
+					<div class="split_tbl">	
+						<div class="wrap_tbl">
+							<div class="thead">
+								<table class="tbl_form">
+								<caption>노출관리 설정 그룹 thead</caption>
+								<colgroup><col width="*"></colgroup>
+								<thead>
+								<tr class="dep_form">
+									<th><a href="#" class="btn_sort">그룹</a></th>
+								</tr>
+								<tr class="dep_form">
+									<th><input type="text" class="inp_text inp_text_s"></th>
+								</tr>
+								</thead>
+								</table>
+							</div>
+							<div class="tbody">
+								<table class="tbl_form">
+								<caption>노출관리 설정 그룹 tbody</caption>
+								<colgroup><col width="*"></colgroup>
+								<tbody>
+								<tr><td><p>그룹</p></td></tr>
+								<tr><td><p>그룹</p></td></tr>
+								<tr><td><p>그룹</p></td></tr>
+								<tr><td><p>그룹</p></td></tr>
+								<tr><td><p>그룹</p></td></tr>
+								<tr><td><p>그룹</p></td></tr>
+								<tr class="selected"><td><p>그룹</p></td></tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>
+								<tr><td></td></tr>
+								</tbody>
+								</table>
+							</div>
+						</div>
+					</div>					
+					<div class="split_tbl">	
+						<table class="tbl_form">
+						<caption>노출관리 설정 키워드 thead</caption>
+						<colgroup><col class="t_check"><col width="*"></colgroup>
+						<thead>
+						<tr class="dep_form">
+							<th rowspan="2" class="t_check"><span class="inp_check"><input type="checkbox"></span></th>
+							<th><a href="#" class="btn_sort">키워드</a></th>
+						</tr>
+						<tr class="dep_form">
+							<th><input type="text" class="inp_text inp_text_s"></th>
+						</tr>
+						</thead>
+						</table>
+						<table class="tbl_form">
+						<caption>노출관리 설정 키워드 tbody</caption>
+						<colgroup><col class="t_check"><col width="*"></colgroup>
+						<tbody>
+						<tr class="selected">
+							<td class="t_check"><span class="inp_check checked"><input type="checkbox" checked></span></td>
+							<td><p>키워드1</p></td>
+						</tr>
+						<tr>
+							<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+							<td><p>키워드2</p></td>
+						</tr>
+						<tr>
+							<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+							<td><p>키워드1</p></td>
+						</tr>
+						<tr>
+							<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+							<td><p>키워드1</p></td>
+						</tr>
+						<tr>
+							<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+							<td><p>키워드1</p></td>
+						</tr>
+						<tr><td></td><td></td></tr>
+						<tr><td></td><td></td></tr>
+						<tr><td></td><td></td></tr>
+						<tr><td></td><td></td></tr>
+						<tr><td></td><td></td></tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		
+		
+			
+			<h2 class="tit_case">thead케이스</h2>			
+			<div class="section_box">			
+				<table class="tbl_form">
+				<!-- [D] t_check는 공통/마지막 col항목엔 width선언 제외 -->
+				<col class="t_check"><col width="21%"><col span="2" width="11%"><col span="4">
+				<thead>
+				<tr class="dep1">
+					<th rowspan="2" class="t_check"><span class="inp_check"><input type="checkbox"></th>
+					<th rowspan="2"><a href="#" class="btn_sort">계정</a></th>
+					<th colspan="2"><a href="#" class="btn_sort">계정정보</a></th>
+					<th colspan="4" span="4">총 비용</th>
+				</tr>
+				<tr class="dep2">
+					<th><a href="#" class="btn_sort">영업권 인증</a></th>
+					<th><a href="#" class="btn_sort">잔액 부족 알림</a></th>
+					<th><a href="#" class="btn_sort">어제</a></th>
+					<th><a href="#" class="btn_sort">최근7일</a></th>
+					<th><a href="#" class="btn_sort">이번달</a></th>
+					<th><a href="#" class="btn_sort">지난달</a></th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<!-- [D] 상단 목록과 동일한 col width값 선언 -->
+				<col class="t_check"><col width="21%"><col span="2" width="11%"><col span="4">
+				<tbody>
+				<tr>
+					<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+					<td><p><a href="#">ABC쇼핑</a></p></td>
+					<td>인증완료</td>
+					<td>OFF</td>
+					<td><p class="num">90,000,000.000</p></td>
+					<td><p class="num">300,000.000</p></td>
+					<td><p class="num">1,300,000.000</p></td>
+					<td><p class="num">780,000,000.000</p></td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+			
+			<p class="case_info">
+				세로 병합 테이블에서, 라인 표현을 위해 합쳐진 td셀 자리에 &lt;td style="display:none"&gt;
+			</p>
+			
+			<!-- 기간비교 -->
+			<div class="section_box">
+				<table class="tbl_form">
+				<caption>기간비교 thead</caption>
+				<!-- [D] 마지막 col항목엔 width선언 제외 -->
+				<colgroup><col width="7%"><col width="15.5%"><col width="8%"><col width="8%"><col width="8%"><col width="8%"><col width="9%"><col width="9%"><col width="9%"><col width="9.5%"><col></colgroup>
+				<thead>
+				<tr>
+					<th>구분</th>
+					<th>기간</th>
+					<th>노출수</th>
+					<th>클릭수</th>
+					<th>클릭률</th>
+					<th>클릭비용</th>
+					<th>총비용</th>
+					<th>전환수</th>
+					<th>전환률</th>
+					<th>전환비용</th>
+					<th>ROAS</th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<caption>기간비교 tbody</caption>
+				<!-- [D] 상단 목록과 동일한 col width값 선언 -->
+				<colgroup><col width="7%"><col width="15.5%"><col width="8%"><col width="8%"><col width="8%"><col width="8%"><col width="9%"><col width="9%"><col width="9%"><col width="9.5%"><col></colgroup>
+				<tbody>
+				<tr class="bg_gray">
+					<td>조회기간</td>
+					<td>2014.12.30 ~ 2015.02.01</td>
+					<td><p class="num">617,560</p></td>
+					<td><p class="num">14,051</p></td>
+					<td><p class="num">2.28%</p></td>
+					<td><p class="num">713</p></td>
+					<td><p class="num">10,018,162</p></td>
+					<td><p class="num">180</p></td>
+					<td><p class="num">1.28%</p></td>
+					<td><p class="num">100,018,162</p></td>
+					<td><p class="num">100,018,16%</p></td>
+				</tr>
+				<tr>
+					<td rowspan="3">비교기간</td>
+					<td><span class="date_wrap"><span class="sup">비교기간1</span><br>2014.12.30 ~ 2015.02.01</span></td>
+					<td><p class="num">900,617,560</p></td>
+					<td><p class="num">900,014,051</p></td>
+					<td><p class="num">902.28%</p></td>
+					<td><p class="num">900,713</p></td>
+					<td><p class="num">900,000,000</p></td>
+					<td><p class="num">900,000,180</p></td>
+					<td><p class="num">900.28%</p></td>
+					<td><p class="num">900,055,656</p></td>
+					<td><p class="num">900,000.54%</p></td>
+				</tr>
+				<tr>
+					<td style="display:none"></td>
+					<td><span class="date_wrap"><span class="sup">비교기간2</span><br>2014.12.30 ~ 2015.02.01</span></td>
+					<td><p class="num">617,560</p></td>
+					<td><p class="num">14,051</p></td>
+					<td><p class="num">2.28%</p></td>
+					<td><p class="num">713</p></td>
+					<td><p class="num">100,000,000</p></td>
+					<td><p class="num">1.68%</p></td>
+					<td><p class="num">5,130,000</p></td>
+					<td><p class="num">55,656</p></td>
+					<td><p class="num">54%</p></td>
+				</tr>
+				<tr>
+					<td style="display:none"></td>
+					<td><span class="date_wrap"><span class="sup">비교기간3</span><br>2014.12.30 ~ 2015.02.01</span></td>
+					<td><p class="num">617,560</p></td>
+					<td><p class="num">14,051</p></td>
+					<td><p class="num">2.28%</p></td>
+					<td><p class="num">713</p></td>
+					<td><p class="num">100,000,000</p></td>
+					<td><p class="num">1.68%</p></td>
+					<td><p class="num">5,130,000</p></td>
+					<td><p class="num">55,656</p></td>
+					<td><p class="num">54%</p></td>
+				</tr>
+				<tr class="bg_gray">
+					<td rowspan="3">성과비교</td>
+					<td>조회기간 VS 비교기간1</td>
+					<td><p class="num"><span class="decrease">10.42%</span></p></td>
+					<td><p class="num"><span class="decrease">14.38%</span></p></td>
+					<td><p class="num"><span class="decrease">4.38%</span></p></td>
+					<td><p class="num"><span class="increase">12.22%</span></p></td>
+					<td><p class="num"><span class="increase">12.22%</span></p></td>
+					<td><p class="num"><span class="increase">31.22%</span></p></td>
+					<td><p class="num"><span class="decrease">4.38%</span></p></td>
+					<td><p class="num"></p></td>
+					<td><p class="num"></p></td>
+				</tr>
+				<tr class="bg_gray">
+					<td style="display:none"></td>
+					<td>조회기간 VS 비교기간2</td>
+					<td><p class="num"><span class="decrease">10.42%</span></p></td>
+					<td><p class="num"><span class="decrease">14.38%</span></p></td>
+					<td><p class="num"><span class="decrease">200.73%</span></p></td>
+					<td><p class="num"><span class="increase">12.22%</span></p></td>
+					<td><p class="num"><span class="increase">12.22%</span></p></td>
+					<td><p class="num"><span class="increase">31.22%</span></p></td>
+					<td><p class="num"><span class="decrease">4.38%</span></p></td>
+					<td><p class="num"></p></td>
+					<td><p class="num"></p></td>
+				</tr>
+				<tr class="bg_gray">
+					<td style="display:none"></td>
+					<td>조회기간 VS 비교기간3</td>
+					<td><p class="num"><span class="decrease">10.42%</span></p></td>
+					<td><p class="num"><span class="decrease">14.38%</span></p></td>
+					<td><p class="num"><span class="decrease">4.38%</span></p></td>
+					<td><p class="num"><span class="increase">12.22%</span></p></td>
+					<td><p class="num"><span class="increase">12.22%</span></p></td>
+					<td><p class="num"><span class="increase">31.22%</span></p></td>
+					<td><p class="num"><span class="decrease">4.38%</span></p></td>
+					<td><p class="num"></p></td>
+					<td><p class="num"></p></td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+			
+			<div class="section_filter">						
+				<!-- tab sub -->
+				<div class="tab_sub">
+					<h4 class="tit_sub">담은 키워드 <span class="txt">(0/5000)</span></h4>
+					<ul>
+						<li class="selected"><a href="#">PC WEB</a></li>
+						<li><a href="#">Mobile</a></li>
+					</ul>
+					<div class="side">
+						<a href="#" class="btn_basic">키워드 추가</a>
+						<a href="#" class="btn_basic"><img src="img/ico_btn_delete.png" alt="x" class="ico">삭제</a>
+						<a href="#" class="btn_basic">순위변경</a>
+						<a href="#" class="btn_basic">키워드 조합 </a>
+						<a href="#" class="btn_basic">제안서 생성</a>
+					</div>
+				</div>	
+				
+				<!-- [D] 모바일 tab -->
+				<div class="wrap_tab_contents">
+					<table class="tbl_form">
+					<caption>담은 키워드 thead</caption>
+					<!-- [D] t_check는 공통/마지막 col항목엔 width선언 제외 -->
+					<colgroup><col class="t_check"><col><col width="114px"><col width="105px"><col width="9.5%"><col width="9.5%"><col width="8.5%"><col width="8%"><col width="11%"><col width="105px"></colgroup>
+					<thead>
+					<tr>
+						<th class="t_check"><span class="inp_check"><input type="checkbox"></span></th>
+						<th><span class="sort_input"><input type="text" value="키워드" class="inp_text inp_text_m" /><a href="#" class="btn_sort">키워드</a></span></th>
+						<th><a href="#" class="btn_sort up">예상순위</a></th>
+						<th><a href="#" class="btn_sort">예상입찰가</a></th>
+						<th>
+							<a href="#" class="btn_sort selected"><strong>예상노출수</strong></a>
+							<span class="inp_opiotn">500이상</span>
+						</th>
+						<th><a href="#" class="btn_sort">예상클릭수</a></th>
+						<th><a href="#" class="btn_sort">예상클릭율</a></th>
+						<th><a href="#" class="btn_sort">예상CPC</a></th>
+						<th><a href="#" class="btn_sort">예상광고비</a></th>
+						<th>
+							<a href="#" class="btn_basic_s" style="width:80px" onclick="$('.ly_pop[name=prop_16],.dimmed').show();return false;">키워드 필터</a>
+							<a href="#" class="btn_basic_s" style="width:80px">모든필터해제</a>
+						</th>
+					</tr>
+					</thead>
+					</table>
+					<table class="tbl_form">
+					<caption>담은 키워드 tbody</caption>
+					<!-- [D] 상단 목록과 동일한 col width값 선언 -->					
+					<colgroup><col class="t_check"><col><col width="114px"><col width="105px"><col width="9.5%"><col width="9.5%"><col width="8.5%"><col width="8%"><col width="11%"><col width="105px"></colgroup>
+					<tbody>
+					<tr>
+						<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+						<td><p>꽃</p></td>
+						<td><p class="num">
+							<select class="selectbox select_s" style="width:100px">
+								<option>1</option>
+							</select>
+						</p></td>
+						<td><input type="text" class="inp_text inp_text_s inp_text_r" style="width:90px"></td>
+						<td><p class="num">617,560</p></td>
+						<td><p class="num">55,656</p></td>
+						<td><p class="num">2.28%</p></td>
+						<td><p class="num">713</p></td>
+						<td><p class="num">1,014,051</p></td>
+						<td><a href="#" class="btn_basic_s" style="width:80px">삭제</a></td>
+					</tr>
+					<tr>
+						<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+						<td title="키워드맥스스무자입니다.일이삼사오륙칠팔구십"><p><span class="ellipsis">키워드맥스스무자입니다.일이삼사오륙칠팔구십</span></p></td>
+						<td><p class="num">
+							<select class="selectbox select_s" style="width:100px">
+								<option>99,999</option>
+							</select>
+						</p></td>
+						<td><input type="text" class="inp_text inp_text_s inp_text_r" style="width:90px"></td>
+						<td><p class="num">99,999,999</p></td>
+						<td><p class="num">99,999,999</p></td>
+						<td><p class="num">999.99%</p></td>
+						<td><p class="num">999,999</p></td>
+						<td><p class="num">99,999,999,999</p></td>
+						<td><a href="#" class="btn_basic_s" style="width:80px">삭제</a></td>
+					</tr>
+					<tr>
+						<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+						<td><p>꽃배달화환</p></td>
+						<td><p class="num">
+							<select class="selectbox select_s" style="width:100px">
+								<option>1</option>
+							</select>
+						</p></td>
+						<td><input type="text" class="inp_text inp_text_s inp_text_r" value="999,999" style="width:90px"></td>
+						<td><p class="num">1,255</p></td>
+						<td><p class="num">556</p></td>
+						<td><p class="num">2.28%</p></td>
+						<td><p class="num">713</p></td>
+						<td><p class="num">1,014,051</p></td>
+						<td><a href="#" class="btn_basic_s" style="width:80px">삭제</a></td>
+					</tr>
+					</tbody>
+					</table> 
+					<div class="tfoot">
+						<table class="tbl_form">
+						<caption>담은 키워드 tfoot</caption>
+						<colgroup><col class="t_check"><col><col width="114px"><col width="105px"><col width="9.5%"><col width="9.5%"><col width="8.5%"><col width="8%"><col width="11%"><col width="105px"></colgroup>
+						<tbody>
+						<tr class="total">
+							<td colspan="2">요약</td>
+							<td><p class="num">123,123</p></td>
+							<td><p class="num">123,123</p></td>
+							<td><p class="num">100,,255</p></td>
+							<td><p class="num">100,556</p></td>
+							<td><p class="num">122.28%</p></td>
+							<td><p class="num">100,713</p></td>
+							<td><p class="num">100,014,051</p></td>
+							<td></td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- //wrap_tab_contents -->	
+			</div>
+			
+			<!-- 전환기간별 방문수 분석 테이블 -->
+			<div class="section_box">
+				<table class="tbl_form">
+				<caption>전환기간별 방문수 분석 상세 thead</caption>
+				<colgroup><col width="19.2%"><col width="15.34%"><col width="11%"><col span="6"></colgroup>
+				<thead>
+				<tr>
+					<th>구분</th>
+					<th>전환소요기간/방문횟수</th>
+					<th>전환수 합계</th>
+					<th>1회</th>
+					<th>2회</th>
+					<th>3회</th>
+					<th>4회</th>
+					<th>5회</th>
+					<th>5회이상</th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<caption>전환기간별 방문수 분석 tbody</caption>
+				<!-- [D] 상단 목록과 동일한 col width값 선언 -->
+				<colgroup><col width="19.2%"><col width="15.34%"><col width="11%"><col span="6"></colgroup>
+				<tbody>
+				<tr class="bg_gray">
+					<td>직접전환</td>
+					<td><p>1일 (30분)</p></td>
+					<td><p class="num">500</p></td>
+					<td><p class="num">150</p></td>
+					<td><p class="num">100</p></td>
+					<td><p class="num">80</p></td>
+					<td><p class="num">70</p></td>
+					<td><p class="num">30</p></td>
+					<td><p class="num">20</p></td>
+				</tr>
+				<tr>
+					<td rowspan="10">간접전환</td>
+					<td><p>1일</p></td>
+					<td class="bg_step100"><p class="num">500</p></td>
+					<td class="bg_step95"><p class="num">150</p></td>
+					<td class="bg_step90"><p class="num">100</p></td>
+					<td class="bg_step85"><p class="num">80</p></td>
+					<td class="bg_step80"><p class="num">70</p></td>
+					<td class="bg_step75"><p class="num">30</p></td>
+					<td class="bg_step70"><p class="num">20</p></td>
+				</tr>
+				<tr>
+					<td><p>2일</p></td>
+					<td class="bg_step65"><p class="num">500</p></td>
+					<td class="bg_step60"><p class="num">150</p></td>
+					<td class="bg_step55"><p class="num">100</p></td>
+					<td class="bg_step50"><p class="num">80</p></td>
+					<td class="bg_step45"><p class="num">70</p></td>
+					<td class="bg_step40"><p class="num">30</p></td>
+					<td class="bg_step35"><p class="num">20</p></td>
+				</tr>
+				<tr>
+					<td><p>3일</p></td>
+					<td class="bg_step30"><p class="num">500</p></td>
+					<td class="bg_step25"><p class="num">500</p></td>
+					<td class="bg_step20"><p class="num">150</p></td>
+					<td class="bg_step15"><p class="num">100</p></td>
+					<td class="bg_step10"><p class="num">80</p></td>
+					<td class="bg_step5"><p class="num">70</p></td>
+					<td><p class="num">30</p></td>
+				</tr>
+				<tr>
+					<td><p>4일</p></td>
+					<td><p class="num">500</p></td>
+					<td><p class="num">150</p></td>
+					<td><p class="num">100</p></td>
+					<td><p class="num">80</p></td>
+					<td><p class="num"></p></td>
+					<td><p class="num"></p></td>
+					<td><p class="num"></p></td>
+				</tr>
+				<tr>
+					<td><p>5일</p></td>
+					<td><p class="num">500</p></td>
+					<td><p class="num">150</p></td>
+					<td><p class="num">100</p></td>
+					<td><p class="num">80</p></td>
+					<td><p class="num"></p></td>
+					<td><p class="num"></p></td>
+					<td><p class="num"></p></td>
+				</tr>
+				<tr>
+					<td><p>6일</p></td>
+					<td><p class="num">500</p></td>
+					<td><p class="num">150</p></td>
+					<td><p class="num">100</p></td>
+					<td><p class="num">80</p></td>
+					<td><p class="num"></p></td>
+					<td><p class="num"></p></td>
+					<td><p class="num"></p></td>
+				</tr>
+				<tr>
+					<td><p>7일</p></td>
+					<td><p class="num">500</p></td>
+					<td><p class="num">150</p></td>
+					<td><p class="num">100</p></td>
+					<td><p class="num">80</p></td>
+					<td><p class="num">70</p></td>
+					<td><p class="num">30</p></td>
+					<td><p class="num"></p></td>
+				</tr>
+				<tr>
+					<td><p>8일</p></td>
+					<td><p class="num">500</p></td>
+					<td><p class="num">150</p></td>
+					<td><p class="num">100</p></td>
+					<td><p class="num">80</p></td>
+					<td><p class="num">70</p></td>
+					<td><p class="num">30</p></td>
+					<td><p class="num"></p></td>
+				</tr>
+				<tr>
+					<td><p>9일</p></td>
+					<td><p class="num">500</p></td>
+					<td><p class="num">150</p></td>
+					<td><p class="num">100</p></td>
+					<td><p class="num">80</p></td>
+					<td><p class="num">70</p></td>
+					<td><p class="num">30</p></td>
+					<td><p class="num"></p></td>
+				</tr>
+				<tr>
+					<td><p>10일 이상</p></td>
+					<td><p class="num">500</p></td>
+					<td><p class="num">150</p></td>
+					<td><p class="num">100</p></td>
+					<td><p class="num">80</p></td>
+					<td><p class="num">70</p></td>
+					<td><p class="num">30</p></td>
+					<td><p class="num"></p></td>
+				</tr>
+				<tr class="total">
+					<td></td>
+					<td><p>방문수 합계</p></td>
+					<td><p class="num">-</p></td>
+					<td><p class="num">500</p></td>
+					<td><p class="num">795</p></td>
+					<td><p class="num">795</p></td>
+					<td><p class="num">795</p></td>
+					<td><p class="num">795</p></td>
+					<td><p class="num">795</p></td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+			
+			
+			<div class="section_box">
+				<div class="thead_filter">
+					<em class="index">노출관리설정</em>
+					<span class="inp_radio" style="width:127px"><input type="radio"><label>ON</label></span>
+					<span class="inp_radio" style="width:127px"><input type="radio"><label>OFF</label></span>
+					<span class="bar">|</span>
+					<label>관리기간설정</label>
+					<input type="text" class="datepicker" style="width:145px">
+					<span class="bar_h">-</span>
+					<input type="text" class="datepicker" style="width:145px">
+				</div>
+				<div class="wrap_schedule" name="case_tbl_schedule">
+					<ul class="info_schedule">
+						<li><span class="bg_on"></span> 선택시간</li>
+						<li><span class="bg_disabled"></span> 선택불가능시간</li>
+						<li><span class="bg_off"></span> 미선택 시간</li>
+					</ul>
+					<!-- 스케쥴러 선택(on)/선택불가능(disabled)/미선택(off)/드래그활성화(highlight) -->
+					<table class="tbl_schedule">
+					<caption>스케쥴러</caption>
+					<colgroup><col width="27"><col span="25"></colgroup>
+					<thead>
+					<tr>
+						<th></th><th>00:00</th><th>01:00</th><th>02:00</th><th>03:00</th><th>04:00</th><th>05:00</th><th>06:00</th><th>07:00</th><th>08:00</th><th>09:00</th><th>10:00</th>
+						<th>11:00</th><th>12:00</th><th>13:00</th><th>14:00</th><th>15:00</th><th>16:00</th><th>17:00</th><th>18:00</th><th>19:00</th><th>20:00</th><th>21:00</th><th>22:00</th><th>23:00</th><th>24:00</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<th scrop="row">월</th>
+						<td class="on highlight"></td><td class="on highlight"></td><td class="on highlight"></td><td class="on highlight"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td>
+						<td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td>
+					</tr>
+					<tr>
+						<th scrop="row">화</th>
+						<td class="on highlight"></td><td class="on highlight"></td><td class="on highlight"></td><td class="on highlight"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td>
+						<td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td>
+					</tr>
+					<tr>
+						<th scrop="row">수</th>
+						<td class="on highlight"></td><td class="on highlight"></td><td class="on highlight"></td><td class="on highlight"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td>
+						<td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td>
+					</tr>
+					<tr>
+						<th scrop="row">목</th>
+						<td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td>
+						<td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td>
+					</tr>
+					<tr>
+						<th scrop="row">금</th>
+						<td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td>
+						<td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td>
+					</tr>
+					<tr>
+						<th scrop="row">토</th>
+						<td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td>
+						<td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td>
+					</tr>
+					<tr>
+						<th scrop="row">일</th>
+						<td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td>
+						<td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td><td class="disabled"></td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+				<div class="wrap_schedule" name="case_tbl_schedule_onoff">
+					<ul class="info_schedule">
+						<li><span class="bg_on"></span> 광고 ON</li>
+						<li><span class="bg_off"></span> 광고 OFF</li>
+					</ul>
+					<!-- 스케쥴러 선택(on)/선택불가능(disabled)/미선택(off)/드래그활성화(highlight) -->
+					<table class="tbl_schedule">
+					<caption>스케쥴러</caption>
+					<colgroup><col width="27"><col span="25"></colgroup>
+					<thead>
+					<tr>
+						<th></th><th>00:00</th><th>01:00</th><th>02:00</th><th>03:00</th><th>04:00</th><th>05:00</th><th>06:00</th><th>07:00</th><th>08:00</th><th>09:00</th><th>10:00</th>
+						<th>11:00</th><th>12:00</th><th>13:00</th><th>14:00</th><th>15:00</th><th>16:00</th><th>17:00</th><th>18:00</th><th>19:00</th><th>20:00</th><th>21:00</th><th>22:00</th><th>23:00</th><th>24:00</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<th scrop="row">월</th>
+						<td class="on highlight"></td><td class="on highlight"></td><td class="on highlight"></td><td class="on highlight"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td>
+						<td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td>
+					</tr>
+					<tr>
+						<th scrop="row">화</th>
+						<td class="on highlight"></td><td class="on highlight"></td><td class="on highlight"></td><td class="on highlight"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td>
+						<td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td>
+					</tr>
+					<tr>
+						<th scrop="row">수</th>
+						<td class="on highlight"></td><td class="on highlight"></td><td class="on highlight"></td><td class="on highlight"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td>
+						<td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td>
+					</tr>
+					<tr>
+						<th scrop="row">목</th>
+						<td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td>
+						<td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td><td class="on"></td>
+					</tr>
+					<tr>
+						<th scrop="row">금</th>
+						<td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td>
+						<td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td>
+					</tr>
+					<tr>
+						<th scrop="row">토</th>
+						<td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td>
+						<td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td>
+					</tr>
+					<tr>
+						<th scrop="row">일</th>
+						<td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td>
+						<td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td><td class="off"></td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+						
+			<div class="btn_foot">
+				<a href="#" class="btn_b_odd">확인</a>
+				<a href="#" class="btn_b_gray">취소</a>
+			</div>
+			
+</div>
+	
+</body>
+</html>

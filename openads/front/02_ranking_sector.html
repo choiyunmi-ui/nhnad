@@ -1,0 +1,457 @@
+
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>업종별 랭킹 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="sub_tit" class="bg_v2 p40">
+			<dl>
+			<dt>상품랭킹</dt>
+			<dd>모든 광고상품의 효율을 한눈에 확인할 수 있습니다.</dd>
+			</dl>
+		</div>
+		<div id="contents">
+			<ul id="tab_fixed" class="tab_v1">
+			<!-- [D] 활성화 페이지 .on 추가 -->
+			<li><a href="#">지표별 랭킹</a></li>
+			<li><a href="#">소재별 랭킹</a></li>
+			<li><a href="#">디바이스별 랭킹</a></li>
+			<li><a href="#">유형별 랭킹</a></li>
+			<li><a href="#">매체별 랭킹</a></li>
+			<li class="on"><a href="#">업종별 랭킹</a></li>
+			<li><a href="#">과금대별 링킹</a></li>			
+			</ul>
+			<div class="chart_filter">
+				<dl>
+				<dt>지표</dt>
+				<dd class="sel_wrap" style="width:190px;">
+					<button type="button" class="btn_sel">의류/패션잡화</button>
+					<ul class="sel_lst">
+					<li><a href="#">의류/패션잡화1</a></li>
+					<li><a href="#">의류/패션잡화2</a></li>
+					<li><a href="#">의류/패션잡화3</a></li>
+					</ul>	
+				</dd>
+				<dd class="sel_wrap" style="width:190px;">
+					<button type="button" class="btn_sel">의류/패션잡화판매</button>
+					<ul class="sel_lst">
+					<li><a href="#">의류/패션잡화판매1</a></li>
+					<li><a href="#">의류/패션잡화판매2</a></li>
+					<li><a href="#">의류/패션잡화판매3</a></li>
+					</ul>	
+				</dd>
+				<dd class="sel_wrap" style="width:190px;">
+					<button type="button" class="btn_sel">전문특수의류</button>
+					<ul class="sel_lst">
+					<li><a href="#">전문특수의류1</a></li>
+					<li><a href="#">전문특수의류2</a></li>
+					<li><a href="#">전문특수의류3</a></li>
+					</ul>	
+				</dd>					
+				</dl>
+				<ul class="lst_rdo">
+				<li class="rdo_box"><input type="radio" name="filter_time" id="prv_month" checked><label for="prv_month"><span>전월</span></label></li>
+				<li class="rdo_box"><input type="radio" name="filter_time" id="three_month"><label for="three_month"><span>직전 3개월</span></label></li>
+				<li class="rdo_box"><input type="radio" name="filter_time" id="six_month"><label for="six_month"><span>직전 6개월</span></label></li>
+				</ul>
+			</div>
+			<div class="chart_box">
+				<img src="img/@img_chart01.jpg" alt="">					
+			</div>
+			<!-- [D] 결과 없을시 출력 -->
+			<div class="chart_none bd_pt">
+				<p>데이터가 충분하지 않습니다.</p>	
+			</div>
+			<!-- //[D] 결과 없을시 출력 -->
+			<div class="btn_area_rt">
+				<button type="button" class="btn_bd ico_plus">관심상품 추가</button>
+			</div>
+			<!-- [D] 결과 있을시 출력 -->
+			<div class="tbl_grd chck">
+				<table class="easyui-datagrid" style="width:100%">
+				<caption class="blind">상품 선택, 순위, 상품명, 집계 데이터 기준 랭킹(클릭률, 클릭비용, 전환율,전환비용, ROAS), 비중(%) 기준 랭킹(집행수, 노출수, 클릭수, 전환수)</caption>
+				<thead>
+				<tr>
+				<th field="ck" checkbox="true" width="40" rowspan="3" align="center"><b>선택</b></th>
+				<th field="rank" width="40" rowspan="3" align="center"><b>순위</b></th>
+				<th field="productid" width="210" rowspan="3" align="left"><b>상품명</b></th>
+				<th colspan="5"><b>집계 데이터 기준 랭킹</b><a href="#" id="tt_btn1_1" class="btn_tooltip">?</a></th>
+				<th colspan="4"><b>비중(%) 기준 랭킹</b><a href="#" id="tt_btn1_2" class="btn_tooltip">?</a></th>
+				</tr>
+				<tr>
+				<th field="field01" scope="col" width="80" align="right" rowspan="2"><span id="tt_btn1_3" class="btn_sort btn_tooltip on">클릭률</span></th>
+				<th field="field02" scope="col" width="80" align="right" rowspan="2"><span id="tt_btn1_4" class="btn_sort btn_tooltip">클릭비용</span></th>
+				<th scope="col" colspan="3">
+					전환기준
+					<span class="sel_wrap_s" style="width:134px">
+						<button type="button" class="btn_sel">전체</button>
+						<ul class="sel_lst">
+						<li><a href="#">전체</a></li>
+						<li><a href="#">회원가입</a></li>
+						<li><a href="#">구매/주문완료</a></li>
+						<li><a href="#">신청완료</a></li>
+						<li><a href="#">예약완료</a></li>
+						<li><a href="#">글쓰기완료</a></li>
+						<li><a href="#">다운로드수</a></li>
+						<li><a href="#">실행수</a></li>
+						<li><a href="#">참여수</a></li>
+						<li><a href="#">기타</a></li>
+						</ul>
+					</span>
+				</th>
+				<th field="field06" scope="col" width="85" align="right" rowspan="2"><span id="tt_btn1_8" class="btn_sort btn_tooltip">집행수 비중</span></th>
+				<th field="field07" scope="col" width="85" align="right" rowspan="2"><span id="tt_btn1_9" class="btn_sort btn_tooltip">노출수 비중</span></th>
+				<th field="field08" scope="col" width="85" align="right" rowspan="2"><span id="tt_btn1_10" class="btn_sort btn_tooltip">클릭수 비중</span></th>
+				<th field="field09" scope="col" width="85" align="right" rowspan="2"><span id="tt_btn1_11" class="btn_sort btn_tooltip">전환수 비중</span></th>
+				</tr>
+				<tr>
+				<th field="field03" scope="col" width="80" align="right"><span id="tt_btn1_5" class="btn_sort btn_tooltip">전환율</span></th>
+				<th field="field04" scope="col" width="80" align="right"><span id="tt_btn1_6" class="btn_sort btn_tooltip">전환비용</span></th>
+				<th field="field05" scope="col" width="80" align="right"><span id="tt_btn1_7" class="btn_sort btn_tooltip">ROAS</span></th>
+				</tr>
+				</thead>
+				<!-- [D] 결과 있을시 출력 -->
+				<tbody>
+				<tr>
+				<td></td>
+				<td>1</td>
+				<td>네이버 클릭초이스</td>
+				<td>11.20%</td>
+				<td>310원</td>
+				<td>11.20%</td>
+				<td>310원</td>
+				<td>11.20%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				</tr>	
+				<tr>
+				<td></td>
+				<td>2</td>
+				<td>크리테오</td>
+				<td>7.04%</td>
+				<td>310원</td>
+				<td>7.04%</td>
+				<td>310원</td>
+				<td>7.04%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				</tr>		
+				<tr>
+				<td></td>
+				<td>3</td>
+				<td>네이버 DA</td>
+				<td>100%</td>
+				<td>310원</td>
+				<td>100%</td>
+				<td>310원</td>
+				<td>100%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				</tr>			
+				<tr>
+				<td></td>
+				<td>4</td>
+				<td>카카오 성과형</td>
+				<td>4.11%</td>
+				<td>310원</td>
+				<td>4.11%</td>
+				<td>310원</td>
+				<td>4.11%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				</tr>				
+				<tr>
+				<td></td>
+				<td>5</td>
+				<td>앱팡</td>
+				<td>90.00%</td>
+				<td>310원</td>
+				<td>90.00%</td>
+				<td>310원</td>
+				<td>90.00%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				</tr>	
+				<tr>
+				<td></td>
+				<td>6</td>
+				<td>네이버 클릭초이스</td>
+				<td>11.20%</td>
+				<td>310원</td>
+				<td>11.20%</td>
+				<td>310원</td>
+				<td>11.20%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				</tr>	
+				<tr>
+				<td></td>
+				<td>7</td>
+				<td>크리테오</td>
+				<td>7.04%</td>
+				<td>310원</td>
+				<td>7.04%</td>
+				<td>310원</td>
+				<td>7.04%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				</tr>		
+				<tr>
+				<td></td>
+				<td>8</td>
+				<td>네이버 DA</td>
+				<td>100%</td>
+				<td>310원</td>
+				<td>100%</td>
+				<td>310원</td>
+				<td>100%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				</tr>			
+				<tr>
+				<td></td>
+				<td>9</td>
+				<td>카카오 성과형</td>
+				<td>4.11%</td>
+				<td>310원</td>
+				<td>4.11%</td>
+				<td>310원</td>
+				<td>4.11%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				</tr>				
+				<tr>
+				<td></td>
+				<td>10</td>
+				<td>앱팡</td>
+				<td>90.00%</td>
+				<td>310원</td>
+				<td>90.00%</td>
+				<td>310원</td>
+				<td>90.00%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				</tr>	
+				<tr>
+				<td></td>
+				<td>11</td>
+				<td>네이버 클릭초이스</td>
+				<td>11.20%</td>
+				<td>310원</td>
+				<td>11.20%</td>
+				<td>310원</td>
+				<td>11.20%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				</tr>	
+				<tr>
+				<td></td>
+				<td>12</td>
+				<td>크리테오</td>
+				<td>7.04%</td>
+				<td>310원</td>
+				<td>7.04%</td>
+				<td>310원</td>
+				<td>7.04%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				</tr>		
+				<tr>
+				<td></td>
+				<td>13</td>
+				<td>네이버 DA</td>
+				<td>100%</td>
+				<td>310원</td>
+				<td>100%</td>
+				<td>310원</td>
+				<td>100%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				</tr>			
+				<tr>
+				<td></td>
+				<td>14</td>
+				<td>카카오 성과형</td>
+				<td>4.11%</td>
+				<td>310원</td>
+				<td>4.11%</td>
+				<td>310원</td>
+				<td>4.11%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				<td>5.15%</td>
+				</tr>				
+				<tr>
+				<td></td>
+				<td>15</td>
+				<td>앱팡</td>
+				<td>90.00%</td>
+				<td>310원</td>
+				<td>90.00%</td>
+				<td>310원</td>
+				<td>90.00%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				<td>45.26%</td>
+				</tr>	
+				</tbody>
+				<!-- //[D] 결과 있을시 출력 -->
+				</table>
+				<!-- [D] tbody 상단 평균값 스크립트 -->
+				<script type="text/javascript">
+				$(document).ready(function(){
+					var html	=	"<tr class='datagrid-header-row'>" +
+	                	"<td auto=\"true\" colspan='3'><div class='datagrid-cell'>전체평균</div></td>" +
+	                	"<td auto=\"true\" ><div class='datagrid-cell al_r'>5.15%</div></td>" +
+						"<td auto=\"true\" ><div class='datagrid-cell al_r'>310원</div></td>" +
+						"<td auto=\"true\" ><div class='datagrid-cell al_r'>5.15%</div></td>" +
+						"<td auto=\"true\" ><div class='datagrid-cell al_r'>12,300 원</div></td>" +
+						"<td auto=\"true\" ><div class='datagrid-cell al_r'>100%</div></td>" +
+						"<td auto=\"true\" ><div class='datagrid-cell al_c'>-</div></td>" +
+						"<td auto=\"true\" ><div class='datagrid-cell al_c'>-</div></td>" +
+						"<td auto=\"true\" ><div class='datagrid-cell al_c'>-</div></td>" +
+						"<td auto=\"true\" ><div class='datagrid-cell al_c'>-</div></td>" +
+	                "</tr>";
+	                $(".datagrid-view2 .datagrid-htable > tbody").append(html);
+	                $('.datagrid-header-check input').on('change', function() {
+	                 	$(this).parents('.datagrid-header-check').toggleClass('on');
+	                });
+				});	        
+		  	   </script>
+				<!-- // [D] tbody 상단 평균값 스크립트 -->
+				<!-- [D] 툴팁 버튼과 동일한 ID번호로 통일시 자동으로 마우스오버 모션 생성(#tt_btn1 = #tt_wrap1) -->
+				<!-- [D] 위치값은 인라인으로 조정 -->
+				<div id="tt_wrap1_1" class="tooltip_wrap" style="display:none;left:518px">
+					<div class="tool_box">
+						<p class="txt2">수집한 데이터를 기반으로 계산된 각 지표별 평균 효율<br>데이터입니다.</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_2" class="tooltip_wrap right" style="display:none;right:50px">
+					<div class="tool_box">
+						<p class="txt2">각 지표별 총 합에서 해당항목이 차지하는 비중을<br>나타냅니다.</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_3" class="tooltip_wrap" style="display:none;top:90px;left:287px">
+					<div class="tool_box">
+						<p class="txt2">사용자가 특정 광고상품을 보고 해당 광고상품을 클릭한 비율을 나타내는 지표입니다.</p>
+						<p class="txt3">네이버 클릭초이스를 본 사용자 수가 1000명이고,해당 광고<br>상품을 클릭한 숫자가 500일 경우 네이버 클릭초이스의 클릭률은 0.5% 입니다.</p>
+						<p class="txt3">* <b>클릭률(%)</b> =<br>&nbsp;&nbsp;클릭수 / 노출수 *100</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_4" class="tooltip_wrap" style="display:none;top:90px;left:366px">
+					<div class="tool_box">
+						<p class="txt2">광고 1클릭당 발생하는 평균비용을 나타내는 지표입니다.</p>
+						<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 해당 광고<br>상품을 클릭한 숫자가 5,000일 경우 네이버 클릭초이스의 클릭비용은 200원 입니다</p>
+						<p class="txt3">* <b>클릭비용(원)</b> =<br>&nbsp;&nbsp;광고비 / 클릭수</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_5" class="tooltip_wrap" style="display:none;top:108px;left:446px">
+					<div class="tool_box">
+						<p class="txt2">특정 광고상품을 통해 사이트를 방문한 후 구매, 회원가입 등의 전환을 발생시키는 비율을 나타내는 지표입니다.</p>
+						<p class="txt3">네이버 클릭초이스 광고를 클릭한 숫자가 5,000이고 이를 통해<br>100건의 전환이 일어났을 경우 네이버 클릭초이스의 전환율은 2%입니다.</p>
+						<p class="txt3">* <b>전환율(%)</b> =<br>&nbsp;&nbsp;전환수 / 유입수(클릭수) *100</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_6" class="tooltip_wrap" style="display:none;top:108px;left:531px">
+					<div class="tool_box">
+						<p class="txt2">전환 한번 당 발생하는 비용을 나타내는 지표입니다.</p>
+						<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 100건의<br>전환이 일어났을 경우 네이버 클릭초이스의 전환비용은 10,000원입니다.</p>
+						<p class="txt3">* <b>전환비용(원)</b> =<br>&nbsp;&nbsp;광고비용 / 전환수</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_7" class="tooltip_wrap right" style="display:none;top:108px;right:318px">
+					<div class="tool_box">
+						<p class="txt2">광고비용 대비 매출액을 나타내는 지표입니다.</p>
+						<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 이를 통해<br>1천만원의 매출이 발생했을 경우 네이버 클릭초이스의 ROAS는 1000%입니다.</p>
+						<p class="txt3">* <b>ROAS(%)</b> =<br>&nbsp;&nbsp;매출액 / 광고비용 *100</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_8" class="tooltip_wrap right" style="display:none;top:90px;right:234px">
+					<div class="tool_box">
+						<p class="txt2">광고를 집행한 광고주 수의 비중을 나타내는 지표입니다.</p>
+						<p class="txt3">전체 광고주 수가 1000개이고 네이버 클릭초이스를 집행한<br>광고주 수가 500개일 경우, 네이버 클릭초이스의 집행수(비중)는 50%입니다.</p>
+						<p class="txt3">* <b>집행수 비중(%)</b> =<br>&nbsp;&nbsp;해당상품을 집행한 전체 광고주 수 / 전체 광고주 수 *100</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_9" class="tooltip_wrap right" style="display:none;top:90px;right:150px">
+					<div class="tool_box">
+						<p class="txt2">특정 광고상품이 노출된 숫자를 나타내는 지표입니다.</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_10" class="tooltip_wrap right" style="display:none;top:90px;right:64px">
+					<div class="tool_box">
+						<p class="txt2">사용자들이 특정 광고상품을 클릭한 숫자를 나타내는<br>지표입니다.</p>
+					</div>
+				</div>
+				<div id="tt_wrap1_11" class="tooltip_wrap right" style="display:none;top:90px;right:-21px">
+					<div class="tool_box">
+						<p class="txt2">특정 광고상품을 통해 구매, 회원가입, 애플리케이션<br>다운로드 등으로 전환된 숫자를 나타내는 지표입니다.</p>
+					</div>
+				</div>
+			</div>	
+			<!-- [D] 결과 없을시 출력 -->
+			<div class="result_none">
+				<p>데이터가 충분하지 않습니다.</p>				
+			</div>
+			<!-- //[D] 결과 없을시 출력 -->
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

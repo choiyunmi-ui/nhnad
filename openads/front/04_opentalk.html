@@ -1,0 +1,345 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>오픈토크 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/chartist.min.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/lib/chartist.min.js"></script>
+<!-- chartist IE9 크로스 브라우징용 JS -->
+<script type="text/javascript" src="js/lib/matchMedia.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="sub_tit" class="bg_v4">
+			<dl>
+			<dt>여러분의 의견을 들려주세요.</dt>
+			<dd>온라인 시장의 다양한 이슈와 광고 상품에 대한 토론이 열리는 공간입니다.</dd>
+			</dl>
+		</div>
+		<div id="contents" class="sub_opentalk">
+			<h2 class="tit_sz20">이주의 Opentalk</h2>
+			<div class="week_talk">
+				<div class="info">
+					<ul class="detail">
+					<li>2016.01.25</li>
+					<li>참여<b class="txt_yel">46</b> 명</li>
+					</ul>
+					<a href="#" class="tit">리타겟팅 매체를 고민하는 당신의 선택.</a>
+				</div>
+				<!-- [D] 투표참여형 -->
+				<div class="wchart_wrap">
+					<dl>
+					<dt>N2S</dt>
+					<dd><b class="txt_yel2">68%</b></dd>
+					<dd><a href="#" class="btn_bd">투표하기</a></dd>
+					</dl>
+					<div class="chart_wrap">
+						<div class="ct-chart ct-double-octave"></div>
+					</div>
+					<script>
+						new Chartist.Pie('.ct-chart', {
+						  series: [32,68]
+						}, {
+						  donut: true,
+						  donutWidth: 25,
+						  startAngle: 0,
+						  total: 100,
+						  showLabel: false,
+						  width: 210,
+						  height: 210
+						});
+					</script>
+					<dl>
+					<dt>타겟팅 게이츠</dt>
+					<dd><b class="txt_blue">32%</b></dd>
+					<dd><a href="#" class="btn_bd">투표하기</a></dd>
+					</dl>
+				</div>
+				<!-- //[D] 투표참여형 -->
+				<!-- [D] 의견공유형 -->
+				<div class="wopinion_wrap">
+					<p class="txt_sz16">내 최대 포털사이트 네이버(www.naver.com)를 운영하는 NHN(대표 최휘영)이 네이버 검색창의 온라인쇼핑몰 ‘바로가기’를 통해 이뤄진<br>물품 구매에 대한 수수료를 폐지한 것으로 확인됐다. 기존 검색 및 광고 비즈니스와 새롭게 떠오르는 쇼핑 비즈니스간 영역을 분명하게 분리한 것으로,<br>전자상거래 영역에서의 NHN 영향력 강화가 예상된다. 20일 관련업계에 따르면 NHN은 그동안 네티즌이 네이버 검색창에서 ‘옥션’등 쇼핑몰사이트를 검...</p>
+					<div class="btn_area al_c">
+						<a href="#" class="btn_bd">토론 참여하기</a>
+					</div>
+				</div>
+				<!-- //[D] 의견공유형 -->
+			</div>
+			<ul class="tab_v4 tab_area">
+			<li class="on"><a href="#">전체<b class="num">9</b></a></li>
+			<li><a href="#">매체토론<b class="num">6</b></a></li>
+			<li><a href="#">상품토론<b class="num">3</b></a></li>
+			<li><a href="#">이슈토론<b class="num">1</b></a></li>
+			</ul>
+			<ul class="tab_lst">
+			<li>
+				<div class="tbl_v4">
+					<table>
+					<caption class="blind">토론유형, 토론주제, 투표율</caption>
+					<colgroup>
+					<col style="width:150px"><col><col style="width:140px"><col style="width:160px">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col">토론유형</th>
+					<th scope="col">토론주제</th>
+					<th scope="col" colspan="2">투표율</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td class="type">매체토론</td>
+					<td class="al_l">
+						<p class="txt1">리타겟팅 매체를 고민하는 당신의 선택은.</p>
+						<ul class="rp_lst">
+						<li><b>N2S</b> : 높은 유입수에도 불구하고 이탈하는 회원이 많아 높은 유입수에도 불구하고 이탈하는 회원이 많아불구하고 이탈하는 회원이 많아 높은 유입수에도 불구하고 이탈하는 회원이 많아</li>
+						<li><b>타겟팅 게이츠</b> : 투입하는 광고비에 비해서투입하는 광고비에 비해서투입하는 광고비에 비해서투입하는고비에 비해서투입하는 광고비에 비해서투입하는</li>
+						</ul>
+					</td>
+					<td class="vote">
+						<ul class="vote_lst">
+						<li><span title="N25">N2S</span><span class="txt_yel2">68%</span></li>
+						<li><span title="타겟팅게이츠">타겟팅게이츠</span><span class="txt_blue">32%</span></li>
+						</ul>
+					</td>
+					<td>
+						<a href="#" class="btn_bd">투표하기</a>
+					</td>
+					</tr>
+					<tr>
+					<td class="type">상품토론</td>
+					<td class="al_l">
+						<p class="txt1">쇼핑몰 업체라면 집행해야 하는 쇼핑광고</p>
+					</td>
+					<td class="vote">
+						<ul class="vote_lst">
+						<li><span title="쇼핑박스">쇼핑박스</span><span class="txt_yel2">68%</span></li>
+						<li><span title="스타일#">스타일#</span><span class="txt_blue">32%</span></li>
+						</ul>
+					</td>
+					<td>
+						<a href="#" class="btn_bd">투표하기</a>
+					</td>
+					</tr>
+					<tr>
+					<td class="type">이슈토론</td>
+					<td class="al_l">
+						<p class="txt1">네이버 수수료 정책 변화에 대한 당신의 생각은?</p>
+						<p class="txt2">직접 광고를 진행하는 입장에서 대행사의 직접 광고를 진행하는 입장에서 대행사의 직접 광고를 진행하는</p>
+					</td>
+					<td class="vote"></td>
+					<td>
+						<a href="#" class="btn_bd">투표하기</a>
+					</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>	
+				<div class="pagenation"> 
+					<a href="#" class="first">처음</a>
+					<a href="#" class="prev">이전</a>
+					<ul class="num">
+					<!-- [D] 활성화 페이지 .on 추가 -->
+					<li class="on"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">6</a></li>
+					<li><a href="#">7</a></li>
+					<li><a href="#">8</a></li>
+					<li><a href="#">9</a></li>
+					<li><a href="#">10</a></li>				
+					</ul>
+					<a href="#" class="next">다음</a>
+					<a href="#" class="last">끝</a>			
+				</div>
+			</li>
+			<li style="display:none;">
+				<div class="tbl_v4">
+					<table>
+					<caption class="blind">토론유형, 토론주제, 투표율</caption>
+					<colgroup>
+					<col style="width:150px"><col><col style="width:140px"><col style="width:160px">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col">토론유형</th>
+					<th scope="col">토론주제</th>
+					<th scope="col" colspan="2">투표율</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td class="type">매체토론</td>
+					<td class="al_l">
+						<p class="txt1">리타겟팅 매체를 고민하는 당신의 선택은.</p>
+						<ul class="rp_lst">
+						<li><b>N2S</b> : 높은 유입수에도 불구하고 이탈하는 회원이 많아 높은 유입수에도 불구하고 이탈하는 회원이 많아불구하고 이탈하는 회원이 많아 높은 유입수에도 불구하고 이탈하는 회원이 많아</li>
+						<li><b>타겟팅 게이츠</b> : 투입하는 광고비에 비해서투입하는 광고비에 비해서투입하는 광고비에 비해서투입하는고비에 비해서투입하는 광고비에 비해서투입하는</li>
+						</ul>
+					</td>
+					<td class="vote">
+						<ul class="vote_lst">
+						<li><span title="N2S">N2S</span><span class="txt_yel2">68%</span></li>
+						<li><span title="타겟팅게이츠">타겟팅게이츠</span><span class="txt_blue">32%</span></li>
+						</ul>
+					</td>
+					<td>
+						<a href="#" class="btn_bd">투표하기</a>
+					</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>	
+				<div class="pagenation"> 
+					<a href="#" class="first">처음</a>
+					<a href="#" class="prev">이전</a>
+					<ul class="num">
+					<!-- [D] 활성화 페이지 .on 추가 -->
+					<li class="on"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">6</a></li>
+					<li><a href="#">7</a></li>
+					<li><a href="#">8</a></li>
+					<li><a href="#">9</a></li>
+					<li><a href="#">10</a></li>				
+					</ul>
+					<a href="#" class="next">다음</a>
+					<a href="#" class="last">끝</a>			
+				</div>
+			</li>
+			<li style="display:none;">
+				<div class="tbl_v4">
+					<table>
+					<caption class="blind">토론유형, 토론주제, 투표율</caption>
+					<colgroup>
+					<col style="width:150px"><col><col style="width:140px"><col style="width:160px">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col">토론유형</th>
+					<th scope="col">토론주제</th>
+					<th scope="col" colspan="2">투표율</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td class="type">상품토론</td>
+					<td class="al_l">
+						<p class="txt1">쇼핑몰 업체라면 집행해야 하는 쇼핑광고</p>
+					</td>
+					<td class="vote">
+						<ul class="vote_lst">
+						<li><span title="쇼핑박스">쇼핑박스</span><span class="txt_yel2">68%</span></li>
+						<li><span title="스타일#">스타일#</span><span class="txt_blue">32%</span></li>
+						</ul>
+					</td>
+					<td>
+						<a href="#" class="btn_bd">투표하기</a>
+					</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>	
+				<div class="pagenation"> 
+					<a href="#" class="first">처음</a>
+					<a href="#" class="prev">이전</a>
+					<ul class="num">
+					<!-- [D] 활성화 페이지 .on 추가 -->
+					<li class="on"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">6</a></li>
+					<li><a href="#">7</a></li>
+					<li><a href="#">8</a></li>
+					<li><a href="#">9</a></li>
+					<li><a href="#">10</a></li>				
+					</ul>
+					<a href="#" class="next">다음</a>
+					<a href="#" class="last">끝</a>			
+				</div>
+			</li>
+			<li style="display:none;">
+				<div class="tbl_v4">
+					<table>
+					<caption class="blind">토론유형, 토론주제, 투표율</caption>
+					<colgroup>
+					<col style="width:150px"><col><col style="width:140px"><col style="width:160px">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col">토론유형</th>
+					<th scope="col">토론주제</th>
+					<th scope="col" colspan="2">투표율</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td class="type">이슈토론</td>
+					<td class="al_l">
+						<p class="txt1">네이버 수수료 정책 변화에 대한 당신의 생각은?</p>
+						<p class="txt2">직접 광고를 진행하는 입장에서 대행사의 직접 광고를 진행하는 입장에서 대행사의 직접 광고를 진행하는</p>
+					</td>
+					<td class="vote"></td>
+					<td>
+						<a href="#" class="btn_bd">투표하기</a>
+					</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>	
+				<div class="pagenation"> 
+					<a href="#" class="first">처음</a>
+					<a href="#" class="prev">이전</a>
+					<ul class="num">
+					<!-- [D] 활성화 페이지 .on 추가 -->
+					<li class="on"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">6</a></li>
+					<li><a href="#">7</a></li>
+					<li><a href="#">8</a></li>
+					<li><a href="#">9</a></li>
+					<li><a href="#">10</a></li>				
+					</ul>
+					<a href="#" class="next">다음</a>
+					<a href="#" class="last">끝</a>			
+				</div>
+			</li>				
+			</ul>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

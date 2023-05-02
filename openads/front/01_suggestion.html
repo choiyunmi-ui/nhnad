@@ -1,0 +1,189 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>제휴제안 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="sub_tit" class="bg_v1">
+			<dl>
+			<dt>제휴제안</dt>
+			<dd>오픈애즈는 여러분들의 다양한 제안을 기다리고 있습니다.</dd>
+			</dl>			
+		</div>
+		<div id="contents">
+			<ul class="tab_v1">
+			<li class="span_area">
+				<span>서비스 소개</span>
+				<ul class="tab_v1_2" style="display:none">
+				<li><a href="#">서비스 안내</a></li>
+				<li><a href="#">회원유형</a></li>
+				<li><a href="#">애드머니</a></li>
+				<li><a href="#">공지사항</a></li>
+				</ul>
+			</li>
+			<li><a href="#">광고 집행 신청</a></li>
+			<li><a href="#">부가서비스</a></li>
+			<li class="on"><a href="#">제휴제안</a></li>				
+			</ul>
+			<form action="#">
+			<fieldset>
+			<legend>제휴제안 접수 영역</legend>
+				<p class="ess_not">필수 입력 정보</p>
+				<div class="tit_wrap">
+					<h2 class="tit_sec">제안자 정보</h2>
+				</div>
+				<div class="tbl_v3">
+					<table>
+					<caption class="blind">구분, 회사명, 제안자명, 이메일, 휴대폰번호</caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<tr class="wide">
+					<th scope="row" class="ess">구분</th>
+					<td>
+						<ul class="lst_rdo mr40">
+						<li class="rdo_box"><input type="radio" name="check1" id="check1_1" checked><label for="check1_1"><span>매체사</span></label></li>
+						<li class="rdo_box"><input type="radio" name="check1" id="check1_2" checked><label for="check1_2"><span>대행사</span></label></li>
+						<li class="rdo_box"><input type="radio" name="check1" id="check1_3" checked><label for="check1_3"><span>일반기업</span></label></li>
+						<li class="rdo_box"><input type="radio" name="check1" id="check1_4" checked><label for="check1_4"><span>개인</span></label></li>
+						</ul>		
+					</td>
+					</tr>
+					<tr>
+					<th scope="row"><label for="company">회사명</label></th>
+					<td><input type="text" id="company" class="fm_com" style="width:175px"></td>
+					</tr>
+					<tr>
+					<th scope="row" class="ess"><label for="name">제안자명</label></th>
+					<td><input type="text" id="name" class="fm_com" style="width:175px"></td>
+					</tr>
+					<tr>
+					<th scope="row" class="ess"><label for="email">이메일</label></th>
+					<td>
+						<input type="text" id="email" class="fm_com" style="width:175px">
+						<span class="fm_etc" style="width:33px">@</span>
+						<input type="text" class="fm_com" title="도메인 입력" style="width:144px">
+						<div class="sel_wrap" style="width:142px;margin-left:10px">
+							<button type="button" class="btn_sel">직접입력</button>
+							<ul class="sel_lst">
+							<li><a href="#">naver.com</a></li>
+							<li><a href="#">naver.com</a></li>
+							<li><a href="#">naver.com</a></li>
+							<li><a href="#">naver.com</a></li>
+							<li><a href="#">naver.com</a></li>
+							</ul>							
+						</div>
+					</td>	
+					</tr>
+					<tr>
+					<th scope="row" class="ess">휴대폰번호</th>
+					<td>
+						<div class="sel_wrap">
+							<button type="button" class="btn_sel">010</button>
+							<ul class="sel_lst">
+							<li><a href="#">010</a></li>
+							<li><a href="#">011</a></li>
+							<li><a href="#">016</a></li>
+							<li><a href="#">017</a></li>		
+							<li><a href="#">018</a></li>		
+							<li><a href="#">019</a></li>			
+							</ul>							
+						</div>
+						<span class="fm_etc">-</span><input type="text" title="휴대폰번호 중간자리" class="fm_com" style="width:82px">
+						<span class="fm_etc">-</span><input type="text" title="휴대폰번호 마지막자리" class="fm_com" style="width:82px">
+					</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+				<div class="tit_wrap">
+					<h2 class="tit_sec">제휴제안</h2>					
+				</div>
+				<div class="tbl_v3">
+					<table>
+					<caption class="blind">제목, 내용, 개인정보 수집 및 이용에 대한 안내</caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row" class="ess">제목</th>
+					<td>
+						<div class="plc_wrap" style="width:100%">
+							<input type="text" id="title" style="width:100%" class="fm_com plc_ip">
+							<label for="title" class="plc_lb">제목을 입력해주세요.</label>
+						</div>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row" class="ess">내용</th>
+					<td>
+						<div class="plc_wrap" style="width:100%">
+							<textarea id="cont" style="width:100%" class="fm_txtarea plc_ip"></textarea>
+							<label for="cont" class="plc_lb">내용을 입력해주세요.</label>
+						</div>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">개인정보 수집<br>및 이용에 대한 안내</th>
+					<td>
+						<div class="agr_box">
+							<p>대행 이용약관</p>
+							<p>&nbsp;</p>
+							<p>제1조 (목적)</p>
+							<p>이 약관은 오픈애드(이하 "회사"라 합니다)가 제공하는 인터넷 광고대행 서비스의 이용조건 및 절차에 관한 제반사항을 규정함을
+							목적으로 합니다.</p>
+							<p>&nbsp;</p>
+							<p>제 2 조 (서비스의 정의) </p>
+							<p>"모바일 광고대행 서비스"(이하 본 서비스라 합니다.)라 함은 모바일 애플리케이션을 통하여 매체 광고를 제공할 수 있는 광고 
+							서비스를 말합니다.</p>
+							<p>&nbsp;</p>
+							<p>제 3 조 (서비스의 정의) 
+							<p>"모바일 광고대행 서비스"(이하 본 서비스라 합니다.)라 함은 모바일 애플리케이션을 통하여 매체 광고를 제공할 수 있는 광고 
+							서비스를 말합니다.</p>							
+						</div>	
+						<div class="agr_chk">
+							<span class="chk_box"><input type="checkbox" id="agreed1"><label for="agreed1"><span>개인정보 수집 및 이용에 동의합니다.(필수)</span></label></span>							
+						</div>					
+					</td>
+					</tr>			
+					</tbody>						
+					</table>					
+				</div>			
+				<div class="btn_area_l">
+					<button type="submit" class="btn_l btn_org" style="width:200px">등록</button>
+					<a href="#" class="btn_l btn_wht" style="width:200px">취소</a>				
+				</div>					
+			</fieldset>				
+			</form>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>탈퇴신청 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents" class="sub_mleave"> 	
+			<form action="#">
+			<fieldset>
+			<legend>회원탈퇴 신청영역</legend>
+				<ul class="tab_v1">
+				<li class="on"><a href="#">홈</a></li>			
+				<li><a href="#">기본정보관리</a></li>			
+				<li><a href="#">비즈니스계정</a></li>			
+				<li><a href="#">애드머니</a></li>			
+				<li class="high"><a href="#">서비스신청<br>처리이력</a></li>
+ 				<li class="high"><a href="#">나의<br>광고효율</a></li>
+				<li class="high"><a href="#">유료회원<br>신청이력</a></li>
+				<li><a href="#">관심상품</a></li>			
+				<li><a href="#">상담내역</a></li>			
+				</ul>
+				<h2 class="tit_sz20">탈퇴신청안내</h2>
+				<div class="agr_box">
+					<p>제1조 (목적)</p>
+					<p>이 약관은 오픈애드(이하 "회사"라 합니다)가 제공하는 인터넷 광고대행 서비스의 이용조건 및 절차에 관한 제반사항을 규정함을
+					목적으로 합니다.</p>
+					<p>&nbsp;</p>
+					<p>제 2 조 (서비스의 정의) </p>
+					<p>"모바일 광고대행 서비스"(이하 본 서비스라 합니다.)라 함은 모바일 애플리케이션을 통하여 매체 광고를 제공할 수 있는 광고 
+					서비스를 말합니다.</p>
+					<p>&nbsp;</p>
+					<p>제 3 조 (서비스의 정의) 
+					</p><p>"모바일 광고대행 서비스"(이하 본 서비스라 합니다.)라 함은 모바일 애플리케이션을 통하여 매체 광고를 제공할 수 있는 광고 
+					서비스를 말합니다.</p>							
+				</div>
+				<div class="tit_wrap">
+					<h3 class="tit_sec">나의 현재 상태</h3>
+				</div>
+				<div class="tbl_v3_2">
+					<table>
+					<caption class="blind">잔여 애드머니</caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row">잔여 애드머니</th>
+					<td class="txt_yel">500,000원<a href="#" class="btn_bd bd_y" style="width:97px">전환 신청</a></td>
+					</tr>
+					</tbody>						
+					</table>					
+				</div>
+				<div class="tit_wrap">
+					<h3 class="tit_sec">나의 정보 확인</h3>
+				</div>
+				<div class="tbl_v3_2">
+					<table>
+					<caption class="blind">이름, 아이디, 비즈니스 계정명, 탈퇴사유</caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row">이름</th>
+					<td>김철수</td>
+					</tr>
+					<tr>
+					<th scope="row">아이디</th>
+					<td>manager@nhnet.com</td>
+					</tr>
+					<tr>
+					<th scope="row">비즈니스 계정명</th>
+					<td>오픈애즈 주식회사</td>
+					</tr>
+					<tr>
+					<th scope="row">탈퇴사유</th>
+					<td>
+						<div class="plc_wrap">
+							<input type="text" id="cause" class="fm_com plc_ip" style="width:780px"><label for="cause" class="plc_lb">탈퇴사유를 입력해주세요</label>
+						</div>
+					</td>
+					</tr>				
+					</tbody>						
+					</table>					
+				</div>
+				<div class="btn_area al_c">
+					<a href="#" class="btn_l btn_org">오픈애즈 회원탈퇴하기</a>
+					<a href="#" class="btn_l btn_wht">취소</a>
+				</div>
+			</fieldset>
+			</form>				
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

@@ -1,0 +1,909 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Table :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<style type="text/css">
+.section{overflow:hidden;margin-bottom:80px;}
+.guide_h1{padding-bottom:20px;margin-bottom:30px;border-bottom:2px solid #ccc;font-size:20px;color:#000;}
+	
+</style>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] CONTAINER -->
+	<div id="container"> 
+		<div id="contents">			
+
+			<div class="section">
+				<h1 class="guide_h1">TABLE1</h1>
+				<div class="tit_wrap">
+					<h3 class="tit_sec">타이틀영역</h3>
+				</div>
+				<div class="tbl_v3">
+					<table>
+					<caption class="blind"></caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row"><label for="noname1">카테고리1</label></th>
+					<td><input type="text" id="noname1" class="fm_com" placeholder="항목을 입력해주세요" style="width:100%;"></td>
+					</tr>
+					<tr>
+					<th scope="row"><label for="noname2">카테고리2</label></th>
+					<td><input type="text" id="noname2" class="fm_com" style="width:274px"><a href="#" class="btn_bd bd_y" style="margin-left:28px;">테이블 버튼</a></td>
+					</tr>
+					<tr>
+					<th scope="row"><label for="mobile">카테고리3</label></th>
+					<td>
+						<div class="sel_wrap">
+							<button type="button" class="btn_sel">010</button>
+							<ul class="sel_lst">
+								<li><a href="#">010</a></li>
+								<li><a href="#">011</a></li>
+								<li><a href="#">016</a></li>
+								<li><a href="#">017</a></li>		
+								<li><a href="#">018</a></li>		
+								<li><a href="#">019</a></li>		
+							</ul>							
+						</div>
+						<span class="fm_etc">-</span><input type="text" title="휴대폰번호 중간자리" class="fm_com" style="width:82px">
+						<span class="fm_etc">-</span><input type="text" title="휴대폰번호 마지막자리" class="fm_com" style="width:82px">
+						<a href="#" class="btn_bd bd_y" style="margin-left:28px;">테이블 버튼</a>
+					</td>								
+					</tr>
+					<!-- [D] 위아래 padding 넓은 tr에 .wide 추가 -->
+					<tr class="wide">
+					<th scope="row">카테고리 4</th>
+					<td>
+						<p class="txt1">테이블 텍스트 정보입니다. 테이블 텍스트 정보입니다.</p>
+						<div class="txt_box">
+							<p class="warn">항목에 대한 부가 설명 영역입니다.</p>		
+						</div>				
+					</td>
+					</tr>
+					<tr class="wide">
+					<th scope="row">카테고리 5</th>
+					<td>
+						<div class="agr_box">
+							<p>제1조 (목적)</p>
+							<p>이 약관은 오픈애드(이하 "회사"라 합니다)가 제공하는 인터넷 광고대행 서비스의 이용조건 및 절차에 관한 제반사항을 규정함을
+							목적으로 합니다.</p>
+							<p>&nbsp;</p>
+							<p>제 2 조 (서비스의 정의) </p>
+							<p>"모바일 광고대행 서비스"(이하 본 서비스라 합니다.)라 함은 모바일 애플리케이션을 통하여 매체 광고를 제공할 수 있는 광고 
+							서비스를 말합니다.</p>
+							<p>&nbsp;</p>
+							<p>제 3 조 (서비스의 정의) 
+							<p>"모바일 광고대행 서비스"(이하 본 서비스라 합니다.)라 함은 모바일 애플리케이션을 통하여 매체 광고를 제공할 수 있는 광고 
+							서비스를 말합니다.</p>							
+						</div>	
+						<div class="agr_chk">
+							<span class="chk_box"><input type="checkbox" id="agreed3"><label for="agreed3"><span>위 이용약관에 동의합니다. (필수)</span></label></span>							
+						</div>			
+					</td>
+					</tr>
+					</tbody>						
+					</table>					
+				</div>			
+			</div>	
+
+			<div class="section">
+				<h1 class="guide_h1">TABLE1_2</h1>
+				<div class="tit_wrap">
+					<h3 class="tit_sec">게시물 작성</h3>
+				</div>
+				<div class="tbl_v3 write">
+					<table>
+					<caption class="blind">제목, 카테고리, 작성자</caption>
+					<colgroup>
+					<col style="width:140px"><col style="width:375px"><col style="width:140px"><col style="width:375px">					
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row"><label for="tit">제목</label></th>
+					<td><input type="text" id="tit" class="fm_com" style="width:343px;"></td>
+					<th scope="row">카테고리</th>
+					<td>
+						<div class="sel_wrap" style="width:188px">
+							<button type="button" class="btn_sel">Media</button>
+							<ul class="sel_lst">
+								<li><a href="#">Media</a></li>
+								<li><a href="#">Tech</a></li>		
+								<li><a href="#">UI/UX</a></li>		
+								<li><a href="#">Creative</a></li>		
+								<li><a href="#">광고 전략</a></li>		
+							</ul>							
+						</div>
+					</td>		
+					</tr>
+					<tr>
+					<th scope="col">작성자</th>
+					<td colspan="3">김현아</td>
+					</tr>
+					</tbody>						
+					</table>					
+				</div>	
+			</div>	
+
+			<div class="section">
+				<h1 class="guide_h1">TABLE2</h1>
+				<div class="tit_wrap">
+					<h3 class="tit_sec">타이틀영역</h3>
+				</div>
+				<div class="tbl_v5 sec_mb">
+					<table>
+					<caption class="blind">검색영역 선택(상품,키워드)</caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row"><span class="rdo_box"><input type="radio" name="radio1" id="radio1_1" checked><label for="radio1_1"><span>상품</span></label></span></th>
+					<td><p class="fnt_lt">원하는 검색조건에 맞는 상품을 조회하고 해당 상품의 광고효율을 살펴볼 수 있습니다.</p></td> 
+					</tr>
+					<tr>
+					<th scope="row"><span class="rdo_box"><input type="radio" name="radio1" id="radio1_2"><label for="radio1_2"><span>키워드</span></label></span></th>
+					<td><p class="fnt_lt">원하는 검색조건에 맞는 키워드를 조회하고 해당 키워드의 유입/전환지표 등을 살펴볼 수 있습니다.</p></td>
+					</tr>
+					</tbody>						
+					</table>					
+				</div>	
+				<div class="tit_wrap bd">
+					<h3 class="tit_sec">Step2. 검색조건 선택</h3>
+				</div>
+				<div class="tbl_v5">
+					<table>
+					<caption class="blind">검색조건 선택(노출소재, 디바이스, 상품유형, 매체, 업종, 예산)</caption>
+					<colgroup>
+					<col style="width:180"px><col>							
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row">노출소재</th>
+					<td>
+						<ul class="lst_chk">
+						<li class="chk_box"><input type="checkbox" id="chk1_1"><label for="chk1_1"><span>전체</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk1_2"><label for="chk1_2"><span>검색광고</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk1_3"><label for="chk1_3"><span>배너광고</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk1_4"><label for="chk1_4"><span>콘텐츠광고</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk1_5"><label for="chk1_5"><span>비디오광고</span></label></li>
+						</ul>
+					</td>
+					</tr>
+					<tr>
+					<th scope="row">디바이스</th>
+					<td>
+						<ul class="lst_chk">
+						<li class="chk_box"><input type="checkbox" id="chk2_1"><label for="chk2_1"><span>전체</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk2_2"><label for="chk2_2"><span>PC</span></label></li>
+						<li class="chk_box"><input type="checkbox" id="chk2_3"><label for="chk2_3"><span>Mobile</span></label></li>						
+						</ul>
+					</td>
+					</tr>
+					</tbody>						
+					</table>					
+				</div>		
+			</div>
+
+			<div class="section">
+				<h1 class="guide_h1">TABLE3</h1>
+				<div class="tbl_v4">
+					<table>
+					<caption class="blind">신청내역, 상품명, URL</caption>
+					<colgroup>
+					<col style="width:105px"><col style="width:230px"><col><col style="width:90px">							
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col">신청내역</th>
+					<th scope="col">상품명</th>
+					<th scope="col">URL</th>
+					<th scope="col">&nbsp;</th>								
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td>1</td>
+					<td class="al_l">네이버 클릭초이스</td>
+					<td class="al_l">http://www.openade.co.kr</td>
+					<td><a href="#" class="btn_del">삭제</a></td>
+					</tr>
+					<tr>
+					<td>2</td>
+					<td class="al_l">네이버 타임보드</td>
+					<td class="al_l">http://www.openadsopenads.co.kr</td>
+					<td><a href="#" class="btn_del">삭제</a></td>
+					</tr>						
+					</tbody>
+					</table>
+				</div>			
+			</div>
+
+			<div class="section">
+				<h1 class="guide_h1">TABLE4</h1>
+				<div class="tbl_v9">
+					<table>
+					<caption class="blind">서비스분류, 일반회원, 유료회원</caption>
+					<colgroup>
+					<col><col style="width:315px"><col style="width:315px">					
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col">서비스 분류</th>
+					<th scope="col">일반회원</th>
+					<th scope="col">유료회원</th>
+					</tr>					
+					</thead>
+					<tbody>
+					<tr>
+					<th colspan="3">광고상품별 효율 데이터</th>
+					</tr>
+					<tr>
+					<td class="al_l">
+						<dl>
+						<dt>전체 광고효율</dt>
+						<dd>(클릭률, 클릭비용, 노출수 비중, 클릭수 비중, 집행수 비중)</dd>						
+						</dl>
+					</td>
+					<td><span class="po">가능</span></td>
+					<td><span class="po">가능</span></td>					
+					</tr>
+					<tr>
+					<td class="al_l">
+						<dl>
+						<dt>전체 전환효율</dt>
+						<dd>(전환율, 전환비용, ROAS, 전환수 비중)</dd>
+						</dl>
+					</td>
+					<td><span class="po_part">가능</span><p>(상위 10위까지 확인 가능)</p></td>
+					<td><span class="po">가능</span></td>					
+					</tr>
+					<tr>
+					<td class="al_l">
+						<dl>
+						<dt>업종별/과금대별 광고효율</dt>
+						<dd>(클릭률, 클릭비용, 노출수 비중, 클릭수 비중, 집행수 비중)</dd>						
+						</dl>
+					</td>
+					<td><span class="impo">불가능</span></td>
+					<td><span class="po">가능</span></td>					
+					</tr>
+					<tr class="last">
+					<td class="al_l">
+						<dl>
+						<dt>업종별/과금대별 전환효율</dt>
+						<dd>(전환율, 전환비용, ROAS, 전환수 비중)</dd>						
+						</dl>
+					</td>
+					<td><span class="impo">불가능</span></td>
+					<td><span class="po">가능</span></td>					
+					</tr>
+					</tbody>
+					</table>				
+				</div>		
+			</div>
+
+			<div class="section">
+				<h1 class="guide_h1">TABLE - padding border</h1>
+				<div class="section_box tbl_v7">
+					<table>
+					<caption class="blind">회원정보, 직접운영 정보</caption>					
+					<colgroup>
+					<col style="width:33.333%"><col style="width:33.333%"><col style="width:33.333%">					
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col" colspan="2">회원정보</th>					
+					<th scope="col">직접운영 전보</th>					
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td>				
+						<dl>
+						<dt>ID</dt>
+						<dd>openadsopenads@nhnent.com</dd>
+						</dl>
+						<dl>
+						<dt>이메일</dt>
+						<dd>openadsopenads@nhnent.com</dd>
+						</dl>
+						<dl>
+						<dt>이름</dt>
+						<dd>김철수</dd>
+						</dl>							
+					</td>
+					<td>
+						<dl>
+						<dt>비즈니스 계정</dt>
+						<dd>오픈애즈 컴퍼니</dd>
+						</dl>
+						<dl>
+						<dt>회원등급</dt>
+						<dd>정회원</dd>
+						</dl>
+						<dl>
+						<dt>유료 권한</dt>
+						<dd>유료회원</dd>
+						</dl>
+					</td>
+					<td>
+						<dl>
+						<dt>잔여 애드머니</dt>
+						<dd class="fnt_yel">500,000원</dd>
+						</dl>
+						<dl>
+						<dt>광고담당자</dt>
+						<dd>홍길동</dd>
+						</dl>
+						<dl>
+						<dt>계좌번호</dt>
+						<dd>123-456789-12-345</dd>
+						</dl>
+					</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="section">
+				<h1 class="guide_h1">TABLE - DATA</h1>
+				<!-- [D] 체크박스 있는 테이블의경우 .chck 추가-->
+				<div class="tbl_grd chck">
+					<table class="easyui-datagrid" style="width:100%">
+					<caption class="blind">상품 선택, 상품명, 집계 데이터 기준 랭킹(클릭률, 클릭비용, 전환율,전환비용, ROAS), 비중(%) 기준 랭킹(집행수, 노출수, 클릭수, 전환수)</caption>
+					<thead>
+					<tr>
+					<th field="ck" checkbox="true" width="50" rowspan="3" align="center"><b>선택</b></th>
+					<th field="productid" width="220" rowspan="3" align="left"><b>상품명</b></th>
+					<th colspan="5"><b>집계 데이터 기준 랭킹</b><a href="#" id="tt_btn1_1" class="btn_tooltip">?</a></th>
+					<th colspan="4"><b>비중(%) 기준 랭킹</b><a href="#" id="tt_btn1_2" class="btn_tooltip">?</a></th>
+					</tr>
+					<tr>
+					<th field="field01" scope="col" width="80" align="right" rowspan="2"><span id="tt_btn1_3" class="btn_sort btn_tooltip on">클릭률</span></th>
+					<th field="field02" scope="col" width="80" align="right" rowspan="2"><span id="tt_btn1_4" class="btn_sort btn_tooltip">클릭비용</span></th>
+					<th scope="col" colspan="3">
+						전환기준
+						<span class="sel_wrap_s" style="width:134px">
+							<button type="button" class="btn_sel">전체</button>
+							<ul class="sel_lst">
+							<li><a href="#">전체</a></li>
+							<li><a href="#">회원가입</a></li>
+							<li><a href="#">구매/주문완료</a></li>
+							<li><a href="#">신청완료</a></li>
+							<li><a href="#">예약완료</a></li>
+							<li><a href="#">글쓰기완료</a></li>
+							<li><a href="#">다운로드수</a></li>
+							<li><a href="#">실행수</a></li>
+							<li><a href="#">참여수</a></li>
+							<li><a href="#">기타</a></li>
+							</ul>
+						</span>
+					</th>
+					<th field="field06" scope="col" width="85" align="center" rowspan="2"><span id="tt_btn1_8" class="btn_sort btn_tooltip">집행수 비중</span></th>
+					<th field="field07" scope="col" width="85" align="center" rowspan="2"><span id="tt_btn1_9" class="btn_sort btn_tooltip">노출수 비중</span></th>
+					<th field="field08" scope="col" width="85" align="center" rowspan="2"><span id="tt_btn1_10" class="btn_sort btn_tooltip">클릭수 비중</span></th>
+					<th field="field09" scope="col" width="85" align="center" rowspan="2"><span id="tt_btn1_11" class="btn_sort btn_tooltip">전환수 비중</span></th>
+					</tr>
+					<tr>
+					<th field="field03" scope="col" width="80" align="center"><span id="tt_btn1_5" class="btn_sort btn_tooltip">전환율</span></th>
+					<th field="field04" scope="col" width="90" align="right"><span id="tt_btn1_6" class="btn_sort btn_tooltip">전환비용</span></th>
+					<th field="field05" scope="col" width="80" align="center"><span id="tt_btn1_7" class="btn_sort btn_tooltip">ROAS</span></th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td></td>
+					<td>동영상광고</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td><div class="al_c"><span class="ico_secret sp">노출 불가</span></div></td>
+					<td><div class="al_c"><span class="ico_secret sp">노출 불가</span></div></td>
+					<td><span class="td_box">4분위</span></td>
+					<td><span class="td_box">4분위</span></td>
+					<td><span class="td_box">4분위</span></td>
+					<td><span class="td_box">4분위</span></td>
+					</tr>		
+					<tr>
+					<td></td>
+					<td>배너광고</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td><div class="al_c"><span class="ico_secret sp">노출 불가</span></div></td>
+					<td><div class="al_c"><span class="ico_secret sp">노출 불가</span></div></td>
+					<td><span class="td_box">4분위</span></td>
+					<td><span class="td_box">4분위</span></td>
+					<td><span class="td_box">4분위</span></td>
+					<td><span class="td_box">4분위</span></td>
+					</tr>	
+					<tr>
+					<td></td>
+					<td>검색광고</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td><div class="al_c"><span class="ico_batt sp">데이터없음</span></div></td>
+					<td><div class="al_c"><span class="ico_batt sp">데이터없음</span></div></td>
+					<td><span class="td_box">4분위</span></td>
+					<td><span class="td_box">4분위</span></td>
+					<td><span class="td_box">4분위</span></td>
+					<td><span class="td_box">4분위</span></td>
+					</tr>
+					<tr>
+					<td></td>
+					<td>컨텐츠광고</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td><div class="al_c"><span class="ico_batt sp">데이터없음</span></div></td>
+					<td><div class="al_c"><span class="ico_batt sp">데이터없음</span></div></td>
+					<td><span class="td_box">4분위</span></td>
+					<td><span class="td_box">4분위</span></td>
+					<td><span class="td_box">4분위</span></td>
+					<td><span class="td_box">4분위</span></td>
+					</tr>
+					</tbody>
+					<!-- //[D] 결과 있을시 출력 -->
+					</table>
+					<!-- [D] tbody 상단 평균값 스크립트 -->
+					<script type="text/javascript">
+					$(document).ready(function(){
+						$('.datagrid-header-check').html('선택');
+						var html	=	"<tr class='datagrid-header-row'>" +
+		                	"<td auto=\"true\" colspan='2'><div class='datagrid-cell'>전체평균</div></td>" +
+		                	"<td auto=\"true\" ><div class='datagrid-cell'>5.15%</div></td>" +
+							"<td auto=\"true\" ><div class='datagrid-cell al_r'>310원</div></td>" +
+							"<td auto=\"true\" ><div class='datagrid-cell'>5.15%</div></td>" +
+							"<td auto=\"true\" ><div class='datagrid-cell al_r'>12,300 원</div></td>" +
+							"<td auto=\"true\" ><div class='datagrid-cell'>100%</div></td>" +
+							"<td auto=\"true\" ><div class='datagrid-cell'>-</div></td>" +
+							"<td auto=\"true\" ><div class='datagrid-cell'>-</div></td>" +
+							"<td auto=\"true\" ><div class='datagrid-cell'>-</div></td>" +
+							"<td auto=\"true\" ><div class='datagrid-cell'>-</div></td>" +
+		                "</tr>";
+		                $(".datagrid-view2 .datagrid-htable > tbody").append(html);
+					});	        
+			  	   </script>
+					<!-- // [D] tbody 상단 평균값 스크립트 -->
+					<!-- [D] 툴팁 버튼과 동일한 ID번호로 통일시 자동으로 마우스오버 모션 생성(#tt_btn1 = #tt_wrap1) -->
+					<!-- [D] 위치값은 인라인으로 조정 -->
+					<div id="tt_wrap1_1" class="tooltip_wrap" style="display:none;left:518px">
+						<div class="tool_box">
+							<p class="txt2">수집한 데이터를 기반으로 계산된 각 지표별 평균 효율<br>데이터입니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_2" class="tooltip_wrap right" style="display:none;right:50px">
+						<div class="tool_box">
+							<p class="txt2">각 지표별 총 합에서 해당항목이 차지하는 비중을<br>나타냅니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_3" class="tooltip_wrap" style="display:none;top:90px;left:287px">
+						<div class="tool_box">
+							<p class="txt2">사용자가 특정 광고상품을 보고 해당 광고상품을 클릭한 비율을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스를 본 사용자 수가 1000명이고,해당 광고<br>상품을 클릭한 숫자가 500일 경우 네이버 클릭초이스의 클릭률은 0.5% 입니다.</p>
+							<p class="txt3">* <b>클릭률(%)</b> =<br>&nbsp;&nbsp;클릭수 / 노출수 *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_4" class="tooltip_wrap" style="display:none;top:90px;left:366px">
+						<div class="tool_box">
+							<p class="txt2">광고 1클릭당 발생하는 평균비용을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 해당 광고<br>상품을 클릭한 숫자가 5,000일 경우 네이버 클릭초이스의 클릭비용은 200원 입니다</p>
+							<p class="txt3">* <b>클릭비용(원)</b> =<br>&nbsp;&nbsp;광고비 / 클릭수</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_5" class="tooltip_wrap" style="display:none;top:108px;left:446px">
+						<div class="tool_box">
+							<p class="txt2">특정 광고상품을 통해 사이트를 방문한 후 구매, 회원가입 등의 전환을 발생시키는 비율을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스 광고를 클릭한 숫자가 5,000이고 이를 통해<br>100건의 전환이 일어났을 경우 네이버 클릭초이스의 전환율은 2%입니다.</p>
+							<p class="txt3">* <b>전환율(%)</b> =<br>&nbsp;&nbsp;전환수 / 유입수(클릭수) *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_6" class="tooltip_wrap" style="display:none;top:108px;left:531px">
+						<div class="tool_box">
+							<p class="txt2">전환 한번 당 발생하는 비용을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 100건의<br>전환이 일어났을 경우 네이버 클릭초이스의 전환비용은 10,000원입니다.</p>
+							<p class="txt3">* <b>전환비용(원)</b> =<br>&nbsp;&nbsp;광고비용 / 전환수</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_7" class="tooltip_wrap right" style="display:none;top:108px;right:318px">
+						<div class="tool_box">
+							<p class="txt2">광고비용 대비 매출액을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 이를 통해<br>1천만원의 매출이 발생했을 경우 네이버 클릭초이스의 ROAS는 1000%입니다.</p>
+							<p class="txt3">* <b>ROAS(%)</b> =<br>&nbsp;&nbsp;매출액 / 광고비용 *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_8" class="tooltip_wrap right" style="display:none;top:90px;right:234px">
+						<div class="tool_box">
+							<p class="txt2">광고를 집행한 광고주 수의 비중을 나타내는 지표입니다.</p>
+							<p class="txt3">전체 광고주 수가 1000개이고 네이버 클릭초이스를 집행한<br>광고주 수가 500개일 경우, 네이버 클릭초이스의 집행수(비중)는 50%입니다.</p>
+							<p class="txt3">* <b>집행수 비중(%)</b> =<br>&nbsp;&nbsp;해당상품을 집행한 전체 광고주 수 / 전체 광고주 수 *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_9" class="tooltip_wrap right" style="display:none;top:90px;right:150px">
+						<div class="tool_box">
+							<p class="txt2">특정 광고상품이 노출된 숫자를 나타내는 지표입니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_10" class="tooltip_wrap right" style="display:none;top:90px;right:64px">
+						<div class="tool_box">
+							<p class="txt2">사용자들이 특정 광고상품을 클릭한 숫자를 나타내는<br>지표입니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_11" class="tooltip_wrap right" style="display:none;top:90px;right:-21px">
+						<div class="tool_box">
+							<p class="txt2">특정 광고상품을 통해 구매, 회원가입, 애플리케이션<br>다운로드 등으로 전환된 숫자를 나타내는 지표입니다.</p>
+						</div>
+					</div>
+				</div>	
+			</div>
+
+			<div class="section">
+				<h1 class="guide_h1">TABLE - SORTING</h1>	
+				<div class="tbl_sort">
+					<table>
+					<caption class="blind">노출소재, 매체명, 노출영역, 디바이스, 과금방식, 타겟팅, 광고속성</caption>
+					<colgroup>
+					<col style="width:135px"><col style="width:137px"><col style="width:137px"><col style="width:135px"><col style="width:135px"><col style="width:137px"><col style="width:134px">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col"><span class="btn_sort">노출 소재</span></th>
+					<th scope="col"><span class="btn_sort">매체명</span></th>
+					<th scope="col"><span class="btn_sort">노출 영역</span></th>
+					<th scope="col"><span class="btn_sort">디바이스</span></th>
+					<th scope="col"><span class="btn_sort">과금방식</span></th>
+					<th scope="col"><span class="btn_sort">타겟팅</span></th>
+					<th scope="col"><span class="btn_sort">광고 속성</span></th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td class="chk_box"><input type="checkbox" id="chk1_1"><label for="chk1_1"><span>검색광고</span></label></td>
+					<td class="chk_box"><input type="checkbox" id="chk2_1"><label for="chk2_1"><span>네이버</span></label></td>
+					<td class="chk_box"><input type="checkbox" id="chk3_1"><label for="chk3_1"><span>검색포털</span></label></td>
+					<td class="chk_box"><input type="checkbox" id="chk4_1"><label for="chk4_1"><span>PC</span></label></td>
+					<td class="chk_box"><input type="checkbox" id="chk5_1"><label for="chk5_1"><span>CPC(CPP)</span></label></td>
+					<td class="chk_box"><input type="checkbox" id="chk6_1"><label for="chk6_1"><span>가능</span></label></td>
+					<td class="chk_box"><input type="checkbox" id="chk7_1"><label for="chk7_1"><span>쇼핑</span></label></td>
+					</tr>	
+					<tr>
+					<td class="chk_box"><input type="checkbox" id="chk1_2"><label for="chk1_2"><span>배너 광고</span></label></td>
+					<td class="chk_box"><input type="checkbox" id="chk2_2"><label for="chk2_2"><span>다음</span></label></td>
+					<td class="chk_box"><input type="checkbox" id="chk3_2"><label for="chk3_2"><span>동영상포털</span></label></td>
+					<td class="chk_box"><input type="checkbox" id="chk4_2"><label for="chk4_2"><span>Mobile</span></label></td>
+					<td class="chk_box"><input type="checkbox" id="chk5_2"><label for="chk5_2"><span>CPM</span></label></td>
+					<td class="chk_box"><input type="checkbox" id="chk6_2"><label for="chk6_2"><span>불가능</span></label></td>
+					<td class="chk_box"><input type="checkbox" id="chk7_2"><label for="chk7_2"><span>리워드</span></label></td>
+					</tr>	
+					<tr>
+					<td class="chk_box"><input type="checkbox" id="chk1_3"><label for="chk1_3"><span>동영상 광고</span></label></td>
+					<td class="chk_box"><input type="checkbox" id="chk2_3"><label for="chk2_3"><span>구글</span></label></td>
+					<td class="chk_box"><input type="checkbox" id="chk3_3"><label for="chk3_3"><span>애드네트워크</span></label></td>
+					<td class="chk_box"></td>
+					<td class="chk_box"><input type="checkbox" id="chk5_3"><label for="chk5_3"><span>CPT</span></label></td>
+					<td class="chk_box"></td>
+					<td class="chk_box"><input type="checkbox" id="chk7_3"><label for="chk7_3"><span>리타겟팅</span></label></td>
+					</tr>	
+					<tr>
+					<td class="chk_box"><input type="checkbox" id="chk1_4"><label for="chk1_4"><span>콘텐츠 광고</span></label></td>
+					<td class="chk_box"><input type="checkbox" id="chk2_4"><label for="chk2_4"><span>네이트</span></label></td>
+					<td class="chk_box"><input type="checkbox" id="chk3_4"><label for="chk3_4"><span>소셜/메신저</span></label></td>
+					<td class="chk_box"></td>
+					<td class="chk_box"><input type="checkbox" id="chk5_4"><label for="chk5_4"><span>CPV(CPVC)</span></label></td>
+					<td class="chk_box"></td>
+					<td class="chk_box"><input type="checkbox" id="chk7_4"><label for="chk7_4"><span>네이티브AD</span></label></td>
+					</tr>									
+					</tbody>
+					</table>										
+				</div>
+			</div>
+
+			<div class="section">
+				<h1 class="guide_h1">LIST - 공지사항</h1>
+				<div class="tbl_v1">
+					<table>
+					<caption class="blind">공지사항(번호, 제목, 작성일)</caption>
+					<colgroup>
+						<col style="width:135px"><col><col style="width:200px">
+					</colgroup>
+					<thead>
+					<tr>
+					<th scope="col">NO</th>						
+					<th scope="col">제목</th>						
+					<th scope="col">작성일</th>						
+					</tr>						
+					</thead>
+					<tbody>
+					<!-- [D] 공지사항 .notice 추가 -->
+					<tr class="notice">
+					<td><strong class="ico_notice">공지</strong></td>
+					<td class="tb_tit"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+					<td>2016.03.05</td>				
+					</tr>
+					<tr>
+					<td>20</td>
+					<td class="tb_tit"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+					<td>2016.03.05</td>				
+					</tr>	
+					<tr>
+					<td>19</td>
+					<td class="tb_tit"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+					<td>2016.03.05</td>				
+					</tr>
+					<tr>
+					<td>18</td>
+					<td class="tb_tit"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+					<td>2016.03.05</td>				
+					</tr>
+					<tr>
+					<td>17</td>
+					<td class="tb_tit"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+					<td>2016.03.05</td>				
+					</tr>
+					<tr>
+					<td>16</td>
+					<td class="tb_tit"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+					<td>2016.03.05</td>				
+					</tr>								
+					</tbody>						
+					</table>					
+				</div>		
+			</div>
+
+			<div class="section">
+				<h1 class="guide_h1">LIST - 도움말</h1>
+				<div class="tbl_v8">
+					<table>
+					<caption class="blind">자주묻는 질문(제목,내용)</caption>
+					<colgroup>
+					<col style="width:70px"><col style="width:150px"><col>
+					</colgroup>
+					<tbody>
+					<tr>
+					<td class="num">1</td>
+					<td>OpenADs</td>
+					<td class="td_tit"><a href="#">OpenADs 서비스란 무엇인가요?</a></td>
+					</tr>	
+					<tr>
+					<td class="num">2</td>
+					<td>OpenADs</td>
+					<td class="td_tit"><a href="#">OpenADs 서비스란 무엇인가요?</a></td>
+					</tr>	
+					<tr>
+					<td class="num">3</td>
+					<td>OpenADs</td>
+					<td class="td_tit"><a href="#">OpenADs 서비스란 무엇인가요?</a></td>
+					</tr>					
+					</tbody>
+					</table>					
+				</div>
+			</div>
+
+			<div class="section">
+				<h1 class="guide_h1">LIST - 자주묻는 질문</h1>
+				<div class="tbl_v6">
+					<table>
+					<caption class="blind">자주묻는 질문(제목,내용)</caption>
+					<colgroup>
+					<col style="width:200px"><col>
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row">서비스이용</th>
+					<td>
+						<dl>
+						<dt>OpenADs 서비스란 무엇인가요?</dt>
+						<dd>서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다.  서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다.</dd>
+						</dl>						
+					</td>
+					</tr>	
+					<tr>
+					<th scope="row">애드머니</th>
+					<td>
+						<dl>
+						<dt>OpenADs 서비스란 무엇인가요?</dt>
+						<dd>서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다.  서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다.</dd>
+						</dl>						
+					</td>
+					</tr>	
+					<tr>
+					<th scope="row">상품</th>
+					<td>
+						<dl>
+						<dt>OpenADs 서비스란 무엇인가요?</dt>
+						<dd>서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다.  서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다.</dd>
+						</dl>						
+					</td>
+					</tr>	
+					<tr>
+					<th scope="row">솔루션</th>
+					<td>
+						<dl>
+						<dt>OpenADs 서비스란 무엇인가요?</dt>
+						<dd>서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다.  서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다.</dd>
+						</dl>						
+					</td>
+					</tr>	
+					<tr>
+					<th scope="row">회원정보</th>
+					<td>
+						<dl>
+						<dt>OpenADs 서비스란 무엇인가요?</dt>
+						<dd>서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다.  서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다. 서비스 소개 내용입니다.</dd>
+						</dl>						
+					</td>
+					</tr>						
+					</tbody>
+					</table>					
+				</div>	
+			</div>
+
+			<div class="section">
+				<h1 class="guide_h1">LIST - 마케팅소식</h1>
+				<ul class="lst_v4">
+				<!-- [D] 이미지 없을경우 기본이미지 삽입 -->
+				<li>
+					<a href="#">
+						<img src="img/img_trend_sug.jpg" alt="제휴 제안서" class="img">
+						<dl class="ad_info">
+						<dt class="tit">디자이너를 위한 홈페이지 개발도구, &lsquo;웨비두&rsquo;</dt>
+						<dd class="cont">웨비두가 디자이너를 위한 홈페이지 개발도구 2.0버전을 지난달 공개했다.<br>웨비두는 2012년 이스라엘에서 설립된 스타트업이다. 워드프레스나 윅스와 비슷한 서비스지만, 디자이너를 주 고객...</dd>
+						<dd class="detail"><span>2016-03-30</span><span>Media</span><span>조회수 30</span></dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img_trend_media.jpg" alt="Media" class="img">
+						<dl class="ad_info">
+						<dt class="tit">페이스북, &lsquo;인공위성 인터넷&rsquo; 프로젝트 중단</dt>
+						<dd class="cont">페이스북이 저개발 지역에 인터넷을 공급하기 위해 인공위성을 쏘려는 계획을 포기했다는 보도가 나왔다.<br>&lt;디인포메이션&gt;이 페이스북 인공위성 프로젝트에 관한 정보를 직접 아는 한 정보원을 인용해 6월8일(현지시각) 전한...</dd>
+						<dd class="detail"><span>2016-03-30</span><span>Media</span><span>조회수 30</span></dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img_trend_market.jpg" alt="Market" class="img">
+						<dl class="ad_info">
+						<dt class="tit">디자이너를 위한 홈페이지 개발도구, &lsquo;웨비두&rsquo;</dt>
+						<dd class="cont">웨비두가 디자이너를 위한 홈페이지 개발도구 2.0버전을 지난달 공개했다.<br>웨비두는 2012년 이스라엘에서 설립된 스타트업이다. 워드프레스나 윅스와 비슷한 서비스지만, 디자이너를 주 고객...</dd>
+						<dd class="detail"><span>2016-03-30</span><span>Media</span><span>조회수 30</span></dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img_trend_it.jpg" alt="IT/Tech" class="img">
+						<dl class="ad_info">
+						<dt class="tit">디자이너를 위한 홈페이지 개발도구, &lsquo;웨비두&rsquo;</dt>
+						<dd class="cont">웨비두가 디자이너를 위한 홈페이지 개발도구 2.0버전을 지난달 공개했다.<br>웨비두는 2012년 이스라엘에서 설립된 스타트업이다. 워드프레스나 윅스와 비슷한 서비스지만, 디자이너를 주 고객...</dd>
+						<dd class="detail"><span>2016-03-30</span><span>Media</span><span>조회수 30</span></dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img_trend_creative.jpg" alt="Creative" class="img">
+						<dl class="ad_info">
+						<dt class="tit">페이스북, &lsquo;인공위성 인터넷&rsquo; 프로젝트 중단</dt>
+						<dd class="cont">페이스북이 저개발 지역에 인터넷을 공급하기 위해 인공위성을 쏘려는 계획을 포기했다는 보도가 나왔다.<br>&lt;디인포메이션&gt;이 페이스북 인공위성 프로젝트에 관한 정보를 직접 아는 한 정보원을 인용해 6월8일(현지시각) 전한...</dd>
+						<dd class="detail"><span>2016-03-30</span><span>Media</span><span>조회수 30</span></dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/img_trend_ui.jpg" alt="UI/UX" class="img">
+						<dl class="ad_info">
+						<dt class="tit">디자이너를 위한 홈페이지 개발도구, &lsquo;웨비두&rsquo;</dt>
+						<dd class="cont">웨비두가 디자이너를 위한 홈페이지 개발도구 2.0버전을 지난달 공개했다.<br>웨비두는 2012년 이스라엘에서 설립된 스타트업이다. 워드프레스나 윅스와 비슷한 서비스지만, 디자이너를 주 고객...</dd>
+						<dd class="detail"><span>2016-03-30</span><span>Media</span><span>조회수 30</span></dd>
+						</dl>
+					</a>
+				</li>			
+				</ul>	
+			</div>
+
+			<div class="section">
+				<h1 class="guide_h1">LIST - 관심상품</h1>
+				<ul class="tbl_v13">
+				<li>
+					<table>
+					<caption class="blind">관심상품 News 리스트</caption>
+					<thead>
+					<tr>
+					<th scope="col" colspan="2">관심상품 News</th>
+					</tr>
+					</thead>
+					<tbody>
+					<!-- [D] 관심상품 소식 있을경우 출력 -->
+					<tr>
+					<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+					</tr>
+					<tr>
+					<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+					</tr>
+					<tr>
+					<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+					</tr>
+					<tr>
+					<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+					</tr>
+					<tr>
+					<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+					</tr>
+					<!-- //[D] 관심상품 소식 있을경우 출력 -->
+					<!-- [D] 관심상품 소식 없을경우 출력 -->	
+					<tr>
+						<td colspan="2" class="result_none">등록된 관심상품 소식이 없습니다</td>
+					</tr>	
+					<!-- //[D] 관심상품 소식 없을경우 출력 -->
+					</tbody>
+					</table>
+				</li>
+				<li>
+					<table>
+					<caption class="blind">관심상품 Trend 리스트</caption>
+					<thead>
+					<tr>
+					<th scope="col" colspan="2">관심상품 Trend</th>
+					</tr>
+					</thead>
+					<tbody>
+					<!-- [D] 관심상품 소식 있을경우 출력 -->
+					<tr>
+					<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+					</tr>
+					<tr>
+					<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+					</tr>
+					<tr>
+					<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+					</tr>
+					<tr>
+					<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+					</tr>
+					<tr>
+					<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+					</tr>
+					<!-- //[D] 관심상품 소식 있을경우 출력 -->
+					<!-- [D]관심상품 소식 없을경우 출력 -->
+					<tr>
+						<td colspan="2" class="result_none">등록된 관심상품 트랜드 소식이 없습니다</td>
+					</tr>	
+					<!-- //[D] 관심상품 소식 없을경우 출력 -->
+					</tbody>
+					</table>
+				</li>
+				</ul>
+			</div>
+			
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

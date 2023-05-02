@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>기본정보관리 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents">
+			<form action="#">
+			<fieldset>
+				<!-- [D] 레이어팝업 -->
+				<div class="ly_wrap" style="display:block">
+					<!-- [D] 이메일 주소 변경하기 팝업 -->
+					<div class="pop_email ly_box" style="display:block">
+						<div class="ly_top">
+							<p class="tit">이메일 주소 변경하기</p>
+							<a href="#" class="btn_close btn_popclose">닫기</a>
+						</div>
+						<div class="ly_cont">
+							<p class="txt1">새로운 이메일 주소를 입력하신 후, 중복확인 버튼을 클릭해주세요.</p>
+							<div class="tbl_v3">
+								<table>
+								<caption class="blind">변경 이메일주소</caption>
+								<colgroup>
+								<col style="width:115px"><col>
+								</colgroup>
+								<tbody>
+								<tr>
+								<th scope="row"><label for="email">이메일</label></th>
+								<td>
+									<input type="text" id="email" class="fm_com" style="width:125px">
+									<span class="fm_etc" style="width:33px">@</span>
+									<input type="text" class="fm_com" title="도메인 입력" style="width:130px">
+									<div class="sel_wrap" style="width:142px;margin-left:10px">
+										<button type="button" class="btn_sel">직접입력</button>
+										<ul class="sel_lst">
+										<li><a href="#">직접입력</a></li>
+										<li><a href="#">naver.com</a></li>
+										<li><a href="#">gmail.com</a></li>
+										<li><a href="#">nate.com</a></li>
+										<li><a href="#">yahoo.co.kr</a></li>
+										<li><a href="#">hanmail.net</a></li>
+										<li><a href="#">daum.net</a></li>
+										<li><a href="#">dreamwiz.com</a></li>
+										<li><a href="#">lycos.co.kr</a></li>
+										<li><a href="#">empal.com</a></li>
+										<li><a href="#">korea.com</a></li>
+										</ul>							
+									</div>
+									<a href="#" class="btn_bd bd_y" style="margin-left:10px;">중복확인</a>
+								</td>	
+								</tr>
+								</tbody>						
+								</table>					
+							</div>	
+							<div class="btn_area">
+								<button type="submit" class="btn_s btn_org" style="width:150px">인증번호발송</button>
+							</div>				
+						</div>					
+					</div>	
+					<!-- //[D] 이메일 주소 변경하기 팝업 -->	
+					<!-- [D] 이메일 주소 변경하기 팝업2 -->
+					<div class="pop_email ly_box" style="display:block">
+						<div class="ly_top">
+							<p class="tit">이메일 주소 변경하기</p>
+							<a href="#" class="btn_close btn_popclose">닫기</a>
+						</div>
+						<div class="ly_cont">
+							<p class="txt1">고객님의 메일 주소로 보내드린 인증키를 입력해주세요.</p>
+							<div class="tbl_v3">
+								<table>
+								<caption class="blind">변경 이메일주소</caption>
+								<colgroup>
+								<col style="width:115px"><col>
+								</colgroup>
+								<tbody>
+								<tr>
+								<th scope="row"><label for="number">인증번호 입력</label></th>
+								<td><input type="text" id="number" class="fm_com" style="width:249px"><a href="#" class="btn_bd bd_y" style="margin-left:10px;">인증키 재발급</a></td>
+								</tr>
+								</tbody>						
+								</table>					
+							</div>	
+							<p class="txt2">승인까지 남은시간: 9:59</p>
+							<div class="btn_area">
+								<button type="submit" class="btn_s btn_org" style="width:150px">확인</button>
+							</div>
+						</div>					
+					</div>	
+					<!-- //[D] 메일 주소 변경하기 팝업2 -->	
+				</div>	
+				<!-- //[D] 레이어팝업 -->
+			</fieldset>				
+			</form>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

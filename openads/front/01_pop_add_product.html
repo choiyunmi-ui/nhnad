@@ -1,0 +1,94 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>서비스신청 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents">
+			<form action="#">
+			<fieldset>
+				<!-- [D] 레이어팝업 -->
+				<div class="ly_wrap" style="display:block">
+					<!-- [D] 상품 추가하기 팝업 -->
+					<div class="pop_addpr ly_box" style="display:block">
+						<div class="ly_top">
+							<p class="tit">상품 추가하기</p>
+							<a href="#" class="btn_close btn_popclose">닫기</a>
+						</div>
+						<div class="ly_cont">
+							<p class="txt1">추가하실 상품 정보를 입력해주세요.</p>
+							<p class="ess_not">필수 입력 정보</p>
+							<div class="tbl_v3">
+								<table>
+								<caption class="blind">사이트 URL, 집행 희망 상품, 가입상태, 월 예상 광고비</caption>
+								<colgroup>
+								<col style="width:115px"><col>
+								</colgroup>
+								<tbody>
+								<tr>
+								<th scope="row" class="ess"><label for="url">사이트 URL</label></th>
+								<td><input type="text" id="url" class="fm_com" style="width:100%"></td>
+								</tr>
+								<tr>
+								<th scope="row" class="ess"><label for="hope">집행 희망 상품</label></th>
+								<td><input type="text" id="hope" class="fm_com" style="width:244px"><a href="#" class="btn_bd bd_y" style="width:104px;margin-left:20px;">상품찾기</a></td>
+								</tr>
+								<tr class="wide">
+								<th scope="row" class="ess">가입상태</th>
+								<td style="position:relative;padding-top:20px;">
+									<ul class="lst_chk add_ip">
+									<li class="rdo_box"><input type="radio" name="check1" id="check1_1" checked><label for="check1_1"><span>신규</span></label></li>
+									<li class="rdo_box"><input type="radio" name="check1" id="check1_2"><label for="check1_2"><span>기존</span></label></li>
+									</ul>											
+									<span class="plc_wrap"><input type="text" id="ex_id" class="fm_com plc_ip" style="width:244px"><label for="ex_id" class="plc_lb" style="font-size:12px;">기존 ID 입력</label></span>
+									<p class="txt3">* ID없이 진행되는 상품의 경우, ‘신규’로 체크해주시면 됩니다.</p>
+								</td>	
+								</tr>
+								<tr>
+								<th scope="row" class="ess"><label for="ad">월 예상 광고비</label></th>
+								<td><input type="text" id="ad" class="fm_com al_r" style="width:244px"><span class="fm_txt">원</span></td>
+								</tr>
+								</tbody>						
+								</table>					
+							</div>	
+							<div class="btn_area">
+								<button type="submit" class="btn_s btn_org">확인</button>
+								<a href="#" class="btn_s btn_wht btn_popclose">취소</a>
+							</div>				
+						</div>					
+					</div>	
+					<!-- //[D] 상품 추가하기 팝업 -->	
+				</div>	
+				<!-- //[D] 레이어팝업 -->
+			</fieldset>				
+			</form>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

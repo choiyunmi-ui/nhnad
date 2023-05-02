@@ -1,0 +1,97 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>회원유형 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents">
+			<!-- [D] 레이어팝업 -->
+			<div class="ly_wrap" style="display:block">
+				<!-- [D] 유료서비스 결제완료 팝업 -->
+				<div class="pop_charge2 ly_box" style="display:block">
+					<div class="ly_top">
+						<p class="tit">유료서비스 결제완료</p>
+						<a href="#" class="btn_close btn_popclose">닫기</a>
+					</div>
+					<div class="ly_cont">	
+						<div class="status_box">
+							<p class="txt1">오픈애즈 서비스를 이용해 주셔서 감사합니다.</p>
+							<p class="txt2">더 도움되는 광고 정보를 제공해드릴 수 있도록 노력하겠습니다.</p>
+						</div>
+						<div class="tbl_v3">
+							<table>
+							<caption class="blind">결제상품, 결제방법, 입금자명, 예금주 / 입금계좌번호</caption>
+							<colgroup>
+								<col style="width:155"><col>
+							</colgroup>
+							<thead>
+							<tbody>
+							<tr>
+							<th scope="row">결제상품</th>
+							<td>이용기간 : 1개월<p></p></td>
+							</tr>	
+							<!-- [D] 무통장 입금시 출력 -->		
+							<tr>
+							<th scope="row">결제방법</th>
+							<td>무통장입금</td>
+							</tr>
+							<tr>
+							<th scope="row">입금액</th>
+							<td><strong>165,000 원</strong> <span class="txt1">(2016.04.15 까지)</span></td>
+							</tr>
+							<tr>
+							<th scope="row">예금계좌</th>
+							<td>신한은행 000 - 000 - 0000000</td>
+							</tr>		
+							<!-- //[D] 무통장 입금시 출력 -->
+							<!-- [D] 애드머니 결제시 출력 -->
+							<tr>
+							<th scope="row">결제방법</th>
+							<td>애드머니</td>
+							</tr>
+							<tr>
+							<th scope="row">입금액</th>
+							<td><strong>82,500 원</strong></td>
+							</tr>
+							<!-- //[D] 애드머니 결제시 출력 -->
+							</tbody>
+							</table>
+						</div>
+						<div class="btn_area">
+							<button type="submit" class="btn_s btn_org" style="width:150px">확인</button>
+						</div>			
+					</div>					
+				</div>	
+				<!-- //[D] 유료서비스 결제완료 팝업 -->	
+			</div>		
+			<!-- //[D] 레이어팝업 -->
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

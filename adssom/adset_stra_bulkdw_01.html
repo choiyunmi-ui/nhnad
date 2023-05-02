@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<script>
+// 마크업 검수용 [D] 개발제외
+$(function(){
+	load_contents('adset_stra_bulkup_01','adset_stra_bulkup_01.html');
+});
+</script>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+			<div class="section_head">
+				<h2 class="tit_top">전략그룹 대량등록</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">광고정보관리</a>
+						<div class="dep1">
+							<a href="#" class="selected">광고정보관리</a>
+							<a href="#">분석/리포트</a>
+							<a href="#">자동입찰</a>
+							<a href="#">마켓트렌드</a>
+							<a href="#">광고제안</a>
+							<a href="#">어드민</a>
+							<a href="#">시스템관리</a>
+						</div>
+					</span>
+					<span class="bar">&gt;</span>
+					<span class="dep_group">
+						<a href="#">광고설정/전략그룹대량등록</a>
+						<div class="dep2">
+							<em class="tit_dep2">광고설정</em>
+							<a href="#">광고주관리</a>
+							<a href="#">데이터관리</a>
+							<a href="#">스크립트관리</a>
+							<a href="#">추적코드관리</a>
+							<a href="#">랜딩페이지검수</a>
+							<a href="#">잔액부족알림이력</a>
+							<em class="tit_dep2">전략그룹</em>
+							<a href="#">전략그룹관리</a>
+							<a href="#" class="selected">전략그룹대량이동</a>
+						</div>
+					</span>
+				</div>
+			</div>			
+			
+			<!-- [D] 선택된 탭 .selected -->
+			<div class="tab_page">
+				<ul>
+				<li><a href="#">대량등록 파일업로드</a></li>
+				<li class="selected"><a href="#">광고상품정보 다운로드</a></li>
+				</ul>
+			</div>
+			
+			<!-- 조회필터 -->
+			<div class="section_filter" name="case_filter_team3">
+				@template_filter.html
+			</div>
+			<div class="btn_filter_foot">
+				<a href="#" class="btn_odd">등록</a>
+			</div>
+	
+			<div class="sub_head">
+				<h3 class="tit_section">전략그룹 대량등록 파일 다운로드 작업조회</h3>
+			</div>	
+			<div class="section_filter" name="case_filter_team2">
+				@template_filter.html
+			</div>
+			<div class="section_filter" name="case_filter_datepicker4">
+				@template_filter.html
+			</div>			
+			
+			<div class="section_box" name="adset_stra_bulkup_01">
+				@adset_stra_bulkup_01.html
+			</div>
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

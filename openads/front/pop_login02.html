@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>로그인</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] POPUP SIZE : 630x463 -->
+<div id="login_wrap">
+	<div id="log_header">
+		<h1 class="logo sp">OpenAds</h1>
+	</div> 
+	<div id="log_contents">
+		<div class="log_notice">
+			<p class="txt1">오픈애즈 이용을 위하여 아래 내용을 입력해주세요.</p>
+			<p class="txt2">입력하신 닉네임은 오픈애즈 활동시 사용됩니다.</p>
+		</div>
+		<div class="log_box">
+			<form action="#">
+			<legend>닉네임 생성 영역</legend>
+			<fieldset>
+ 				<p class="ess_not">필수입력항목</p>
+				<ul class="fm_lst">
+				<li>
+					<dl>
+					<dt class="ess"><span>닉네임</span></dt>
+					<dd class="plc_wrap"><input type="text" id="nickname" class="fm_com plc_ip" style="width:240px"><label for="nickname" class="plc_lb">사용하실 닉네임을 입력해주세요.</label></dd>
+					</dl>
+					<button type="button" class="btn_bd">중복확인</button>
+				</li>
+				</ul>
+				<p class="txt1 al_r">한글, 영문대/소문자, 숫자만 입력 가능하며, 5자 이내로 입력해주세요.</p>
+				<div class="btn_area">
+					<button type="submit" class="btn_org">입력</button>
+				</div>
+			</fieldset>
+			</form>
+		</div>
+	</div>
+	<div id="log_footer">
+		<p>© NHN Entertainment Corp.</p>
+	</div>
+</div>
+</body>
+</html>

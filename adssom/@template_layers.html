@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<style>
+.ly_pop{display:inline-block !important;position:static;widht:auto !important;height:auto}
+</style>
+</head>
+<body>
+
+<!-- layer popup - 광고 운영 중 키워드 제외 -->
+<div class="ly_pop" name="prop_11" style="display:none"><div class="ly_pop_in">
+	<div class="ly_pop_cont">
+		<div class="ly_head">
+			<h3 class="tit_ly">광고 운영 중 키워드 제외</h3>
+			<a href="#" class="btn_close_ly">닫기</a>
+		</div>
+		<p class="tit_txt">
+			광고주에게 솔루션 가입 초대장을 발송합니다.<br> 
+			발송된 초대장은 발송일로 부터 14일간 유효합니다.
+		</p>
+		<table class="tbl_ly">
+		<caption>광고 운영 중 키워드 제외</caption>
+		<colgroup><col width="137"><col></colgroup>
+		<tbody>
+		<tr>
+			<th>광고주</th>
+			<td>
+				<select class="selectbox select_s" style="width:216px">
+					<option>NHN AD</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<th>사이트</th>
+			<td>
+				<select class="selectbox select_s" style="width:216px">
+					<option>선택</option>
+				</select>
+			</td>
+		</tr>
+		</tbody>
+		</table>
+		<div class="btn_foot">
+			<a href="#" class="btn_b_odd">확인</a>
+			<a href="#" class="btn_b_gray">취소</a>
+		</div>
+	</div>
+</div></div>	
+
+<!-- layer popup - 키워드 추이 -->
+<div class="ly_pop" style="display:none" name="prop_12"><div class="ly_pop_in">
+	<div class="ly_pop_cont">
+		<div class="ly_head">
+			<h3 class="tit_ly">키워드 추이 <span class="bar_line">-</span> <span class="txt">꽃배달</span></h3>
+			<a href="#" class="btn_close_ly">닫기</a>
+		</div>
+		<div class="section_filter_ly">
+			<span class="inp_radio"><input name="case_keyword_ly" type="radio"><label>PC 웹 - 기간비교</label></span>
+			<span class="inp_radio"><input name="case_keyword_ly" type="radio"><label>PC 웹 - 순위비교</label></span>
+			<span class="inp_radio"><input name="case_keyword_ly" type="radio"><label>웹 / 모바일 비교</label></span>
+			<span class="bar">|</span>
+			<select class="selectbox select_s" style="width:213px">
+				<option>클릭초이스 1순위</option>
+			</select>
+			<span class="btn_group">
+				<a href="#" class="btn_odd">검색</a>
+			</span>					
+		</div>
+		
+		<div class="tab_ly">
+			<ul>
+				<li class="selected"><a href="#">예상노출수</a></li>
+				<li><a href="#">예상클릭수</a></li>
+				<li><a href="#">예상 CPC</a></li>
+				<li><a href="#">예상광고비</a></li>
+			</ul>
+		</div>
+								
+		<div class="section_graph_ly">
+			<div class="graph"><img src="img/@graph21.gif" alt="" /></div>
+		</div>	
+		
+		<!-- PC 웹 - 기간비교 -->					
+		<table class="tbl_ly" style="display:none">
+		<caption>PC 웹 - 기간비교</caption>
+		<colgroup><col width="55"><col span="12"></colgroup>
+		<thead>
+		<tr>
+			<th><span class="bar_slash">\</span></th>
+			<th>1월</th>
+			<th>2월</th>
+			<th>3월</th>
+			<th>4월</th>
+			<th>5월</th>
+			<th>6월</th>
+			<th>7월</th>
+			<th>8월</th>
+			<th>9월</th>
+			<th>10월</th>
+			<th>11월</th>
+			<th>12월</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<th>2013</th>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">1,129,800</p></td>
+			<td><p class="num">1,503,900</p></td>
+			<td><p class="num">1,502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">129,800</p></td>
+			<td><p class="num">150,900</p></td>
+			<td><p class="num">1,502,500</p></td>
+			<td><p class="num">1,503,900</p></td>
+			<td><p class="num">502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">129,800</p></td>
+		</tr>
+		<tr>
+			<th>2014</th>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">1,129,800</p></td>
+			<td><p class="num">1,503,900</p></td>
+			<td><p class="num">129,800</p></td>
+			<td><p class="num">150,900</p></td>
+			<td><p class="num">1,502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">129,800</p></td>
+			<td><p class="num">1,503,900</p></td>
+			<td><p class="num">1,502,500</p></td>
+		</tr>
+		</tbody>
+		</table>
+		
+		<!-- PC 웹 - 기간비교 : 조회결과 없음 -->
+		<table class="tbl_ly">
+		<caption>광고 운영 중 키워드 제외</caption>
+		<colgroup><col width="55"><col span="12"></colgroup>
+		<thead>
+		<tr>
+			<th><span class="bar_slash">\</span></th>
+			<th>1월</th>
+			<th>2월</th>
+			<th>3월</th>
+			<th>4월</th>
+			<th>5월</th>
+			<th>6월</th>
+			<th>7월</th>
+			<th>8월</th>
+			<th>9월</th>
+			<th>10월</th>
+			<th>11월</th>
+			<th>12월</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<th>2013</th>
+			<td colspan="12" rowspan="2" class="listnone">조회 결과가 없습니다</td>
+		</tr>
+		<tr>
+			<th>2014</th>
+		</tr>
+		</tbody>
+		</table>
+		
+		<!-- PC 웹 - 순위비교 -->				
+		<table class="tbl_ly" style="display:none">
+		<caption>PC 웹 - 순위비교</caption>
+		<colgroup><col width="80"><col span="15" width="50px"></colgroup>
+		<thead>
+		<tr>
+			<th><span class="bar_slash">\</span></th>
+			<th>1순위</th>
+			<th>2순위</th>
+			<th>3순위</th>
+			<th>4순위</th>
+			<th>5순위</th>
+			<th>6순위</th>
+			<th>7순위</th>
+			<th>8순위</th>
+			<th>9순위</th>
+			<th>10순위</th>
+			<th>11순위</th>
+			<th>12순위</th>
+			<th>13순위</th>
+			<th>14순위</th>
+			<th>15순위</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<th>예상 노출수</th>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">21,129,800</p></td>
+			<td><p class="num">1,503,900</p></td>
+			<td><p class="num">1,502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">129,800</p></td>
+			<td><p class="num">150,900</p></td>
+			<td><p class="num">1,502,500</p></td>
+			<td><p class="num">1,503,900</p></td>
+			<td><p class="num">502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">129,800</p></td>
+			<td><p class="num">502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">129,800</p></td>
+		</tr>
+		<tr>
+			<th>예상 클릭수</th>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">1,129,800</p></td>
+			<td><p class="num">1,503,900</p></td>
+			<td><p class="num">129,800</p></td>
+			<td><p class="num">150,900</p></td>
+			<td><p class="num">1,502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">129,800</p></td>
+			<td><p class="num">1,503,900</p></td>
+			<td><p class="num">1,502,500</p></td>
+			<td><p class="num">502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">129,800</p></td>
+		</tr>
+		<tr>
+			<th>예상CPC</th>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">1,129,800</p></td>
+			<td><p class="num">1,503,900</p></td>
+			<td><p class="num">129,800</p></td>
+			<td><p class="num">150,900</p></td>
+			<td><p class="num">1,502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">129,800</p></td>
+			<td><p class="num">1,503,900</p></td>
+			<td><p class="num">1,502,500</p></td>
+			<td><p class="num">502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">129,800</p></td>
+		</tr>
+		<tr>
+			<th>예상비용</th>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">1,129,800</p></td>
+			<td><p class="num">1,503,900</p></td>
+			<td><p class="num">129,800</p></td>
+			<td><p class="num">150,900</p></td>
+			<td><p class="num">1,502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">129,800</p></td>
+			<td><p class="num">1,503,900</p></td>
+			<td><p class="num">1,502,500</p></td>
+			<td><p class="num">502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">129,800</p></td>
+		</tr>
+		</tbody>
+		</table>
+		
+		<!-- 웹 / 모바일 비교 -->					
+		<table class="tbl_ly" style="display:none">
+		<caption>웹 / 모바일 비교</caption>
+		<colgroup><col width="55"><col span="12"></colgroup>
+		<thead>
+		<tr>
+			<th><span class="bar_slash">\</span></th>
+			<th>1월</th>
+			<th>2월</th>
+			<th>3월</th>
+			<th>4월</th>
+			<th>5월</th>
+			<th>6월</th>
+			<th>7월</th>
+			<th>8월</th>
+			<th>9월</th>
+			<th>10월</th>
+			<th>11월</th>
+			<th>12월</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<th>PC 웹</th>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">1,129,800</p></td>
+			<td><p class="num">1,503,900</p></td>
+			<td><p class="num">1,502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">129,800</p></td>
+			<td><p class="num">150,900</p></td>
+			<td><p class="num">1,502,500</p></td>
+			<td><p class="num">1,503,900</p></td>
+			<td><p class="num">502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">129,800</p></td>
+		</tr>
+		<tr>
+			<th>모바일</th>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">1,129,800</p></td>
+			<td><p class="num">1,503,900</p></td>
+			<td><p class="num">129,800</p></td>
+			<td><p class="num">150,900</p></td>
+			<td><p class="num">1,502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">502,500</p></td>
+			<td><p class="num">1,484,800</p></td>
+			<td><p class="num">129,800</p></td>
+			<td><p class="num">1,503,900</p></td>
+			<td><p class="num">1,502,500</p></td>
+		</tr>
+		</tbody>
+		</table>
+		
+		<div class="btn_foot">
+			<a href="#" class="btn_b_gray">닫기</a>
+		</div>
+	</div>
+</div></div>	
+
+<!-- layer popup - 키워드 필터 -->
+<div class="ly_pop" style="display:none" name="prop_16"><div class="ly_pop_in">
+	<div class="ly_pop_cont">
+		<div class="ly_head">
+			<h3 class="tit_ly">키워드 필터 <span class="bar_line">-</span> <span class="txt">꽃배달</span></h3>
+			<a href="#" class="btn_close_ly">닫기</a>
+		</div>
+		
+		<!-- 키워드로 필터링 -->
+		<div class="filter_keyword">
+			<h4 class="tit_ly_inp">
+				<span class="inp_check"><input type="text"><label>키워드로 필터링</label></span>
+			</h4>
+			<p class="txt_info">포함 하는 단어 (입력한 단어를 포함하는 키워드 표시)</p>
+			<ul class="field_keyword">
+			<li><input type="text" value="키워드1" class="inp_text_key"><a href="#" class="btn_del">삭제</a></li>
+			<li><input type="text" value="키워드2" class="inp_text_key"><a href="#" class="btn_del">삭제</a></li>
+			<li><input type="text" value="키워드3" class="inp_text_key"><a href="#" class="btn_del">삭제</a></li>
+			<li><input type="text" value="키워드4" class="inp_text_key"><a href="#" class="btn_del">삭제</a></li>
+			<li><input type="text" value="키워드5" class="inp_text_key"><a href="#" class="btn_del">삭제</a></li>
+			<li><input type="text" value="키워드6" class="inp_text_key"><a href="#" class="btn_del">삭제</a></li>
+			</ul>
+			<p class="txt_info">제외 하는 단어 (입력한 단어를 제외한 키워드 표시)</p>
+			<ul class="field_keyword">
+			<li><input type="text" placeholder="제외할 단어를 한 줄에 하나씩 입력하세요." class="inp_text_key"></li>
+			<li><input type="text" class="inp_text_key"></li>
+			<li><input type="text" class="inp_text_key"></li>
+			</ul>
+		</div>
+		
+		<!-- 실적으로 필터링 -->
+		<div class="filter_keyword">
+			<h3 class="tit_ly_inp">
+				<span class="inp_check"><input type="text"><label>실적으로 필터링</label></span>
+			</h3>
+			<table class="tbl_ly">
+			<caption></caption>
+			<colgroup><col width="153px"><col></colgroup>
+			<tbody>
+			<tr>
+				<th scrop="row">예상 노출수</th>
+				<td>
+					<input type="text" class="inp_text inp_text_s" value="500" placeholder="설정된 필터 없음" style="width:152px">
+					<select class="selectbox select_s" style="width:70px">
+						<option>이상</option>
+						<option>이하</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scrop="row">예상 클릭수</th>
+				<td>
+					<input type="text" class="inp_text inp_text_s" placeholder="설정된 필터 없음" style="width:152px">
+					<select class="selectbox select_s" style="width:70px">
+						<option>이상</option>
+						<option>이하</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scrop="row">예상 클릭률</th>
+				<td>
+					<input type="text" class="inp_text inp_text_s" placeholder="설정된 필터 없음" style="width:152px">
+					<select class="selectbox select_s" style="width:70px">
+						<option>이상</option>
+						<option>이하</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scrop="row">예상 클릭비용</th>
+				<td>
+					<input type="text" class="inp_text inp_text_s" placeholder="설정된 필터 없음" style="width:152px">
+					<select class="selectbox select_s" style="width:70px">
+						<option>이상</option>
+						<option>이하</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scrop="row">예상 광고비</th>
+				<td>
+					<input type="text" class="inp_text inp_text_s" placeholder="설정된 필터 없음" style="width:152px">
+					<select class="selectbox select_s" style="width:70px">
+						<option>이상</option>
+						<option>이하</option>
+					</select>
+				</td>
+			</tr>
+			</tbody>
+			</table>
+		</div>
+		
+		<div class="btn_foot">
+			<a href="#" class="btn_b_lgray">전체초기화</a>
+			<a href="#" class="btn_b_odd">필터적용</a>
+			<a href="#" class="btn_b_gray">닫기</a>
+		</div>
+	</div>
+</div></div>
+
+<!-- layer popup - 키워드 목표 순위 / 입찰가 변경 -->
+<div class="ly_pop" name="prop_22" style="display:none"><div class="ly_pop_in">
+	<div class="ly_pop_cont">
+		<div class="ly_head">
+			<h3 class="tit_ly">키워드 목표 순위 / 입찰가 변경 (3 개)</h3>
+			<a href="#" class="btn_close_ly">닫기</a>
+		</div>
+		<table class="tbl_ly">
+		<colgroup><col width="120"><col></colgroup>
+		<tbody>
+		<tr>
+			<th scrop="row"><span class="inp_radio checked"><input type="radio checked"><label>순위</label></span></th>
+			<td>
+				<select class="selectbox select_s" style="width:217px">
+					<option>클릭초이스 1순위</option>
+					<option>클릭초이스 2순위</option>
+					<option>클릭초이스 3순위</option>
+					<option>클릭초이스 4순위</option>
+					<option>클릭초이스 5순위</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<th scrop="row"><span class="inp_radio"><input type="radio"><label>입찰가</label></span></th>
+			<td><input type="text" class="inp_text inp_text_s" placeholder="입찰가를 입력해 주세요." style="width:217px"></td>
+		</tr>
+		</tbody></table>
+		<div class="btn_foot">
+			<a href="#" class="btn_b_odd">적용</a>
+			<a href="#" class="btn_b_gray">취소</a>
+		</div>
+	</div>
+</div></div>
+
+<!-- layer popup - 키워드 추가 -->
+<div class="ly_pop" name="prop_24" style="display:none"><div class="ly_pop_in">
+	<div class="ly_pop_cont">
+		<div class="ly_head">
+			<h3 class="tit_ly">키워드 추가 <span class="bar_line">-</span> <span class="txt">0개 / 50개</span></h3>
+			<a href="#" class="btn_close_ly">닫기</a>
+		</div>
+		<textarea class="inp_textarea" placeholder="한 줄에 하나의 키워드를 입력해 주세요." style="width:400px;height:222px"></textarea>
+		<div class="btn_foot">
+			<a href="#" class="btn_b_odd">추가</a>
+			<a href="#" class="btn_b_gray">취소</a>
+		</div>
+	</div>
+</div></div>
+
+<!-- layer popup - 키워드 목표 순위변경 -->
+<div class="ly_pop" name="prop_25" style="display:none"><div class="ly_pop_in">
+	<div class="ly_pop_cont">
+		<div class="ly_head">
+			<h3 class="tit_ly">키워드 목표 순위변경</h3>
+			<a href="#" class="btn_close_ly">닫기</a>
+		</div>
+		<select class="selectbox" style="width:287px">
+			<option>클릭초이스 1순위</option>
+			<option>~</option>
+			<option>클릭초이스 15순위</option>
+		</select>
+		<div class="btn_foot">
+			<a href="#" class="btn_b_odd">적용</a>
+			<a href="#" class="btn_b_gray">취소</a>
+		</div>
+	</div>
+</div></div>
+
+<!-- layer popup - 키워드 조합 -->
+<div class="ly_pop" name="prop_26" style="display:none"><div class="ly_pop_in">
+	<div class="ly_pop_cont">
+		<div class="ly_head">
+			<h3 class="tit_ly">키워드 조합 <span class="bar_line">-</span> <span class="txt">0개 / 1,000개</span></h3>
+			<a href="#" class="btn_close_ly">닫기</a>
+		</div>
+		<table class="tbl_ly">
+		<caption>키워드 조합</caption>
+		<tbody>
+		<tr>
+			<th scope="row">조합방법</th>
+			<td name="prop_26_inp">
+				<span class="inp_radio checked" style="width:214px"><input type="radio" checked><label>기본 조합</label></span>
+				<span class="inp_radio" style="width:214px"><input type="radio"><label>지역명 확장</label></span>
+			</td>
+		</tr>
+		<!-- [D] 지역명 확장 선택시 노출 -->
+		<tr style="display:none" name="prop_27">
+			<th scope="row" rowspan="3">조합 순서</th>
+			<td name="prop_27_inp">
+				<span class="inp_radio checked" style="width:214px"><input type="radio" checked><label>지역명 + 키워드</label></span>
+				<span class="inp_radio" style="width:214px"><input type="radio"><label>키워드 + 지역명</label></span>
+			</td>
+		</tr>
+		<tr style="display:none" name="prop_27">
+			<td>
+				<span class="inp_check"><input type="checkbox"><label>1차 지역</label></span>
+				<select class="selectbox select_s" style="width:120px">
+					<option>전체</option>
+				</select>
+				<span class="bar">|</span>
+				<span class="inp_check"><input type="checkbox"><label>2차 지역</label></span>
+				<select class="selectbox select_s" style="width:120px">
+					<option>전체</option>
+				</select>
+				<span class="bar">|</span>
+				<span class="inp_check disabled"><input type="checkbox" disabled><label>3차 지역</label></span>
+				<select class="selectbox select_s" disabled style="width:120px">
+					<option>전체</option>
+				</select>
+			</td>
+		</tr>	
+		<tr style="display:none" name="prop_27">
+			<td>
+				<span class="inp_radio" style="width:214px"><input type="radio"><label>시, 군, 구 포함</label></span>
+				<span class="inp_radio" style="width:214px"><input type="radio"><label>시, 군, 구 미 포함</label></span>
+			</td>
+		</tr>
+		<!-- //[D] 지역명 확장 선택시 노출 -->		
+		</tbody>
+		</table>
+		
+		<!-- [D] 기본조합 -->
+		<!-- [D] placeholer 속성은 개행을 지원하지 않으므로, 기본 텍스트 개발 적용 필요.
+		포커스 될때 기본 텍스트 제거 후 placeholer class 제거 -->
+		<div class="keyword_mix" name="prop_26_mix">
+			<span class="inp_key_mix">
+				<label>접두사</label>
+				<textarea class="placeholer">접두사를 한 줄에 하나씩 입력하세요.</textarea>
+			</span>
+			<span class="ico_plus"><em>+</em></span>
+			<span class="inp_key_mix">
+				<label>키워드</label>
+				<textarea class="placeholer">
+키워드를 한 줄에 하나씩 입력하세요.
+
+키워드는 필수 입력 사항입니다. 
+1개 이상의 키워드를 입력하세요.</textarea>
+			</span>
+			<span class="ico_plus"><em>+</em></span>
+			<span class="inp_key_mix">
+				<label>접미사</label>
+				<textarea class="placeholer">접미사를 한 줄에 하나씩 입력하세요.</textarea>
+			</span>
+		</div>
+		
+		<!-- 지역명 조합 -->
+		<div class="keyword_mix" style="display:none" name="prop_27_mix">
+			<span class="inp_key_mix">
+				<label>지역명</label>
+				<textarea class="placeholer">지역 카테고리를 선택하세요.</textarea>
+			</span>
+			<span class="ico_plus"><em>+</em></span>
+			<span class="inp_key_mix">
+				<label>키워드</label>
+				<textarea class="placeholer">
+키워드를 한 줄에 하나씩 입력하세요.
+
+키워드는 필수 입력 사항입니다. 
+1개 이상의 키워드를 입력하세요.</textarea>
+			</span>
+			<span class="ico_plus"><em>+</em></span>
+			<span class="inp_key_mix disabled">
+				<label>지역명</label>
+				<textarea class="placeholer" disabled>지역 카테고리를 선택하세요.</textarea>
+			</span>
+		</div>
+		
+		<div class="btn_foot">
+			<a href="#" class="btn_b_odd">추가</a>
+			<a href="#" class="btn_b_gray">취소</a>
+		</div>
+	</div>
+</div></div>
+
+<!-- layer popup - 제안서 생성 -->
+<div class="ly_pop" name="prop_29" style="display:none;"><div class="ly_pop_in">
+	<div class="ly_pop_cont">
+		<div class="ly_head">
+			<h3 class="tit_ly">제안서 생성</h3>
+			<a href="#" class="btn_close_ly">닫기</a>
+		</div>
+		<table class="tbl_ly">
+		<caption>광고 운영 중 키워드 제외</caption>
+		<colgroup><col width="137"><col></colgroup>
+		<tbody>
+		<tr>
+			<th>제안서 명</th>
+			<td>
+				<span class="inp_del">			
+					<input type="text" value="20150101_nhnad제안서" class="inp_text inp_text_s" style="width:210px">
+					<a href="#" class="btn_del">삭제</a>
+				</span>
+			</td>
+		</tr>
+		</tbody>
+		</table>
+		<div class="btn_foot">
+			<a href="#" class="btn_b_odd">생성</a>
+			<a href="#" class="btn_b_gray">취소</a>
+		</div>
+	</div>
+</div></div>
+
+
+<!-- layer popup - 수집미완료 현황 -->
+<div class="ly_pop" style="display:none" name="system_monitor_01"><div class="ly_pop_in">
+	<div class="ly_pop_cont">
+		<div class="ly_head">
+			<h3 class="tit_ly">수집미완료 현황</h3>
+			<a href="#" class="btn_close_ly">닫기</a>
+		</div>
+		<p class="tit_txt_b"><strong>에이전시 이름</strong> <span class="stxt">YYYY.MM.DD hh:mm</span></p>
+		<div class="result_group">
+			<ul class="lst_line">
+			<li>수집 미완료 (수집완료-9/수집대상전체-11)</li>
+			<li>수집미완료 계정 – 2</li>
+			<li>광고주_계정이름</li>
+			<li>광고주_계정이름</li>
+			</ul>
+		</div>
+		<div class="btn_foot">
+			<a href="#" class="btn_b_odd">확인</a>
+		</div>
+	</div>
+</div></div>
+<!-- //layer popup -->
+<!-- layer popup - 데이터 검증현황 상세 -->
+<div class="ly_pop" style="display:none" name="system_monitor_02"><div class="ly_pop_in">
+	<div class="ly_pop_cont">
+		<div class="ly_head">
+			<h3 class="tit_ly">데이터 검증현황 상세 <span class="bar_h">-</span> <span class="txt">에이전시명</span></h3>
+			<a href="#" class="btn_close_ly">닫기</a>
+		</div>
+		<p class="tit_txt_b"><strong>검증 기준일</strong> : 2014.02.01</p>
+		<div class="result_group">
+			<h4 class="tit">불일치  : 총 000개</h4>
+			<div class="par">
+				<em class="red">
+				광고지표(ADSSOM값 – API 수집값)<br>
+				- 0 일때 = 일치)<br>
+				- +/- 정수 일때 = 불일치)<br>
+				</em>
+			</div>
+			<h4 class="tit">광고효과 비교 상세 (일간)</h4>
+			<div class="par">
+				<ul class="lst_bar">
+				<li>비교기간 : 2014.01.31~2014.01.31</li>
+				<li> 광고주 : XXXX , 계정 : ADSSOM_네이버</li>
+				</ul>
+				<ul class="lst_bar">
+				<li>계정전체 : 노출수 차이<em class="red">(0)</em>/클릭수 차이<em class="red">(1)</em>/총비용 차이<em class="red">(-100)</em></li>
+				<li>계정>사이트>그룹>키워드이름 : 노출수 차이(0)/클릭수 차이<em class="red">(1)</em>/총비용 차이<em class="red">(-100)</em></li>
+				</ul>
+			</div>
+			<h4 class="tit">광고효과 비교 (월간) </h4>
+			<div class="par">
+				<ul class="lst_bar">
+				<li>비교기간 : 2014.01.31~2014.01.31</li>
+				<li> 광고주 : XXXX , 계정 : ADSSOM_네이버</li>
+				</ul>
+				<ul class="lst_bar">
+				<li>계정전체 : 노출수 차이<em class="red">(0)</em>/클릭수 차이<em class="red">(1)</em>/총비용 차이<em class="red">(-100)</em></li>
+				<li>계정>사이트>그룹>키워드이름 : 노출수 차이(0)/클릭수 차이<em class="red">(1)</em>/총비용 차이<em class="red">(-100)</em></li>
+				</ul>
+			</div>
+		</div>
+		<div class="btn_foot">
+			<a href="#" class="btn_b_odd">확인</a>
+		</div>
+	</div>
+</div></div>
+<!-- //layer popup -->
+
+<!-- layer popup - 캠페인/ 광고그룹 선택 -->
+<div class="ly_pop" style="display:none"><div class="ly_pop_in">
+	<div class="ly_pop_cont">
+		<div class="ly_head">
+			<h3 class="tit_ly">캠페인/ 광고그룹 선택</h3>
+			<a href="#" class="btn_close_ly">닫기</a>
+		</div>
+		<div class="wrap_lst_choose">
+			<div class="lst_choose">
+				<h4 class="tit"><span class="inp_check"><input type="checkbox"><label for="">사이트 URL 목록</label></span></h4>
+				<ul>
+				<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">광고상품 선택(http://www.naverdla.com)</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">계정이름(http://www.alwkff.co.kr)</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">디바이스(http://www.dkajfgs.com)</label></span></li>
+				</ul>
+			</div>
+			<div class="lst_choose">
+				<h4 class="tit"><span class="inp_check"><input type="checkbox"><label for="">광고그룹 목록</label></span></h4>
+				<ul>
+				<li><span class="inp_check"><input type="checkbox"><label for="">영업권 인증</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">잔액부족알림</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">광고유형</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">영업권 인증</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">잔액부족알림</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">광고유형</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">영업권 인증</label></span></li>
+				<li><span class="inp_check"><input type="checkbox"><label for="">잔액부족알림</label></span></li>
+				<li></li>
+				<li></li>
+				</ul>
+			</div>
+		</div>
+		<div class="btn_foot">
+			<a href="#" class="btn_b_odd">확인</a>
+		</div>
+	</div>
+</div></div>
+<!-- //layer popup -->
+		
+</div>
+
+<!-- footer-->
+<div id="footer">footer(@template_layout.html)</div>
+<!-- //footer-->
+
+</body>
+</html>

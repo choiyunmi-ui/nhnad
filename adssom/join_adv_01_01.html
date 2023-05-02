@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- [D] GNB가 없는 헤더 타잎에 header_single class add -->
+	<div id="header" class="header_single">
+		<h1 class="tit_ssom">AD SSOM</h1>
+		<div class="userinfo">
+			<p class="user">paycoID@email.com</p>
+			<div class="nav_user">
+				<span class="bar">|</span>
+				<a href="#"><img src="img/ico_logout.png" alt="x" class="ico">로그아웃</a>
+			</div>
+		</div>
+	</div>
+	<div id="container">
+		<div id="contents">
+		
+			<div class="section_head">
+				<h2 class="tit_top">ADSSOM 회원가입</h2>
+				<p class="tit_txt">ADSSOM 초대장을 받은 분을 위한 회원 가입 페이지 입니다.</p>
+			</div>
+			
+			<!-- [D] 현재 step항목에 selected class 추가 -->
+			<div class="nav_step step_join">
+				<ol>
+				<li class="selected"><em><span>1단계</span> 약관동의</em></li>
+				<li><em><span>2단계</span> 기본정보입력</em></li>
+				<li><em><span>3단계</span> 가입완료</em></li>
+				</ol>
+			</div>
+			
+			<div class="section_box">
+				<div class="policy">
+					<h3 class="tit">서비스 이용 약관</h3>
+					<textarea class="inp_textarea">
+제 1조 (목적)
+이 이용약관(이하 "약관"이라 함)은 에이전시이름㈜(이하 "회사"라고 함)가 검색광고 온라인 컨설팅을 위한 솔루션이름 서비스(이하 "서비스"라고 함)를 제공하고 이를 이용함에 있어 필요한 제반 사항
+제 2조 (목적) 제 1조 (목적)
+이 이용약관(이하 "약관"이라 함)은 에이전시이름㈜(이하 "회사"라고 함)가 검색광고 온라인 컨설팅을 위한 솔루션이름 서비스(이하 "서비스"라고 함)를 제공하고 이를 이용함에 있어 필요한 제반 사항을 
+제 2조 (목적)
+이 이용약관(이하 "약관"이라 함)은 에이전시이름㈜(이하 "회사"라고 함)가 검색광고 온라인 컨설팅을 위한 솔루션이름 서비스(이하 "서비스"라고 함)를 제공하고 이를 이용함에 있어 필요한 제반 사항을 
+					</textarea>
+					<div class="agree">
+						<span class="inp_check"><input type="checkbox" /><label for="">서비스 이용약관에 동의합니다.</label></span>
+					</div>
+				</div>
+				<div class="policy">
+					<h3 class="tit">개인정보 취급방침</h3>
+					<textarea class="inp_textarea">
+1. 수집하는 개인정보의 항목
+첫째, 회사는 회원(또는 서비스) 가입, 원활한 고객상담, 각종 서비스의 제공 등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+광고주 회원<일반회원>
+- 성명, 아이디, 비밀번호, 이메일, 휴대폰번호
+선택 항목 : 팀, 직책 정보
+					</textarea>
+					<div class="agree">
+						<span class="inp_check"><input type="checkbox" /><label for="">개인정보 취급방침에 동의합니다.</label></span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="btn_foot">
+				<a href="#" class="btn_b_odd">확인</a>
+				<a href="#" class="btn_b_gray">취소</a>
+			</div>
+
+		</div>
+	
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+
+</body>
+</html>

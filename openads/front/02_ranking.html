@@ -1,0 +1,751 @@
+
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>오픈랭킹 홈 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.slides.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="sub_tit" class="bg_v2">
+			<dl>
+			<dt>상품랭킹</dt>
+			<dd>모든 광고상품의 효율을 한눈에 확인할 수 있습니다.</dd>
+			</dl>
+		</div>
+		<div id="contents" class="sub_ranking">
+			<div class="ranking_slide">
+				<h2 class="tit_sz30">지표별 랭킹</h2>
+				<!-- <a href="#" class="rs_prev sp">이전</a> -->
+				<div id="slides" class="rs_lst">
+					<div>
+						<ul class="inner">
+						<li>
+							<a href="#">
+								<b>클릭률</b>
+								<ul>
+								<li><span class="rank">1</span><span class="percent">70<span>%</span></span><span class="name" title="네이버 클릭초이스초이스초이스">네이버 클릭초이스초이스초이스</span></li>
+								<li><span class="rank">2</span><span class="percent">50<span>%</span></span><span class="name" title="naverclickchoicetesttest">naverclickchoicetesttest</span></li>
+								<li><span class="rank">3</span><span class="percent">9999.99<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+								</ul>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<b>클릭비용</b>
+								<ul>
+								<li><span class="rank">2</span><span class="percent">50<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+								<li><span class="rank">3</span><span class="percent">4000000<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+								<li><span class="rank">1</span><span class="percent">70<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+								</ul>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<b>전환율</b>
+								<ul>
+								<li><span class="rank">1</span><span class="percent">70<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+								<li><span class="rank">2</span><span class="percent">50<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+								<li><span class="rank">3</span><span class="percent">40<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+								</ul>
+							</a>
+						</li>
+						</ul>
+					</div>
+					<div>
+						<ul class="inner">
+						<li>
+							<a href="#">
+								<b>전환비용</b>
+								<ul>
+								<li><span class="rank">1</span><span class="percent">70<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+								<li><span class="rank">2</span><span class="percent">50<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+								<li><span class="rank">3</span><span class="percent">40<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+								</ul>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<b>ROAS</b>
+								<ul>
+								<li><span class="rank">1</span><span class="percent">70<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+								<li><span class="rank">2</span><span class="percent">50<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+								<li><span class="rank">3</span><span class="percent">40<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+								</ul>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<b>진행수(비중)</b>
+								<ul>
+								<li><span class="rank">1</span><span class="percent">70<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+								<li><span class="rank">2</span><span class="percent">50<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+								<li><span class="rank">3</span><span class="percent">40<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+								</ul>
+							</a>
+						</li>
+						</ul>
+					</div>
+					<div>
+						<ul class="inner">
+						<li>
+							<b>노출수(비중)</b>
+							<ul>
+							<li><span class="rank">1</span><span class="percent">70<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+							<li><span class="rank">2</span><span class="percent">50<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+							<li><span class="rank">3</span><span class="percent">40<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+							</ul>
+						</li>
+						<li>
+							<b>클릭수(비중)</b>
+							<ul>
+							<li><span class="rank">1</span><span class="percent">70<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+							<li><span class="rank">2</span><span class="percent">50<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+							<li><span class="rank">3</span><span class="percent">40<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+							</ul>
+						</li>
+						<li>
+							<b>전환수(비중)</b>
+							<ul>
+							<li><span class="rank">1</span><span class="percent">70<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+							<li><span class="rank">2</span><span class="percent">50<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+							<li><span class="rank">3</span><span class="percent">40<span>%</span></span><span class="name" title="네이버 클릭초이스">네이버 클릭초이스</span></li>
+							</ul>
+						</li>
+						</ul>
+					</div>
+				</div>				
+				  <script>
+				    $(function() {
+				      $('#slides').slidesjs({
+				        width: 990,
+				        height: 200
+				      });
+				    });
+				  </script>
+			</div>
+			<div class="area_ct">
+				<h2 class="tit_sz20">소재랭킹</h2>
+				<div class="tbl_grd">
+					<table class="easyui-datagrid" style="width:100%">
+					<caption class="blind">순위, 소재유형, 집계 데이터 기준 랭킹(클릭률, 클릭비용, 전환율,전환비용, ROAS), 비중(%) 기준 랭킹(집행수, 노출수, 클릭수, 전환수)</caption>
+					<thead>
+					<tr>
+					<th field="rank" width="60" rowspan="2" align="center"><b>순위</b></th>
+					<th field="productid" width="160" rowspan="2" align="left"><b>소재유형</b></th>
+					<th colspan="5"><b>집계 데이터 기준 랭킹</b><a href="#" id="tt_btn1_1" class="btn_tooltip">?</a></th>
+					<th colspan="4"><b>비중(%) 기준 랭킹</b><a href="#" id="tt_btn1_2" class="btn_tooltip">?</a></th>
+					</tr>
+					<tr>
+					<th field="field01" scope="col" width="90" align="right"><span id="tt_btn1_3" class="btn_sort btn_tooltip on active">클릭률</span></th>
+					<th field="field02" scope="col" width="90" align="right"><span id="tt_btn1_4" class="btn_sort btn_tooltip">클릭비용</span></th>
+					<th field="field03" scope="col" width="90" align="right"><span id="tt_btn1_5" class="btn_sort btn_tooltip">전환율</span></th>
+					<th field="field04" scope="col" width="90" align="right"><span id="tt_btn1_6" class="btn_sort btn_tooltip">전환비용</span></th>
+					<th field="field05" scope="col" width="90" align="right"><span id="tt_btn1_7" class="btn_sort btn_tooltip">ROAS</span></th>
+					<th field="field06" scope="col" width="90" align="right"><span id="tt_btn1_8" class="btn_sort btn_tooltip">집행수</span></th>
+					<th field="field07" scope="col" width="90" align="right"><span id="tt_btn1_9" class="btn_sort btn_tooltip">노출수</span></th>
+					<th field="field08" scope="col" width="90" align="right"><span id="tt_btn1_10" class="btn_sort btn_tooltip">클릭수</span></th>
+					<th field="field09" scope="col" width="90" align="right"><span id="tt_btn1_11" class="btn_sort btn_tooltip">전환수</span></th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td>1</td>
+					<td>검색광고</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td>120,300 원</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					</tr>		
+					<tr>
+					<td>2</td>
+					<td>배너광고</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td>120,300 원</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					</tr>	
+					<tr>
+					<td>3</td>
+					<td>동영상광고</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td>120,300 원</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					</tr>
+					<tr>
+					<td>4</td>
+					<td>콘텐츠광고</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td>120,300 원</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					</tr>
+					</tbody>
+					</table>
+					<!-- [D] 툴팁 버튼과 동일한 ID번호로 통일시 자동으로 마우스오버 모션 생성(#tt_btn1 = #tt_wrap1) -->
+					<!-- [D] 위치값은 인라인으로 조정 -->
+					<div id="tt_wrap1_1" class="tooltip_wrap" style="display:none;left:477px">
+						<div class="tool_box">
+							<p class="txt2">수집한 데이터를 기반으로 계산된 각 지표별 평균 효율<br>데이터입니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_2" class="tooltip_wrap right" style="display:none;right:61px">
+						<div class="tool_box">
+							<p class="txt2">각 지표별 총 합에서 해당항목이 차지하는 비중을<br>나타냅니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_3" class="tooltip_wrap" style="display:none;top:70px;left:230px">
+						<div class="tool_box">
+							<p class="txt2">사용자가 특정 광고상품을 보고 해당 광고상품을 클릭한 비율을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스를 본 사용자 수가 1000명이고,해당 광고<br>상품을 클릭한 숫자가 500일 경우 네이버 클릭초이스의 클릭률은 0.5% 입니다.</p>
+							<p class="txt3">* <b>클릭률(%)</b> =<br>&nbsp;&nbsp;클릭수 / 노출수 *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_4" class="tooltip_wrap" style="display:none;top:70px;left:319px">
+						<div class="tool_box">
+							<p class="txt2">광고 1클릭당 발생하는 평균비용을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 해당 광고<br>상품을 클릭한 숫자가 5,000일 경우 네이버 클릭초이스의 클릭비용은 200원 입니다</p>
+							<p class="txt3">* <b>클릭비용(원)</b> =<br>&nbsp;&nbsp;광고비 / 클릭수</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_5" class="tooltip_wrap" style="display:none;top:70px;left:411px">
+						<div class="tool_box">
+							<p class="txt2">특정 광고상품을 통해 사이트를 방문한 후 구매, 회원가입 등의 전환을 발생시키는 비율을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스 광고를 클릭한 숫자가 5,000이고 이를 통해<br>100건의 전환이 일어났을 경우 네이버 클릭초이스의 전환율은 2%입니다.</p>
+							<p class="txt3">* <b>전환율(%)</b> =<br>&nbsp;&nbsp;전환수 / 유입수(클릭수) *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_6" class="tooltip_wrap" style="display:none;top:70px;left:500px">
+						<div class="tool_box">
+							<p class="txt2">전환 한번 당 발생하는 비용을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 100건의<br>전환이 일어났을 경우 네이버 클릭초이스의 전환비용은 10,000원입니다.</p>
+							<p class="txt3">* <b>전환비용(원)</b> =<br>&nbsp;&nbsp;광고비용 / 전환수</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_7" class="tooltip_wrap" style="display:none;top:70px;left:591px">
+						<div class="tool_box">
+							<p class="txt2">광고비용 대비 매출액을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 이를 통해<br>1천만원의 매출이 발생했을 경우 네이버 클릭초이스의 ROAS는 1000%입니다.</p>
+							<p class="txt3">* <b>ROAS(%)</b> =<br>&nbsp;&nbsp;매출액 / 광고비용 *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_8" class="tooltip_wrap right" style="display:none;top:70px;right:254px">
+						<div class="tool_box">
+							<p class="txt2">광고를 집행한 광고주 수의 비중을 나타내는 지표입니다.</p>
+							<p class="txt3">전체 광고주 수가 1000개이고 네이버 클릭초이스를 집행한<br>광고주 수가 500개일 경우, 네이버 클릭초이스의 집행수(비중)는 50%입니다.</p>
+							<p class="txt3">* <b>집행수 비중(%)</b> =<br>&nbsp;&nbsp;해당상품을 집행한 전체 광고주 수 / 전체 광고주 수 *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_9" class="tooltip_wrap right" style="display:none;top:70px;right:164px">
+						<div class="tool_box">
+							<p class="txt2">특정 광고상품이 노출된 숫자를 나타내는 지표입니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_10" class="tooltip_wrap right" style="display:none;top:70px;right:72px">
+						<div class="tool_box">
+							<p class="txt2">사용자들이 특정 광고상품을 클릭한 숫자를 나타내는<br>지표입니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap1_11" class="tooltip_wrap right" style="display:none;top:70px;right:-18px">
+						<div class="tool_box">
+							<p class="txt2">특정 광고상품을 통해 구매, 회원가입, 애플리케이션<br>다운로드 등으로 전환된 숫자를 나타내는 지표입니다.</p>
+						</div>
+					</div>
+				</div>		
+				<h2 class="tit_sz20">디바이스 랭킹</h2>
+				<div class="tbl_grd">
+					<table class="easyui-datagrid" style="width:100%">
+					<caption class="blind">순위, 디바이스 유형, 집계 데이터 기준 랭킹(클릭률, 클릭비용, 전환율,전환비용, ROAS), 비중(%) 기준 랭킹(집행수, 노출수, 클릭수, 전환수)</caption>
+					<thead>
+					<tr>
+					<th field="rank" width="60" rowspan="2" align="center"><b>순위</b></th>
+					<th field="productid" width="160" rowspan="2" align="left"><b>상품명</b></th>
+					<th colspan="5"><b>집계 데이터 기준 랭킹</b><a href="#" id="tt_btn2_1" class="btn_tooltip">?</a></th>
+					<th colspan="4"><b>비중(%) 기준 랭킹</b><a href="#" id="tt_btn2_2" class="btn_tooltip">?</a></th>
+					</tr>
+					<tr>
+					<th field="field01" scope="col" width="90" align="right"><span id="tt_btn2_3" class="btn_sort btn_tooltip on active">클릭률</span></th>
+					<th field="field02" scope="col" width="90" align="right"><span id="tt_btn2_4" class="btn_sort btn_tooltip">클릭비용</span></th>
+					<th field="field03" scope="col" width="90" align="right"><span id="tt_btn2_5" class="btn_sort btn_tooltip">전환율</span></th>
+					<th field="field04" scope="col" width="90" align="right"><span id="tt_btn2_6" class="btn_sort btn_tooltip">전환비용</span></th>
+					<th field="field05" scope="col" width="90" align="right"><span id="tt_btn2_7" class="btn_sort btn_tooltip">ROAS</span></th>
+					<th field="field06" scope="col" width="90" align="right"><span id="tt_btn2_8" class="btn_sort btn_tooltip">집행수</span></th>
+					<th field="field07" scope="col" width="90" align="right"><span id="tt_btn2_9" class="btn_sort btn_tooltip">노출수</span></th>
+					<th field="field08" scope="col" width="90" align="right"><span id="tt_btn2_10" class="btn_sort btn_tooltip">클릭수</span></th>
+					<th field="field09" scope="col" width="90" align="right"><span id="tt_btn2_11" class="btn_sort btn_tooltip">전환수</span></th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td>1</td>
+					<td>PC</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td>120,300 원</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					</tr>		
+					<tr>
+					<td>2</td>
+					<td>Mobile</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td>120,300 원</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					</tr>
+					</tbody>
+					</table>
+					<!-- [D] 툴팁 버튼과 동일한 ID번호로 통일시 자동으로 마우스오버 모션 생성(#tt_btn1 = #tt_wrap1) -->
+					<!-- [D] 위치값은 인라인으로 조정 -->
+					<div id="tt_wrap2_1" class="tooltip_wrap" style="display:none;left:477px">
+						<div class="tool_box">
+							<p class="txt2">수집한 데이터를 기반으로 계산된 각 지표별 평균 효율<br>데이터입니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap2_2" class="tooltip_wrap right" style="display:none;right:61px">
+						<div class="tool_box">
+							<p class="txt2">각 지표별 총 합에서 해당항목이 차지하는 비중을<br>나타냅니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap2_3" class="tooltip_wrap" style="display:none;top:70px;left:230px">
+						<div class="tool_box">
+							<p class="txt2">사용자가 특정 광고상품을 보고 해당 광고상품을 클릭한 비율을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스를 본 사용자 수가 1000명이고,해당 광고<br>상품을 클릭한 숫자가 500일 경우 네이버 클릭초이스의 클릭률은 0.5% 입니다.</p>
+							<p class="txt3">* <b>클릭률(%)</b> =<br>&nbsp;&nbsp;클릭수 / 노출수 *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap2_4" class="tooltip_wrap" style="display:none;top:70px;left:319px">
+						<div class="tool_box">
+							<p class="txt2">광고 1클릭당 발생하는 평균비용을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 해당 광고<br>상품을 클릭한 숫자가 5,000일 경우 네이버 클릭초이스의 클릭비용은 200원 입니다</p>
+							<p class="txt3">* <b>클릭비용(원)</b> =<br>&nbsp;&nbsp;광고비 / 클릭수</p>
+						</div>
+					</div>
+					<div id="tt_wrap2_5" class="tooltip_wrap" style="display:none;top:70px;left:411px">
+						<div class="tool_box">
+							<p class="txt2">특정 광고상품을 통해 사이트를 방문한 후 구매, 회원가입 등의 전환을 발생시키는 비율을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스 광고를 클릭한 숫자가 5,000이고 이를 통해<br>100건의 전환이 일어났을 경우 네이버 클릭초이스의 전환율은 2%입니다.</p>
+							<p class="txt3">* <b>전환율(%)</b> =<br>&nbsp;&nbsp;전환수 / 유입수(클릭수) *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap2_6" class="tooltip_wrap" style="display:none;top:70px;left:500px">
+						<div class="tool_box">
+							<p class="txt2">전환 한번 당 발생하는 비용을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 100건의<br>전환이 일어났을 경우 네이버 클릭초이스의 전환비용은 10,000원입니다.</p>
+							<p class="txt3">* <b>전환비용(원)</b> =<br>&nbsp;&nbsp;광고비용 / 전환수</p>
+						</div>
+					</div>
+					<div id="tt_wrap2_7" class="tooltip_wrap" style="display:none;top:70px;left:591px">
+						<div class="tool_box">
+							<p class="txt2">광고비용 대비 매출액을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 이를 통해<br>1천만원의 매출이 발생했을 경우 네이버 클릭초이스의 ROAS는 1000%입니다.</p>
+							<p class="txt3">* <b>ROAS(%)</b> =<br>&nbsp;&nbsp;매출액 / 광고비용 *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap2_8" class="tooltip_wrap right" style="display:none;top:70px;right:254px">
+						<div class="tool_box">
+							<p class="txt2">광고를 집행한 광고주 수의 비중을 나타내는 지표입니다.</p>
+							<p class="txt3">전체 광고주 수가 1000개이고 네이버 클릭초이스를 집행한<br>광고주 수가 500개일 경우, 네이버 클릭초이스의 집행수(비중)는 50%입니다.</p>
+							<p class="txt3">* <b>집행수 비중(%)</b> =<br>&nbsp;&nbsp;해당상품을 집행한 전체 광고주 수 / 전체 광고주 수 *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap2_9" class="tooltip_wrap right" style="display:none;top:70px;right:164px">
+						<div class="tool_box">
+							<p class="txt2">특정 광고상품이 노출된 숫자를 나타내는 지표입니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap2_10" class="tooltip_wrap right" style="display:none;top:70px;right:72px">
+						<div class="tool_box">
+							<p class="txt2">사용자들이 특정 광고상품을 클릭한 숫자를 나타내는<br>지표입니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap2_11" class="tooltip_wrap right" style="display:none;top:70px;right:-18px">
+						<div class="tool_box">
+							<p class="txt2">특정 광고상품을 통해 구매, 회원가입, 애플리케이션<br>다운로드 등으로 전환된 숫자를 나타내는 지표입니다.</p>
+						</div>
+					</div>
+				</div>	
+				<h2 class="tit_sz20">상품 랭킹</h2>
+				<div class="tbl_grd">
+					<table class="easyui-datagrid" style="width:100%">
+					<caption class="blind">순위, 상품유형, 집계 데이터 기준 랭킹(클릭률, 클릭비용, 전환율,전환비용, ROAS), 비중(%) 기준 랭킹(집행수, 노출수, 클릭수, 전환수)</caption>
+					<thead>
+					<tr>
+					<th field="rank" width="60" rowspan="2" align="center"><b>순위</b></th>
+					<th field="productid" width="160" rowspan="2" align="left"><b>상품유형</b></th>
+					<th colspan="5"><b>집계 데이터 기준 랭킹</b><a href="#" id="tt_btn3_1" class="btn_tooltip">?</a></th>
+					<th colspan="4"><b>비중(%) 기준 랭킹</b><a href="#" id="tt_btn3_2" class="btn_tooltip">?</a></th>
+					</tr>
+					<tr>
+					<th field="field01" scope="col" width="90" align="right"><span id="tt_btn3_3" class="btn_sort btn_tooltip on active">클릭률</span></th>
+					<th field="field02" scope="col" width="90" align="right"><span id="tt_btn3_4" class="btn_sort btn_tooltip">클릭비용</span></th>
+					<th field="field03" scope="col" width="90" align="right"><span id="tt_btn3_5" class="btn_sort btn_tooltip">전환율</span></th>
+					<th field="field04" scope="col" width="90" align="right"><span id="tt_btn3_6" class="btn_sort btn_tooltip">전환비용</span></th>
+					<th field="field05" scope="col" width="90" align="right"><span id="tt_btn3_7" class="btn_sort btn_tooltip">ROAS</span></th>
+					<th field="field06" scope="col" width="90" align="right"><span id="tt_btn3_8" class="btn_sort btn_tooltip">집행수</span></th>
+					<th field="field07" scope="col" width="90" align="right"><span id="tt_btn3_9" class="btn_sort btn_tooltip">노출수</span></th>
+					<th field="field08" scope="col" width="90" align="right"><span id="tt_btn3_10" class="btn_sort btn_tooltip">클릭수</span></th>
+					<th field="field09" scope="col" width="90" align="right"><span id="tt_btn3_11" class="btn_sort btn_tooltip">전환수</span></th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td>1</td>
+					<td>쇼핑</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td>120,300 원</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					</tr>		
+					<tr>
+					<td>2</td>
+					<td>리워드</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td>120,300 원</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					</tr>	
+					<tr>
+					<td>3</td>
+					<td>리타겟팅</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td>120,300 원</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					</tr>
+					<tr>
+					<td>4</td>
+					<td>모바일 앱마케팅</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td>120,300 원</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					</tr>
+					<tr>
+					<td>5</td>
+					<td>네이티브</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td>120,300 원</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					</tr>
+					</tbody>
+					</table>
+					<!-- [D] 툴팁 버튼과 동일한 ID번호로 통일시 자동으로 마우스오버 모션 생성(#tt_btn1 = #tt_wrap1) -->
+					<!-- [D] 위치값은 인라인으로 조정 -->
+					<div id="tt_wrap3_1" class="tooltip_wrap" style="display:none;left:477px">
+						<div class="tool_box">
+							<p class="txt2">수집한 데이터를 기반으로 계산된 각 지표별 평균 효율<br>데이터입니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap3_2" class="tooltip_wrap right" style="display:none;right:61px">
+						<div class="tool_box">
+							<p class="txt2">각 지표별 총 합에서 해당항목이 차지하는 비중을<br>나타냅니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap3_3" class="tooltip_wrap" style="display:none;top:70px;left:230px">
+						<div class="tool_box">
+							<p class="txt2">사용자가 특정 광고상품을 보고 해당 광고상품을 클릭한 비율을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스를 본 사용자 수가 1000명이고,해당 광고<br>상품을 클릭한 숫자가 500일 경우 네이버 클릭초이스의 클릭률은 0.5% 입니다.</p>
+							<p class="txt3">* <b>클릭률(%)</b> =<br>&nbsp;&nbsp;클릭수 / 노출수 *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap3_4" class="tooltip_wrap" style="display:none;top:70px;left:319px">
+						<div class="tool_box">
+							<p class="txt2">광고 1클릭당 발생하는 평균비용을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 해당 광고<br>상품을 클릭한 숫자가 5,000일 경우 네이버 클릭초이스의 클릭비용은 200원 입니다</p>
+							<p class="txt3">* <b>클릭비용(원)</b> =<br>&nbsp;&nbsp;광고비 / 클릭수</p>
+						</div>
+					</div>
+					<div id="tt_wrap3_5" class="tooltip_wrap" style="display:none;top:70px;left:411px">
+						<div class="tool_box">
+							<p class="txt2">특정 광고상품을 통해 사이트를 방문한 후 구매, 회원가입 등의 전환을 발생시키는 비율을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스 광고를 클릭한 숫자가 5,000이고 이를 통해<br>100건의 전환이 일어났을 경우 네이버 클릭초이스의 전환율은 2%입니다.</p>
+							<p class="txt3">* <b>전환율(%)</b> =<br>&nbsp;&nbsp;전환수 / 유입수(클릭수) *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap3_6" class="tooltip_wrap" style="display:none;top:70px;left:500px">
+						<div class="tool_box">
+							<p class="txt2">전환 한번 당 발생하는 비용을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 100건의<br>전환이 일어났을 경우 네이버 클릭초이스의 전환비용은 10,000원입니다.</p>
+							<p class="txt3">* <b>전환비용(원)</b> =<br>&nbsp;&nbsp;광고비용 / 전환수</p>
+						</div>
+					</div>
+					<div id="tt_wrap3_7" class="tooltip_wrap" style="display:none;top:70px;left:591px">
+						<div class="tool_box">
+							<p class="txt2">광고비용 대비 매출액을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 이를 통해<br>1천만원의 매출이 발생했을 경우 네이버 클릭초이스의 ROAS는 1000%입니다.</p>
+							<p class="txt3">* <b>ROAS(%)</b> =<br>&nbsp;&nbsp;매출액 / 광고비용 *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap3_8" class="tooltip_wrap right" style="display:none;top:70px;right:254px">
+						<div class="tool_box">
+							<p class="txt2">광고를 집행한 광고주 수의 비중을 나타내는 지표입니다.</p>
+							<p class="txt3">전체 광고주 수가 1000개이고 네이버 클릭초이스를 집행한<br>광고주 수가 500개일 경우, 네이버 클릭초이스의 집행수(비중)는 50%입니다.</p>
+							<p class="txt3">* <b>집행수 비중(%)</b> =<br>&nbsp;&nbsp;해당상품을 집행한 전체 광고주 수 / 전체 광고주 수 *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap3_9" class="tooltip_wrap right" style="display:none;top:70px;right:164px">
+						<div class="tool_box">
+							<p class="txt2">특정 광고상품이 노출된 숫자를 나타내는 지표입니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap3_10" class="tooltip_wrap right" style="display:none;top:70px;right:72px">
+						<div class="tool_box">
+							<p class="txt2">사용자들이 특정 광고상품을 클릭한 숫자를 나타내는<br>지표입니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap3_11" class="tooltip_wrap right" style="display:none;top:70px;right:-18px">
+						<div class="tool_box">
+							<p class="txt2">특정 광고상품을 통해 구매, 회원가입, 애플리케이션<br>다운로드 등으로 전환된 숫자를 나타내는 지표입니다.</p>
+						</div>
+					</div>
+				</div>		
+				<h2 class="tit_sz20">매체 랭킹</h2>
+				<div class="tbl_grd">
+					<table class="easyui-datagrid" style="width:100%">
+					<caption class="blind">순위, 매체명, 집계 데이터 기준 랭킹(클릭률, 클릭비용, 전환율,전환비용, ROAS), 비중(%) 기준 랭킹(집행수, 노출수, 클릭수, 전환수)</caption>
+					<thead>
+					<tr>
+					<th field="rank" width="60" rowspan="2" align="center"><b>순위</b></th>
+					<th field="productid" width="160" rowspan="2" align="left"><b>매체명</b></th>
+					<th colspan="5"><b>집계 데이터 기준 랭킹</b><a href="#" id="tt_btn4_1" class="btn_tooltip">?</a></th>
+					<th colspan="4"><b>비중(%) 기준 랭킹</b><a href="#" id="tt_btn4_2" class="btn_tooltip">?</a></th>
+					</tr>
+					<tr>
+					<th field="field01" scope="col" width="90" align="right"><span id="tt_btn4_3" class="btn_sort btn_tooltip on active">클릭률</span></th>
+					<th field="field02" scope="col" width="90" align="right"><span id="tt_btn4_4" class="btn_sort btn_tooltip">클릭비용</span></th>
+					<th field="field03" scope="col" width="90" align="right"><span id="tt_btn4_5" class="btn_sort btn_tooltip">전환율</span></th>
+					<th field="field04" scope="col" width="90" align="right"><span id="tt_btn4_6" class="btn_sort btn_tooltip">전환비용</span></th>
+					<th field="field05" scope="col" width="90" align="right"><span id="tt_btn4_7" class="btn_sort btn_tooltip">ROAS</span></th>
+					<th field="field06" scope="col" width="90" align="right"><span id="tt_btn4_8" class="btn_sort btn_tooltip">집행수</span></th>
+					<th field="field07" scope="col" width="90" align="right"><span id="tt_btn4_9" class="btn_sort btn_tooltip">노출수</span></th>
+					<th field="field08" scope="col" width="90" align="right"><span id="tt_btn4_10" class="btn_sort btn_tooltip">클릭수</span></th>
+					<th field="field09" scope="col" width="90" align="right"><span id="tt_btn4_11" class="btn_sort btn_tooltip">전환수</span></th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td>1</td>
+					<td>네이버</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td>120,300 원</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					</tr>		
+					<tr>
+					<td>2</td>
+					<td>다음</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td>120,300 원</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					</tr>	
+					<tr>
+					<td>3</td>
+					<td>구글</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td>120,300 원</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					</tr>
+					<tr>
+					<td>4</td>
+					<td>네이트</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td>120,300 원</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					</tr>
+					<tr>
+					<td>5</td>
+					<td>페이스북</td>
+					<td>5.15%</td>
+					<td>310원</td>
+					<td>5.15%</td>
+					<td>120,300 원</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					<td>100%</td>
+					</tr>
+					</tbody>
+					</table>
+					<!-- [D] 툴팁 버튼과 동일한 ID번호로 통일시 자동으로 마우스오버 모션 생성(#tt_btn1 = #tt_wrap1) -->
+					<!-- [D] 위치값은 인라인으로 조정 -->
+					<div id="tt_wrap4_1" class="tooltip_wrap" style="display:none;left:477px">
+						<div class="tool_box">
+							<p class="txt2">수집한 데이터를 기반으로 계산된 각 지표별 평균 효율<br>데이터입니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap4_2" class="tooltip_wrap right" style="display:none;right:61px">
+						<div class="tool_box">
+							<p class="txt2">각 지표별 총 합에서 해당항목이 차지하는 비중을<br>나타냅니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap4_3" class="tooltip_wrap" style="display:none;top:70px;left:230px">
+						<div class="tool_box">
+							<p class="txt2">사용자가 특정 광고상품을 보고 해당 광고상품을 클릭한 비율을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스를 본 사용자 수가 1000명이고,해당 광고<br>상품을 클릭한 숫자가 500일 경우 네이버 클릭초이스의 클릭률은 0.5% 입니다.</p>
+							<p class="txt3">* <b>클릭률(%)</b> =<br>&nbsp;&nbsp;클릭수 / 노출수 *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap4_4" class="tooltip_wrap" style="display:none;top:70px;left:319px">
+						<div class="tool_box">
+							<p class="txt2">광고 1클릭당 발생하는 평균비용을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 해당 광고<br>상품을 클릭한 숫자가 5,000일 경우 네이버 클릭초이스의 클릭비용은 200원 입니다</p>
+							<p class="txt3">* <b>클릭비용(원)</b> =<br>&nbsp;&nbsp;광고비 / 클릭수</p>
+						</div>
+					</div>
+					<div id="tt_wrap4_5" class="tooltip_wrap" style="display:none;top:70px;left:411px">
+						<div class="tool_box">
+							<p class="txt2">특정 광고상품을 통해 사이트를 방문한 후 구매, 회원가입 등의 전환을 발생시키는 비율을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스 광고를 클릭한 숫자가 5,000이고 이를 통해<br>100건의 전환이 일어났을 경우 네이버 클릭초이스의 전환율은 2%입니다.</p>
+							<p class="txt3">* <b>전환율(%)</b> =<br>&nbsp;&nbsp;전환수 / 유입수(클릭수) *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap4_6" class="tooltip_wrap" style="display:none;top:70px;left:500px">
+						<div class="tool_box">
+							<p class="txt2">전환 한번 당 발생하는 비용을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 100건의<br>전환이 일어났을 경우 네이버 클릭초이스의 전환비용은 10,000원입니다.</p>
+							<p class="txt3">* <b>전환비용(원)</b> =<br>&nbsp;&nbsp;광고비용 / 전환수</p>
+						</div>
+					</div>
+					<div id="tt_wrap4_7" class="tooltip_wrap" style="display:none;top:70px;left:591px">
+						<div class="tool_box">
+							<p class="txt2">광고비용 대비 매출액을 나타내는 지표입니다.</p>
+							<p class="txt3">네이버 클릭초이스에 집행한 광고비가 1백만원이고 이를 통해<br>1천만원의 매출이 발생했을 경우 네이버 클릭초이스의 ROAS는 1000%입니다.</p>
+							<p class="txt3">* <b>ROAS(%)</b> =<br>&nbsp;&nbsp;매출액 / 광고비용 *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap4_8" class="tooltip_wrap right" style="display:none;top:70px;right:254px">
+						<div class="tool_box">
+							<p class="txt2">광고를 집행한 광고주 수의 비중을 나타내는 지표입니다.</p>
+							<p class="txt3">전체 광고주 수가 1000개이고 네이버 클릭초이스를 집행한<br>광고주 수가 500개일 경우, 네이버 클릭초이스의 집행수(비중)는 50%입니다.</p>
+							<p class="txt3">* <b>집행수 비중(%)</b> =<br>&nbsp;&nbsp;해당상품을 집행한 전체 광고주 수 / 전체 광고주 수 *100</p>
+						</div>
+					</div>
+					<div id="tt_wrap4_9" class="tooltip_wrap right" style="display:none;top:70px;right:164px">
+						<div class="tool_box">
+							<p class="txt2">특정 광고상품이 노출된 숫자를 나타내는 지표입니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap4_10" class="tooltip_wrap right" style="display:none;top:70px;right:72px">
+						<div class="tool_box">
+							<p class="txt2">사용자들이 특정 광고상품을 클릭한 숫자를 나타내는<br>지표입니다.</p>
+						</div>
+					</div>
+					<div id="tt_wrap4_11" class="tooltip_wrap right" style="display:none;top:70px;right:-18px">
+						<div class="tool_box">
+							<p class="txt2">특정 광고상품을 통해 구매, 회원가입, 애플리케이션<br>다운로드 등으로 전환된 숫자를 나타내는 지표입니다.</p>
+						</div>
+					</div>
+				</div>	
+			</div>			
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

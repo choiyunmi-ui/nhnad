@@ -1,0 +1,315 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>관심 상품 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents" class="sub_myit"> 		
+			<ul class="tab_v1">
+			<!-- [D] 활성화 페이지 .on 추가 -->
+			<li><a href="#">홈</a></li>			
+			<li><a href="#">기본정보관리</a></li>			
+			<li><a href="#">비즈니스계정</a></li>			
+			<li><a href="#">애드머니</a></li>			
+			<li class="high"><a href="#">서비스신청<br>처리이력</a></li>
+			<li class="high"><a href="#">나의<br>광고효율</a></li>
+			<li class="high"><a href="#">유료회원<br>신청이력</a></li>
+			<li class="on"><a href="#">관심상품</a></li>
+			<li><a href="#">상담내역</a></li>			
+			</ul>
+			<div class="tit_wrap">
+			<h2 class="tit_sec">관심 상품</h2>
+			</div>
+			<div class="wrap_box">
+				<button type="button" class="btn_bd">관심상품 등록</button>
+				<button type="button" class="btn_bd">관심상품 삭제</button>
+			</div>
+			<div class="tbl_grd chck">
+				<table class="easyui-datagrid" style="width:100%">
+				<caption class="blind">상품 선택, 순위, 상품명, 집계 데이터 기준 랭킹(클릭률, 클릭비용, 전환율,전환비용, ROAS), 비중(%) 기준 랭킹(집행수, 노출수, 클릭수, 전환수)</caption>
+				<thead>
+				<tr>
+				<th field="ck" checkbox="true" width="60" rowspan="3" align="center">선택</th>
+				<th field="raking" width="59" rowspan="3" align="center"><b>순위</b></th>
+				<th field="productid" width="268" rowspan="3" align="left"><b>상품명</b></th>
+				<th colspan="5"><b>집계 데이터 기준 랭킹</b></th>
+				<th colspan="4"><b>비중(%) 기준 랭킹</b></th>
+				</tr>
+				<tr>
+				<th field="field01" scope="col" width="79" align="center" rowspan="2"><span class="btn_sort on">클릭률</span></th>
+				<th field="field02" scope="col" width="79" align="right" rowspan="2"><span class="btn_sort">클릭비용</span></th>
+				<th scope="col" colspan="3">
+					전환기준
+					<div class="sel_wrap_s" style="width:134px">
+						<button type="button" class="btn_sel">전체</button>
+						<ul class="sel_lst">
+						<li><a href="#">전체</a></li>
+						<li><a href="#">회원가입</a></li>
+						<li><a href="#">구매/주문완료</a></li>
+						<li><a href="#">신청완료</a></li>
+						<li><a href="#">예약완료</a></li>
+						<li><a href="#">글쓰기완료</a></li>
+						<li><a href="#">다운로드수</a></li>
+						<li><a href="#">실행수</a></li>
+						<li><a href="#">참여수</a></li>
+						<li><a href="#">기타</a></li>
+						</ul>
+					</div>
+				</th>
+				<th field="field06" scope="col" width="59" align="center" rowspan="2">집행수</th>
+				<th field="field07" scope="col" width="59" align="center" rowspan="2">노출수</th>
+				<th field="field08" scope="col" width="59" align="center" rowspan="2">클릭수</th>
+				<th field="field09" scope="col" width="60" align="center" rowspan="2">전환수</th>
+				</tr>
+				<tr>
+				<th field="field03" scope="col" width="79" align="center"><span class="btn_sort">전환율</span></th>
+				<th field="field04" scope="col" width="79" align="right"><span class="btn_sort">전환비용</span></th>
+				<th field="field05" scope="col" width="79" align="center"><span class="btn_sort">ROAS</span></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td></td>
+				<td>1</td>
+				<td><div class="ico_movie">동영상광고</div></td>
+				<td>5.15%</td>
+				<td>310원</td>
+				<td>5.15%</td>
+				<td>120,300 원</td>
+				<td>100%</td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				</tr>		
+				<tr>
+				<td></td>
+				<td>2</td>
+				<td><div class="ico_banner">배너광고</div></td>
+				<td>5.15%</td>
+				<td>310원</td>
+				<td>5.15%</td>
+				<td>120,300 원</td>
+				<td>100%</td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				</tr>	
+				<tr>
+				<td></td>
+				<td>3</td>
+				<td><div class="ico_srch">검색광고</div></td>
+				<td>5.15%</td>
+				<td>310원</td>
+				<td>5.15%</td>
+				<td>120,300 원</td>
+				<td>100%</td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				</tr>
+				<tr>
+				<td></td>
+				<td>4</td>
+				<td><div class="ico_cont">컨텐츠광고</div></td>
+				<td>5.15%</td>
+				<td>310원</td>
+				<td>5.15%</td>
+				<td>120,300 원</td>
+				<td>100%</td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				</tr>
+				<tr>
+				<td></td>
+				<td>5</td>
+				<td><div class="ico_movie">네이버 클릭초이스</div></td>
+				<td>5.15%</td>
+				<td>310원</td>
+				<td>5.15%</td>
+				<td>120,300 원</td>
+				<td>100%</td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				</tr>
+				<tr>
+				<td></td>
+				<td>6</td>
+				<td><div class="ico_banner">네이버 클릭초이스</div></td>
+				<td>5.15%</td>
+				<td>310원</td>
+				<td>5.15%</td>
+				<td>120,300 원</td>
+				<td>100%</td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				</tr>
+				<tr>
+				<td></td>
+				<td>7</td>
+				<td><div class="ico_srch">네이버 클릭초이스</div></td>
+				<td>5.15%</td>
+				<td>310원</td>
+				<td>5.15%</td>
+				<td>120,300 원</td>
+				<td>100%</td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				</tr>
+				<tr>
+				<td></td>
+				<td>8</td>
+				<td><div class="ico_movie">네이버 클릭초이스</div></td>
+				<td>5.15%</td>
+				<td>310원</td>
+				<td>5.15%</td>
+				<td>120,300 원</td>
+				<td>100%</td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				</tr>
+				<tr>
+				<td></td>
+				<td>9</td>
+				<td><div class="ico_movie">네이버 클릭초이스</div></td>
+				<td>5.15%</td>
+				<td>310원</td>
+				<td>5.15%</td>
+				<td>120,300 원</td>
+				<td>100%</td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				</tr>
+				<tr>
+				<td></td>
+				<td>10</td>
+				<td><div class="ico_banner">네이버 클릭초이스</div></td>
+				<td>5.15%</td>
+				<td>310원</td>
+				<td>5.15%</td>
+				<td>120,300 원</td>
+				<td>100%</td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				<td><span class="td_box">4분위</span></td>
+				</tr>
+				</tbody>
+				</table>
+			</div>	
+			<ul class="tbl_v13">
+			<li>
+				<table>
+				<caption class="blind">관심상품 News 리스트</caption>
+				<thead>
+				<tr>
+				<th scope="col">관심상품 News</th>
+				</tr>
+				</thead>
+				<tbody>
+				<!-- [D] 관심상품 소식 있을경우 출력 -->
+				<tr>
+				<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+				</tr>
+				<tr>
+				<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+				</tr>
+				<tr>
+				<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+				</tr>
+				<tr>
+				<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+				</tr>
+				<tr>
+				<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+				</tr>
+				<!-- //[D] 관심상품 소식 있을경우 출력 -->
+				<!-- [D] 관심상품 소식 없을경우 출력 -->
+				<tr>
+				<td colspan="2" class="result_none">등록된 관심상품 소식이 없습니다</td>
+				</tr>
+				<!-- //[D] 관심상품 소식 없을경우 출력 -->
+				</tbody>
+				</table>	
+			</li>
+			<li>
+				<table>
+				<caption class="blind">관심상품 Trend 리스트</caption>
+				<thead>
+				<tr>
+				<th scope="col">관심상품 Trend</th>
+				</tr>
+				</thead>
+				<!-- [D] 관심상품 소식 있을경우 출력 -->
+				<tbody>
+				<tr>
+				<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+				</tr>
+				<tr>
+				<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+				</tr>
+				<tr>
+				<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+				</tr>
+				<tr>
+				<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+				</tr>
+				<tr>
+				<td><a href="#"><span>[아이템베이]</span>아이템베이 캐시백 광고 출시(11/04)</a></td>
+				</tr>
+				<!-- //[D] 관심상품 소식 있을경우 출력 -->
+				<!-- [D]관심상품 소식 없을경우 출력 -->
+				<tr>
+				<td colspan="2" class="result_none">등록된 관심상품 트랜드 소식이 없습니다</td>
+				</tr>
+				<!-- //[D] 관심상품 소식 없을경우 출력 -->
+				</tbody>
+				</table>
+			</li>
+			</ul>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

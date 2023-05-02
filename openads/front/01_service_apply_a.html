@@ -1,0 +1,220 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>광고집행신청 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents">
+			<ul class="tab_v1">
+			<li class="span_area">
+				<span>서비스 소개</span>
+				<ul class="tab_v1_2" style="display:none">
+				<li><a href="#">서비스 안내</a></li>
+				<li><a href="#">회원유형</a></li>
+				<li><a href="#">애드머니</a></li>
+				<li><a href="#">공지사항</a></li>
+				</ul>
+			</li>
+			<li class="on"><a href="#">광고 집행 신청</a></li>
+			<li><a href="#">부가서비스</a></li>
+			<li><a href="#">제휴제안</a></li>				
+			</ul>
+			<form action="#">
+			<fieldset>
+			<legend>서비스 신청 접수 영역</legend>
+				<div class="tit_wrap">
+					<h2 class="tit_sec">서비스 신청 접수</h2>
+				</div>
+				<div class="tbl_v3">
+					<table>
+					<caption class="blind">ID, E-Mail, 휴대폰번호, 신청항목 선택, 광고정보 입력, 대행 이용 약관, 데이터 수집에 대한 동의, 개인정보 취급 약관</caption>
+					<colgroup>
+					<col style="width:180px"><col>							
+					</colgroup>
+					<tbody>
+					<tr>
+					<th scope="row">ID</th>
+					<td><p class="txt2">openadsopenads@nhnent.com</p></td>
+					</tr>
+					<tr>
+					<th scope="row">E-Mail</th>
+					<td><p class="txt2">openadsopenads@nhnent.com<a href="#" class="btn_bd bd_y" style="margin-left:61px;">메일주소 변경</a></p></td>
+					</tr>
+					<tr>
+					<th scope="row">휴대폰번호</th>
+					<td>
+						<div class="sel_wrap">
+							<button type="button" class="btn_sel">010</button>
+							<ul class="sel_lst">
+							<li><a href="#">010</a></li>
+							<li><a href="#">011</a></li>
+							<li><a href="#">016</a></li>
+							<li><a href="#">017</a></li>		
+							<li><a href="#">018</a></li>		
+							<li><a href="#">019</a></li>				
+							</ul>							
+						</div>
+						<span class="fm_etc">-</span><input type="text" title="휴대폰번호 중간자리" class="fm_com" style="width:82px">
+						<span class="fm_etc">-</span><input type="text" title="휴대폰번호 마지막자리" class="fm_com" style="width:82px">
+						<a href="#" class="btn_pop btn_bd bd_y" style="width:105px;margin-left:20px">인증하기</a>
+					</td>								
+					</tr>
+					<tr class="wide">
+					<th scope="row">신청항목 선택</th>
+					<td>
+						<ul class="lst_rdo w213">
+						<li class="rdo_box"><input type="radio" name="check1" id="check1_1" checked><label for="check1_1"><span>광고 집행 신청</span></label></li>
+						<li class="rdo_box"><input type="radio" name="check1" id="check1_2"><label for="check1_2"><span>부가서비스 신청</span></label></li>
+						</ul>
+						<div class="txt_box">
+							<p class="warn">온라인 광고 집행영업권설정을 원하시는 경우 ‘<strong>광고 집행 신청</strong>’, 그 외 마케팅 서비스 신청을 원하시는 경우 ‘<strong>부가서비스 신청</strong>’ 을 선택해주세요.</p>		
+						</div>				
+					</td>
+					</tr>
+					<tr class="wide">
+					<th scope="row">광고정보 입력</th>
+					<td>
+						<ul class="lst_rdo">
+						<li class="rdo_box"><input type="radio" name="check2" id="check2_1" checked><label for="check2_1"><span>광고정보 직접입력</span></label></li>
+						<li class="rdo_box"><input type="radio" name="check2" id="check2_2"><label for="check2_2"><span>오픈애즈 CS파트 상담요청</span></label></li>
+						</ul>		
+						<!-- [D]상품추가하기 기능을 통해 입력된 광고정보가 있을 경우 출력 -->
+						<div class="tbl_v12">
+							<table>
+							<caption class="blind">신청내역 정보</caption>
+							<colgroup>
+							<col style="width:130px"><col style="width:220px"><col style="width:160px"><col style="width:140px"><col style="width:70px"><col style="width:70px">			
+							</colgroup>
+							<tbody>
+							<tr>
+							<th scope="row">신청내역 1</th>
+							<td class="al_l">http://www.openads.co.kr</td>
+							<td class="al_l">네이버 클릭초이스</td>
+							<td class="al_r">5,000,000 원</td>
+							<td>기존</td>
+							<td><a href="#" class="btn_del">삭제</a></td>
+							</tr>	
+							<tr>
+							<th scope="row">신청내역 2</th>
+							<td class="al_l">http://www.openads.co.kr</td>
+							<td class="al_l">상품명영역최대10자</td>
+							<td class="al_r">1,000,000,000 원</td>
+							<td>신규</td>
+							<td><a href="#" class="btn_del">삭제</a></td>
+							</tr>					
+							</tbody>
+							</table>
+						</div>		
+						<!-- //[D]상품추가하기 기능을 통해 입력된 광고정보가 있을 경우 출력 -->
+						<!-- [D] 광고정보 직접입력 선택 시 노출 -->
+						<div class="btn_area_s">
+							<button type="button" class="btn_pop btn_bd ico_plus"><span>상품 추가하기</span></button>
+						</div>						
+						<!-- //[D] 광고정보 직접입력 선택 시 노출 -->
+						<div class="txt_box">
+							<p class="warn">‘<b>광고정보 직접입력</b>’을 통해 수집되는 정보는 오픈애즈 CS파트에서 광고주님과 보다 빠르고 정확한 컨설팅을 진행하기 위해 사용되며,<br>해당정보 기입을 통해 매체사 대행권이 즉시 설정되는 것은 아니오니 참고 바랍니다.<br><br>만약, 광고정보 입력 없이 바로 CS파트를 통해 신청하길 원하시는 경우 ‘<b>오픈애즈 CS파트 상담요청</b>’ 을 선택해주시면 됩니다.</p>		
+						</div>		
+					</td>
+					</tr>
+					<tr class="wide">
+					<th scope="row">대행 이용 약관</th>
+					<td>
+						<div class="agr_box">
+							<p>제1조 (목적)</p>
+							<p>이 약관은 오픈애드(이하 "회사"라 합니다)가 제공하는 인터넷 광고대행 서비스의 이용조건 및 절차에 관한 제반사항을 규정함을
+							목적으로 합니다.</p>
+							<p>&nbsp;</p>
+							<p>제 2 조 (서비스의 정의) </p>
+							<p>"모바일 광고대행 서비스"(이하 본 서비스라 합니다.)라 함은 모바일 애플리케이션을 통하여 매체 광고를 제공할 수 있는 광고 
+							서비스를 말합니다.</p>
+							<p>&nbsp;</p>
+							<p>제 3 조 (서비스의 정의) 
+							<p>"모바일 광고대행 서비스"(이하 본 서비스라 합니다.)라 함은 모바일 애플리케이션을 통하여 매체 광고를 제공할 수 있는 광고 
+							서비스를 말합니다.</p>							
+						</div>	
+						<div class="agr_chk">
+							<span class="chk_box"><input type="checkbox" id="agreed1"><label for="agreed1"><span>위 이용약관에 동의합니다. (필수)</span></label></span>							
+						</div>					
+					</td>
+					</tr>
+					<tr class="wide">
+					<th scope="row">데이터 수집에 대한<br />동의</th>
+					<td>
+						<div class="agr_box">
+							<p>제1조 (목적)</p>
+							<p>이 약관은 오픈애드(이하 "회사"라 합니다)가 제공하는 인터넷 광고대행 서비스의 이용조건 및 절차에 관한 제반사항을 규정함을
+							목적으로 합니다.</p>
+							<p>&nbsp;</p>
+							<p>제 2 조 (서비스의 정의) </p>
+							<p>"모바일 광고대행 서비스"(이하 본 서비스라 합니다.)라 함은 모바일 애플리케이션을 통하여 매체 광고를 제공할 수 있는 광고 
+							서비스를 말합니다.</p>
+							<p>&nbsp;</p>
+							<p>제 3 조 (서비스의 정의) 
+							<p>"모바일 광고대행 서비스"(이하 본 서비스라 합니다.)라 함은 모바일 애플리케이션을 통하여 매체 광고를 제공할 수 있는 광고 
+							서비스를 말합니다.</p>							
+						</div>	
+						<div class="agr_chk">
+							<span class="chk_box"><input type="checkbox" id="agreed2"><label for="agreed2"><span>위 이용약관에 동의합니다. (필수)</span></label></span>							
+						</div>					
+					</td>
+					</tr>
+					<tr class="wide">
+					<th scope="row">개인정보 취급 약관</th>
+					<td>
+						<div class="agr_box">
+							<p>제1조 (목적)</p>
+							<p>이 약관은 오픈애드(이하 "회사"라 합니다)가 제공하는 인터넷 광고대행 서비스의 이용조건 및 절차에 관한 제반사항을 규정함을
+							목적으로 합니다.</p>
+							<p>&nbsp;</p>
+							<p>제 2 조 (서비스의 정의) </p>
+							<p>"모바일 광고대행 서비스"(이하 본 서비스라 합니다.)라 함은 모바일 애플리케이션을 통하여 매체 광고를 제공할 수 있는 광고 
+							서비스를 말합니다.</p>
+							<p>&nbsp;</p>
+							<p>제 3 조 (서비스의 정의) 
+							<p>"모바일 광고대행 서비스"(이하 본 서비스라 합니다.)라 함은 모바일 애플리케이션을 통하여 매체 광고를 제공할 수 있는 광고 
+							서비스를 말합니다.</p>							
+						</div>	
+						<div class="agr_chk">
+							<span class="chk_box"><input type="checkbox" id="agreed3"><label for="agreed3"><span>위 이용약관에 동의합니다. (필수)</span></label></span>							
+						</div>					
+					</td>
+					</tr>					
+					</tbody>						
+					</table>					
+				</div>			
+				<div class="btn_area_l">
+					<button type="submit" class="btn_l btn_org" style="width:200px">신청접수</button>
+					<a href="#" class="btn_l btn_wht" style="width:200px">취소</a>				
+				</div>				
+			</fieldset>				
+			</form>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+
+	<!-- header -->
+	<div id="header">
+		<h1 class="tit_ssom">AD SSOM</h1>
+		<div class="userinfo">
+			<p class="user">박선유님 안녕하세요</p>
+			<div class="nav_user">
+				<a href="#">내정보</a>
+				<span class="bar">|</span>
+				<a href="#"><img src="img/ico_logout.png" alt="x" class="ico">로그아웃</a>
+			</div>
+		</div>
+		<!-- [D] 전체메뉴 클릭시 div.nav_top에 .total_view toggle -->
+		<div class="nav_top"><div class="nav_top_in">
+			<ul>
+			<li><a href="#">HOME</a></li>
+			<li><a href="#">광고정보관리</a>
+				<div class="dep2">
+					<em class="tit_dep2">광고설정</em>
+					<a href="#">광고주관리</a>
+					<a href="#">사이트정보</a>
+					<a href="#">데이터관리</a>
+					<a href="#">광고대상관리</a>
+					<a href="#">랜딩페이지모니터</a>
+					<a href="#">잔액부족알림이력</a>
+					<em class="tit_dep2">전략그룹</em>
+					<a href="#">전략그룹관리</a>
+					<a href="#">전략그룹대량이동</a>
+				</div>
+			</li>
+			<li><a href="#">분석/리포트</a>
+				<div class="dep2">
+					<em class="tit_dep2">광고효과분석</em>
+					<a href="#">KPI대시보드</a>
+					<a href="#">사이트분석</a>
+					<a href="#">광고상품분석</a>
+					<a href="#">전략그룹분석</a>
+					<a href="#">네이버실시간</a>
+					<em class="tit_dep2">전환분석</em>
+					<a href="#">실시간분석</a>
+					<a href="#">전환상세분석</a>
+					<a href="#">전자상거래분석</a>
+					<a href="#">전환기간분석</a>
+					<em class="tit_dep2">리포트</em>
+					<a href="#">리포트설정</a>
+					<a href="#">리포트예약관리</a>
+					<a href="#">리포트보관함</a>
+					<em class="tit_dep2">실시간알림</em>
+					<a href="#">실시간알림관리</a>
+					<a href="#">실시간알림이력</a>
+				</div>
+			</li>
+			<li><a href="#">자동입찰</a>
+				<div class="dep2">
+					<em class="tit_dep2"><a href="#">노출관리설정</a></em>
+					<em class="tit_dep2"><a href="#">순위관리설정</a></em>
+					<em class="tit_dep2"><a href="#">자동입찰현황</a></em>
+					<em class="tit_dep2"><a href="#">자동입찰관리이력</a></em>
+				</div>
+			</li>
+			<li class="selected"><a href="#">마켓트렌드</a>
+				<div class="dep2">
+					<em class="tit_dep2">경쟁사분석</em>
+					<a href="#" class="selected">사이트별분석</a>
+					<a href="#">키워드별분석</a>
+					<a href="#">업종별분석</a>
+					<em class="tit_dep2">검색트랜드</em>
+				</div>
+			</li>
+			<li><a href="#">광고제안</a>
+				<div class="dep2">
+					<em class="tit_dep2"><a href="#">키워드</a></em>
+					<a href="#">키워드제안</a>
+					<a href="#">키워드목록</a>
+					<em class="tit_dep2"><a href="#">광고문구</a></em>
+					<a href="#">문구작성</a>
+					<a href="#">문구다운로드</a>
+				</div>
+			</li>
+			<li><a href="#">어드민</a>
+				<div class="dep2">
+					<em class="tit_dep2">회원관리</em>
+					<a href="#">회원관리</a>
+					<a href="#">팀관리</a>
+					<a href="#">관리이력</a>
+					<em class="tit_dep2"><a href="#">API 쿼터모니터링</a></em>
+					<em class="tit_dep2"><a href="#">API 계정관리</a></em>
+					<em class="tit_dep2"><a href="#">자동입찰개수관리</a></em>
+				</div>
+			</li>
+			<li><a href="#">시스템관리</a>
+				<div class="dep2">
+					<em class="tit_dep2"><a href="#">시스템모니터링</a></em>
+					<em class="tit_dep2"><a href="#">자동입찰개수관리</a></em>
+					<em class="tit_dep2"><a href="#">광고상품관리</a></em>
+					<em class="tit_dep2"><a href="#">권한관리</a></em>
+					<em class="tit_dep2"><a href="#">에이전시관리</a></em>
+				</div>
+			</li>
+			<li><a href="#" class="btn_total"><img src="img/ico_allmenu.gif" alt="+" class="ico">전체메뉴</a></li>
+			</ul>			
+		</div></div>
+	</div>
+	<!-- //header -->
+	
+	<div id="container">
+		<div id="contents">
+		
+			<div class="section_head">
+				<h2 class="tit_top">타이틀,sitemap + 검색 필터</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">마켓트렌드</a>
+						<div class="dep1">
+							<a href="#">광고정보관리</a>
+							<a href="#">분석/리포트</a>
+							<a href="#">자동입찰</a>
+							<a href="#" class="selected">마켓트렌드</a>
+							<a href="#">광고제안</a>
+							<a href="#">어드민</a>
+							<a href="#">시스템관리</a>
+						</div>
+					</span>
+					<span class="bar">&gt;</span>
+					<span class="dep_group">
+						<a href="#">경쟁사분석/사이트별분석</a>
+						<div class="dep2">
+							<em class="tit_dep2">경쟁사분석</em>
+							<a href="#" class="selected">사이트별분석</a>
+							<a href="#">키워드별분석</a>
+							<a href="#">업종별분석</a>
+						</div>
+					</span>
+				</div>
+			</div>
+			
+			<div class="section_filter">
+				<label>회원유형</label> <select class="selectbox">
+					<option>광고담당자(AE)</option>
+					<option>광고주</option>
+				</select> <span class="bar">|</span> <label>팀</label> <select
+					class="selectbox">
+					<option>전체</option>
+					<option>1팀</option>
+					<option>2팀</option>
+					<option>3팀</option>
+					<option>미분류</option>
+				</select> <span class="bar">|</span> <label>권한</label> <select
+					class="selectbox">
+					<option>전체</option>
+					<option>리더</option>
+					<option>멤버</option>
+				</select> <span class="bar">|</span> <label>담당자</label> <input type="text"
+					class="inp_text"> <span class="btn_group"> <a
+					href="#" class="btn_odd">조회</a>
+				</span>
+			</div>
+			
+			<div class="sub_head">
+				<h3 class="tit_section">광고주 목록</h3>
+				<div class="side">
+					<a href="#" class="btn_basic_m"><img src="img/ico_btn_check.png" alt="v" class="ico">등록</a>
+					<a href="#" class="btn_basic_m"><img src="img/ico_btn_delete.png" alt="x" class="ico">삭제</a>
+				</div>
+			</div>
+			
+			<div class="section_box">
+				<table class="tbl_form">
+				<!-- [D] t_check는 공통/마지막 col항목엔 width선언 제외 -->
+				<col class="t_check"><col width="18%"><col width="12%"><col width="10%"><col span="4">
+				<thead>
+				<tr class="dep1">
+					<th rowspan="2" class="t_check"><span class="inp_check"><input type="checkbox"></th>
+					<th rowspan="2"><a href="#" class="btn_sort">광고주</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">팀</a></th>
+					<th rowspan="2"><a href="#" class="btn_sort">담당자</a></th>
+					<th colspan="4" span="4">총 비용</th>
+				</tr>
+				<tr class="dep2">
+					<th><a href="#" class="btn_sort">어제</a></th>
+					<th><a href="#" class="btn_sort">최근7일</a></th>
+					<th><a href="#" class="btn_sort">이번달</a></th>
+					<th><a href="#" class="btn_sort">지난달</a></th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<!-- [D] 상단 목록과 동일한 col width값 선언 -->
+				<col class="t_check"><col width="18%"><col width="12%"><col width="10%"><col span="4">
+				<tbody>
+				<!-- [D] 목록없을때 -->
+				<tr><td colspan="100" class="lst_none">조회 대상이 없습니다.</td></tr>
+				<!-- //[D] 목록없을때 -->
+				</tbody>
+				</table>
+			</div>	
+
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">
+			<div class="nav_foot">
+				<a href="#">회사소개</a>
+				<span class="bar">|</span>
+				<a href="#">이용약관</a>
+				<span class="bar">|</span>
+				<a href="#">개인정보취급방침</a>
+				<span class="bar">|</span>
+				사업자등록번호 000-00-00000
+				<span class="bar">|</span>
+				대표:심도섭
+				<span class="bar">|</span>
+				대왕판교로 645번길 16 NHN 엔터테인먼트 플레이 뮤지엄
+				<span class="bar">|</span>
+				전화번호 : 1800-0704
+			</div>
+			<p class="copyright">Copyright <a href="#">NHN Entertainment AD.</a> All right reserved.</p>
+		</div>
+		<!-- //footer-->
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>공지사항 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents">
+			<ul class="tab_v1">
+			<li class="span_area on">
+				<span>서비스 소개</span>
+				<ul class="tab_v1_2" style="display:none">
+				<li><a href="#">서비스 안내</a></li>
+				<li><a href="#">회원유형</a></li>
+				<li><a href="#">애드머니</a></li>
+				<li class="on"><a href="#">공지사항</a></li>
+				</ul>
+			</li>
+			<li><a href="#">광고 집행 신청</a></li>
+			<li><a href="#">부가서비스</a></li>
+			<li><a href="#">제휴제안</a></li>				
+			</ul>
+			<div class="top_srchwrap">
+				<p class="tit">공지사항</p>
+				<div class="srch_area">
+					<form action="#">
+					<fieldset>
+					<legend>검색 영역</legend>
+						<label for="ip_srch" class="plc_lb">검색어를 입력하세요.</label>
+						<input type="text" id="ip_srch" class="plc_ip">
+						<button type="submit" class="btn_srch">검색</button>
+					</fieldset>						
+					</form>				
+				</div>
+			</div>
+			<div class="tbl_v1">
+				<table>
+				<caption class="blind">공지사항(번호, 제목, 작성일)</caption>
+				<colgroup>
+					<col style="width:135px"><col><col style="width:200px">
+				</colgroup>
+				<thead>
+				<tr>
+				<th scope="col">NO</th>						
+				<th scope="col">제목</th>						
+				<th scope="col">작성일</th>						
+				</tr>						
+				</thead>
+				<tbody>
+				<!-- [D] 검색어시 검색어 노출 -->
+				<tr>
+				<td class="result" colspan="3">"검색어"에 대한 결과입니다.</td>				
+				</tr>
+				<!-- //[D] 검색어시 검색어 노출 -->
+				<!-- [D] 공지사항 .notice 추가 -->
+				<tr class="notice">
+				<td><strong class="ico_notice">공지</strong></td>
+				<td class="tb_tit"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+				<td>2016-03-05</td>				
+				</tr>
+				<!-- //[D] 공지사항 .notice 추가 -->
+				<tr>
+				<td>20</td>
+				<td class="tb_tit"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+				<td>2016-03-05</td>				
+				</tr>	
+				<tr>
+				<td>19</td>
+				<td class="tb_tit"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+				<td>2016-03-05</td>				
+				</tr>
+				<tr>
+				<td>18</td>
+				<td class="tb_tit"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+				<td>2016-03-05</td>				
+				</tr>
+				<tr>
+				<td>17</td>
+				<td class="tb_tit"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+				<td>2016-03-05</td>				
+				</tr>
+				<tr>
+				<td>16</td>
+				<td class="tb_tit"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+				<td>2016-03-05</td>				
+				</tr>
+				<tr>
+				<td>15</td>
+				<td class="tb_tit"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+				<td>2016-03-05</td>				
+				</tr>
+				<tr>
+				<td>14</td>
+				<td class="tb_tit"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+				<td>2016-03-05</td>				
+				</tr>
+				<tr>
+				<td>13</td>
+				<td class="tb_tit"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+				<td>2016-03-05</td>				
+				</tr>
+				<tr>
+				<td>12</td>
+				<td class="tb_tit"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+				<td>2016-03-05</td>				
+				</tr>
+				<tr>
+				<td>11</td>
+				<td class="tb_tit"><a href="#">오픈랭킹 8월 업데이트 안내</a></td>
+				<td>2016-03-05</td>				
+				</tr>			
+				<!-- [D] 검색어시 검색어 노출 -->
+				<tr>
+				<td class="no_result" colspan="3">검색된 결과가 없습니다.</td>				
+				</tr>
+				<!-- //[D] 검색어시 검색어 노출 -->						
+				</tbody>						
+				</table>					
+			</div>			
+			<div class="pagenation">
+				<a href="#" class="first">처음</a>
+				<a href="#" class="prev">이전</a>
+				<ul class="num">
+				<!-- [D] 활성화 페이지 .on 추가 -->
+				<li class="on"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+				<li><a href="#">7</a></li>
+				<li><a href="#">8</a></li>
+				<li><a href="#">9</a></li>
+				<li><a href="#">10</a></li>				
+				</ul>
+				<a href="#" class="next">다음</a>
+				<a href="#" class="last">끝</a>			
+			</div>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

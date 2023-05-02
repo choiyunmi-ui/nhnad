@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+			
+			<!-- dimmed -->
+			<div class="dimmed" style=""></div>
+			<!-- layer popup - 실시간입찰 -->
+			<div class="ly_pop" style=""><div class="ly_pop_in">
+				<div class="ly_pop_cont" style="width:858px">
+					<div class="ly_head">
+						<a href="#" class="btn_close_ly">닫기</a>
+					</div>
+					
+					<div class="filter_keyword">						
+						<table class="tbl_state">
+						<caption>노출관리 입찰 이력</caption>
+						<colgroup><col width="171px"><col><col width="171px"><col></colgroup>
+						<thead>
+						<tr><th scope="col" colspan="4">입찰이력</th></tr>
+						</thead>					
+						<tbody>
+						<tr>
+							<th scope="row">변경 전 광고상태</th>
+							<td>ON</td>
+							<th scope="row">입찰광고상태</th>
+							<td>OFF</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+					
+					<div class="filter_keyword">						
+						<table class="tbl_state">
+						<caption>노출관리 설정 내역</caption>
+						<colgroup><col width="171px"><col><col width="171px"><col></colgroup>
+						<thead>
+						<tr><th scope="col" colspan="4">A사이트 <span class="bar_arw">&gt;</span> B그룹 <span class="bar_arw">&gt;</span> C키워드 노출관리 설정내역</th></tr>
+						</thead>					
+						<tbody>
+						<tr>
+							<th scope="row">노출관리설정</th>
+							<td>ON</td>
+							<th scope="row">관리기간설정</th>
+							<td>2014.11.01 - 2014.11.30</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+					
+					<div class="wrap_schedule" name="case_tbl_schedule_onoff">
+						@template_table.html
+					</div>
+				</div>
+			</div></div>
+			<!-- //layer popup -->
+	
+</body>
+</html>

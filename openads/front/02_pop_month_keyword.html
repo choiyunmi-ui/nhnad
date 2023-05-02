@@ -1,0 +1,173 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>키워드 랭킹 :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/datagrid.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+<!-- [D] 전페이지 공통 건너띄기 링크 제공 -->
+<ul id="skip">
+<li><a href="#lnb" onclick="document.getElementById('lnb').tabIndex=-1;document.getElementById('lnb').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+<!-- //[D] 전페이지 공통 건너띄기 링크 제공 -->
+<!-- [D] WRAP -->
+<div id="wrap">
+	<!-- [D] HEADER -->
+	<div id="header"></div>
+	<!-- //[D] HEADER -->
+	<!-- [D] CONTAINER -->
+	<div id="container">
+		<div id="contents">
+			<form action="#">
+			<fieldset>
+				<!-- [D] 레이어팝업 -->
+				<div class="ly_wrap" style="display:block">
+					<!-- [D] 키워드별효율추이 팝업 -->
+					<div class="pop_keyword ly_box" style="display:block">
+						<div class="ly_top">
+							<p class="tit">캐나다구스</p>
+							<a href="#" class="btn_close btn_popclose">닫기</a>
+						</div>
+						<div class="ly_cont">		
+							<h2 class="tit_sz18">월별</h2>
+							<div class="tbl_grd">
+								<table class="easyui-datagrid" style="width:100%">
+								<caption class="blind">기간, 유입수 순위, 전환수 순위, 기간, 유입수 순위, 전환수</caption>
+								<thead>
+								<tr>
+								<th field="date01" scope="col" width="103" align="center"><b>기간</b></th>
+								<th field="field01" scope="col" width="103" align="center"><span class="btn_sort on"><b>유입수 순위</b></span></th>
+								<th field="field02" scope="col" width="103" align="center"><span class="btn_sort"><b>전환수 순위</b></span></th>
+								<th field="date02" scope="col" width="103" align="center"><b>기간</b></th>
+								<th field="field03" scope="col" width="103" align="center"><span class="btn_sort on"><b>유입수 순위</b></span></th>
+								<th field="field04" scope="col" width="103" align="center"><span class="btn_sort"><b>전환수 순위</b></span></th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+								<td>2016년 5월</td>
+								<td>999위</td>
+								<td>1,000위</td>
+								<td>2015년 5월</td>
+								<td>-</td>
+								<td>-</td>
+								</tr>	
+								<tr>
+								<td>2016년 4월</td>
+								<td>1,000위</td>
+								<td>1,200위</td>
+								<td>2015년 10월</td>
+								<td>-</td>
+								<td>-</td>
+								</tr>	
+								<tr>
+								<td>2016년 3월</td>
+								<td>1,000위</td>
+								<td>1,300위</td>
+								<td>2015년 9월</td>
+								<td>-</td>
+								<td>-</td>
+								</tr>	
+								<tr>
+								<td>2016년 2월</td>
+								<td>-</td>
+								<td>-</td>
+								<td>2015년 8월</td>
+								<td>-</td>
+								<td>-</td>
+								</tr>		
+								<tr>
+								<td>2016년 1월</td>
+								<td>-</td>
+								<td>-</td>
+								<td>2015년 7월</td>
+								<td>-</td>
+								<td>-</td>
+								</tr>	
+								<tr>
+								<td>2015년 12월</td>
+								<td>-</td>
+								<td>-</td>
+								<td>2015년 6월</td>
+								<td>-</td>
+								<td>-</td>
+								</tr>	
+								</tbody>
+								</table>
+							</div>	
+							<h2 class="tit_sz18">요일별 (전월기준)</h2>
+							<div class="tbl_grd">
+								<table class="easyui-datagrid" style="width:100%">
+								<caption class="blind">기간, 유입수 순위, 전환수 순위, 기간, 유입수 순위, 전환수</caption>
+								<thead>
+								<tr>
+								<th field="day" scope="col" width="206" align="center"><b>기간</b></th>
+								<th field="field01" scope="col" width="206" align="center"><span class="btn_sort on"><b>유입수 순위</b></span></th>
+								<th field="field02" scope="col" width="206" align="center"><span class="btn_sort"><b>전환수 순위</b></span></th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+								<td>월요일</td>
+								<td>999위</td>
+								<td>1,000위</td>
+								</tr>
+								<tr>
+								<td>화요일</td>
+								<td>1,000위</td>
+								<td>1,200위</td>
+								</tr>
+								<tr>
+								<td>수요일</td>
+								<td>1,000위</td>
+								<td>1,000위</td>
+								</tr>
+								<tr>
+								<td>목요일</td>
+								<td>1,000위</td>
+								<td>1,400위</td>
+								</tr>
+								<tr>
+								<td>금요일</td>
+								<td>1,000위</td>
+								<td>1,500위</td>
+								</tr>
+								<tr>
+								<td>토요일</td>
+								<td>1,000위</td>
+								<td>1,600위</td>
+								</tr>
+								<tr>
+								<td>일요일</td>
+								<td>1,000위</td>
+								<td>1,700위</td>
+								</tr>
+								</tbody>
+								</table>
+							</div>	
+						</div>
+					</div>	
+					<!-- //[D] 키워드별효율추이 팝업 -->	
+				</div>		
+				<!-- //[D] 레이어팝업 -->
+			</fieldset>				
+			</form>
+		</div>
+		<a id="btn_top" href="#">TOP</a>
+	</div>
+	<!-- //[D] CONTAINER -->
+	<!-- [D] fOOTER -->
+	<div id="footer"></div>
+	<!-- //[D] FOOTER -->	
+</div>
+<!-- //[D] WRAP -->
+</body>
+</html>

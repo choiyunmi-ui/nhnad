@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+			<div class="section_head">
+				<h2 class="tit_top">자동입찰현황 상세</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">자동입찰</a>
+						<div class="dep1">
+							<a href="#">광고정보관리</a>
+							<a href="#">분석/리포트</a>
+							<a href="#" class="selected">자동입찰</a>
+							<a href="#">마켓트렌드</a>
+							<a href="#">광고제안</a>
+							<a href="#">어드민</a>
+							<a href="#">시스템관리</a>
+						</div>
+					</span>
+					<span class="bar">&gt;</span>
+					<a href="#">자동입찰현황 상세</a>
+				</div>
+			</div>
+			
+			<!-- 조회필터 -->			
+			<div class="section_filter" name="case_filter_bm_ae">
+				@template_filter.html
+			</div>	
+			<div class="section_filter" name="case_filter_bm_dt1">
+				@template_filter.html
+			</div>	
+			<div class="section_filter" name="case_filter_bm_dt2">
+				@template_filter.html
+			</div>	
+			
+			<div class="sub_head">
+				<div class="side">
+					<a href="#" class="btn_basic_m">담기</a>
+					<a href="#" class="btn_basic_m">설정ON</a>
+					<a href="#" class="btn_basic_m">설정OFF</a>
+					<a href="#" class="btn_basic_m"><img src="img/ico_btn_delete.png" alt="삭제 아이콘" class="ico">삭제</a>
+					<a href="#" class="btn_basic_m"><img src="img/ico_btn_down.png" alt="다운로드 아이콘" class="ico">CSV 다운로드</a>
+				</div>
+			</div>
+			
+			<div class="section_box">
+				<table class="tbl_form">
+				<caption>자동입찰현황 상세 thead</caption>
+				<colgroup><col class="t_check"><col width="17%"><col width=""><col width="17%"><col width="17%"><col width="11%"><col width="11%"></colgroup>
+				<thead>
+				<tr class="dep_form">
+					<th rowspan="2" class="t_check"><span class="inp_check"><input type="checkbox"></span></th>
+					<th colspan="1"><a href="#" class="btn_sort">설정단위</a></th>
+					<th colspan="1"><a href="#" class="btn_sort">캠페인</a></th>
+					<th colspan="1"><a href="#" class="btn_sort">그룹</a></th>
+					<th colspan="1"><a href="#" class="btn_sort">키워드</a></th>
+					<th colspan="1"><a href="#" class="btn_sort">설정</a></th>
+					<th colspan="1">
+						<a href="#" class="btn_basic_s">실시간정보조회</a>
+						<!-- [D] 오른쪽 끝과 닿을때 right_side class 추가 -->
+						<span class="wrap_hint right_side">
+							<a href="#" class="btn_hint">?</a>
+							<span class="ly_hint">
+								<span class="ul">
+								<span class="li">실시간정보조회 버튼 클릭시, 현재 광고상태가 업데이트됩니다.</span>
+								<span class="li">실시간정보조회 버튼 클릭 시 관리대상의 현재 광고 상태가 조회됩니다.<br>단, 현재 상태가 삭제인 관리대상의 광고상태는 업데이트 되지 않습니다.</span>
+								</span>
+							</span>
+						</span>
+					</th>
+				</tr>
+				<tr class="dep_form">
+					<th>
+						<select class="selectbox select_s">
+							<option>전체</option>
+						</select>
+					</th>
+					<th>
+						<select class="selectbox select_s">
+							<option>전체</option>
+						</select>
+					</th>
+					<th>
+						<select class="selectbox select_s">
+							<option>전체</option>
+						</select>
+					</th>
+					<th><input type="text" class="inp_text inp_text_s"></th>
+					<th>
+						<select class="selectbox select_s">
+							<option>전체</option>
+						</select>
+					</th>
+					<th>광고상태</th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<caption>자동입찰현황 상세 tbody</caption>
+				<colgroup><col class="t_check"><col width="17%"><col width=""><col width="17%"><col width="17%"><col width="11%"><col width="11%"></colgroup>
+				<tbody>
+				<tr>
+					<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+					<td><p>사이트</p></td>
+					<td><p class="btn_r">사이트 (www.nhnadsite.co.kr) <a href="#" class="btn_basic_s">수정</a></p></td>
+					<td><p></p></td>
+					<td><p></p></td>
+					<td>ON</td>
+					<td>ON</td>
+				</tr>
+				<tr>
+					<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+					<td><p>캠페인</p></td>
+					<td title="사이트 (www.nhnadwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwsite.co.kr)"><p class="btn_r"><span class="ellipsis">사이트 (www.nhnadwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwsite.co.kr)</span> <a href="#" class="btn_basic_s">수정</a></p></td>
+					<td><p></p></td>
+					<td><p></p></td>
+					<td>OFF</td>
+					<td>OFF</td>
+				</tr>
+				<tr>
+					<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+					<td><p>캠페인</p></td>
+					<td><p>사이트 (www.nhnadsite.co.kr)</p></td>
+					<td><p class="btn_r">그룹22 <a href="#" class="btn_basic_s">수정</a></p></td>
+					<td><p></p></td>
+					<td>ON</td>
+					<td>ON</td>
+				</tr>
+				<tr>
+					<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+					<td><p>그룹</p></td>
+					<td><p>사이트 (www.nhnadsite.co.kr)</p></td>
+					<td><p class="btn_r">그룹22 <a href="#" class="btn_basic_s">수정</a></p></td>
+					<td><p></p></td>
+					<td>OFF</td>
+					<td>ON</td>
+				</tr>
+				<tr>
+					<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+					<td><p>그룹</p></td>
+					<td><p>사이트 (www.nhnadsite.co.kr)</p></td>
+					<td><p class="btn_r">그룹22</p></td>
+					<td><p class="btn_r">안녕 <a href="#" class="btn_basic_s">수정</a></p></td>
+					<td>ON</td>
+					<td>OFF</td>
+				</tr>
+				<tr class="selected">
+					<td class="t_check"><span class="inp_check disabled"><input type="checkbox" disabled></span></td>
+					<td><p>키워드</p></td>
+					<td><p>사이트 (www.nhnadsite.co.kr)</p></td>
+					<td><p class="btn_r">그룹22222</p></td>
+					<td><p class="btn_r disabled">(삭제)키워드3 <a href="#" class="btn_basic_s disabled">수정</a></p></td>
+					<!-- [D] selected bg적용 제외 셀은 select_exc class 추가 -->
+					<td class="select_exc">ON</td>
+					<td class="select_exc">ON</td>
+				</tr>
+				<tr class="selected">
+					<td class="t_check"><span class="inp_check disabled"><input type="checkbox" disabled></span></td>
+					<td><p>키워드</p></td>
+					<td><p>사이트 (www.nhnadsite.co.kr)</p></td>
+					<td><p class="btn_r disabled">(삭제)그룹22222</p></td>
+					<td><p class="btn_r disabled">(삭제)키워드3 <a href="#" class="btn_basic_s disabled">수정</a></p></td>
+					<td class="select_exc">ON</td>
+					<td class="select_exc">ON</td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+			
+			<!-- BM_MG_DT_02 노출관리 수정모드 -->
+			<div class="wrap_split">
+				<!-- split_l -->
+				<div class="split_l" style="width:25%" name="mode_edit_target">
+					<div class="sub_head">
+						<div class="side">
+							<a href="#" class="btn_basic_m"><img src="img/ico_btn_delete.png" alt="x" class="ico">삭제</a>
+						</div>
+					</div>
+					<div class="section_box">
+						<div class="wrap_tbl">
+							<div class="thead">
+								<table class="tbl_form">
+								<caption>선택대상 thead</caption>
+								<colgroup><col class="t_check"><col></colgroup>
+								<thead>
+								<tr>
+									<th class="t_check"><span class="inp_check"><input type="checkbox"></span></th>
+									<th>선택대상</th>
+								</tr>
+								</thead>
+								</table>
+							</div>
+							<div class="tbody line20">
+								<table class="tbl_form">
+								<caption>선택대상 tbody</caption>
+								<colgroup><col class="t_check"><col></colgroup>
+								<tbody>
+								<tr>
+									<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+									<td><p><img src="img/ico_site.gif" alt="" class="ico" />사이트 (www.site.com)</p></td>
+								</tr>
+								<tr>
+									<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+									<td><p><img src="img/ico_site.gif" alt="" class="ico" />사이트 (www.site.com)</p></td>
+								</tr>
+								<tr>
+									<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+									<td><p><img src="img/ico_site.gif" alt="" class="ico" />사이트 (www.site.com)</p></td>
+								</tr>
+								<tr>
+									<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+									<td><p><img src="img/ico_group.gif" alt="" class="ico" />사이트 (www.site.com)</p></td>
+								</tr>
+								<tr>
+									<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+									<td><p><img src="img/ico_group.gif" alt="" class="ico" />sample test</p></td>
+								</tr>
+								<tr>
+									<td class="t_check"><span class="inp_check"><input type="checkbox"></span></td>
+									<td><p><img src="img/ico_keyword.gif" alt="" class="ico" />sample test</p></td>
+								</tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td><p><img src="img/ico_keyword.gif" alt="" class="ico" />sample test</p></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								<tr><td class="t_check"><span class="inp_check"><input type="checkbox"></span></td><td></td></tr>
+								</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //split_l -->
+
+				<!-- split_r -->
+				<div class="split_r" style="width: 75%">
+					<div class="sub_head">
+						<div class="side">
+							<a href="#" class="btn_basic_m">저장</a>
+						</div>
+					</div>
+					<div class="section_box">
+						<div class="thead_filter" name="mode_edit_filter">
+							<em class="index">노출관리설정</em>
+							<span class="inp_radio" style="width:127px"><input type="radio"><label>ON</label></span>
+							<span class="inp_radio" style="width:127px"><input type="radio"><label>OFF</label></span>
+							<span class="bar">|</span>
+							<label>관리기간설정</label>
+							<input type="text" class="datepicker" style="width:145px">
+							<span class="bar_h">-</span>
+							<input type="text" class="datepicker" style="width:145px">
+						</div>
+						<div class="wrap_schedule h_line20" name="case_tbl_schedule_onoff">
+							@template_table.html
+						</div>
+					</div>
+				</div>
+				<!-- //split_r -->
+			</div>
+			
+			<!-- 참고하세요! -->
+			<div class="section_box">
+				<dl class="notice_info">
+					<dt>참고하세요! </dt>
+					<dd>
+						<ul>
+						<li>선택 광고주의 설정된 모든 관리 대상이 조회됩니다.</li>
+						<li>삭제 표시된 관리대상은 자동입찰이 정상 동작하지 않습니다</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

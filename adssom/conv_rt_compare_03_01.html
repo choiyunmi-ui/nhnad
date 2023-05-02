@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script>
+/* 개발 제외/마크업 검수용 */
+$(function(){
+	load_contents('conv_rt','conv_rt_dashboard_01.html');
+});
+</script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<div id="contents">
+		
+			<div class="section_head">
+				<h2 class="tit_top">실시간 분석</h2>
+				<div class="sitemap">
+					<a href="#">HOME</a>
+					<span class="bar">&gt;</span>
+					<!-- [D] .dep2의 구조는 GNB구조와 같습니다. / span.dep_group에 .hover class 추가시 펼쳐짐 -->
+					<span class="dep_group">
+						<a href="#">분석/리포트</a>
+						<div class="dep1">
+							<a href="#">광고정보관리</a>
+							<a href="#" class="selected">분석/리포트</a>
+							<a href="#">자동입찰</a>
+							<a href="#">마켓트렌드</a>
+							<a href="#">광고제안</a>
+							<a href="#">어드민</a>
+							<a href="#">시스템관리</a>
+						</div>
+					</span>
+					<span class="bar">&gt;</span>
+					<span class="dep_group">
+						<a href="#">전환분석/실시간분석</a>
+						<div class="dep2">
+							<em class="tit_dep2"><a href="#">광고효과분석</a></em>
+							<a href="#">상세분석</a>
+							<a href="#">로그분석</a>
+							<a href="#">실시간분석</a>
+							<em class="tit_dep2">리포트</em>
+							<a href="#">리포트설정</a>
+							<a href="#">리포트예약관리</a>
+							<a href="#">리포트보관함</a>
+						</div>
+					</span>
+				</div>
+			</div>		
+			
+			<!-- 조회필터 -->
+			<div class="section_filter" name="case_filter_ae_site">
+				@template_filter
+			</div>
+			
+			<!-- tab -->
+			<div class="tab_page">
+				<ul>
+					<li><a href="#">실시간 대시보드</a></li>
+					<li><a href="#">실시간 - 시간대별</a></li>
+					<li class="selected"><a href="#">실시간 - 성과비교</a></li>
+				</ul>
+			</div>
+			
+			<div class="sub_head">
+				<h3 class="tit_section">
+					시간대별 성과비교</span>
+				</h3>
+			</div>
+			
+			<div class="section_box tab_contents">
+			
+				<!-- 시간대별 성과비 -->
+				<div class="sub_head_in">
+					<h3 class="tit_section">시간대별 성과비교 <span class="stxt">YYYY.MM.DD hh:mm 업데이트 <a href="#" title="새로고침" class="btn_update">새로고침</a></h3>
+				</div>
+				<div class="section_option_in">
+					<label>계정</label>
+					<select class="selectbox select_m" style="width:220px">
+						<option>전체선택</option>
+					</select>
+					<span class="bar">|</span>
+					<label>비교기간</label>
+					<select class="selectbox select_m" style="width:220px">
+						<option>어제</option>
+						<option>지난주</option>
+					</select>
+					<span class="bar">|</span>
+					<span class="inp_radio checked" style="width:190px"><input type="radio" checked><label>누적비교</label></span>
+					<span class="inp_radio" style="width:190px"><input type="radio"><label>시간대별비교</label></span>
+				</div>	
+			
+				<!-- 성과비교 요약 -->
+				<div class="sub_head_in">
+					<h3 class="tit_section">성과비교 요약</h3>
+				</div>
+			
+				<!-- 전환선택 -->
+				<div class="section_option_in">
+					<label>전환선택</label>
+					<select class="selectbox select_m" style="width:242px">
+						<option>전체선택</option>
+					</select>
+					<span class="btn_group">
+						<a href="#" class="btn_basic_m"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운로드</a>
+					</span>
+				</div>				
+				
+				<table class="tbl_form">
+				<caption>성과비교 요약 thead</caption>
+				<colgroup><col><col width="10%"><col width="10%"><col width="10%"><col width="10%"><col width="10%"><col width="10%"><col width="11%"></colgroup>
+				<thead>
+				<tr>
+					<th>기간</th>
+					<th>전체 유입</th>
+					<th>비 광고 유입</th>
+					<th>광고유입</th>
+					<th>광고유입 비중</th>
+					<th>전환수</th>
+					<th>전환률</th>
+					<th>매출액</th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<caption>성과비교 요약 tbody</caption>
+				<colgroup><col><col width="10%"><col width="10%"><col width="10%"><col width="10%"><col width="10%"><col width="10%"><col width="11%"></colgroup>
+				<tbody>
+				<tr>
+					<td>2014.11.10 <span class="time">24:00 ~ 24:00</span></td>
+					<td><p class="num">617,560</p></td>
+					<td><p class="num">617,560</p></td>
+					<td><p class="num">617,560</p></td>
+					<td><p class="num">2.28%</p></td>
+					<td><p class="num">180</p></td>
+					<td><p class="num">2.28%</p></td>
+					<td><p class="num">1,547,180</p></td>
+				</tr>
+				<tr>
+					<td>2014.11.10 <span class="time">24:00 ~ 24:00</span></td>
+					<td><p class="num">617,560</p></td>
+					<td><p class="num">617,560</p></td>
+					<td><p class="num">900,000,180</p></td>
+					<td><p class="num">900.28%</p></td>
+					<td><p class="num">900,000,180</p></td>
+					<td><p class="num">900.28%</p></td>
+					<td><p class="num">900,005,400,00</p></td>
+				</tr>
+				<tr>
+					<td><em>성과비교</em></td>
+					<td><p class="num"><span class="decrease">10.42%</span></p></td>
+					<td><p class="num"><span class="decrease">10.42%</span></p></td>
+					<td><p class="num"><span class="decrease">10.42%</span></p></td>
+					<td><p class="num"><span class="increase">12.22%</span></p></td>
+					<td><p class="num"><span class="increase">112.22%</span></p></td>
+					<td><p class="num"><span class="increase">12.22%</span></p></td>
+					<td><p class="num"><span class="decrease">10.42%</span></p></td>
+				</tr>
+				</tbody>
+				</table>
+				
+				<!-- 성과비교 상세 -->
+				<div class="sub_head_in">
+					<h3 class="tit_section">
+						성과비교 상세 <span class="bar_line">-</span> <span class="txt">합계</span></span>
+					</h3>
+				</div>
+			
+				<!-- 차트선택 -->
+				<div class="section_option_in">
+					<label>차트선택</label>
+					<select class="selectbox select_m" style="width:242px">
+						<option>선택하세요.</option>
+						<option>전체유입</option>
+						<option>광고유입</option>
+						<option>전환수</option>
+						<option>매출액</option>
+					</select>
+					<span class="btn_group">
+						<a href="#" class="btn_basic_m"><img src="img/ico_btn_down.png" alt="download icon" class="ico">다운로드</a>
+					</span>
+				</div>	
+			
+				<div class="section_graph">
+					<div class="graph"><img src="img/@graph14.gif" alt="" /></div>
+				</div>		
+				
+				<table class="tbl_form">
+				<caption>성과비교 상세 thead</caption>
+				<!-- [D] 마지막 col항목엔 width선언 제외 -->
+				<colgroup><col width="5%"><col span="4"><col span="4"><col span="3"></colgroup>
+				<thead>
+				<tr class="dep1">
+					<th rowspan="2">시간대</th>
+					<th colspan="4">오늘성과</th>
+					<th colspan="4">비교기간 성과</th>
+					<th colspan="3">성과비교</th>
+				</tr>
+				<tr class="dep2">
+					<th>오늘유입</th>
+					<th>오늘전환</th>
+					<th>전환률</th>
+					<th>매출액</th>
+					<th>지난주유입</th>
+					<th>지난주전환</th>
+					<th>전환률</th>
+					<th>매출액</th>
+					<th>유입성과비교</th>
+					<th>전환성과비교</th>
+					<th>매출액비교</th>
+				</tr>
+				</thead>
+				</table>
+				<table class="tbl_form">
+				<caption>성과비교 상세 tbody</caption>
+				<!-- [D] 상단 목록과 동일한 col width값 선언 -->
+				<colgroup><col width="5%"><col span="4"><col span="4"><col span="3"></colgroup>
+				<tbody>
+				<tr>
+					<td>01</td>
+					<td><p class="num">617,560</p></td>
+					<td><p class="num">14,051</p></td>
+					<td><p class="num">2.28%</p></td>
+					<td><p class="num">713</p></td>
+					<td><p class="num">14,051</p></td>
+					<td><p class="num">713</p></td>
+					<td><p class="num">2.28%</p></td>
+					<td><p class="num">5,400,000</p></td>
+					<td><p class="num"><span class="increase">12.22%</span></p></td>
+					<td><p class="num"><span class="increase">12.22%</span></p></td>
+					<td><p class="num"><span class="increase">12.22%</span></p></td>
+				</tr>
+				<tr>
+					<td>02</td>
+					<td><p class="num">617,560</p></td>
+					<td><p class="num">14,051</p></td>
+					<td><p class="num">2.28%</p></td>
+					<td><p class="num">713</p></td>
+					<td><p class="num">14,051</p></td>
+					<td><p class="num">713</p></td>
+					<td><p class="num">2.28%</p></td>
+					<td><p class="num">5,400,000</p></td>
+					<td><p class="num"><span class="increase">12.22%</span></p></td>
+					<td><p class="num"><span class="increase">12.22%</span></p></td>
+					<td><p class="num"><span class="increase">12.22%</span></p></td>
+				</tr>
+				<tr>
+					<td>03</td>
+					<td><p class="num">617,560</p></td>
+					<td><p class="num">14,051</p></td>
+					<td><p class="num">2.28%</p></td>
+					<td><p class="num">14,051</p></td>
+					<td><p class="num">713</p></td>
+					<td><p class="num">713</p></td>
+					<td><p class="num">2.28%</p></td>
+					<td><p class="num">5,400,000</p></td>
+					<td><p class="num"><span class="increase">12.22%</span></p></td>
+					<td><p class="num"><span class="increase">12.22%</span></p></td>
+					<td><p class="num"><span class="increase">12.22%</span></p></td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+			
+			<!-- 참고하세요! -->
+			<div class="section_box" name="conv_rt_notice">
+				@conv_rt_dashboard_01.html
+			</div>
+			
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>

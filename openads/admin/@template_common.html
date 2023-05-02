@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>TEMPLATE_COMMON :: OPEN ADS</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$(function() {
+		$( ".datepicker" ).datepicker();
+	});
+</script>
+<style>
+body{background-color:#f2f2f2;}
+.tit_case{margin:20px 0 0 5px;font-weight:bold;font-size:14px;}
+.tit_case_in{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;min-width:70px;border-right:2px solid #64bbe8;margin-right:8px;padding-right:10px;text-align:center;}
+.case_info{margin:5px 0 0 5px;font-size:12px;line-height:18px;}
+.template_case{margin:30px;padding-bottom:150px;}
+.case_box{margin-top:10px;padding:10px;border:1px solid #d3d2dc;border-radius:3px;background:#fff;}
+.case_box label{margin-left:15px;}
+.case_box label:first-child{margin-left:0;}
+.case_box+.case_info{margin-top:10px;line-height:16px}
+.ip_check label,.ip_radio label{margin-left:0 !important;margin-right:15px;}
+.selectbox{margin-right:5px;}
+.inp_text{margin-right:10px;margin-left:-10px;}
+label+.inp_text,
+label+.inp_keyword{margin-left:5px;}
+.inp_textarea{margin-right:10px;width:200px;height:110px;}
+.timer{margin-right:10px;}
+.msg_check+.msg_check{margin-left:10px}
+.increase,.decrease{margin-left:15px}
+.inp_keyword .inp_text{margin:0}
+.inp_del .inp_text{margin:0}
+</style>
+</head>
+<body>
+<div class="template_case">
+
+	<h2 class="tit_case">INPUT</h2>
+	<p class="case_info">기본 width 220px. width값 변경시 인라인으로 스타일 추가</p>
+	<div class="case_box">
+		<input type="text" id="ip_name" placeholder="기본문구 placeholder" class="ip_txt">
+	</div>
+
+	<h2 class="tit_case">SELECT BOX</h2>
+	<p class="case_info">기본 width 150px. width값 변경시 인라인으로 스타일 추가</p>
+	<div class="case_box">
+		<div class="sel_wrap" style="width:220px">
+			<button type="button" class="btn_sel">사용</button>
+			<ul class="sel_lst">
+			<li><a href="#">사용</a></li>
+			<li><a href="#">미사용</a></li>
+			<li><a href="#">사용</a></li>
+			<li><a href="#">미사용</a></li>
+			<li><a href="#">사용</a></li>
+			<li><a href="#">미사용</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="case_box">
+		<div class="sel_wrap" style="width:220px">
+			<button type="button" class="btn_sel">사용</button>
+			<ul class="sel_lst">
+			<li><a href="#">사용</a></li>
+			<li><a href="#">미사용</a></li>
+			<li><a href="#">사용</a></li>
+			<li><a href="#">미사용</a></li>
+			<li><a href="#">사용</a></li>
+			<li><a href="#">미사용</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<h2 class="tit_case">체크박스/라디오버튼</h2>
+	<div class="case_box">
+		<span class="ip_check"><input type="checkbox" id="ip_check"><label for="ip_check">체크박스</label></span>
+		<span class="ip_radio"><input type="radio" name="radio" id="wr_now" class="ip_rd"><label for="wr_now">라디오버튼</label></span>
+	</div>
+
+	<h2 class="tit_case">TEXTAREA</h2>
+	<p class="case_info">기본 width 100%, min-height:50px. width, height값 변경시 인라인으로 스타일 추가</p>
+	<div class="case_box">
+		<textarea placeholder="border 있음" class="ip_txar"></textarea>
+		<textarea placeholder="border 없음" class="ip_txar2"></textarea>
+	</div>
+
+	<h2 class="tit_case">datepicker</h2>
+	<p class="case_info">사용플러그인 : jqueryui <a href="http://jqueryui.com/datepicker">http://jqueryui.com/datepicker</a></p>
+	<div class="case_box">
+		<div class="cal_wrap">
+				<input type="text" class="ip_txt datepicker" style="width:158px">
+		</div>
+	</div>
+
+	<h2 class="tit_case">버튼</h2>
+	<p class="case_info">defalut(가운데정렬) / 회색버튼 .btn_gray / 노란 버튼 .btn_yel / + 아이콘 아이콘없음 .ico_none</p>
+	<div class="case_box">
+		<div class="btn_area">
+			<a href="#" class="btn_gry">임시저장글</a>
+			<a href="#" class="btn_yel">글쓰기</a>
+			<a href="#" class="btn_yel ico_none">글쓰기</a>
+		</div>
+	</div>
+	<p class="case_info">fl_l / fl_r class로 버튼 정렬</p>
+	<div class="case_box">
+		<div class="btn_area">
+			<a href="#" class="btn_gry fl_l">예약게시글</a>
+			<a href="#" class="btn_gry fl_l">임시저장글</a>
+			<a href="#" class="btn_yel fl_r">글쓰기</a>
+		</div>
+	</div>
+	<p class="case_info">오른쪽 버튼 독립적으로 있을시 ab_r class 추가</p>
+	<div class="case_box">
+		<div class="btn_area">
+			<button type="button" class="btn_yel">임시저장</button>
+			<a href="#" class="btn_yel">미리보기</a>
+			<button type="submit" class="btn_yel">등록하기</button>
+			<a href="#" class="btn_yel ab_r">등록취소</a>
+		</div>
+	</div>
+
+	<h2 class="tit_case">버튼_활성화</h2>
+	<div class="case_box">
+		<div class="btn_area">
+			<button type="button" class="btn_yel ico_none">노란배경</button>
+			<button type="button" class="btn_yel ico_none bd">검정보더&amp;노란배경</button>
+			<button type="button" class="btn_gry ico_none">회색배경</button>
+			<button type="button" class="btn_gry ico_none bd">검정보더&amp;회색배경</button>
+		</div>
+	</div>
+
+	<h2 class="tit_case">클릭영역 표시</h2>
+	<p class="case_info">.click 추가</p>
+	<div class="case_box">
+		<a href="#" class="click">클릭</a>
+	</div>
+
+	<h2 class="tit_case">필수입력 표시 </h2>
+	<p class="case_info">.req 추가</p>
+	<div class="case_box">
+		<span class="req">필수</span>
+	</div>
+
+	<h2 class="tit_case">pagenation</h2>
+	<div class="case_box">
+		<div class="pagenation">
+			<a href="#" class="first">처음</a>
+			<a href="#" class="prev">이전</a>
+			<ul class="num">
+			<li class="on"><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">6</a></li>
+			<li><a href="#">7</a></li>
+			<li><a href="#">8</a></li>
+			<li><a href="#">9</a></li>
+			<li><a href="#">10</a></li>
+			</ul>
+			<a href="#" class="next">다음</a>
+			<a href="#" class="last">끝</a>
+		</div>
+	</div>
+
+	<h2 class="tit_case">검색영역</h2>
+	<div class="case_box">
+		<div class="srch_wrap">
+			<form action="#">
+			<fieldset>
+			<legend>검색 영역</legend>
+				<div class="sel_wrap">
+					<button type="button" class="btn_sel">제목 + 내용</button>
+					<ul class="sel_lst">
+					<li><a href="#">제목 + 내용</a></li>
+					<li><a href="#">제목</a></li>
+					<li><a href="#">내용</a></li>
+					</ul>
+				</div>
+				<label for="scrh_word" class="blind">검색어 입력</label>
+				<input type="text" id="scrh_word" class="ipt_txt">
+				<button type="submit" class="btn_srch">검색</button>
+			</fieldset>
+			</form>
+		</div>
+	</div>
+
+
+
+</div>
+
+</body>
+</html>

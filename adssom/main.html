@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>통합마케팅솔루션</title>
+<link rel="stylesheet" href="css/ui.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/lib/select2.min.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+
+<div id="skip_nav"><a href="#container">본문 바로가기</a></div>
+
+<div id="wrap">
+	<!-- header -->
+	<div id="header">header(@template_layout.html)</div>
+	<!-- //header -->
+	<div id="container">
+		<!-- [D] 메인 페이지에 .main class 추가 -->
+		<div id="contents" class="main">		
+			<p class="msg_alarm">총 123개의 광고주가 등록되어 있습니다.</p>
+			
+			<div class="main_head">
+				<h3 class="tit_main">총비용 요약</h3>
+			</div>
+			
+			<div class="section_main total">
+				<ul class="day">
+					<li><em>어제</em> 100,234,568</li>
+					<li><em>최근7일</em> 100,234,568</li>
+				</ul>
+				<ul class="month">
+					<li><em>이번달</em> 100,234,568</li>
+					<li><em>지난달</em> 100,234,568</li>
+				</ul>
+			</div>
+			
+			<div class="main_head">
+				<h3 class="tit_main">광고주 목록</h3>
+			</div>
+			
+			<div class="section_box">
+				<!-- [D] 테이블 목록이 10개 이상일때 .wrap_tbl>.thead+.tbody 구조로 둘러쌈 (스크롤처리) / 스크롤이 없을때는 제거! -->
+				<div class="wrap_tbl">
+					<div class="thead">
+						<table class="tbl_form">
+						<caption>광고주 목록 thead</caption>
+						<!-- [D] t_check는 공통/마지막 col항목엔 width선언 제외 -->
+						<colgroup><col class="t_sort"><col width="18%"><col width="12%"><col width="10%"><col span="4"></colgroup>
+						<thead>
+						<tr class="dep1">
+							<th rowspan="2" class="t_sort"><a href="#" class="btn_t_sort_g">정렬</a></th>
+							<th rowspan="2"><a href="#" class="btn_sort">광고주</a></th>
+							<th rowspan="2"><a href="#" class="btn_sort">팀</a></th>
+							<th rowspan="2"><a href="#" class="btn_sort">담당자</a></th>
+							<th colspan="4" span="4">총 비용</th>
+						</tr>
+						<tr class="dep2">
+							<th><a href="#" class="btn_sort">어제</a></th>
+							<th><a href="#" class="btn_sort">최근7일</a></th>
+							<th><a href="#" class="btn_sort">이번달</a></th>
+							<th><a href="#" class="btn_sort">지난달</a></th>
+						</tr>
+						</thead>
+						</table>
+					</div>
+					<div class="tbody">
+						<table class="tbl_form">
+						<caption>광고주 목록 tbody</caption>
+						<!-- [D] 상단 목록과 동일한 col width값 선언 -->
+						<colgroup><col class="t_sort"><col width="18%"><col width="12%"><col width="10%"><col span="4"></colgroup>
+						<tbody>
+						<tr>
+							<td class="t_sort"><a href="#" class="btn_t_sort_g">정렬</a></td>
+							<td><p><a href="#">ABC쇼핑</a></td>
+							<td><p>1팀</p></td>
+							<td><p>박선유</p></td>
+							<td><p class="num">90,000,000.000</p></td>
+							<td><p class="num">300,000.000</p></td>
+							<td><p class="num">1,300,000.000</p></td>
+							<td><p class="num">780,000,000.000</p></td>
+						</tr>
+						<tr class="selected">
+							<td class="t_sort"><a href="#" class="btn_t_sort_g up">정렬</a></td>
+							<td><p><a href="#"><em>ABC쇼핑</em></a></td>
+							<td><p>1팀</p></td>
+							<td><p>박선유</p></td>
+							<td><p class="num">780,000,000.000</p></td>
+							<td><p class="num">300,000.000</p></td>
+							<td><p class="num">90,000,000.000</p></td>
+							<td><p class="num">1,300,000.000</p></td>
+						</tr>
+						<tr class="selected_sub">
+							<td class="t_sort"></td>
+							<td><p><a href="#">ABC쇼핑</a></td>
+							<td><p>1팀</p></td>
+							<td><p>박선유</p></td>
+							<td><p class="num">-</p></td>
+							<td><p class="num">-</p></td>
+							<td><p class="num">-</p></td>
+							<td><p class="num">-</p></td>
+						</tr>
+						<tr class="selected_sub">
+							<td class="t_sort"></td>
+							<td><p><a href="#">ABC쇼핑</a></td>
+							<td><p>1팀</p></td>
+							<td><p>박선유</p></td>
+							<td><p class="num">-</p></td>
+							<td><p class="num">-</p></td>
+							<td><p class="num">-</p></td>
+							<td><p class="num">-</p></td>
+						</tr>
+						<tr class="selected_sub">
+							<td class="t_sort"></td>
+							<td><p><a href="#">ABC쇼핑</a></td>
+							<td><p>1팀</p></td>
+							<td><p>박선유</p></td>
+							<td><p class="num">-</p></td>
+							<td><p class="num">-</p></td>
+							<td><p class="num">-</p></td>
+							<td><p class="num">-</p></td>
+						</tr>
+						<tr>
+							<td class="t_sort"><a href="#" class="btn_t_sort_g">정렬</a></td>
+							<td><p><a href="#">ABC쇼핑</a></td>
+							<td><p>1팀</p></td>
+							<td><p>박선유</p></td>
+							<td><p class="num">-</p></td>
+							<td><p class="num">-</p></td>
+							<td><p class="num">-</p></td>
+							<td><p class="num">-</p></td>
+						</tr>
+						<tr>
+							<td class="t_sort"><a href="#" class="btn_t_sort_g">정렬</a></td>
+							<td><p><a href="#">ABC쇼핑</a></td>
+							<td><p>1팀</p></td>
+							<td><p>박선유</p></td>
+							<td><p class="num">90,000,000.000</p></td>
+							<td><p class="num">300,000.000</p></td>
+							<td><p class="num">1,300,000.000</p></td>
+							<td><p class="num">780,000,000.000</p></td>
+						</tr>
+						<tr>
+							<td class="t_sort"><a href="#" class="btn_t_sort_g">정렬</a></td>
+							<td><p><a href="#">ABC쇼핑</a></td>
+							<td><p>1팀</p></td>
+							<td><p>박선유</p></td>
+							<td><p class="num">90,000,000.000</p></td>
+							<td><p class="num">300,000.000</p></td>
+							<td><p class="num">1,300,000.000</p></td>
+							<td><p class="num">780,000,000.000</p></td>
+						</tr>
+						<tr><td class="t_sort"><a href="#" class="btn_t_sort_g">정렬</a></td><td><p><a href="#">ABC쇼핑</a></td><td><p>1팀</p></td><td><p>박선유</p></td><td><p class="num">90,000,000.000</p></td><td><p class="num">300,000.000</p></td><td><p class="num">1,300,000.000</p></td><td><p class="num">780,000,000.000</p></td></tr>
+						<tr><td class="t_sort"><a href="#" class="btn_t_sort_g">정렬</a></td><td><p><a href="#">ABC쇼핑</a></td><td><p>1팀</p></td><td><p>박선유</p></td><td><p class="num">90,000,000.000</p></td><td><p class="num">300,000.000</p></td><td><p class="num">1,300,000.000</p></td><td><p class="num">780,000,000.000</p></td></tr>
+						<tr><td class="t_sort"><a href="#" class="btn_t_sort_g">정렬</a></td><td><p><a href="#">ABC쇼핑</a></td><td><p>1팀</p></td><td><p>박선유</p></td><td><p class="num">90,000,000.000</p></td><td><p class="num">300,000.000</p></td><td><p class="num">1,300,000.000</p></td><td><p class="num">780,000,000.000</p></td></tr>
+						<tr><td class="t_sort"><a href="#" class="btn_t_sort_g">정렬</a></td><td><p><a href="#">ABC쇼핑</a></td><td><p>1팀</p></td><td><p>박선유</p></td><td><p class="num">90,000,000.000</p></td><td><p class="num">300,000.000</p></td><td><p class="num">1,300,000.000</p></td><td><p class="num">780,000,000.000</p></td></tr>
+						<tr><td class="t_sort"><a href="#" class="btn_t_sort_g">정렬</a></td><td><p><a href="#">ABC쇼핑</a></td><td><p>1팀</p></td><td><p>박선유</p></td><td><p class="num">90,000,000.000</p></td><td><p class="num">300,000.000</p></td><td><p class="num">1,300,000.000</p></td><td><p class="num">780,000,000.000</p></td></tr>
+						<tr><td class="t_sort"><a href="#" class="btn_t_sort_g">정렬</a></td><td><p><a href="#">ABC쇼핑</a></td><td><p>1팀</p></td><td><p>박선유</p></td><td><p class="num">90,000,000.000</p></td><td><p class="num">300,000.000</p></td><td><p class="num">1,300,000.000</p></td><td><p class="num">780,000,000.000</p></td></tr>
+						<tr><td class="t_sort"><a href="#" class="btn_t_sort_g">정렬</a></td><td><p><a href="#">ABC쇼핑</a></td><td><p>1팀</p></td><td><p>박선유</p></td><td><p class="num">90,000,000.000</p></td><td><p class="num">300,000.000</p></td><td><p class="num">1,300,000.000</p></td><td><p class="num">780,000,000.000</p></td></tr>
+						<tr><td class="t_sort"><a href="#" class="btn_t_sort_g">정렬</a></td><td><p><a href="#">ABC쇼핑</a></td><td><p>1팀</p></td><td><p>박선유</p></td><td><p class="num">90,000,000.000</p></td><td><p class="num">300,000.000</p></td><td><p class="num">1,300,000.000</p></td><td><p class="num">780,000,000.000</p></td></tr>
+						<tr><td class="t_sort"><a href="#" class="btn_t_sort_g">정렬</a></td><td><p><a href="#">ABC쇼핑</a></td><td><p>1팀</p></td><td><p>박선유</p></td><td><p class="num">90,000,000.000</p></td><td><p class="num">300,000.000</p></td><td><p class="num">1,300,000.000</p></td><td><p class="num">780,000,000.000</p></td></tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<div class="main_head">
+				<h3 class="tit_main">주요 현황 <span class="stxt">전체광고주</span></h3>
+			</div>
+			
+			<div class="section_main sum">
+				<div class="last_month">
+					<h4 class="tit">전월 대비 누적 성과</h4>
+					<div class="graph"><img src="img/@graph1.gif" alt="" style="width:100%"></div>
+				</div>
+				<div class="recent">
+					<h4 class="tit">최근 3개월 총 비용</h4>
+					<div class="graph"><img src="img/@graph2.gif" alt="" style="width:100%"></div>
+				</div>
+				<div class="ad">
+					<h4 class="tit">광고 상품 비중</h4>
+					<div class="graph"><img src="img/@graph3.gif" alt="" style="width:100%"></div>
+				</div>
+			</div>
+			
+			<div class="section_present"><div class="section_in">
+				<dl class="report">
+					<dt>리포트 현황</dt>
+					<dd>
+						<ul>
+						<li class="fin"><strong>150</strong> 완료</li>
+						<li><strong>150</strong> 진행</li>
+						<li class="fail"><strong>0</strong> 실패</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl class="alarm">
+					<dt>알림 현황</dt>
+					<dd>
+						<ul>
+						<li><strong>0</strong> 어제 알림</li>
+						<li><strong>150</strong> 오늘 알림</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl class="auto">
+					<dt>자동입찰 현황</dt>
+					<dd>
+						<ul>
+						<li><strong>0</strong> 순위관리 설정</li>
+						<li><strong>150</strong> 노출관리 설정</li>
+						</ul>
+					</dd>
+				</dl>
+			</div></div>
+			
+		</div>
+		
+		<!-- footer-->
+		<div id="footer">footer(@template_layout.html)</div>
+		<!-- //footer-->
+	</div>
+</div>
+	
+</body>
+</html>
